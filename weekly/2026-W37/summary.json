@@ -7,7 +7,7 @@
     "2026-08-31",
     "2026-09-07"
   ],
-  "generated_at": "2026-09-15 00:38",
+  "generated_at": "2026-09-15 00:51",
   "kinds": {
     "事后审计": {
       "sessions": 46,
@@ -40,21 +40,21 @@
       "confirmed": 367,
       "false_pos": 18,
       "unique": 121,
-      "usd_rated": 10.58,
+      "usd_rated": 14.21,
       "top": [
         {
           "model": "Fable 5.1",
-          "score": 93.6,
+          "score": 91.1,
           "sessions": 6
         },
         {
           "model": "K3",
-          "score": 81.7,
+          "score": 82.4,
           "sessions": 24
         },
         {
           "model": "Gemini 3.8 Flash",
-          "score": 52.1,
+          "score": 52.5,
           "sessions": 20
         }
       ]
@@ -70,7 +70,7 @@
   "week": "2026-W37",
   "week_label": "2026 年第 37 周",
   "partial": false,
-  "generations": 2,
+  "generations": 3,
   "first_generated_at": "2026-09-15 00:30",
-  "last_generated_at": "2026-09-15 00:38"
+  "last_generated_at": "2026-09-15 00:51"
 }
