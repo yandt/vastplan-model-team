@@ -7,7 +7,7 @@
     "2026-08-31",
     "2026-09-07"
   ],
-  "generated_at": "2026-09-15 00:51",
+  "generated_at": "2026-09-15 01:02",
   "kinds": {
     "事后审计": {
       "sessions": 46,
@@ -18,19 +18,19 @@
       "usd_rated": 151.35,
       "top": [
         {
-          "model": "DeepSeek V4.1 Flash",
-          "score": 74.3,
-          "sessions": 19
+          "model": "DeepSeek V4.1 Flash（opencode）",
+          "score": 72.6,
+          "sessions": 2
         },
         {
-          "model": "Grok 4.6 Extra High",
-          "score": 71.6,
-          "sessions": 40
-        },
-        {
-          "model": "Muse Spark 1.3 Contributor",
-          "score": 71.6,
+          "model": "K3（agent）",
+          "score": 69.1,
           "sessions": 14
+        },
+        {
+          "model": "DeepSeek V4.1 Flash（pi）",
+          "score": 68.0,
+          "sessions": 17
         }
       ]
     },
@@ -43,19 +43,19 @@
       "usd_rated": 14.21,
       "top": [
         {
-          "model": "Fable 5.1",
-          "score": 91.1,
+          "model": "K3（agent）",
+          "score": 85.4,
           "sessions": 6
         },
         {
-          "model": "K3",
-          "score": 82.4,
-          "sessions": 24
+          "model": "Fable 5.1",
+          "score": 76.9,
+          "sessions": 6
         },
         {
-          "model": "Gemini 3.8 Flash",
-          "score": 52.5,
-          "sessions": 20
+          "model": "K3（pi）",
+          "score": 66.8,
+          "sessions": 18
         }
       ]
     }
@@ -70,7 +70,7 @@
   "week": "2026-W37",
   "week_label": "2026 年第 37 周",
   "partial": false,
-  "generations": 3,
+  "generations": 5,
   "first_generated_at": "2026-09-15 00:30",
-  "last_generated_at": "2026-09-15 00:51"
+  "last_generated_at": "2026-09-15 01:02"
 }
