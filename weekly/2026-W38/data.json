@@ -10,7 +10,7 @@
       "2026-09-12",
       "2026-09-14"
     ],
-    "generated_at": "2026-09-15 14:30",
+    "generated_at": "2026-09-15 14:47",
     "partial": true,
     "title": "模型团队周报 2026-W38（2026-09-14 → 2026-09-16）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 38 周（进行中）（2026-W38）",
       "本窗 2026-09-14 → 2026-09-16（环比 2026-09-12 → 2026-09-14）",
-      "生成 2026-09-15 14:30"
+      "生成 2026-09-15 14:47"
     ]
   },
   "kpis": [
@@ -655,6 +655,7 @@
             "rows": [
               {
                 "label": "#1 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 86.7,
                 "now_pct": 66.4,
@@ -666,6 +667,7 @@
               },
               {
                 "label": "#2 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 42.5,
                 "now_pct": 62.3,
@@ -677,6 +679,7 @@
               },
               {
                 "label": "#3 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 42.5,
                 "now_pct": 60.8,
@@ -688,6 +691,7 @@
               },
               {
                 "label": "#4 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 55,
                 "now_pct": 58.5,
@@ -698,7 +702,11 @@
                 }
               },
               {
-                "label": "#5 K3@方舟 Agent Plan",
+                "label": "#5 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 100,
                 "now_pct": 43.8,
@@ -710,6 +718,7 @@
               },
               {
                 "label": "#6 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 12.5,
                 "now_pct": 36.9,
@@ -721,6 +730,7 @@
               },
               {
                 "label": "#7 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 40.8,
                 "now_pct": 33.1,
@@ -732,6 +742,7 @@
               },
               {
                 "label": "#8 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 55.8,
                 "now_pct": 16.7,
@@ -743,6 +754,7 @@
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 18.3,
                 "now_pct": 3.8,
@@ -759,6 +771,7 @@
             "rows": [
               {
                 "label": "#1 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 85.7,
                 "now_pct": 95.7,
@@ -770,6 +783,7 @@
               },
               {
                 "label": "#2 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 100,
                 "now_pct": 85.7,
@@ -781,6 +795,7 @@
               },
               {
                 "label": "#3 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 96.6,
                 "now_pct": 84.6,
@@ -791,7 +806,11 @@
                 }
               },
               {
-                "label": "#4 K3@方舟 Agent Plan",
+                "label": "#4 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 100,
                 "now_pct": 78.6,
@@ -803,6 +822,7 @@
               },
               {
                 "label": "#5 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 100,
                 "now_pct": 75,
@@ -814,6 +834,7 @@
               },
               {
                 "label": "#6 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 81.8,
                 "now_pct": 72.5,
@@ -825,6 +846,7 @@
               },
               {
                 "label": "#7 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 93.8,
                 "now_pct": 69.2,
@@ -836,6 +858,7 @@
               },
               {
                 "label": "#8 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 77.8,
                 "now_pct": 66.7,
@@ -847,6 +870,7 @@
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 66.7,
                 "now_pct": 50,
@@ -865,6 +889,7 @@
             "rows": [
               {
                 "label": "#1 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 48.1,
                 "now_pct": 31.2,
@@ -876,6 +901,7 @@
               },
               {
                 "label": "#2 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 83.3,
                 "now_pct": 30.2,
@@ -887,6 +913,7 @@
               },
               {
                 "label": "#3 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 62.5,
                 "now_pct": 25,
@@ -898,6 +925,7 @@
               },
               {
                 "label": "#4 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 58,
                 "now_pct": 22.7,
@@ -909,6 +937,7 @@
               },
               {
                 "label": "#5 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 25,
                 "now_pct": 6.9,
@@ -920,6 +949,7 @@
               },
               {
                 "label": "#6 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 31.2,
                 "now_pct": 6.9,
@@ -930,7 +960,11 @@
                 }
               },
               {
-                "label": "#7 K3@方舟 Agent Plan",
+                "label": "#7 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 100,
                 "now_pct": 5.7,
@@ -942,6 +976,7 @@
               },
               {
                 "label": "#8 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 72.9,
                 "now_pct": 5.7,
@@ -953,6 +988,7 @@
               },
               {
                 "label": "#9 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 59.5,
                 "now_pct": 0,
@@ -969,6 +1005,7 @@
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 79.9,
                 "now_pct": 100,
@@ -980,6 +1017,7 @@
               },
               {
                 "label": "#2 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 47.5,
                 "now_pct": 31.7,
@@ -991,6 +1029,7 @@
               },
               {
                 "label": "#3 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 15.7,
                 "now_pct": 30.2,
@@ -1002,6 +1041,7 @@
               },
               {
                 "label": "#4 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 14.3,
                 "now_pct": 27.3,
@@ -1013,6 +1053,7 @@
               },
               {
                 "label": "#5 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 21.7,
                 "now_pct": 26.8,
@@ -1023,7 +1064,11 @@
                 }
               },
               {
-                "label": "#6 K3@方舟 Agent Plan",
+                "label": "#6 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 18.3,
                 "now_pct": 25,
@@ -1035,6 +1080,7 @@
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 11.1,
                 "now_pct": 19.9,
@@ -1046,6 +1092,7 @@
               },
               {
                 "label": "#8 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 12.3,
                 "now_pct": 19.7,
@@ -1057,6 +1104,7 @@
               },
               {
                 "label": "#9 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 24.6,
                 "now_pct": 10.2,
@@ -1075,6 +1123,7 @@
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 66.7,
                 "now_pct": 91.5,
@@ -1086,6 +1135,7 @@
               },
               {
                 "label": "#2 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 100,
                 "now_pct": 83.3,
@@ -1097,6 +1147,7 @@
               },
               {
                 "label": "#3 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 53.1,
                 "now_pct": 79,
@@ -1108,6 +1159,7 @@
               },
               {
                 "label": "#4 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 50.6,
                 "now_pct": 76.1,
@@ -1118,7 +1170,11 @@
                 }
               },
               {
-                "label": "#5 K3@方舟 Agent Plan",
+                "label": "#5 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 66.4,
                 "now_pct": 70.3,
@@ -1130,6 +1186,7 @@
               },
               {
                 "label": "#6 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 56.8,
                 "now_pct": 62.6,
@@ -1141,6 +1198,7 @@
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 16,
                 "now_pct": 61.7,
@@ -1152,6 +1210,7 @@
               },
               {
                 "label": "#8 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 80.2,
                 "now_pct": 38.5,
@@ -1163,6 +1222,7 @@
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 32.1,
                 "now_pct": 29.9,
@@ -1179,6 +1239,7 @@
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 0,
                 "now_pct": 100,
@@ -1188,6 +1249,7 @@
               },
               {
                 "label": "#2 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 0,
                 "now_pct": 89.7,
@@ -1197,6 +1259,7 @@
               },
               {
                 "label": "#3 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 0,
                 "now_pct": 82.8,
@@ -1205,7 +1268,11 @@
                 "bad_text": "0.31"
               },
               {
-                "label": "#4 K3@方舟 Agent Plan",
+                "label": "#4 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 0,
                 "now_pct": 75.9,
@@ -1215,6 +1282,7 @@
               },
               {
                 "label": "#5 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 0,
                 "now_pct": 75.9,
@@ -1224,6 +1292,7 @@
               },
               {
                 "label": "#6 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 0,
                 "now_pct": 62.1,
@@ -1233,6 +1302,7 @@
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 0,
                 "now_pct": 62.1,
@@ -1242,6 +1312,7 @@
               },
               {
                 "label": "#8 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 0,
                 "now_pct": 34.5,
@@ -1251,6 +1322,7 @@
               },
               {
                 "label": "#9 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 0,
                 "now_pct": 29.9,
@@ -1273,6 +1345,7 @@
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 0.9,
                 "now_pct": 0.1,
@@ -1284,6 +1357,7 @@
               },
               {
                 "label": "#2 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 4.1,
                 "now_pct": 0.3,
@@ -1295,6 +1369,7 @@
               },
               {
                 "label": "#3 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 2.1,
                 "now_pct": 0.3,
@@ -1306,6 +1381,7 @@
               },
               {
                 "label": "#4 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 4.3,
                 "now_pct": 2.6,
@@ -1317,6 +1393,7 @@
               },
               {
                 "label": "#5 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 31.7,
                 "now_pct": 4.1,
@@ -1327,7 +1404,11 @@
                 }
               },
               {
-                "label": "#6 K3@方舟 Agent Plan",
+                "label": "#6 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 10.3,
                 "now_pct": 5.4,
@@ -1339,6 +1420,7 @@
               },
               {
                 "label": "#7 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 87.7,
                 "now_pct": 10.6,
@@ -1350,6 +1432,7 @@
               },
               {
                 "label": "#8 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 52.3,
                 "now_pct": 11.1,
@@ -1361,6 +1444,7 @@
               },
               {
                 "label": "#9 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 100,
                 "now_pct": 12.5,
@@ -1377,6 +1461,7 @@
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 0.9,
                 "now_pct": 0.1,
@@ -1388,6 +1473,7 @@
               },
               {
                 "label": "#2 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 2.1,
                 "now_pct": 0.2,
@@ -1399,6 +1485,7 @@
               },
               {
                 "label": "#3 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 4.1,
                 "now_pct": 0.4,
@@ -1410,6 +1497,7 @@
               },
               {
                 "label": "#4 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 4.3,
                 "now_pct": 1.8,
@@ -1421,6 +1509,7 @@
               },
               {
                 "label": "#5 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 31.7,
                 "now_pct": 2.9,
@@ -1431,7 +1520,11 @@
                 }
               },
               {
-                "label": "#6 K3@方舟 Agent Plan",
+                "label": "#6 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 10.3,
                 "now_pct": 3.2,
@@ -1443,6 +1536,7 @@
               },
               {
                 "label": "#7 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 52.3,
                 "now_pct": 5.5,
@@ -1454,6 +1548,7 @@
               },
               {
                 "label": "#8 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 100,
                 "now_pct": 7.4,
@@ -1465,6 +1560,7 @@
               },
               {
                 "label": "#9 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 87.7,
                 "now_pct": 16,
@@ -1483,6 +1579,7 @@
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 15.6,
                 "now_pct": 22.4,
@@ -1494,6 +1591,7 @@
               },
               {
                 "label": "#2 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 59,
                 "now_pct": 36.7,
@@ -1505,6 +1603,7 @@
               },
               {
                 "label": "#3 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 40,
                 "now_pct": 55.7,
@@ -1516,6 +1615,7 @@
               },
               {
                 "label": "#4 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 56.6,
                 "now_pct": 64.3,
@@ -1527,6 +1627,7 @@
               },
               {
                 "label": "#5 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 60.7,
                 "now_pct": 73.1,
@@ -1537,7 +1638,11 @@
                 }
               },
               {
-                "label": "#6 K3@方舟 Agent Plan",
+                "label": "#6 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 89,
                 "now_pct": 77.2,
@@ -1549,6 +1654,7 @@
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 16.7,
                 "now_pct": 80.7,
@@ -1560,6 +1666,7 @@
               },
               {
                 "label": "#8 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 70.1,
                 "now_pct": 93.1,
@@ -1571,6 +1678,7 @@
               },
               {
                 "label": "#9 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 53,
                 "now_pct": 100,
@@ -1587,6 +1695,7 @@
             "rows": [
               {
                 "label": "#1 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 89.8,
                 "now_pct": 100,
@@ -1598,6 +1707,7 @@
               },
               {
                 "label": "#2 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 90.6,
                 "now_pct": 82.7,
@@ -1609,6 +1719,7 @@
               },
               {
                 "label": "#3 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 57.5,
                 "now_pct": 67.8,
@@ -1620,6 +1731,7 @@
               },
               {
                 "label": "#4 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 65.4,
                 "now_pct": 65.9,
@@ -1631,6 +1743,7 @@
               },
               {
                 "label": "#5 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 96.3,
                 "now_pct": 62,
@@ -1642,6 +1755,7 @@
               },
               {
                 "label": "#6 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 58.5,
                 "now_pct": 55.2,
@@ -1653,6 +1767,7 @@
               },
               {
                 "label": "#7 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 51,
                 "now_pct": 46,
@@ -1664,6 +1779,7 @@
               },
               {
                 "label": "#8 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 29.5,
                 "now_pct": 33.6,
@@ -1674,7 +1790,11 @@
                 }
               },
               {
-                "label": "#9 K3@方舟 Agent Plan",
+                "label": "#9 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 24.8,
                 "now_pct": 24.6,
@@ -1693,6 +1813,7 @@
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 2.2,
                 "now_pct": 3.2,
@@ -1703,7 +1824,11 @@
                 }
               },
               {
-                "label": "#2 K3@方舟 Agent Plan",
+                "label": "#2 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 2.6,
                 "now_pct": 4.6,
@@ -1715,6 +1840,7 @@
               },
               {
                 "label": "#3 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 5.2,
                 "now_pct": 5.1,
@@ -1726,6 +1852,7 @@
               },
               {
                 "label": "#4 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 5,
                 "now_pct": 7.6,
@@ -1737,6 +1864,7 @@
               },
               {
                 "label": "#5 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 6.8,
                 "now_pct": 8.4,
@@ -1748,6 +1876,7 @@
               },
               {
                 "label": "#6 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 10.5,
                 "now_pct": 9.8,
@@ -1759,6 +1888,7 @@
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 10.5,
                 "now_pct": 20.1,
@@ -1770,6 +1900,7 @@
               },
               {
                 "label": "#8 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 13.1,
                 "now_pct": 27.5,
@@ -1781,6 +1912,7 @@
               },
               {
                 "label": "#9 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 24.2,
                 "now_pct": 100,
@@ -1797,6 +1929,7 @@
             "rows": [
               {
                 "label": "#1 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 99.3,
                 "now_pct": 100,
@@ -1808,6 +1941,7 @@
               },
               {
                 "label": "#2 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 94.3,
                 "now_pct": 96.9,
@@ -1819,6 +1953,7 @@
               },
               {
                 "label": "#3 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 94.8,
                 "now_pct": 96.3,
@@ -1829,7 +1964,11 @@
                 }
               },
               {
-                "label": "#4 K3@方舟 Agent Plan",
+                "label": "#4 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 94.6,
                 "now_pct": 95.5,
@@ -1841,6 +1980,7 @@
               },
               {
                 "label": "#5 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 91.5,
                 "now_pct": 92.8,
@@ -1852,6 +1992,7 @@
               },
               {
                 "label": "#6 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 92.9,
                 "now_pct": 90.9,
@@ -1863,6 +2004,7 @@
               },
               {
                 "label": "#7 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 89.3,
                 "now_pct": 89.9,
@@ -1874,6 +2016,7 @@
               },
               {
                 "label": "#8 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 85.9,
                 "now_pct": 88.8,
@@ -1885,6 +2028,7 @@
               },
               {
                 "label": "#9 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 85.9,
                 "now_pct": 86.9,
@@ -2468,7 +2612,11 @@
             "title": "产出 · 平均质量分 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 K3@方舟 Agent Plan",
+                "label": "#1 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 100,
                 "now_pct": 79.5,
@@ -2480,6 +2628,7 @@
               },
               {
                 "label": "#2 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 68.4,
                 "now_pct": 77.3,
@@ -2491,6 +2640,7 @@
               },
               {
                 "label": "#3 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 35.5,
                 "now_pct": 60.2,
@@ -2502,6 +2652,7 @@
               },
               {
                 "label": "#4 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 25.1,
                 "now_pct": 57.6,
@@ -2513,6 +2664,7 @@
               },
               {
                 "label": "#5 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 30.7,
                 "now_pct": 57.2,
@@ -2524,6 +2676,7 @@
               },
               {
                 "label": "#6 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 24.7,
                 "now_pct": 55.7,
@@ -2535,6 +2688,7 @@
               },
               {
                 "label": "#7 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 48.5,
                 "now_pct": 54.5,
@@ -2546,6 +2700,7 @@
               },
               {
                 "label": "#8 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 15.2,
                 "now_pct": 51.5,
@@ -2557,6 +2712,7 @@
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 15.6,
                 "now_pct": 35.6,
@@ -2573,6 +2729,7 @@
             "rows": [
               {
                 "label": "#1 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 100,
                 "now_pct": 100,
@@ -2584,6 +2741,7 @@
               },
               {
                 "label": "#2 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 100,
                 "now_pct": 100,
@@ -2595,6 +2753,7 @@
               },
               {
                 "label": "#3 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 100,
                 "now_pct": 95,
@@ -2606,6 +2765,7 @@
               },
               {
                 "label": "#4 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 100,
                 "now_pct": 95,
@@ -2617,6 +2777,7 @@
               },
               {
                 "label": "#5 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 75,
                 "now_pct": 94.7,
@@ -2627,7 +2788,11 @@
                 }
               },
               {
-                "label": "#6 K3@方舟 Agent Plan",
+                "label": "#6 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 100,
                 "now_pct": 93.3,
@@ -2639,6 +2804,7 @@
               },
               {
                 "label": "#7 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 100,
                 "now_pct": 92.9,
@@ -2650,6 +2816,7 @@
               },
               {
                 "label": "#8 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 100,
                 "now_pct": 91.3,
@@ -2661,6 +2828,7 @@
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 50,
                 "now_pct": 66.7,
@@ -2678,7 +2846,11 @@
             "title": "独立 · 独有占比 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 K3@方舟 Agent Plan",
+                "label": "#1 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 100,
                 "now_pct": 39.3,
@@ -2690,6 +2862,7 @@
               },
               {
                 "label": "#2 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 76.5,
                 "now_pct": 38.5,
@@ -2701,6 +2874,7 @@
               },
               {
                 "label": "#3 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 25,
                 "now_pct": 26.3,
@@ -2712,6 +2886,7 @@
               },
               {
                 "label": "#4 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 42.9,
                 "now_pct": 23.8,
@@ -2723,6 +2898,7 @@
               },
               {
                 "label": "#5 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 0,
                 "now_pct": 16.7,
@@ -2734,6 +2910,7 @@
               },
               {
                 "label": "#6 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 25,
                 "now_pct": 10.5,
@@ -2745,6 +2922,7 @@
               },
               {
                 "label": "#7 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 50,
                 "now_pct": 10,
@@ -2756,6 +2934,7 @@
               },
               {
                 "label": "#8 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 72.7,
                 "now_pct": 0,
@@ -2767,6 +2946,7 @@
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 0,
                 "now_pct": 0,
@@ -2783,6 +2963,7 @@
             "rows": [
               {
                 "label": "#1 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 18.2,
                 "now_pct": 100,
@@ -2794,6 +2975,7 @@
               },
               {
                 "label": "#2 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 13.6,
                 "now_pct": 73.8,
@@ -2804,7 +2986,11 @@
                 }
               },
               {
-                "label": "#3 K3@方舟 Agent Plan",
+                "label": "#3 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 41.9,
                 "now_pct": 50.8,
@@ -2816,6 +3002,7 @@
               },
               {
                 "label": "#4 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 39.8,
                 "now_pct": 43.4,
@@ -2827,6 +3014,7 @@
               },
               {
                 "label": "#5 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 3.6,
                 "now_pct": 29.6,
@@ -2838,6 +3026,7 @@
               },
               {
                 "label": "#6 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 6.7,
                 "now_pct": 27.2,
@@ -2849,6 +3038,7 @@
               },
               {
                 "label": "#7 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 14.3,
                 "now_pct": 23.3,
@@ -2860,6 +3050,7 @@
               },
               {
                 "label": "#8 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 9.8,
                 "now_pct": 22.7,
@@ -2871,6 +3062,7 @@
               },
               {
                 "label": "#9 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 2.7,
                 "now_pct": 17.3,
@@ -2888,7 +3080,11 @@
             "title": "覆盖 · 重要性加权占参与轮次 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 K3@方舟 Agent Plan",
+                "label": "#1 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 100,
                 "now_pct": 56.6,
@@ -2900,6 +3096,7 @@
               },
               {
                 "label": "#2 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 82,
                 "now_pct": 54.7,
@@ -2911,6 +3108,7 @@
               },
               {
                 "label": "#3 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 30.5,
                 "now_pct": 41.5,
@@ -2922,6 +3120,7 @@
               },
               {
                 "label": "#4 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 17.6,
                 "now_pct": 40,
@@ -2933,6 +3132,7 @@
               },
               {
                 "label": "#5 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 14.1,
                 "now_pct": 40,
@@ -2944,6 +3144,7 @@
               },
               {
                 "label": "#6 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 19.9,
                 "now_pct": 38.1,
@@ -2955,6 +3156,7 @@
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 14.1,
                 "now_pct": 37.6,
@@ -2966,6 +3168,7 @@
               },
               {
                 "label": "#8 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 53.9,
                 "now_pct": 33.1,
@@ -2977,6 +3180,7 @@
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 9.4,
                 "now_pct": 25.4,
@@ -2992,7 +3196,11 @@
             "title": "成立密度 · 每次（越多越好） · 本项排名（彩＝成立，粉＝说错；均为每次）",
             "rows": [
               {
-                "label": "#1 K3@方舟 Agent Plan",
+                "label": "#1 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 0,
                 "now_pct": 100,
@@ -3002,6 +3210,7 @@
               },
               {
                 "label": "#2 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 0,
                 "now_pct": 92.9,
@@ -3011,6 +3220,7 @@
               },
               {
                 "label": "#3 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 0,
                 "now_pct": 75,
@@ -3020,6 +3230,7 @@
               },
               {
                 "label": "#4 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 0,
                 "now_pct": 71.4,
@@ -3029,6 +3240,7 @@
               },
               {
                 "label": "#5 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 0,
                 "now_pct": 67.9,
@@ -3038,6 +3250,7 @@
               },
               {
                 "label": "#6 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 0,
                 "now_pct": 67.9,
@@ -3047,6 +3260,7 @@
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 0,
                 "now_pct": 64.3,
@@ -3056,6 +3270,7 @@
               },
               {
                 "label": "#8 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 0,
                 "now_pct": 57.1,
@@ -3065,6 +3280,7 @@
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 0,
                 "now_pct": 42.9,
@@ -3087,6 +3303,7 @@
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 0.6,
                 "now_pct": 0.1,
@@ -3098,6 +3315,7 @@
               },
               {
                 "label": "#2 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 0.8,
                 "now_pct": 0.1,
@@ -3109,6 +3327,7 @@
               },
               {
                 "label": "#3 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 1,
                 "now_pct": 0.2,
@@ -3120,6 +3339,7 @@
               },
               {
                 "label": "#4 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 1.9,
                 "now_pct": 0.5,
@@ -3131,6 +3351,7 @@
               },
               {
                 "label": "#5 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 7.1,
                 "now_pct": 1.2,
@@ -3142,6 +3363,7 @@
               },
               {
                 "label": "#6 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 8.3,
                 "now_pct": 1.5,
@@ -3153,6 +3375,7 @@
               },
               {
                 "label": "#7 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 11.9,
                 "now_pct": 2,
@@ -3163,7 +3386,11 @@
                 }
               },
               {
-                "label": "#8 K3@方舟 Agent Plan",
+                "label": "#8 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 3.4,
                 "now_pct": 3.2,
@@ -3175,6 +3402,7 @@
               },
               {
                 "label": "#9 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 100,
                 "now_pct": 14,
@@ -3191,6 +3419,7 @@
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 0.6,
                 "now_pct": 0,
@@ -3202,6 +3431,7 @@
               },
               {
                 "label": "#2 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 0.8,
                 "now_pct": 0,
@@ -3213,6 +3443,7 @@
               },
               {
                 "label": "#3 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 1,
                 "now_pct": 0.2,
@@ -3224,6 +3455,7 @@
               },
               {
                 "label": "#4 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 1.9,
                 "now_pct": 0.2,
@@ -3235,6 +3467,7 @@
               },
               {
                 "label": "#5 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 8.3,
                 "now_pct": 0.6,
@@ -3246,6 +3479,7 @@
               },
               {
                 "label": "#6 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 7.1,
                 "now_pct": 0.6,
@@ -3257,6 +3491,7 @@
               },
               {
                 "label": "#7 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 11.9,
                 "now_pct": 0.8,
@@ -3267,7 +3502,11 @@
                 }
               },
               {
-                "label": "#8 K3@方舟 Agent Plan",
+                "label": "#8 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 3.4,
                 "now_pct": 0.9,
@@ -3279,6 +3518,7 @@
               },
               {
                 "label": "#9 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 100,
                 "now_pct": 4.3,
@@ -3297,6 +3537,7 @@
             "rows": [
               {
                 "label": "#1 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 13.8,
                 "now_pct": 13.4,
@@ -3308,6 +3549,7 @@
               },
               {
                 "label": "#2 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 20.9,
                 "now_pct": 17.6,
@@ -3319,6 +3561,7 @@
               },
               {
                 "label": "#3 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 21.4,
                 "now_pct": 26.1,
@@ -3330,6 +3573,7 @@
               },
               {
                 "label": "#4 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 26.1,
                 "now_pct": 31.4,
@@ -3340,7 +3584,11 @@
                 }
               },
               {
-                "label": "#5 K3@方舟 Agent Plan",
+                "label": "#5 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 47.4,
                 "now_pct": 39.5,
@@ -3352,6 +3600,7 @@
               },
               {
                 "label": "#6 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 16.8,
                 "now_pct": 52.9,
@@ -3363,6 +3612,7 @@
               },
               {
                 "label": "#7 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 48.9,
                 "now_pct": 69.4,
@@ -3374,6 +3624,7 @@
               },
               {
                 "label": "#8 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 80.9,
                 "now_pct": 78.6,
@@ -3385,6 +3636,7 @@
               },
               {
                 "label": "#9 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 100,
                 "now_pct": 86.2,
@@ -3401,6 +3653,7 @@
             "rows": [
               {
                 "label": "#1 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 94.5,
                 "now_pct": 100,
@@ -3412,6 +3665,7 @@
               },
               {
                 "label": "#2 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 57.2,
                 "now_pct": 63.9,
@@ -3423,6 +3677,7 @@
               },
               {
                 "label": "#3 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 50.2,
                 "now_pct": 41.8,
@@ -3434,6 +3689,7 @@
               },
               {
                 "label": "#4 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 32.5,
                 "now_pct": 33.1,
@@ -3445,6 +3701,7 @@
               },
               {
                 "label": "#5 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 39.5,
                 "now_pct": 32,
@@ -3456,6 +3713,7 @@
               },
               {
                 "label": "#6 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 23.3,
                 "now_pct": 26.3,
@@ -3467,6 +3725,7 @@
               },
               {
                 "label": "#7 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 22.4,
                 "now_pct": 23.8,
@@ -3478,6 +3737,7 @@
               },
               {
                 "label": "#8 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 15.5,
                 "now_pct": 20.3,
@@ -3488,7 +3748,11 @@
                 }
               },
               {
-                "label": "#9 K3@方舟 Agent Plan",
+                "label": "#9 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 18.3,
                 "now_pct": 19.8,
@@ -3506,7 +3770,11 @@
             "title": "Token · 每条成立千枚 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 K3@方舟 Agent Plan",
+                "label": "#1 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 2.8,
                 "now_pct": 3.2,
@@ -3518,6 +3786,7 @@
               },
               {
                 "label": "#2 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 22.7,
                 "now_pct": 5.4,
@@ -3529,6 +3798,7 @@
               },
               {
                 "label": "#3 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 14.6,
                 "now_pct": 5.8,
@@ -3540,6 +3810,7 @@
               },
               {
                 "label": "#4 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 25.4,
                 "now_pct": 6.3,
@@ -3551,6 +3822,7 @@
               },
               {
                 "label": "#5 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 19,
                 "now_pct": 6.9,
@@ -3562,6 +3834,7 @@
               },
               {
                 "label": "#6 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 38.1,
                 "now_pct": 10.7,
@@ -3573,6 +3846,7 @@
               },
               {
                 "label": "#7 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 13.2,
                 "now_pct": 17.9,
@@ -3584,6 +3858,7 @@
               },
               {
                 "label": "#8 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 42.2,
                 "now_pct": 49.2,
@@ -3595,6 +3870,7 @@
               },
               {
                 "label": "#9 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 100,
                 "now_pct": 82.3,
@@ -3611,6 +3887,7 @@
             "rows": [
               {
                 "label": "#1 MiMo V2.5 Pro",
+                "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 82.4,
                 "now_pct": 100,
@@ -3622,6 +3899,7 @@
               },
               {
                 "label": "#2 Grok 4.6 Extra High",
+                "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 81.8,
                 "now_pct": 87.8,
@@ -3633,6 +3911,7 @@
               },
               {
                 "label": "#3 DeepSeek V4 Flash",
+                "badge": null,
                 "tone": "#6b8e5a",
                 "was_pct": 22.1,
                 "now_pct": 57.7,
@@ -3644,6 +3923,7 @@
               },
               {
                 "label": "#4 DeepSeek V4.1 Flash",
+                "badge": null,
                 "tone": "#8a7a3f",
                 "was_pct": 44.6,
                 "now_pct": 57,
@@ -3655,6 +3935,7 @@
               },
               {
                 "label": "#5 Gemini 3.8 Flash",
+                "badge": null,
                 "tone": "#4f8a8b",
                 "was_pct": 0,
                 "now_pct": 40.6,
@@ -3666,6 +3947,7 @@
               },
               {
                 "label": "#6 GLM-5.3",
+                "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 45.7,
                 "now_pct": 27.2,
@@ -3677,6 +3959,7 @@
               },
               {
                 "label": "#7 Muse Spark 1.3 Contributor",
+                "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 1.4,
                 "now_pct": 1.1,
@@ -3687,7 +3970,11 @@
                 }
               },
               {
-                "label": "#8 K3@方舟 Agent Plan",
+                "label": "#8 K3",
+                "badge": {
+                  "text": "@方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
                 "tone": "#6b5b95",
                 "was_pct": 0,
                 "now_pct": 0,
@@ -3699,6 +3986,7 @@
               },
               {
                 "label": "#9 GLM-5.3-Flash",
+                "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 0,
                 "now_pct": 0,

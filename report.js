@@ -50,7 +50,7 @@ function barRows(panel) {
       const badText = r.bad_text === undefined ? "" : ` <span class="d down">${esc(r.bad_text)}</span>`;
       const delta = r.delta ? ` <span class="d ${esc(r.delta.cls)}">${esc(r.delta.text)}</span>` : "";
       return (
-        `<div class="bar"><span class="lab">${esc(r.label)}</span><span class="tracks">` +
+        `<div class="bar"><span class="lab">${esc(r.label)}${badge(r.badge)}</span><span class="tracks">` +
         `<span class="track was"><i style="width:${r.was_pct}%;background:${esc(r.tone)}"></i></span>` +
         `<span class="track"><i style="width:${r.now_pct}%;background:${esc(r.tone)}"></i></span>${bad}</span>` +
         `<span class="vals">${esc(r.value)}${badText}${delta}</span></div>`
