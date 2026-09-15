@@ -64,12 +64,22 @@
       "enabled": true
     },
     {
-      "name": "DeepSeek V4.1 Flash",
-      "tone": "#8a7a3f",
+      "name": "DeepSeek V4.1 Flash（max）",
+      "tone": null,
       "providers": [
         "OpenCode Go"
       ],
       "thinking": "max",
+      "pricing": "opencode-go",
+      "enabled": true
+    },
+    {
+      "name": "DeepSeek V4.1 Flash（high）",
+      "tone": null,
+      "providers": [
+        "OpenCode Go"
+      ],
+      "thinking": "high",
       "pricing": "opencode-go",
       "enabled": true
     },
