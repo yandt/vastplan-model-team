@@ -4,7 +4,7 @@
       "name": "K3",
       "tone": "#6b5b95",
       "providers": [
-        "Cursor",
+        "agent",
         "方舟 Agent Plan"
       ],
       "thinking": "",
@@ -15,7 +15,7 @@
       "name": "Gemini 3.8 Flash",
       "tone": "#4f8a8b",
       "providers": [
-        "Cursor"
+        "agent"
       ],
       "thinking": "high",
       "pricing": "vendor-api",
@@ -25,7 +25,7 @@
       "name": "Grok 4.6 Extra High",
       "tone": "#4a6fa5",
       "providers": [
-        "Cursor"
+        "agent"
       ],
       "thinking": "xhigh",
       "pricing": "vendor-api",
@@ -35,7 +35,8 @@
       "name": "GLM-5.3",
       "tone": "#b0674a",
       "providers": [
-        "Z.ai"
+        "Z.ai",
+        "zcode"
       ],
       "thinking": "",
       "pricing": "vendor-api",
@@ -45,7 +46,8 @@
       "name": "GLM-5.3-Flash",
       "tone": "#a05a76",
       "providers": [
-        "Z.ai"
+        "Z.ai",
+        "zcode"
       ],
       "thinking": "",
       "pricing": "vendor-api",
@@ -95,7 +97,7 @@
       "name": "Fable 5.1",
       "tone": "#a45a52",
       "providers": [
-        "Cursor"
+        "agent"
       ],
       "thinking": "medium",
       "pricing": "cursor-other-models",
