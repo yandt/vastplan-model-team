@@ -97,7 +97,8 @@ function modelTable(table) {
     })
     .join("");
   const note = table.note ? `<p class="note">${esc(table.note)}</p>` : "";
-  return `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>${note}`;
+  // 表格套一层可横滑的壳：窄屏下靠它横滑，不把整页撑破（桌面下宽度够，不出现滚动条）
+  return `<div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>${note}`;
 }
 
 function comments(block) {
@@ -131,7 +132,7 @@ function debtBlock(debt) {
     .map((row) => `<tr><td class="name">${esc(row[0])}</td>${row.slice(1).map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`)
     .join("");
   const body = debt.rows.length
-    ? `<table class="debt"><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table>`
+    ? `<div class="scroll"><table class="debt"><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>`
     : "<p>（无）</p>";
   const note = debt.note ? `<p class="note">${esc(debt.note)}</p>` : "";
   return `<h2>${esc(debt.title)}<span>${esc(debt.meta)}</span></h2>${note}${body}`;
