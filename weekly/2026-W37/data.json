@@ -10,7 +10,7 @@
       "2026-08-31",
       "2026-09-07"
     ],
-    "generated_at": "2026-09-15 14:47",
+    "generated_at": "2026-09-15 14:54",
     "partial": false,
     "title": "模型团队周报 2026-W37（2026-09-07 → 2026-09-14）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 37 周（2026-W37）",
       "本窗 2026-09-07 → 2026-09-14（环比 2026-08-31 → 2026-09-07）",
-      "生成 2026-09-15 14:47"
+      "生成 2026-09-15 14:54"
     ]
   },
   "kpis": [
@@ -149,7 +149,7 @@
       "name": "K3",
       "tone": "#6b5b95",
       "badge": {
-        "text": "@Curso...",
+        "text": "Curso...",
         "title": "Cursor"
       }
     },
@@ -157,7 +157,7 @@
       "name": "K3",
       "tone": "#6b5b95",
       "badge": {
-        "text": "@方舟 Ag...",
+        "text": "方舟 Ag...",
         "title": "方舟 Agent Plan"
       }
     },
@@ -265,7 +265,7 @@
             "name": "K3",
             "dot": "#6b5b95",
             "badge": {
-              "text": "@Curso...",
+              "text": "Curso...",
               "title": "Cursor"
             },
             "cells": [
@@ -483,7 +483,7 @@
             "name": "K3",
             "dot": "#6b5b95",
             "badge": {
-              "text": "@方舟 Ag...",
+              "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
             },
             "cells": [
@@ -731,7 +731,7 @@
               {
                 "label": "#3 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -758,7 +758,7 @@
               {
                 "label": "#5 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -874,7 +874,7 @@
               {
                 "label": "#4 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -889,7 +889,7 @@
               {
                 "label": "#5 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -983,7 +983,7 @@
               {
                 "label": "#2 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -1046,7 +1046,7 @@
               {
                 "label": "#7 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -1126,7 +1126,7 @@
               {
                 "label": "#3 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -1177,7 +1177,7 @@
               {
                 "label": "#7 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -1247,7 +1247,7 @@
               {
                 "label": "#2 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -1298,7 +1298,7 @@
               {
                 "label": "#6 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -1406,7 +1406,7 @@
               {
                 "label": "#5 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -1419,7 +1419,7 @@
               {
                 "label": "#6 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -1557,7 +1557,7 @@
               {
                 "label": "#7 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -1584,7 +1584,7 @@
               {
                 "label": "#9 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -1688,7 +1688,7 @@
               {
                 "label": "#7 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -1715,7 +1715,7 @@
               {
                 "label": "#9 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -1761,7 +1761,7 @@
               {
                 "label": "#2 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -1848,7 +1848,7 @@
               {
                 "label": "#9 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -1916,7 +1916,7 @@
               {
                 "label": "#4 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -1991,7 +1991,7 @@
               {
                 "label": "#10 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -2025,7 +2025,7 @@
               {
                 "label": "#2 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -2076,7 +2076,7 @@
               {
                 "label": "#6 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -2180,7 +2180,7 @@
               {
                 "label": "#4 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -2195,7 +2195,7 @@
               {
                 "label": "#5 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -2332,7 +2332,7 @@
           {
             "rank": "#1 K3",
             "badge": {
-              "text": "@Curso...",
+              "text": "Curso...",
               "title": "Cursor"
             },
             "score": "74.4",
@@ -2370,7 +2370,7 @@
           {
             "rank": "#6 K3",
             "badge": {
-              "text": "@方舟 Ag...",
+              "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
             },
             "score": "61.9",
@@ -2457,7 +2457,7 @@
             "name": "K3",
             "dot": "#6b5b95",
             "badge": {
-              "text": "@Curso...",
+              "text": "Curso...",
               "title": "Cursor"
             },
             "cells": [
@@ -2546,7 +2546,7 @@
             "name": "K3",
             "dot": "#6b5b95",
             "badge": {
-              "text": "@方舟 Ag...",
+              "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
             },
             "cells": [
@@ -2954,7 +2954,7 @@
               {
                 "label": "#2 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -2969,7 +2969,7 @@
               {
                 "label": "#3 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -3133,7 +3133,7 @@
               {
                 "label": "#5 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -3184,7 +3184,7 @@
               {
                 "label": "#9 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -3230,7 +3230,7 @@
               {
                 "label": "#1 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -3269,7 +3269,7 @@
               {
                 "label": "#4 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -3397,7 +3397,7 @@
               {
                 "label": "#3 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -3412,7 +3412,7 @@
               {
                 "label": "#4 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -3518,7 +3518,7 @@
               {
                 "label": "#1 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -3545,7 +3545,7 @@
               {
                 "label": "#3 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -3671,7 +3671,7 @@
               {
                 "label": "#2 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -3684,7 +3684,7 @@
               {
                 "label": "#3 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -3874,7 +3874,7 @@
               {
                 "label": "#8 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -3889,7 +3889,7 @@
               {
                 "label": "#9 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -4017,7 +4017,7 @@
               {
                 "label": "#8 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -4032,7 +4032,7 @@
               {
                 "label": "#9 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -4126,7 +4126,7 @@
               {
                 "label": "#5 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -4165,7 +4165,7 @@
               {
                 "label": "#8 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -4257,7 +4257,7 @@
               {
                 "label": "#4 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -4344,7 +4344,7 @@
               {
                 "label": "#11 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -4366,7 +4366,7 @@
               {
                 "label": "#1 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -4417,7 +4417,7 @@
               {
                 "label": "#5 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -4557,7 +4557,7 @@
               {
                 "label": "#5 K3",
                 "badge": {
-                  "text": "@Curso...",
+                  "text": "Curso...",
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
@@ -4632,7 +4632,7 @@
               {
                 "label": "#11 K3",
                 "badge": {
-                  "text": "@方舟 Ag...",
+                  "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
@@ -4709,7 +4709,7 @@
           {
             "rank": "#1 K3",
             "badge": {
-              "text": "@Curso...",
+              "text": "Curso...",
               "title": "Cursor"
             },
             "score": "87.5",
@@ -4726,7 +4726,7 @@
           {
             "rank": "#3 K3",
             "badge": {
-              "text": "@方舟 Ag...",
+              "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
             },
             "score": "68.1",
@@ -4915,7 +4915,7 @@
   "notes": [
     "综合能力评分（排名用）：6 项按权重（35% 效果 + 30% 覆盖 + 10% 独立 + 10% 时间 + 5% 花费 + 10% token）在同活动类型内 min-max 归一到 0～100 后加权：效果（均质量）、覆盖（重要性加权成立数 ÷ 所参与轮次同口径合计）、独立（独有/成立）、时间（每次分钟，越快越好）、花费（每次花费，越省越好）、token（每条成立 token，越省越好）；某项没采集到时（如订阅制模型没有金额）该轴按中位 50 记，并在评论里标注。效率分（成立重要性÷耗时）只作参考列，不进综合分。 表格按它从优到差排名。契合分与样本量只进评论，不进评分。",
     "图表逐项排名：每张图只按它自己那个口径排（产出/精准/独立/性价比/覆盖/执行时间/每条成立 token/缓存命中率/成立密度/每次花费/每条成立花费），图内 `#n` 是该图名次；执行时间、每条成立 token、花费越低越好，成立重要性是整场堆叠条、不做模型排名。",
-    "服务商口径：**按服务商（不是按工具）拆**——同一模型走过多个服务商时分行，名字本体不变，写法统一为「名称@厂商」：网页里徽标显示缩写（悬停看全名），Markdown 与数据包写全名。缩写对照：Curso...＝Cursor、方舟 Ag...＝方舟 Agent Plan、Z.ai＝Z.ai、OpenCod...＝OpenCode Go、小米 To...＝小米 Token Plan、pi＝pi。服务商取自 models.json 的 providers 表（改一处全站生效）：pi 调用看登记的服务商，agent 工具一律 Cursor，zcode/opencode 分别归 Z.ai / OpenCode Go；同一家的不同写法（zai 与 zai-coding-cn）算一家。拆不拆看本期与上期的并集，保证跨周可比；单服务商的家不拆。",
+    "服务商口径：**按服务商（不是按工具）拆**——同一模型走过多个服务商时分行，名字本体不变，网页里名字只留本体、服务商是旁边的独立徽标（写短名，悬停看全名）；Markdown、图表与数据包写全名「名称@厂商」。缩写对照：Curso...＝Cursor、方舟 Ag...＝方舟 Agent Plan、Z.ai＝Z.ai、OpenCod...＝OpenCode Go、小米 To...＝小米 Token Plan、pi＝pi。服务商取自 models.json 的 providers 表（改一处全站生效）：pi 调用看登记的服务商，agent 工具一律 Cursor，zcode/opencode 分别归 Z.ai / OpenCode Go；同一家的不同写法（zai 与 zai-coding-cn）算一家。拆不拆看本期与上期的并集，保证跨周可比；单服务商的家不拆。",
     "计数类口径：成立数、花费、假阳这类会随样本量涨的指标，一律折成「每次已评运行」再比（成立密度、每次花费、每次说错），否则跑得多的家天然占优；模型表里的成立/独有/假阳仍是本期合计，看总数时请对照「场」列。",
     "花费三看：每次花费（跑一次多少钱）、每条成立花费（每个真问题多少钱）、token（每条成立 token）；按通道拆开后某批调用缺金额或缺 token 数据时，该家不进对应榜单（不按 0 记，也不当最优）。",
     "生成速度口径：每秒 token＝输出 token ÷ 耗时秒（按已评行汇总后相除），只算模型自己吐出来的输出；输入与缓存读是喂进去的、不算生成，推理 token 也不另加（各家输出是否已含思维输出不一致，加了会重复计）。",
