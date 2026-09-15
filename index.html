@@ -2,56 +2,49 @@
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>VastPlan · 多模型团队归档</title>
-<style>/* 归档入口页样式：Python 与 Node 两侧都读这一份。 */
-:root{--bg:#fbfaf8;--card:#fff;--line:#e6e1da;--ink:#2f2c29;--muted:#8c857c;--accent:#8a6f4a}
-*{box-sizing:border-box}
-body{margin:0;padding:44px 24px 64px;background:var(--bg);color:var(--ink);
-font:14px/1.7 -apple-system,"PingFang SC","Noto Sans CJK SC",Segoe UI,sans-serif}
-main{max-width:960px;margin:0 auto}
-.kicker{margin:0 0 6px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-h1{margin:0 0 6px;font-size:25px;font-weight:650}
-.sub{margin:0 0 30px;color:var(--muted);font-size:12.5px}
-.sub a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:18px 20px;margin:0 0 16px}
-.head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
-.stamp{margin:0;font-size:16px;font-weight:640;font-variant-numeric:tabular-nums}
-.stamp .wk{margin-left:9px;font-size:11.5px;font-weight:400;color:var(--muted)}
-.win{margin:0;color:var(--muted);font-size:12px}
-.kind{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--line)}
-.kind:first-of-type{border-top:0;padding-top:0}
-.kind b{font-weight:600}
-.num{font-variant-numeric:tabular-nums}
-.top{margin:4px 0 0;color:#5b554e;font-size:12.5px}
-.links{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
-.links a{display:inline-block;padding:3px 11px;border:1px solid var(--line);border-radius:999px;
-color:var(--ink);text-decoration:none;font-size:12.5px;background:#fdfcfa}
-.links a:hover{border-color:var(--accent);color:var(--accent)}
-.shots{margin:14px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:9px}
-.shots img{width:100%;border:1px solid var(--line);border-radius:6px;display:block}
-.none{margin:10px 0 0;color:var(--muted);font-size:12.5px}
-h2.sec{margin:30px 0 10px;font-size:15px;font-weight:640;border-top:1px solid var(--ink);padding-top:12px}
-.trend{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px;margin:0 0 22px;min-width:0}
-.trend-legend{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:0;font-size:12px;color:var(--muted)}
-.trend-legend .lg{display:inline-flex;align-items:center;gap:6px}
-.trend-legend i{width:10px;height:10px;border-radius:2px;flex:none}
-.trend-chart{margin:0;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:12px 14px}
-.trend-chart figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 6px;font-size:12px;color:var(--muted)}
-.trend-title{font-weight:600;color:var(--ink);flex:none}
-.trend-readout{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-variant-numeric:tabular-nums}
-.trend-host{position:relative;min-width:0}
-.trend-note{grid-column:1/-1;margin:0 0 18px;color:var(--muted);font-size:12.5px}
-footer{margin-top:28px;color:var(--muted);font-size:12px}
-</style>
+<link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="vendor/uPlot.min.css"></head><body><main>
+<header class="page-head">
 <p class="kicker">VastPlan · Model Team Archive</p>
 <h1>多模型团队归档</h1>
-<p class="sub">真实工程上的多模型实测：事后审计 + 设计分叉，每次生成一份，共 2 次。评分口径与局限见仓库 <a href="README.md">README</a>。</p>
-<h2 class="sec">跨周趋势</h2>
-<section id="trend" class="trend">载入中…（需要 JavaScript）</section>
-<article class="card"><div class="head"><h2 class="stamp">2026-W38<span class="wk">2026 年第 38 周</span></h2><p class="win">2026-09-14 → 2026-09-16（环比 2026-09-12 → 2026-09-14）</p></div><div class="kind"><b>事后审计</b> <span class="num">18 场 · 成立 249 · 假阳 61 · 花费 $67.30</span><p class="top">1 Muse Spark 1.3 Contributor 92.9、2 DeepSeek V4.1 Flash（max） 81.2、3 K3 方舟 Agent Plan 72.0</p></div><div class="kind"><b>设计分叉</b> <span class="num">16 场 · 成立 272 · 假阳 33 · 花费 $8.43</span><p class="top">1 K3 方舟 Agent Plan 87.0、2 Grok 4.6 Extra High 75.3、3 Muse Spark 1.3 Contributor 61.7</p></div><p class="links"><a href="weekly/2026-W38/report.html">报告（网页）</a><a href="weekly/2026-W38/report.md">报告（Markdown）</a><a href="weekly/2026-W38/post.md">发帖稿</a></p><div class="shots"><img src="weekly/2026-W38/images/1-ranking.png" alt="1-ranking.png" loading="lazy"><img src="weekly/2026-W38/images/2-audit-quality.png" alt="2-audit-quality.png" loading="lazy"><img src="weekly/2026-W38/images/3-audit-cost.png" alt="3-audit-cost.png" loading="lazy"><img src="weekly/2026-W38/images/4-design.png" alt="4-design.png" loading="lazy"></div></article><article class="card"><div class="head"><h2 class="stamp">2026-W37<span class="wk">2026 年第 37 周</span></h2><p class="win">2026-09-07 → 2026-09-14（环比 2026-08-31 → 2026-09-07）</p></div><div class="kind"><b>事后审计</b> <span class="num">46 场 · 成立 481 · 假阳 127 · 花费 $141.34</span><p class="top">1 K3 Cursor 82.2、2 DeepSeek V4.1 Flash（max） 78.9、3 Muse Spark 1.3 Contributor 72.5</p></div><div class="kind"><b>设计分叉</b> <span class="num">25 场 · 成立 367 · 假阳 18 · 花费 $14.21</span><p class="top">1 K3 Cursor 87.5、2 Fable 5.1 78.5、3 K3 方舟 Agent Plan 68.1</p></div><p class="links"><a href="weekly/2026-W37/report.html">报告（网页）</a><a href="weekly/2026-W37/report.md">报告（Markdown）</a><a href="weekly/2026-W37/post.md">发帖稿</a></p><div class="shots"><img src="weekly/2026-W37/images/1-ranking.png" alt="1-ranking.png" loading="lazy"><img src="weekly/2026-W37/images/2-audit-quality.png" alt="2-audit-quality.png" loading="lazy"><img src="weekly/2026-W37/images/3-audit-cost.png" alt="3-audit-cost.png" loading="lazy"><img src="weekly/2026-W37/images/4-design.png" alt="4-design.png" loading="lazy"></div></article>
+<p class="sub">真实工程上的多模型实测：事后审计 + 设计分叉，每期一份，共 2 期。评分口径与局限见仓库 <a href="README.md">README</a>。</p>
+</header>
+
+<nav class="tabs" id="board-tabs" aria-label="活动类型"></nav>
+
+<section class="controls">
+<label class="control"><span>期次</span><select id="board-week"></select></label>
+<label class="control"><span>指标</span><select id="board-metric"></select></label>
+<label class="control search"><span>搜索模型</span><input id="board-search" type="search" placeholder="模型名或厂商" autocomplete="off"></label>
+</section>
+<p class="meta" id="board-meta"></p>
+
+<section class="board-wrap">
+<div class="table-scroll" id="board-table">载入中…（需要 JavaScript）</div>
+<p class="note" id="board-note"></p>
+</section>
+
+<section class="chart-card">
+<h3 id="board-chart-title">本项对比</h3>
+<div id="board-chart"></div>
+</section>
+
+<section class="chart-card">
+<h3>模型长期走势（选中类型，综合分）</h3>
+<div id="board-models"></div>
+<p class="note" id="board-models-note"></p>
+</section>
+
+<h2 class="sec" id="trend-head">跨周趋势</h2>
+<section class="trend" id="trend">载入中…（需要 JavaScript）</section>
+
+<h2 class="sec">历期归档</h2>
+<section class="archive"><article class="card"><div class="head"><h3 class="stamp">2026-W38<span class="wk">2026 年第 38 周</span></h3><p class="win">2026-09-14 → 2026-09-16（环比 2026-09-12 → 2026-09-14）</p></div><div class="kind"><b>事后审计</b> <span class="num">20 场 · 成立 287 · 假阳 74 · 花费 $73.56</span><p class="top">1 DeepSeek V4.1 Flash（high） 88.1※、2 Muse Spark 1.3 Contributor 86.5、3 DeepSeek V4.1 Flash（max） 81.1</p></div><div class="kind"><b>设计分叉</b> <span class="num">16 场 · 成立 272 · 假阳 33 · 花费 $8.43</span><p class="top">1 K3 方舟 Agent Plan 87.0、2 Grok 4.6 Extra High 75.3、3 Muse Spark 1.3 Contributor 61.7</p></div><p class="links"><a href="weekly/2026-W38/report.html">报告（网页）</a><a href="weekly/2026-W38/report.md">报告（Markdown）</a></p><div class="shots"><img src="weekly/2026-W38/images/1-ranking.png" alt="1-ranking.png" loading="lazy"><img src="weekly/2026-W38/images/2-audit-quality.png" alt="2-audit-quality.png" loading="lazy"><img src="weekly/2026-W38/images/3-audit-cost.png" alt="3-audit-cost.png" loading="lazy"><img src="weekly/2026-W38/images/4-design.png" alt="4-design.png" loading="lazy"></div></article><article class="card"><div class="head"><h3 class="stamp">2026-W37<span class="wk">2026 年第 37 周</span></h3><p class="win">2026-09-07 → 2026-09-14（环比 2026-08-31 → 2026-09-07）</p></div><div class="kind"><b>事后审计</b> <span class="num">46 场 · 成立 481 · 假阳 127 · 花费 $141.34</span><p class="top">1 K3 Cursor 82.2、2 DeepSeek V4.1 Flash（max） 78.9、3 Muse Spark 1.3 Contributor 72.5</p></div><div class="kind"><b>设计分叉</b> <span class="num">25 场 · 成立 367 · 假阳 18 · 花费 $14.21</span><p class="top">1 K3 Cursor 87.5、2 Fable 5.1 78.5、3 K3 方舟 Agent Plan 68.1</p></div><p class="links"><a href="weekly/2026-W37/report.html">报告（网页）</a><a href="weekly/2026-W37/report.md">报告（Markdown）</a></p><div class="shots"><img src="weekly/2026-W37/images/1-ranking.png" alt="1-ranking.png" loading="lazy"><img src="weekly/2026-W37/images/2-audit-quality.png" alt="2-audit-quality.png" loading="lazy"><img src="weekly/2026-W37/images/3-audit-cost.png" alt="3-audit-cost.png" loading="lazy"><img src="weekly/2026-W37/images/4-design.png" alt="4-design.png" loading="lazy"></div></article></section>
 <footer>报告为自包含 HTML（外壳 + 数据，由 report.js 渲染）；配图 16:9，可直接发帖。趋势图用 uPlot（MIT，见 <a href="vendor/uPlot.LICENSE">vendor/uPlot.LICENSE</a>）。</footer>
 </main>
-<script id="trend-data" type="application/json">{"weeks":["2026-W37","2026-W38"],"labels":["2026-W37（09-07 → 09-14）","2026-W38（09-14 → 09-16）"],"kinds":{"事后审计":{"每类场次":[46,18],"成立密度（条/次）":[1.57,1.83],"每次花费（$）":[0.4604,0.4949],"假阳率":[0.2089,0.1968]},"设计分叉":{"每类场次":[25,16],"成立密度（条/次）":[2.2,2.23],"每次花费（$）":[0.0851,0.0691],"假阳率":[0.0468,0.1082]}},"tones":{"事后审计":"#6b5b95","设计分叉":"#4f8a8b","专责推理":"#b08a3e"}}</script>
+<script id="board-data" type="application/json">{"weeks":[{"stamp":"2026-W37","label":"2026 年第 37 周","partial":false},{"stamp":"2026-W38","label":"2026 年第 38 周（进行中）","partial":true}],"kinds":{"事后审计":{"metrics":["思考","综合","场 本/上","均质量 本/上/Δ","成立 本/上","独有","假阳","准确率","花费 本/上","效率"],"weeks":{"2026-W37":{"note":"主力（≥5 场）第一：K3 Cursor（综合 82.2）","rows":[{"rank":"1","name":"K3","badge":"Cursor","dot":"#6b5b95","cells":["max","82.2","14/4","7.4/20.8","26/23","14","5","84%","13.07/6.38","1.26"]},{"rank":"2","name":"DeepSeek V4.1 Flash（max）","badge":"","dot":"#8a7a3f","cells":["max","78.9","19/0","8.2/0.0","46/0","24","6","88%","6.61/0.00","1.66"]},{"rank":"3","name":"Muse Spark 1.3 Contributor","badge":"","dot":"#7d6b8f","cells":["xhigh","72.5","14/0","5.2/0.0","22/0","15","7","76%","0.12/0.00","2.47"]},{"rank":"4","name":"Grok 4.6 Extra High","badge":"","dot":"#4a6fa5","cells":["xhigh","68.5","40/2","7.2/5.0","70/2","34","9","89%","45.96/3.77","0.77"]},{"rank":"5","name":"K3","badge":"方舟 Agent Plan","dot":"#6b5b95","cells":["max","61.8","29/0","5.9/0.0","49/0","20","11","82%","16.31/0.00","0.73"]},{"rank":"6","name":"Gemini 3.8 Flash","badge":"","dot":"#4f8a8b","cells":["high","61.1","38/3","6.0/8.3","77/13","36","36","68%","32.67/5.44","0.91"]},{"rank":"7","name":"GLM-5.3","badge":"","dot":"#b0674a","cells":["max","60.9","43/3","5.3/5.3","73/14","25","21","78%","17.91/0.79","0.88"]},{"rank":"8","name":"GLM-5.3-Flash","badge":"","dot":"#a05a76","cells":["max","57.0","40/3","5.7/7.7","59/18","24","4","94%","1.05/0.11","0.50"]},{"rank":"9","name":"DeepSeek V4 Flash","badge":"","dot":"#6b8e5a","cells":["max","38.9","35/0","3.8/0.0","41/0","16","11","79%","6.53/0.00","0.52"]},{"rank":"10","name":"MiMo V2.5 Pro","badge":"","dot":"#b08a3e","cells":["max","19.0","35/0","0.7/0.0","18/0","7","17","51%","1.11/0.00","0.49"]}]},"2026-W38":{"note":"※ 本期样本 \u003c 5 场，结论打折；主力（≥5 场）第一：Muse Spark 1.3 Contributor（综合 86.5）","rows":[{"rank":"1※","name":"DeepSeek V4.1 Flash（high）","badge":"","dot":"#8a7a3f","cells":["high","88.1","2/0","9.0/0.0","7/0","1","1","88%","0.20/0.00","1.46"]},{"rank":"2","name":"Muse Spark 1.3 Contributor","badge":"","dot":"#7d6b8f","cells":["xhigh","86.5","19/12","6.4/5.5","47/18","15","19","71%","0.24/0.10","3.53"]},{"rank":"3","name":"DeepSeek V4.1 Flash（max）","badge":"","dot":"#8a7a3f","cells":["max","81.1","16/12","8.9/8.7","39/28","11","6","87%","16.49/6.13","1.13"]},{"rank":"4","name":"GLM-5.3","badge":"","dot":"#b0674a","cells":["max","69.2","19/12","6.0/4.1","35/15","9","8","81%","8.10/3.71","1.00"]},{"rank":"5","name":"K3","badge":"方舟 Agent Plan","dot":"#6b5b95","cells":["max","67.8","19/2","6.1/10.0","41/5","9","10","80%","11.28/1.21","0.92"]},{"rank":"6","name":"GLM-5.3-Flash","badge":"","dot":"#a05a76","cells":["max","67.1","19/12","6.4/4.3","38/13","9","5","88%","0.62/0.24","0.64"]},{"rank":"7","name":"Grok 4.6 Extra High","badge":"","dot":"#4a6fa5","cells":["xhigh","61.1","19/12","6.4/4.3","32/12","4","2","94%","27.27/11.70","0.83"]},{"rank":"8","name":"DeepSeek V4 Flash","badge":"","dot":"#6b8e5a","cells":["max","56.8","19/12","5.2/1.3","33/4","6","7","83%","4.97/0.50","0.65"]},{"rank":"9","name":"MiMo V2.5 Pro","badge":"","dot":"#b08a3e","cells":["max","32.1","19/12","0.2/1.8","13/8","4","15","46%","0.66/0.48","0.96"]},{"rank":"10※","name":"Gemini 3.8 Flash","badge":"","dot":"#4f8a8b","cells":["high","16.1","3/12","1.7/5.6","2/21","0","1","67%","3.74/10.26","0.32"]}]}}},"设计分叉":{"metrics":["思考","综合","场 本/上","均质量 本/上/Δ","成立 本/上","独有","假阳","准确率","花费 本/上","契合 本/上"],"weeks":{"2026-W37":{"note":"主力（≥5 场）第一：K3 Cursor（综合 87.5）","rows":[{"rank":"1","name":"K3","badge":"Cursor","dot":"#6b5b95","cells":["max","87.5","6/4","25.7/14.0","19/11","16","1","95%","0.89/2.54","4.17/0.00"]},{"rank":"2","name":"Fable 5.1","badge":"","dot":"#a45a52","cells":["high/medium","78.5","6/0","29.0/0.0","22/0","13","0","100%","3.63/0.00","4.33/0.00"]},{"rank":"3","name":"K3","badge":"方舟 Agent Plan","dot":"#6b5b95","cells":["max","68.1","18/0","23.9/0.0","55/0","24","1","98%","1.29/0.00","4.69/0.00"]},{"rank":"4","name":"Gemini 3.8 Flash","badge":"","dot":"#4f8a8b","cells":["high","46.7","20/3","17.8/16.7","45/12","15","3","94%","0.93/1.41","4.00/0.00"]},{"rank":"5","name":"GLM-5.3","badge":"","dot":"#b0674a","cells":["max","43.8","21/3","16.6/0.0","46/0","7","1","98%","0.86/0.09","3.79/0.00"]},{"rank":"6","name":"Grok 4.6 Extra High","badge":"","dot":"#4a6fa5","cells":["xhigh","43.6","20/3","22.1/-1.0","56/0","24","1","98%","5.97/1.25","4.33/0.00"]},{"rank":"7","name":"DeepSeek V4 Flash","badge":"","dot":"#6b8e5a","cells":["max","39.2","21/0","15.2/0.0","43/0","8","1","98%","0.26/0.00","4.07/0.00"]},{"rank":"8","name":"GLM-5.3-Flash","badge":"","dot":"#a05a76","cells":["max","35.9","21/3","15.2/-2.0","42/0","6","1","98%","0.05/0.02","3.88/0.00"]},{"rank":"9","name":"DeepSeek V4.1 Flash（max）","badge":"","dot":"#8a7a3f","cells":["max","35.2","9/0","12.2/0.0","11/0","5","0","100%","0.24/0.00","3.33/0.00"]},{"rank":"10","name":"Muse Spark 1.3 Contributor","badge":"","dot":"#7d6b8f","cells":["xhigh","25.9","7/0","10.1/0.0","4/0","1","0","100%","0.02/0.00","3.71/0.00"]},{"rank":"11","name":"MiMo V2.5 Pro","badge":"","dot":"#b08a3e","cells":["max","22.8","18/0","9.1/0.0","24/0","2","9","73%","0.10/0.00","2.81/0.00"]}]},"2026-W38":{"note":"※ 本期样本 \u003c 5 场，结论打折；主力（≥5 场）第一：K3 方舟 Agent Plan（综合 87.0）","rows":[{"rank":"1","name":"K3","badge":"方舟 Agent Plan","dot":"#6b5b95","cells":["max","87.0","15/1","22.1/33.0","43/4","19","7","86%","1.29/0.09","4.64/5.00"]},{"rank":"2","name":"Grok 4.6 Extra High","badge":"","dot":"#4a6fa5","cells":["xhigh","75.3","15/7","23.5/22.6","45/17","21","4","92%","5.23/2.54","4.50/4.43"]},{"rank":"3","name":"Muse Spark 1.3 Contributor","badge":"","dot":"#7d6b8f","cells":["xhigh","61.7","15/7","17.8/10.1","31/4","10","1","97%","0.03/0.02","4.54/3.71"]},{"rank":"4","name":"DeepSeek V4.1 Flash（max）","badge":"","dot":"#8a7a3f","cells":["max","56.7","15/7","17.2/8.3","32/4","8","2","94%","0.63/0.21","4.46/3.00"]},{"rank":"5","name":"GLM-5.3","badge":"","dot":"#b0674a","cells":["max","55.4","15/7","18.1/11.7","34/7","10","4","89%","0.79/0.30","4.36/3.57"]},{"rank":"6※","name":"Gemini 3.8 Flash","badge":"","dot":"#4f8a8b","cells":["high","46.0","3/7","18.0/16.0","6/11","0","0","100%","0.09/0.18","4.67/3.57"]},{"rank":"7","name":"GLM-5.3-Flash","badge":"","dot":"#a05a76","cells":["max","46.0","15/7","16.4/8.1","31/4","7","3","91%","0.05/0.02","4.15/3.33"]},{"rank":"8","name":"DeepSeek V4 Flash","badge":"","dot":"#6b8e5a","cells":["max","42.8","15/7","15.5/5.0","30/3","7","2","94%","0.26/0.05","4.00/3.25"]},{"rank":"9","name":"MiMo V2.5 Pro","badge":"","dot":"#b08a3e","cells":["max","23.4","14/7","11.1/5.1","20/2","4","10","67%","0.07/0.02","3.54/2.43"]}]}}}},"tones":{"事后审计":"#6b5b95","设计分叉":"#4f8a8b","专责推理":"#b08a3e"}}</script>
+<script id="trend-data" type="application/json">{"weeks":["2026-W37","2026-W38"],"labels":["2026-W37（09-07 → 09-14）","2026-W38（09-14 → 09-16）"],"kinds":{"事后审计":{"每类场次":[46,20],"成立密度（条/次）":[1.57,1.86],"每次花费（$）":[0.4604,0.4777],"假阳率":[0.2089,0.205]},"设计分叉":{"每类场次":[25,16],"成立密度（条/次）":[2.2,2.23],"每次花费（$）":[0.0851,0.0691],"假阳率":[0.0468,0.1082]}},"tones":{"事后审计":"#6b5b95","设计分叉":"#4f8a8b","专责推理":"#b08a3e"}}</script>
 <script src="vendor/uPlot.iife.min.js"></script>
 <script src="trend.js"></script>
+<script src="index.js"></script>
 </body></html>

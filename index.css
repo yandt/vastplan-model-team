@@ -1,0 +1,110 @@
+/* 归档入口页样式：与 report.css 同一套视觉变量；窄屏（手机 → 桌面）都能读。
+   作为归档根共享资产（index.css），改一次所有入口页一起生效。 */
+:root{--bg:#fbfaf8;--card:#fff;--line:#e6e1da;--ink:#2f2c29;--muted:#8c857c;--accent:#8a6f4a;--tone:#8a857c}
+*{box-sizing:border-box}
+body{margin:0;padding:40px 24px 64px;background:var(--bg);color:var(--ink);
+font:14px/1.7 -apple-system,"PingFang SC","Noto Sans CJK SC",Segoe UI,sans-serif}
+main{max-width:1080px;margin:0 auto}
+.kicker{margin:0 0 6px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0 0 6px;font-size:25px;font-weight:650}
+.sub{margin:0 0 22px;color:var(--muted);font-size:12.5px}
+.sub a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* ── 活动类型标签页 ── */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.tab{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);
+padding:6px 14px;border-radius:999px;font-size:13px;cursor:pointer;font-family:inherit}
+.tab:hover{border-color:var(--accent)}
+.tab.on{border-color:var(--tone);color:var(--tone);box-shadow:inset 0 -2px 0 var(--tone)}
+
+/* ── 筛选 ── */
+.controls{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:flex-end;margin:0 0 10px}
+.control{display:flex;flex-direction:column;gap:4px;font-size:11px;color:var(--muted)}
+.control select,.control input{font:inherit;font-size:13px;color:var(--ink);background:var(--card);
+border:1px solid var(--line);border-radius:6px;padding:6px 10px;min-width:130px}
+.control.search input{min-width:200px}
+.meta{margin:0 0 12px;color:var(--muted);font-size:12px}
+
+/* ── 榜单表 ── */
+.board-wrap{margin:0 0 20px}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse}
+th,td{padding:7px 9px;vertical-align:middle;white-space:nowrap}
+th{font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);text-align:left;
+border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg)}
+td{font-size:12.5px;border-bottom:1px solid #f0ede9;font-variant-numeric:tabular-nums}
+th.num,td.num{text-align:right}
+th.on{color:var(--ink);box-shadow:inset 0 -2px 0 var(--accent)}
+td.rank{color:var(--muted);width:30px}
+td.name{font-weight:600}
+td.name .dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px}
+.badge{display:inline-block;margin-left:6px;padding:0 6px;border:1px solid var(--line);border-radius:999px;
+background:#fff;font-size:10px;color:var(--muted);font-weight:400}
+td.num.on{position:relative;font-weight:700}
+.cellbar{position:absolute;right:8px;top:50%;transform:translateY(-50%);height:11px;opacity:.18;border-radius:2px}
+td.num.on>*{position:relative}
+.note{margin:8px 0 0;color:var(--muted);font-size:12px}
+.none{margin:10px 0 0;color:var(--muted);font-size:12.5px}
+
+/* ── 指标对比（横条） ── */
+.chart-card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:14px 16px;margin:0 0 18px}
+.chart-card h3{margin:0 0 10px;font-size:12px;font-weight:600;color:var(--muted)}
+.bar{display:grid;grid-template-columns:220px 1fr 110px;gap:10px;align-items:center;margin:6px 0;font-size:12px}
+.bar .lab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .track{height:7px;background:#efebe5;border-radius:2px;overflow:hidden}
+.bar .track i{display:block;height:7px;border-radius:2px}
+.bar .vals{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* ── 跨周趋势（trend.js 用） ── */
+.trend{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px;margin:0 0 22px;min-width:0}
+.trend-legend{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:0;font-size:12px;color:var(--muted)}
+.trend-legend .lg{display:inline-flex;align-items:center;gap:6px}
+.trend-legend i{width:10px;height:10px;border-radius:2px;flex:none}
+.trend-chart{margin:0;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:12px 14px}
+.trend-chart figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 6px;font-size:12px;color:var(--muted)}
+.trend-title{font-weight:600;color:var(--ink);flex:none}
+.trend-readout{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-variant-numeric:tabular-nums}
+.trend-host{position:relative;min-width:0}
+.trend-note{grid-column:1/-1;margin:0 0 18px;color:var(--muted);font-size:12.5px}
+
+/* ── 历期归档（次要位置） ── */
+h2.sec{margin:30px 0 10px;font-size:15px;font-weight:640;border-top:1px solid var(--ink);padding-top:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:18px 20px;margin:0 0 16px}
+.head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
+.stamp{margin:0;font-size:16px;font-weight:640;font-variant-numeric:tabular-nums}
+.stamp .wk{margin-left:9px;font-size:11.5px;font-weight:400;color:var(--muted)}
+.win{margin:0;color:var(--muted);font-size:12px}
+.kind{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--line)}
+.kind:first-of-type{border-top:0;padding-top:0}
+.kind b{font-weight:600}
+.num{font-variant-numeric:tabular-nums}
+.top{margin:4px 0 0;color:#5b554e;font-size:12.5px}
+.links{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.links a{display:inline-block;padding:3px 11px;border:1px solid var(--line);border-radius:999px;
+color:var(--ink);text-decoration:none;font-size:12.5px;background:#fdfcfa}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.shots{margin:14px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:9px}
+.shots img{width:100%;border:1px solid var(--line);border-radius:6px;display:block}
+footer{margin-top:28px;color:var(--muted);font-size:12px}
+
+/* ── 窄屏：手机 → 平板 ── */
+@media (max-width:900px){
+  body{padding:22px 14px 40px}
+  main{max-width:none}
+  h1{font-size:21px}
+  .sub{margin-bottom:16px}
+  .controls{gap:10px 12px}
+  .control,.control select,.control input{width:100%;min-width:0}
+  .controls .control{flex:1 1 150px}
+  .table-scroll table{min-width:640px}
+  .bar{grid-template-columns:1fr auto;gap:3px 8px}
+  .bar .lab{grid-column:1 / -1}
+  .bar .track{grid-column:1}
+  .bar .vals{grid-column:2}
+  .card{padding:14px 15px}
+  .shots{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+}
+@media (max-width:380px){
+  .bar .track{grid-column:1 / -1}
+}
+@media print{body{padding:0}table{min-width:0}}
