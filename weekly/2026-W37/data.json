@@ -3,16 +3,16 @@
     "label": "2026 年第 37 周",
     "stamp": "2026-W37",
     "window": [
-      "2026-09-13",
+      "2026-09-07",
       "2026-09-14"
     ],
     "prev": [
-      "2026-09-12",
-      "2026-09-13"
+      "2026-08-31",
+      "2026-09-07"
     ],
-    "generated_at": "2026-09-15 10:13",
+    "generated_at": "2026-09-15 10:16",
     "partial": false,
-    "title": "模型团队周报 2026-W37（2026-09-13 → 2026-09-14）"
+    "title": "模型团队周报 2026-W37（2026-09-07 → 2026-09-14）"
   },
   "head": {
     "back": {
@@ -23,88 +23,88 @@
     "h1": "模型团队周报",
     "meta": [
       "2026 年第 37 周（2026-W37）",
-      "本窗 2026-09-13 → 2026-09-14（环比 2026-09-12 → 2026-09-13）",
-      "生成 2026-09-15 10:13"
+      "本窗 2026-09-07 → 2026-09-14（环比 2026-08-31 → 2026-09-07）",
+      "生成 2026-09-15 10:16"
     ]
   },
   "kpis": [
     {
       "label": "场次",
-      "value": "11",
-      "prefix": "上期 8 · ",
+      "value": "71",
+      "prefix": "上期 21 · ",
       "delta": {
-        "text": "▲3",
+        "text": "▲50",
         "cls": "up"
       }
     },
     {
       "label": "已评成功行",
-      "value": "99",
-      "prefix": "上期 72 · ",
+      "value": "486",
+      "prefix": "上期 31 · ",
       "delta": {
-        "text": "▲27",
+        "text": "▲455",
         "cls": "up"
       }
     },
     {
       "label": "成立",
-      "value": "86",
-      "prefix": "上期 132 · ",
+      "value": "886",
+      "prefix": "上期 93 · ",
       "delta": {
-        "text": "▼46",
-        "cls": "down"
+        "text": "▲793",
+        "cls": "up"
       }
     },
     {
       "label": "独有成立",
-      "value": "61",
-      "prefix": "上期 53 · ",
+      "value": "363",
+      "prefix": "上期 36 · ",
       "delta": {
-        "text": "▲8",
+        "text": "▲327",
         "cls": "up"
       }
     },
     {
       "label": "假阳性",
-      "value": "16",
-      "prefix": "上期 9 · ",
+      "value": "158",
+      "prefix": "上期 18 · ",
       "delta": {
-        "text": "▲7",
+        "text": "▲140",
         "cls": "down"
       }
     },
     {
       "label": "花费 $",
-      "value": "27.23",
-      "prefix": "上期 18.84 · ",
+      "value": "165.55",
+      "prefix": "上期 19.50 · ",
       "delta": {
-        "text": "▲8.38",
+        "text": "▲146.05",
         "cls": "down"
       },
-      "suffix": " · 11 行未采集"
+      "suffix": " · 15 行未采集"
     },
     {
       "label": "token 合计",
-      "value": "80.8M",
-      "prefix": "上期 86.8M · ",
+      "value": "642.4M",
+      "prefix": "上期 64.3M · ",
       "delta": {
-        "text": "▼6.0",
-        "cls": "up"
+        "text": "▲578.0",
+        "cls": "down"
       },
-      "suffix": " · 缓存命中 90%"
+      "suffix": " · 缓存命中 92%"
     },
     {
       "label": "每次耗时 分钟",
-      "value": "3.7",
-      "prefix": "上期 4.7 · ",
+      "value": "5.3",
+      "prefix": "上期 5.2 · ",
       "delta": {
-        "text": "▼1.0",
-        "cls": "up"
+        "text": "▲0.2",
+        "cls": "down"
       }
     },
     {
       "label": "覆盖模型",
-      "value": "10",
+      "value": "11",
       "prefix": "本期与上期并集",
       "delta": null
     }
@@ -118,6 +118,11 @@
     {
       "name": "DeepSeek V4.1 Flash",
       "tone": "#8a7a3f",
+      "badge": null
+    },
+    {
+      "name": "Fable 5.1",
+      "tone": "#a45a52",
       "badge": null
     },
     {
@@ -150,7 +155,7 @@
     },
     {
       "name": "K3",
-      "tone": "#a45a52",
+      "tone": "#5c6b7a",
       "badge": {
         "text": "@方舟 Ag...",
         "title": "方舟 Agent Plan"
@@ -213,7 +218,7 @@
   "kinds": [
     {
       "title": "事后审计",
-      "meta": "本期 8 场 · 上期 4 场 · 已评行 72/36 · 平均每次 4.6 分钟 · token 79.3M（缓存命中 90%）· 按综合能力排名",
+      "meta": "本期 46 场 · 上期 14 场 · 已评行 319/15 · 平均每次 7.2 分钟 · token 630.8M（缓存命中 92%）· 按综合能力排名",
       "table": {
         "head": [
           {
@@ -257,49 +262,6 @@
         "rows": [
           {
             "rank": "1",
-            "name": "DeepSeek V4.1 Flash",
-            "dot": "#8a7a3f",
-            "badge": null,
-            "cells": [
-              {
-                "text": "max"
-              },
-              {
-                "text": "78.9",
-                "cls": "score"
-              },
-              {
-                "text": "8/4"
-              },
-              {
-                "text": "6.8/12.5",
-                "delta": {
-                  "text": "-5.8",
-                  "cls": "down"
-                }
-              },
-              {
-                "text": "13/15"
-              },
-              {
-                "text": "7"
-              },
-              {
-                "text": "1"
-              },
-              {
-                "text": "93%"
-              },
-              {
-                "text": "4.42/1.71"
-              },
-              {
-                "text": "1.40"
-              }
-            ]
-          },
-          {
-            "rank": "2",
             "name": "K3",
             "dot": "#6b5b95",
             "badge": {
@@ -311,41 +273,127 @@
                 "text": "max"
               },
               {
-                "text": "66.6",
+                "text": "74.4",
                 "cls": "score"
               },
               {
-                "text": "8/2"
+                "text": "14/4"
               },
               {
-                "text": "4.5/18.0",
+                "text": "6.9/20.8",
                 "delta": {
-                  "text": "-13.5",
+                  "text": "-13.9",
                   "cls": "down"
                 }
               },
               {
-                "text": "10/9"
+                "text": "26/23"
               },
               {
-                "text": "4"
+                "text": "14"
               },
               {
-                "text": "3"
+                "text": "5"
               },
               {
-                "text": "77%"
+                "text": "84%"
               },
               {
-                "text": "5.80/1.62"
+                "text": "14.90/6.38"
               },
               {
-                "text": "1.00"
+                "text": "1.17"
+              }
+            ]
+          },
+          {
+            "rank": "2",
+            "name": "DeepSeek V4.1 Flash",
+            "dot": "#8a7a3f",
+            "badge": null,
+            "cells": [
+              {
+                "text": "max"
+              },
+              {
+                "text": "74.3",
+                "cls": "score"
+              },
+              {
+                "text": "19/0"
+              },
+              {
+                "text": "8.2/0.0",
+                "delta": {
+                  "text": "+8.2",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "46/0"
+              },
+              {
+                "text": "24"
+              },
+              {
+                "text": "6"
+              },
+              {
+                "text": "88%"
+              },
+              {
+                "text": "6.61/0.00"
+              },
+              {
+                "text": "1.66"
               }
             ]
           },
           {
             "rank": "3",
+            "name": "Grok 4.6 Extra High",
+            "dot": "#4a6fa5",
+            "badge": null,
+            "cells": [
+              {
+                "text": "xhigh"
+              },
+              {
+                "text": "71.6",
+                "cls": "score"
+              },
+              {
+                "text": "40/2"
+              },
+              {
+                "text": "7.7/5.0",
+                "delta": {
+                  "text": "+2.7",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "79/2"
+              },
+              {
+                "text": "41"
+              },
+              {
+                "text": "10"
+              },
+              {
+                "text": "89%"
+              },
+              {
+                "text": "48.96/3.77"
+              },
+              {
+                "text": "0.81"
+              }
+            ]
+          },
+          {
+            "rank": "4",
             "name": "Muse Spark 1.3 Contributor",
             "dot": "#7d6b8f",
             "badge": null,
@@ -354,79 +402,36 @@
                 "text": "xhigh"
               },
               {
-                "text": "59.4",
+                "text": "71.6",
                 "cls": "score"
               },
               {
-                "text": "8/4"
+                "text": "14/0"
               },
               {
-                "text": "2.9/10.8",
+                "text": "5.2/0.0",
                 "delta": {
-                  "text": "-7.9",
-                  "cls": "down"
+                  "text": "+5.2",
+                  "cls": "up"
                 }
               },
               {
-                "text": "7/11"
+                "text": "22/0"
+              },
+              {
+                "text": "15"
               },
               {
                 "text": "7"
               },
               {
-                "text": "3"
+                "text": "76%"
               },
               {
-                "text": "70%"
+                "text": "0.12/0.00"
               },
               {
-                "text": "0.06/0.04"
-              },
-              {
-                "text": "1.73"
-              }
-            ]
-          },
-          {
-            "rank": "4",
-            "name": "GLM-5.3-Flash",
-            "dot": "#a05a76",
-            "badge": null,
-            "cells": [
-              {
-                "text": "max"
-              },
-              {
-                "text": "53.1",
-                "cls": "score"
-              },
-              {
-                "text": "8/4"
-              },
-              {
-                "text": "3.8/5.2",
-                "delta": {
-                  "text": "-1.5",
-                  "cls": "down"
-                }
-              },
-              {
-                "text": "7/6"
-              },
-              {
-                "text": "4"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "100%"
-              },
-              {
-                "text": "0.12/0.13"
-              },
-              {
-                "text": "0.34"
+                "text": "2.47"
               }
             ]
           },
@@ -440,79 +445,82 @@
                 "text": "high"
               },
               {
-                "text": "52.3",
+                "text": "64.3",
                 "cls": "score"
               },
               {
-                "text": "8/4"
+                "text": "38/3"
               },
               {
-                "text": "4.1/8.5",
+                "text": "6.5/8.3",
                 "delta": {
-                  "text": "-4.4",
+                  "text": "-1.8",
                   "cls": "down"
                 }
               },
               {
-                "text": "11/10"
+                "text": "86/13"
               },
               {
-                "text": "6"
+                "text": "42"
               },
               {
-                "text": "4"
+                "text": "39"
               },
               {
-                "text": "73%"
+                "text": "69%"
               },
               {
-                "text": "5.97/4.29"
+                "text": "35.10/5.44"
               },
               {
-                "text": "0.70"
+                "text": "0.94"
               }
             ]
           },
           {
             "rank": "6",
-            "name": "MiMo V2.5 Pro",
-            "dot": "#b08a3e",
-            "badge": null,
+            "name": "K3",
+            "dot": "#5c6b7a",
+            "badge": {
+              "text": "@方舟 Ag...",
+              "title": "方舟 Agent Plan"
+            },
             "cells": [
               {
                 "text": "max"
               },
               {
-                "text": "49.6",
+                "text": "61.9",
                 "cls": "score"
               },
               {
-                "text": "8/4"
+                "text": "29/0"
               },
               {
-                "text": "2.5/0.5",
+                "text": "6.0/0.0",
                 "delta": {
-                  "text": "+2.0",
+                  "text": "+6.0",
                   "cls": "up"
                 }
               },
               {
-                "text": "6/2"
+                "text": "52/0"
               },
               {
-                "text": "4"
+                "text": "23"
               },
               {
-                "text": "3"
+                "text": "12"
               },
               {
-                "text": "67%"
+                "text": "81%"
               },
               {
-                "text": "0.25/0.23"
+                "text": "16.65/0.00"
               },
               {
-                "text": "0.59"
+                "text": "0.75"
               }
             ]
           },
@@ -526,79 +534,79 @@
                 "text": "max"
               },
               {
-                "text": "46.5",
+                "text": "58.7",
                 "cls": "score"
               },
               {
-                "text": "8/4"
+                "text": "43/3"
               },
               {
-                "text": "2.5/7.2",
+                "text": "5.2/5.3",
                 "delta": {
-                  "text": "-4.8",
+                  "text": "-0.1",
                   "cls": "down"
                 }
               },
               {
-                "text": "5/10"
+                "text": "79/14"
               },
               {
-                "text": "2"
+                "text": "28"
               },
               {
-                "text": "1"
+                "text": "26"
               },
               {
-                "text": "83%"
+                "text": "75%"
               },
               {
-                "text": "1.64/2.07"
+                "text": "19.56/0.79"
               },
               {
-                "text": "0.48"
+                "text": "0.88"
               }
             ]
           },
           {
             "rank": "8",
-            "name": "Grok 4.6 Extra High",
-            "dot": "#4a6fa5",
+            "name": "GLM-5.3-Flash",
+            "dot": "#a05a76",
             "badge": null,
             "cells": [
               {
-                "text": "xhigh"
+                "text": "max"
               },
               {
-                "text": "37.3",
+                "text": "54.4",
                 "cls": "score"
               },
               {
-                "text": "8/4"
+                "text": "40/3"
               },
               {
-                "text": "2.6/7.5",
+                "text": "5.7/7.7",
                 "delta": {
-                  "text": "-4.9",
+                  "text": "-1.9",
                   "cls": "down"
                 }
               },
               {
-                "text": "4/8"
+                "text": "59/18"
+              },
+              {
+                "text": "24"
               },
               {
                 "text": "4"
               },
               {
-                "text": "1"
+                "text": "94%"
               },
               {
-                "text": "80%"
+                "text": "1.05/0.11"
               },
               {
-                "text": "7.16/4.54"
-              },
-              {
-                "text": "0.21"
+                "text": "0.50"
               }
             ]
           },
@@ -612,41 +620,84 @@
                 "text": "max"
               },
               {
-                "text": "22.5",
+                "text": "44.2",
                 "cls": "score"
               },
               {
-                "text": "8/4"
+                "text": "35/0"
               },
               {
-                "text": "0.0/3.8",
+                "text": "4.4/0.0",
                 "delta": {
-                  "text": "-3.8",
-                  "cls": "down"
+                  "text": "+4.4",
+                  "cls": "up"
                 }
               },
               {
-                "text": "0/4"
+                "text": "50/0"
               },
               {
-                "text": "0"
+                "text": "22"
               },
               {
-                "text": "0"
+                "text": "13"
               },
               {
-                "text": "0%"
+                "text": "79%"
               },
               {
-                "text": "—/0.50"
+                "text": "7.24/0.00"
               },
               {
-                "text": "0.00"
+                "text": "0.56"
+              }
+            ]
+          },
+          {
+            "rank": "10",
+            "name": "MiMo V2.5 Pro",
+            "dot": "#b08a3e",
+            "badge": null,
+            "cells": [
+              {
+                "text": "max"
+              },
+              {
+                "text": "20.6",
+                "cls": "score"
+              },
+              {
+                "text": "35/0"
+              },
+              {
+                "text": "0.8/0.0",
+                "delta": {
+                  "text": "+0.8",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "20/0"
+              },
+              {
+                "text": "9"
+              },
+              {
+                "text": "18"
+              },
+              {
+                "text": "53%"
+              },
+              {
+                "text": "1.16/0.00"
+              },
+              {
+                "text": "0.49"
               }
             ]
           }
         ],
-        "note": "主力（≥5 场）第一：DeepSeek V4.1 Flash（综合 78.9）"
+        "note": "主力（≥5 场）第一：K3@Cursor（综合 74.4）"
       },
       "panels": [
         [
@@ -656,100 +707,111 @@
               {
                 "label": "#1 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
-                "was_pct": 69.4,
-                "now_pct": 37.5,
-                "value": "6.8",
+                "was_pct": 39.6,
+                "now_pct": 39.6,
+                "value": "8.2",
                 "delta": {
-                  "text": "-5.8",
-                  "cls": "down"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#2 K3@Cursor",
+                "label": "#2 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 24.1,
+                "now_pct": 36.9,
+                "value": "7.7",
+                "delta": {
+                  "text": "+2.7",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#3 K3@Cursor",
                 "tone": "#6b5b95",
                 "was_pct": 100.0,
-                "now_pct": 25.0,
-                "value": "4.5",
+                "now_pct": 33.1,
+                "value": "6.9",
                 "delta": {
-                  "text": "-13.5",
+                  "text": "-13.9",
                   "cls": "down"
                 }
               },
               {
-                "label": "#3 Gemini 3.8 Flash",
+                "label": "#4 Gemini 3.8 Flash",
                 "tone": "#4f8a8b",
-                "was_pct": 47.2,
-                "now_pct": 22.9,
-                "value": "4.1",
+                "was_pct": 40.2,
+                "now_pct": 31.6,
+                "value": "6.5",
                 "delta": {
-                  "text": "-4.4",
+                  "text": "-1.8",
                   "cls": "down"
                 }
               },
               {
-                "label": "#4 GLM-5.3-Flash",
+                "label": "#5 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 28.9,
+                "now_pct": 28.9,
+                "value": "6.0",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#6 GLM-5.3-Flash",
                 "tone": "#a05a76",
-                "was_pct": 29.2,
-                "now_pct": 20.8,
-                "value": "3.8",
+                "was_pct": 36.9,
+                "now_pct": 27.6,
+                "value": "5.7",
                 "delta": {
-                  "text": "-1.5",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#5 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 59.7,
-                "now_pct": 16.0,
-                "value": "2.9",
-                "delta": {
-                  "text": "-7.9",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#6 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 41.7,
-                "now_pct": 14.6,
-                "value": "2.6",
-                "delta": {
-                  "text": "-4.9",
+                  "text": "-1.9",
                   "cls": "down"
                 }
               },
               {
                 "label": "#7 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 40.3,
-                "now_pct": 13.9,
-                "value": "2.5",
+                "was_pct": 25.7,
+                "now_pct": 25.3,
+                "value": "5.2",
                 "delta": {
-                  "text": "-4.8",
+                  "text": "-0.1",
                   "cls": "down"
                 }
               },
               {
-                "label": "#8 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 2.8,
-                "now_pct": 13.9,
-                "value": "2.5",
+                "label": "#8 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 25.1,
+                "now_pct": 25.1,
+                "value": "5.2",
                 "delta": {
-                  "text": "+2.0",
-                  "cls": "up"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#9 DeepSeek V4 Flash",
                 "tone": "#6b8e5a",
-                "was_pct": 20.8,
-                "now_pct": 0.0,
-                "value": "0.0",
+                "was_pct": 21.1,
+                "now_pct": 21.1,
+                "value": "4.4",
                 "delta": {
-                  "text": "-3.8",
-                  "cls": "down"
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#10 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 4.0,
+                "now_pct": 4.0,
+                "value": "0.8",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               }
             ]
@@ -760,100 +822,111 @@
               {
                 "label": "#1 GLM-5.3-Flash",
                 "tone": "#a05a76",
+                "was_pct": 81.8,
+                "now_pct": 93.7,
+                "value": "94%",
+                "delta": {
+                  "text": "+12%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#2 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
                 "was_pct": 100.0,
-                "now_pct": 100.0,
-                "value": "100%",
+                "now_pct": 88.8,
+                "value": "89%",
+                "delta": {
+                  "text": "-11%",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#3 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 88.5,
+                "now_pct": 88.5,
+                "value": "88%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
                 }
               },
               {
-                "label": "#2 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
-                "was_pct": 100.0,
-                "now_pct": 92.9,
-                "value": "93%",
-                "delta": {
-                  "text": "-7%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#3 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 100.0,
-                "now_pct": 83.3,
-                "value": "83%",
-                "delta": {
-                  "text": "-17%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#4 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 88.9,
-                "now_pct": 80.0,
-                "value": "80%",
-                "delta": {
-                  "text": "-9%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#5 K3@Cursor",
+                "label": "#4 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 100.0,
-                "now_pct": 76.9,
-                "value": "77%",
+                "was_pct": 92.0,
+                "now_pct": 83.9,
+                "value": "84%",
                 "delta": {
-                  "text": "-23%",
+                  "text": "-8%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#6 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 83.3,
-                "now_pct": 73.3,
-                "value": "73%",
+                "label": "#5 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 81.2,
+                "now_pct": 81.2,
+                "value": "81%",
                 "delta": {
-                  "text": "-10%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#6 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 79.4,
+                "now_pct": 79.4,
+                "value": "79%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#7 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 91.7,
-                "now_pct": 70.0,
-                "value": "70%",
-                "delta": {
-                  "text": "-22%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#8 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 66.7,
-                "now_pct": 66.7,
-                "value": "67%",
+                "was_pct": 75.9,
+                "now_pct": 75.9,
+                "value": "76%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
                 }
               },
               {
-                "label": "#9 DeepSeek V4 Flash",
-                "tone": "#6b8e5a",
-                "was_pct": 100.0,
-                "now_pct": 0.0,
-                "value": "0%",
+                "label": "#8 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 87.5,
+                "now_pct": 75.2,
+                "value": "75%",
                 "delta": {
-                  "text": "-100%",
+                  "text": "-12%",
                   "cls": "down"
+                }
+              },
+              {
+                "label": "#9 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 68.4,
+                "now_pct": 68.8,
+                "value": "69%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#10 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 52.6,
+                "now_pct": 52.6,
+                "value": "53%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               }
             ]
@@ -864,102 +937,113 @@
             "title": "独立 · 独有占比 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 37.5,
-                "now_pct": 100.0,
-                "value": "100%",
-                "delta": {
-                  "text": "+62%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#2 Muse Spark 1.3 Contributor",
+                "label": "#1 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 45.5,
-                "now_pct": 100.0,
-                "value": "100%",
+                "was_pct": 98.0,
+                "now_pct": 98.0,
+                "value": "68%",
                 "delta": {
-                  "text": "+55%",
-                  "cls": "up"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#3 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 0.0,
-                "now_pct": 66.7,
-                "value": "67%",
+                "label": "#2 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 100.0,
+                "now_pct": 77.4,
+                "value": "54%",
                 "delta": {
-                  "text": "+67%",
-                  "cls": "up"
+                  "text": "-16%",
+                  "cls": "down"
                 }
               },
               {
-                "label": "#4 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 16.7,
-                "now_pct": 57.1,
-                "value": "57%",
+                "label": "#3 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 75.0,
+                "now_pct": 75.0,
+                "value": "52%",
                 "delta": {
-                  "text": "+40%",
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#4 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 71.9,
+                "now_pct": 74.6,
+                "value": "52%",
+                "delta": {
+                  "text": "+2%",
                   "cls": "up"
                 }
               },
               {
                 "label": "#5 Gemini 3.8 Flash",
                 "tone": "#4f8a8b",
-                "was_pct": 40.0,
-                "now_pct": 54.5,
-                "value": "55%",
+                "was_pct": 77.4,
+                "now_pct": 70.2,
+                "value": "49%",
                 "delta": {
-                  "text": "+15%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#6 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
-                "was_pct": 40.0,
-                "now_pct": 53.8,
-                "value": "54%",
-                "delta": {
-                  "text": "+14%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#7 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 33.3,
-                "now_pct": 40.0,
-                "value": "40%",
-                "delta": {
-                  "text": "+7%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#8 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 10.0,
-                "now_pct": 40.0,
-                "value": "40%",
-                "delta": {
-                  "text": "+30%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#9 DeepSeek V4 Flash",
-                "tone": "#6b8e5a",
-                "was_pct": 25.0,
-                "now_pct": 0.0,
-                "value": "0%",
-                "delta": {
-                  "text": "-25%",
+                  "text": "-5%",
                   "cls": "down"
+                }
+              },
+              {
+                "label": "#6 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 64.7,
+                "now_pct": 64.7,
+                "value": "45%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#7 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 63.6,
+                "now_pct": 63.6,
+                "value": "44%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#8 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 63.3,
+                "now_pct": 63.3,
+                "value": "44%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#9 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 24.0,
+                "now_pct": 58.5,
+                "value": "41%",
+                "delta": {
+                  "text": "+24%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#10 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 0.0,
+                "now_pct": 50.9,
+                "value": "35%",
+                "delta": {
+                  "text": "+35%",
+                  "cls": "up"
                 }
               }
             ]
@@ -970,100 +1054,111 @@
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 100.0,
-                "now_pct": 43.6,
-                "value": "1.73",
+                "was_pct": 95.0,
+                "now_pct": 95.0,
+                "value": "2.47",
                 "delta": {
-                  "text": "-2.23",
-                  "cls": "down"
+                  "text": "+0.00",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#2 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
-                "was_pct": 40.6,
-                "now_pct": 35.4,
-                "value": "1.40",
+                "was_pct": 64.1,
+                "now_pct": 64.1,
+                "value": "1.66",
                 "delta": {
-                  "text": "-0.21",
-                  "cls": "down"
+                  "text": "+0.00",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#3 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 73.8,
-                "now_pct": 25.4,
-                "value": "1.00",
+                "was_pct": 100.0,
+                "now_pct": 45.1,
+                "value": "1.17",
                 "delta": {
-                  "text": "-1.92",
+                  "text": "-1.42",
                   "cls": "down"
                 }
               },
               {
                 "label": "#4 Gemini 3.8 Flash",
                 "tone": "#4f8a8b",
-                "was_pct": 22.0,
-                "now_pct": 17.8,
-                "value": "0.70",
+                "was_pct": 46.2,
+                "now_pct": 36.3,
+                "value": "0.94",
                 "delta": {
-                  "text": "-0.17",
+                  "text": "-0.26",
                   "cls": "down"
                 }
               },
               {
-                "label": "#5 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 6.9,
-                "now_pct": 15.0,
-                "value": "0.59",
+                "label": "#5 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 50.2,
+                "now_pct": 34.0,
+                "value": "0.88",
                 "delta": {
-                  "text": "+0.32",
+                  "text": "-0.42",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#6 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 20.6,
+                "now_pct": 31.3,
+                "value": "0.81",
+                "delta": {
+                  "text": "+0.28",
                   "cls": "up"
                 }
               },
               {
-                "label": "#6 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 26.3,
-                "now_pct": 12.2,
-                "value": "0.48",
+                "label": "#7 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 29.1,
+                "now_pct": 29.1,
+                "value": "0.75",
                 "delta": {
-                  "text": "-0.56",
-                  "cls": "down"
+                  "text": "+0.00",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#7 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 11.5,
-                "now_pct": 8.6,
-                "value": "0.34",
-                "delta": {
-                  "text": "-0.11",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#8 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 22.6,
-                "now_pct": 5.4,
-                "value": "0.21",
-                "delta": {
-                  "text": "-0.68",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#9 DeepSeek V4 Flash",
+                "label": "#8 DeepSeek V4 Flash",
                 "tone": "#6b8e5a",
-                "was_pct": 25.9,
-                "now_pct": 0.0,
-                "value": "0.00",
+                "was_pct": 21.7,
+                "now_pct": 21.7,
+                "value": "0.56",
                 "delta": {
-                  "text": "-1.02",
+                  "text": "+0.00",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#9 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 41.5,
+                "now_pct": 19.3,
+                "value": "0.50",
+                "delta": {
+                  "text": "-0.57",
                   "cls": "down"
+                }
+              },
+              {
+                "label": "#10 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 18.9,
+                "now_pct": 18.9,
+                "value": "0.49",
+                "delta": {
+                  "text": "+0.00",
+                  "cls": "flat"
                 }
               }
             ]
@@ -1074,102 +1169,113 @@
             "title": "覆盖 · 重要性加权占参与轮次 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
-                "was_pct": 73.7,
-                "now_pct": 95.3,
-                "value": "21%",
+                "label": "#1 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 57.6,
+                "now_pct": 47.4,
+                "value": "19%",
                 "delta": {
-                  "text": "+5%",
-                  "cls": "up"
+                  "text": "-4%",
+                  "cls": "down"
                 }
               },
               {
                 "label": "#2 K3@Cursor",
                 "tone": "#6b5b95",
                 "was_pct": 100.0,
-                "now_pct": 82.0,
-                "value": "18%",
+                "now_pct": 42.6,
+                "value": "17%",
                 "delta": {
-                  "text": "-4%",
+                  "text": "-23%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#3 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 62.0,
-                "now_pct": 73.2,
+                "label": "#3 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 67.8,
+                "now_pct": 41.5,
                 "value": "16%",
                 "delta": {
-                  "text": "+2%",
-                  "cls": "up"
+                  "text": "-10%",
+                  "cls": "down"
                 }
               },
               {
-                "label": "#4 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 36.8,
-                "now_pct": 48.8,
-                "value": "11%",
+                "label": "#4 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 40.3,
+                "now_pct": 40.3,
+                "value": "16%",
                 "delta": {
-                  "text": "+3%",
-                  "cls": "up"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#5 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 9.7,
-                "now_pct": 46.6,
-                "value": "10%",
-                "delta": {
-                  "text": "+8%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#6 GLM-5.3",
+                "label": "#5 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 52.3,
-                "now_pct": 42.1,
-                "value": "9%",
+                "was_pct": 43.7,
+                "now_pct": 38.8,
+                "value": "15%",
                 "delta": {
                   "text": "-2%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#7 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 69.8,
-                "now_pct": 39.9,
-                "value": "9%",
+                "label": "#6 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 37.5,
+                "now_pct": 37.5,
+                "value": "15%",
                 "delta": {
-                  "text": "-6%",
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#7 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 57.6,
+                "now_pct": 32.5,
+                "value": "13%",
+                "delta": {
+                  "text": "-10%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#8 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 52.3,
-                "now_pct": 35.5,
-                "value": "8%",
+                "label": "#8 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 31.0,
+                "now_pct": 31.0,
+                "value": "12%",
                 "delta": {
-                  "text": "-4%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#9 DeepSeek V4 Flash",
                 "tone": "#6b8e5a",
-                "was_pct": 25.2,
-                "now_pct": 0.0,
-                "value": "0%",
+                "was_pct": 29.4,
+                "now_pct": 29.4,
+                "value": "12%",
                 "delta": {
-                  "text": "-5%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#10 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 12.8,
+                "now_pct": 12.8,
+                "value": "5%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               }
             ]
@@ -1182,81 +1288,90 @@
                 "tone": "#8a7a3f",
                 "was_pct": 0.0,
                 "now_pct": 100.0,
-                "value": "1.62",
-                "bad_pct": 7.7,
-                "bad_text": "0.12"
+                "value": "2.42",
+                "bad_pct": 13.0,
+                "bad_text": "0.32"
               },
               {
                 "label": "#2 Gemini 3.8 Flash",
                 "tone": "#4f8a8b",
                 "was_pct": 0.0,
-                "now_pct": 84.6,
-                "value": "1.38",
-                "bad_pct": 30.8,
+                "now_pct": 88.8,
+                "value": "2.15",
+                "bad_pct": 40.3,
+                "bad_text": "0.97"
+              },
+              {
+                "label": "#3 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 0.0,
+                "now_pct": 77.7,
+                "value": "1.88",
+                "bad_pct": 9.8,
+                "bad_text": "0.24"
+              },
+              {
+                "label": "#4 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 0.0,
+                "now_pct": 72.5,
+                "value": "1.76",
+                "bad_pct": 23.9,
+                "bad_text": "0.58"
+              },
+              {
+                "label": "#5 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 0.0,
+                "now_pct": 71.6,
+                "value": "1.73",
+                "bad_pct": 13.8,
+                "bad_text": "0.33"
+              },
+              {
+                "label": "#6 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 0.0,
+                "now_pct": 71.6,
+                "value": "1.73",
+                "bad_pct": 16.5,
+                "bad_text": "0.40"
+              },
+              {
+                "label": "#7 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 0.0,
+                "now_pct": 64.9,
+                "value": "1.57",
+                "bad_pct": 20.7,
                 "bad_text": "0.50"
               },
               {
-                "label": "#3 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 0.0,
-                "now_pct": 76.9,
-                "value": "1.25",
-                "bad_pct": 23.1,
-                "bad_text": "0.38"
-              },
-              {
-                "label": "#4 GLM-5.3-Flash",
+                "label": "#8 GLM-5.3-Flash",
                 "tone": "#a05a76",
                 "was_pct": 0.0,
-                "now_pct": 53.8,
-                "value": "0.88",
-                "bad_pct": 0.0,
-                "bad_text": "0.00"
-              },
-              {
-                "label": "#5 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 0.0,
-                "now_pct": 53.8,
-                "value": "0.88",
-                "bad_pct": 23.1,
-                "bad_text": "0.38"
-              },
-              {
-                "label": "#6 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 0.0,
-                "now_pct": 46.2,
-                "value": "0.75",
-                "bad_pct": 23.1,
-                "bad_text": "0.38"
-              },
-              {
-                "label": "#7 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 0.0,
-                "now_pct": 38.5,
-                "value": "0.62",
-                "bad_pct": 7.7,
-                "bad_text": "0.12"
-              },
-              {
-                "label": "#8 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 0.0,
-                "now_pct": 30.8,
-                "value": "0.50",
-                "bad_pct": 7.7,
-                "bad_text": "0.12"
+                "now_pct": 60.9,
+                "value": "1.48",
+                "bad_pct": 4.1,
+                "bad_text": "0.10"
               },
               {
                 "label": "#9 DeepSeek V4 Flash",
                 "tone": "#6b8e5a",
                 "was_pct": 0.0,
-                "now_pct": 0.0,
-                "value": "0.00",
-                "bad_pct": 0.0,
-                "bad_text": "0.00"
+                "now_pct": 55.8,
+                "value": "1.35",
+                "bad_pct": 14.5,
+                "bad_text": "0.35"
+              },
+              {
+                "label": "#10 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 0.0,
+                "now_pct": 22.3,
+                "value": "0.54",
+                "bad_pct": 20.1,
+                "bad_text": "0.49"
               }
             ],
             "legend": [
@@ -1274,96 +1389,112 @@
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 1.0,
-                "now_pct": 0.2,
+                "was_pct": 0.0,
+                "now_pct": 0.1,
                 "value": "$0.01",
                 "delta": {
-                  "text": "-$0.04",
-                  "cls": "down"
+                  "text": "+$0.01",
+                  "cls": "up"
                 }
               },
               {
                 "label": "#2 GLM-5.3-Flash",
                 "tone": "#a05a76",
-                "was_pct": 2.8,
-                "now_pct": 0.3,
-                "value": "$0.01",
+                "was_pct": 1.7,
+                "now_pct": 0.4,
+                "value": "$0.03",
                 "delta": {
-                  "text": "-$0.11",
+                  "text": "-$0.08",
                   "cls": "down"
                 }
               },
               {
                 "label": "#3 MiMo V2.5 Pro",
                 "tone": "#b08a3e",
-                "was_pct": 5.1,
-                "now_pct": 0.7,
+                "was_pct": 0.0,
+                "now_pct": 0.5,
                 "value": "$0.03",
                 "delta": {
-                  "text": "-$0.20",
-                  "cls": "down"
+                  "text": "+$0.03",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#4 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 45.6,
-                "now_pct": 4.5,
+                "label": "#4 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 0.0,
+                "now_pct": 3.1,
                 "value": "$0.20",
                 "delta": {
-                  "text": "-$1.87",
-                  "cls": "down"
+                  "text": "+$0.20",
+                  "cls": "up"
                 }
               },
               {
                 "label": "#5 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
-                "was_pct": 37.6,
-                "now_pct": 12.2,
+                "was_pct": 0.0,
+                "now_pct": 5.5,
+                "value": "$0.35",
+                "delta": {
+                  "text": "+$0.35",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#6 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 12.3,
+                "now_pct": 6.8,
+                "value": "$0.43",
+                "delta": {
+                  "text": "-$0.35",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#7 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 0.0,
+                "now_pct": 8.7,
                 "value": "$0.55",
                 "delta": {
-                  "text": "-$1.15",
-                  "cls": "down"
+                  "text": "+$0.55",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#6 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 35.7,
-                "now_pct": 16.0,
-                "value": "$0.73",
-                "delta": {
-                  "text": "-$0.89",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#7 Gemini 3.8 Flash",
+                "label": "#8 Gemini 3.8 Flash",
                 "tone": "#4f8a8b",
-                "was_pct": 94.6,
-                "now_pct": 16.4,
-                "value": "$0.75",
+                "was_pct": 85.4,
+                "now_pct": 13.8,
+                "value": "$0.88",
                 "delta": {
-                  "text": "-$3.55",
+                  "text": "-$4.57",
                   "cls": "down"
                 }
               },
               {
-                "label": "#8 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
+                "label": "#9 K3@Cursor",
+                "tone": "#6b5b95",
                 "was_pct": 100.0,
-                "now_pct": 19.7,
-                "value": "$0.90",
+                "now_pct": 15.6,
+                "value": "$0.99",
                 "delta": {
-                  "text": "-$3.64",
+                  "text": "-$5.38",
                   "cls": "down"
                 }
-              }
-            ],
-            "legend": [
+              },
               {
-                "text": "未采集金额：DeepSeek V4 Flash（这批调用缺金额数据，不参与花费排名，不当 0）",
-                "tone": null
+                "label": "#10 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 59.1,
+                "now_pct": 18.3,
+                "value": "$1.17",
+                "delta": {
+                  "text": "-$2.60",
+                  "cls": "down"
+                }
               }
             ]
           },
@@ -1373,96 +1504,112 @@
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 1.0,
-                "now_pct": 0.2,
+                "was_pct": 0.0,
+                "now_pct": 0.1,
                 "value": "$0.01",
                 "delta": {
-                  "text": "-$0.04",
-                  "cls": "down"
+                  "text": "+$0.01",
+                  "cls": "up"
                 }
               },
               {
                 "label": "#2 GLM-5.3-Flash",
                 "tone": "#a05a76",
-                "was_pct": 2.8,
-                "now_pct": 0.4,
+                "was_pct": 1.7,
+                "now_pct": 0.3,
                 "value": "$0.02",
                 "delta": {
-                  "text": "-$0.11",
+                  "text": "-$0.09",
                   "cls": "down"
                 }
               },
               {
                 "label": "#3 MiMo V2.5 Pro",
                 "tone": "#b08a3e",
-                "was_pct": 5.1,
+                "was_pct": 0.0,
                 "now_pct": 0.9,
-                "value": "$0.04",
+                "value": "$0.06",
                 "delta": {
-                  "text": "-$0.19",
-                  "cls": "down"
+                  "text": "+$0.06",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#4 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 45.6,
-                "now_pct": 7.2,
-                "value": "$0.33",
-                "delta": {
-                  "text": "-$1.74",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#5 DeepSeek V4.1 Flash",
+                "label": "#4 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
-                "was_pct": 37.6,
-                "now_pct": 7.5,
-                "value": "$0.34",
+                "was_pct": 0.0,
+                "now_pct": 2.3,
+                "value": "$0.14",
                 "delta": {
-                  "text": "-$1.37",
+                  "text": "+$0.14",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#5 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 0.0,
+                "now_pct": 2.3,
+                "value": "$0.14",
+                "delta": {
+                  "text": "+$0.14",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#6 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 12.3,
+                "now_pct": 3.9,
+                "value": "$0.25",
+                "delta": {
+                  "text": "-$0.54",
                   "cls": "down"
                 }
               },
               {
-                "label": "#6 Gemini 3.8 Flash",
+                "label": "#7 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 0.0,
+                "now_pct": 5.0,
+                "value": "$0.32",
+                "delta": {
+                  "text": "+$0.32",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#8 Gemini 3.8 Flash",
                 "tone": "#4f8a8b",
-                "was_pct": 94.6,
-                "now_pct": 12.0,
-                "value": "$0.54",
+                "was_pct": 85.4,
+                "now_pct": 6.4,
+                "value": "$0.41",
                 "delta": {
-                  "text": "-$3.75",
+                  "text": "-$5.03",
                   "cls": "down"
                 }
               },
               {
-                "label": "#7 K3@Cursor",
+                "label": "#9 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 35.7,
-                "now_pct": 12.8,
-                "value": "$0.58",
+                "was_pct": 100.0,
+                "now_pct": 9.0,
+                "value": "$0.57",
                 "delta": {
-                  "text": "-$1.04",
+                  "text": "-$5.80",
                   "cls": "down"
                 }
               },
               {
-                "label": "#8 Grok 4.6 Extra High",
+                "label": "#10 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
-                "was_pct": 100.0,
-                "now_pct": 39.5,
-                "value": "$1.79",
+                "was_pct": 59.1,
+                "now_pct": 9.7,
+                "value": "$0.62",
                 "delta": {
-                  "text": "-$2.75",
+                  "text": "-$3.15",
                   "cls": "down"
                 }
-              }
-            ],
-            "legend": [
-              {
-                "text": "未采集金额：DeepSeek V4 Flash（这批调用缺金额数据，不参与花费排名，不当 0）",
-                "tone": null
               }
             ]
           }
@@ -1472,101 +1619,112 @@
             "title": "执行时间 · 平均每次分钟 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 DeepSeek V4 Flash",
-                "tone": "#6b8e5a",
-                "was_pct": 50.3,
-                "now_pct": 2.6,
-                "value": "0.3",
-                "delta": {
-                  "text": "-5.2",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#2 Muse Spark 1.3 Contributor",
+                "label": "#1 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 23.0,
-                "now_pct": 14.3,
-                "value": "1.6",
+                "was_pct": 19.6,
+                "now_pct": 19.6,
+                "value": "1.9",
                 "delta": {
-                  "text": "-1.0",
-                  "cls": "down"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#3 K3@Cursor",
+                "label": "#2 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 47.0,
-                "now_pct": 33.2,
-                "value": "3.7",
+                "was_pct": 65.4,
+                "now_pct": 49.9,
+                "value": "4.9",
                 "delta": {
                   "text": "-1.5",
                   "cls": "down"
                 }
               },
               {
+                "label": "#3 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 52.5,
+                "now_pct": 52.5,
+                "value": "5.1",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
                 "label": "#4 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 61.8,
-                "now_pct": 35.5,
-                "value": "3.9",
+                "was_pct": 63.4,
+                "now_pct": 67.8,
+                "value": "6.6",
                 "delta": {
-                  "text": "-2.9",
-                  "cls": "down"
+                  "text": "+0.4",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#5 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 89.7,
-                "now_pct": 52.9,
-                "value": "5.8",
-                "delta": {
-                  "text": "-4.0",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#6 DeepSeek V4.1 Flash",
+                "label": "#5 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
-                "was_pct": 68.1,
-                "now_pct": 53.9,
-                "value": "5.9",
+                "was_pct": 70.7,
+                "now_pct": 70.7,
+                "value": "6.9",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#6 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 75.9,
+                "now_pct": 75.9,
+                "value": "7.4",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#7 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 98.8,
+                "now_pct": 82.1,
+                "value": "8.0",
                 "delta": {
                   "text": "-1.6",
                   "cls": "down"
                 }
               },
               {
-                "label": "#7 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 89.3,
-                "now_pct": 56.1,
-                "value": "6.2",
-                "delta": {
-                  "text": "-3.6",
-                  "cls": "down"
-                }
-              },
-              {
                 "label": "#8 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
-                "was_pct": 65.9,
-                "now_pct": 60.9,
-                "value": "6.7",
+                "was_pct": 89.3,
+                "now_pct": 84.9,
+                "value": "8.3",
                 "delta": {
-                  "text": "-0.6",
+                  "text": "-0.4",
                   "cls": "down"
                 }
               },
               {
-                "label": "#9 GLM-5.3-Flash",
+                "label": "#9 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 86.6,
+                "now_pct": 86.6,
+                "value": "8.4",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#10 GLM-5.3-Flash",
                 "tone": "#a05a76",
                 "was_pct": 100.0,
-                "now_pct": 66.2,
-                "value": "7.3",
+                "now_pct": 96.6,
+                "value": "9.4",
                 "delta": {
-                  "text": "-3.7",
+                  "text": "-0.3",
                   "cls": "down"
                 }
               }
@@ -1576,91 +1734,113 @@
             "title": "生成速度 · 每秒 token（输出） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 71.6,
-                "now_pct": 81.8,
-                "value": "94.1",
+                "label": "#1 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 93.9,
+                "now_pct": 93.9,
+                "value": "90.6",
                 "delta": {
-                  "text": "+11.7",
-                  "cls": "up"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#2 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 76.2,
-                "now_pct": 79.5,
-                "value": "91.4",
+                "was_pct": 93.0,
+                "now_pct": 93.0,
+                "value": "89.8",
                 "delta": {
-                  "text": "+3.7",
-                  "cls": "up"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#3 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
+                "label": "#3 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
                 "was_pct": 100.0,
-                "now_pct": 72.1,
-                "value": "82.9",
+                "now_pct": 92.6,
+                "value": "89.4",
                 "delta": {
-                  "text": "-32.1",
+                  "text": "-7.1",
                   "cls": "down"
                 }
               },
               {
                 "label": "#4 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 54.0,
-                "now_pct": 64.0,
-                "value": "73.6",
+                "was_pct": 78.6,
+                "now_pct": 70.9,
+                "value": "68.4",
                 "delta": {
-                  "text": "+11.6",
-                  "cls": "up"
+                  "text": "-7.5",
+                  "cls": "down"
                 }
               },
               {
-                "label": "#5 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 58.2,
-                "now_pct": 54.7,
-                "value": "63.0",
+                "label": "#5 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 65.9,
+                "now_pct": 65.9,
+                "value": "63.6",
                 "delta": {
-                  "text": "-4.0",
-                  "cls": "down"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#6 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
-                "was_pct": 50.9,
-                "now_pct": 50.0,
-                "value": "57.5",
+                "was_pct": 55.1,
+                "now_pct": 54.5,
+                "value": "52.7",
                 "delta": {
-                  "text": "-1.1",
+                  "text": "-0.5",
                   "cls": "down"
                 }
               },
               {
-                "label": "#7 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 40.6,
-                "now_pct": 46.7,
-                "value": "53.7",
+                "label": "#7 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 52.4,
+                "now_pct": 52.4,
+                "value": "50.6",
                 "delta": {
-                  "text": "+7.0",
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#8 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 36.8,
+                "now_pct": 44.5,
+                "value": "43.0",
+                "delta": {
+                  "text": "+7.5",
                   "cls": "up"
                 }
               },
               {
-                "label": "#8 GLM-5.3-Flash",
+                "label": "#9 GLM-5.3-Flash",
                 "tone": "#a05a76",
-                "was_pct": 24.0,
-                "now_pct": 26.5,
-                "value": "30.5",
+                "was_pct": 43.5,
+                "now_pct": 31.9,
+                "value": "30.8",
                 "delta": {
-                  "text": "+2.9",
-                  "cls": "up"
+                  "text": "-11.2",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#10 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 27.3,
+                "now_pct": 27.3,
+                "value": "26.3",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               }
             ]
@@ -1673,89 +1853,111 @@
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 6.8,
-                "now_pct": 11.3,
-                "value": "340.2",
+                "was_pct": 9.1,
+                "now_pct": 9.1,
+                "value": "251.6",
                 "delta": {
-                  "text": "+136.7",
-                  "cls": "up"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#2 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 37.1,
-                "now_pct": 15.3,
-                "value": "458.1",
+                "label": "#2 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 15.4,
+                "now_pct": 15.4,
+                "value": "423.6",
                 "delta": {
-                  "text": "-655.2",
-                  "cls": "down"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#3 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 33.6,
-                "now_pct": 21.3,
-                "value": "639.6",
-                "delta": {
-                  "text": "-367.9",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#4 GLM-5.3",
+                "label": "#3 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 18.4,
-                "now_pct": 22.6,
-                "value": "676.5",
+                "was_pct": 5.1,
+                "now_pct": 23.6,
+                "value": "650.3",
                 "delta": {
-                  "text": "+123.9",
+                  "text": "+511.1",
                   "cls": "up"
                 }
               },
               {
-                "label": "#5 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 7.7,
-                "now_pct": 25.1,
-                "value": "753.3",
-                "delta": {
-                  "text": "+521.1",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#6 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
-                "was_pct": 53.9,
-                "now_pct": 49.4,
-                "value": "1,481.4",
-                "delta": {
-                  "text": "-134.7",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#7 Grok 4.6 Extra High",
+                "label": "#4 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
-                "was_pct": 23.9,
-                "now_pct": 76.8,
-                "value": "2,301.1",
+                "was_pct": 100.0,
+                "now_pct": 28.4,
+                "value": "780.8",
                 "delta": {
-                  "text": "+1585.2",
+                  "text": "-1971.1",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#5 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 10.4,
+                "now_pct": 30.0,
+                "value": "826.0",
+                "delta": {
+                  "text": "+540.8",
                   "cls": "up"
                 }
               },
               {
-                "label": "#8 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 100.0,
-                "now_pct": 92.0,
-                "value": "2,757.6",
+                "label": "#6 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 17.6,
+                "now_pct": 30.2,
+                "value": "830.4",
                 "delta": {
-                  "text": "-239.8",
-                  "cls": "down"
+                  "text": "+347.0",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#7 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 34.8,
+                "now_pct": 34.8,
+                "value": "958.1",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#8 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 65.4,
+                "now_pct": 65.4,
+                "value": "1,799.1",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#9 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 66.3,
+                "now_pct": 66.3,
+                "value": "1,823.6",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#10 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 95.4,
+                "now_pct": 95.8,
+                "value": "2,637.4",
+                "delta": {
+                  "text": "+10.8",
+                  "cls": "up"
                 }
               }
             ]
@@ -1767,99 +1969,110 @@
                 "label": "#1 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
                 "was_pct": 100.0,
-                "now_pct": 98.8,
-                "value": "97%",
+                "now_pct": 100.0,
+                "value": "98%",
                 "delta": {
-                  "text": "-1%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#2 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 91.9,
-                "now_pct": 94.1,
-                "value": "92%",
-                "delta": {
-                  "text": "+2%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#3 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 93.9,
-                "now_pct": 93.4,
-                "value": "92%",
-                "delta": {
-                  "text": "-1%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#4 GLM-5.3",
+                "label": "#2 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 96.6,
-                "now_pct": 92.4,
-                "value": "91%",
+                "was_pct": 96.7,
+                "now_pct": 96.8,
+                "value": "95%",
                 "delta": {
-                  "text": "-4%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#5 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 96.3,
-                "now_pct": 92.0,
-                "value": "90%",
-                "delta": {
-                  "text": "-4%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#6 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 88.3,
-                "now_pct": 90.1,
-                "value": "89%",
-                "delta": {
-                  "text": "+2%",
+                  "text": "+0%",
                   "cls": "up"
                 }
               },
               {
-                "label": "#7 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 95.0,
-                "now_pct": 88.4,
-                "value": "87%",
+                "label": "#3 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 97.2,
+                "now_pct": 96.8,
+                "value": "95%",
                 "delta": {
-                  "text": "-7%",
+                  "text": "-0%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#8 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 87.9,
-                "now_pct": 84.4,
-                "value": "83%",
+                "label": "#4 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 97.6,
+                "now_pct": 95.0,
+                "value": "93%",
                 "delta": {
                   "text": "-3%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#9 DeepSeek V4 Flash",
-                "tone": "#6b8e5a",
-                "was_pct": 86.1,
-                "now_pct": 0.0,
-                "value": "0%",
+                "label": "#5 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 94.9,
+                "now_pct": 94.9,
+                "value": "93%",
                 "delta": {
-                  "text": "-85%",
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#6 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 94.6,
+                "now_pct": 94.6,
+                "value": "93%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#7 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 92.1,
+                "now_pct": 94.2,
+                "value": "92%",
+                "delta": {
+                  "text": "+2%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#8 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 89.7,
+                "now_pct": 89.7,
+                "value": "88%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#9 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 93.3,
+                "now_pct": 88.6,
+                "value": "87%",
+                "delta": {
+                  "text": "-5%",
                   "cls": "down"
+                }
+              },
+              {
+                "label": "#10 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 86.1,
+                "now_pct": 86.1,
+                "value": "84%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               }
             ]
@@ -1867,49 +2080,49 @@
         ],
         [
           {
-            "title": "成立重要性（本期合计 63）",
+            "title": "成立重要性（本期合计 519）",
             "wide": true,
             "segments": [
               {
-                "pct": 15.87,
+                "pct": 16.76,
                 "tone": "#7f2d2d"
               },
               {
-                "pct": 25.4,
+                "pct": 24.86,
                 "tone": "#a8493f"
               },
               {
-                "pct": 38.1,
+                "pct": 29.67,
                 "tone": "#c2764f"
               },
               {
-                "pct": 15.87,
+                "pct": 24.66,
                 "tone": "#cfa86a"
               },
               {
-                "pct": 4.76,
+                "pct": 4.05,
                 "tone": "#b9b3a9"
               }
             ],
             "legend": [
               {
-                "text": "重要性5 10",
+                "text": "重要性5 87",
                 "tone": "#7f2d2d"
               },
               {
-                "text": "重要性4 16",
+                "text": "重要性4 129",
                 "tone": "#a8493f"
               },
               {
-                "text": "重要性3 24",
+                "text": "重要性3 154",
                 "tone": "#c2764f"
               },
               {
-                "text": "重要性2 10",
+                "text": "重要性2 128",
                 "tone": "#cfa86a"
               },
               {
-                "text": "重要性1 3",
+                "text": "重要性1 21",
                 "tone": "#b9b3a9"
               }
             ]
@@ -1925,77 +2138,87 @@
         ],
         "rows": [
           {
-            "rank": "#1 DeepSeek V4.1 Flash",
-            "badge": null,
-            "score": "78.9",
-            "pros": "产出最高（均质量 6.8）、抓得最全（重要性加权占参与轮次 21%）、缓存命中最高（97%）",
-            "cons": "时间相对最弱（每次 5.9 分钟）"
-          },
-          {
-            "rank": "#2 K3",
+            "rank": "#1 K3",
             "badge": {
               "text": "@Curso...",
               "title": "Cursor"
             },
-            "score": "66.6",
-            "pros": "覆盖相对最好（占参与轮次 18%）",
-            "cons": "花费相对最弱（每次 $0.73）"
+            "score": "74.4",
+            "pros": "覆盖相对最好（占参与轮次 17%）",
+            "cons": "花费相对最弱（每次 $0.99）"
           },
           {
-            "rank": "#3 Muse Spark 1.3 Contributor",
+            "rank": "#2 DeepSeek V4.1 Flash",
             "badge": null,
-            "score": "59.4",
-            "pros": "效率分最高（成立重要性÷耗时 1.73）、每条成立最便宜（$0.01）、每条成立最省 token（340 千）",
-            "cons": "覆盖相对最弱（占参与轮次 9%）"
+            "score": "74.3",
+            "pros": "产出最高（均质量 8.2）、缓存命中最高（98%）",
+            "cons": "无突出短板"
           },
           {
-            "rank": "#4 GLM-5.3-Flash",
+            "rank": "#3 Grok 4.6 Extra High",
             "badge": null,
-            "score": "53.1",
-            "pros": "最准（100%）",
-            "cons": "最慢（每次 7.3 分钟，档位 max）"
+            "score": "71.6",
+            "pros": "效果相对最好（均质量 7.7）",
+            "cons": "每条成立最贵（$0.62）"
+          },
+          {
+            "rank": "#4 Muse Spark 1.3 Contributor",
+            "badge": null,
+            "score": "71.6",
+            "pros": "效率分最高（成立重要性÷耗时 2.47）、每条成立最便宜（$0.01）、最快（每次 1.9 分钟，档位 xhigh）、每条成立最省 token（252 千）",
+            "cons": "覆盖相对最弱（占参与轮次 12%）"
           },
           {
             "rank": "#5 Gemini 3.8 Flash",
             "badge": null,
-            "score": "52.3",
-            "pros": "覆盖相对最好（占参与轮次 16%）",
-            "cons": "每条成立最耗 token（2,758 千）"
+            "score": "64.3",
+            "pros": "抓得最全（重要性加权占参与轮次 19%）",
+            "cons": "每条成立最耗 token（2,637 千）"
           },
           {
-            "rank": "#6 MiMo V2.5 Pro",
-            "badge": null,
-            "score": "49.6",
-            "pros": "花费相对最好（每次 $0.03）",
-            "cons": "无突出短板"
+            "rank": "#6 K3",
+            "badge": {
+              "text": "@方舟 Ag...",
+              "title": "方舟 Agent Plan"
+            },
+            "score": "61.9",
+            "pros": "token相对最好（每条成立 424 千）",
+            "cons": "时间相对最弱（每次 8.4 分钟）"
           },
           {
             "rank": "#7 GLM-5.3",
             "badge": null,
-            "score": "46.5",
-            "pros": "花费相对最好（每次 $0.20）",
-            "cons": "效果相对最弱（均质量 2.5）"
+            "score": "58.7",
+            "pros": "token相对最好（每条成立 650 千）",
+            "cons": "独立相对最弱（独有占比 35%）"
           },
           {
-            "rank": "#8 Grok 4.6 Extra High",
+            "rank": "#8 GLM-5.3-Flash",
             "badge": null,
-            "score": "37.3",
-            "pros": "独立相对最好（独有占比 100%）",
-            "cons": "每条成立最贵（$1.79）"
+            "score": "54.4",
+            "pros": "最准（94%）",
+            "cons": "最慢（每次 9.4 分钟，档位 max）"
           },
           {
             "rank": "#9 DeepSeek V4 Flash",
             "badge": null,
-            "score": "22.5",
-            "pros": "最快（每次 0.3 分钟，档位 max）",
-            "cons": "花费未采集（该轴按中位记）、假阳最多（每次 0.00 条，准确率 0%）、均质量垫底（0.0）"
+            "score": "44.2",
+            "pros": "花费相对最好（每次 $0.20）",
+            "cons": "独立相对最弱（独有占比 44%）"
+          },
+          {
+            "rank": "#10 MiMo V2.5 Pro",
+            "badge": null,
+            "score": "20.6",
+            "pros": "花费相对最好（每次 $0.03）",
+            "cons": "假阳最多（每次 0.49 条，准确率 53%）、均质量垫底（0.8）"
           }
         ]
       }
     },
     {
       "title": "设计分叉",
-      "meta": "本期 3 场 · 上期 4 场 · 已评行 27/36 · 平均每次 1.4 分钟 · token 1.5M（缓存命中 59%）· 按综合能力排名",
+      "meta": "本期 25 场 · 上期 7 场 · 已评行 167/16 · 平均每次 1.8 分钟 · token 11.6M（缓存命中 65%）· 按综合能力排名",
       "table": {
         "head": [
           {
@@ -2038,7 +2261,7 @@
         ],
         "rows": [
           {
-            "rank": "1※",
+            "rank": "1",
             "name": "K3",
             "dot": "#6b5b95",
             "badge": {
@@ -2050,24 +2273,67 @@
                 "text": "max"
               },
               {
-                "text": "93.9",
+                "text": "87.5",
                 "cls": "score"
               },
               {
-                "text": "3/3"
+                "text": "6/4"
               },
               {
-                "text": "32.7/18.7",
+                "text": "25.7/14.0",
                 "delta": {
-                  "text": "+14.0",
+                  "text": "+11.7",
                   "cls": "up"
                 }
               },
               {
-                "text": "12/7"
+                "text": "19/11"
               },
               {
-                "text": "12"
+                "text": "16"
+              },
+              {
+                "text": "1"
+              },
+              {
+                "text": "95%"
+              },
+              {
+                "text": "0.89/1.02"
+              },
+              {
+                "text": "4.17/0.00"
+              }
+            ]
+          },
+          {
+            "rank": "2",
+            "name": "Fable 5.1",
+            "dot": "#a45a52",
+            "badge": null,
+            "cells": [
+              {
+                "text": "high/medium"
+              },
+              {
+                "text": "78.5",
+                "cls": "score"
+              },
+              {
+                "text": "6/0"
+              },
+              {
+                "text": "29.0/0.0",
+                "delta": {
+                  "text": "+29.0",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "22/0"
+              },
+              {
+                "text": "13"
               },
               {
                 "text": "0"
@@ -2076,15 +2342,61 @@
                 "text": "100%"
               },
               {
-                "text": "0.37/0.51"
+                "text": "3.63/0.00"
               },
               {
-                "text": "4.33/4.00"
+                "text": "4.33/0.00"
               }
             ]
           },
           {
-            "rank": "2※",
+            "rank": "3",
+            "name": "K3",
+            "dot": "#5c6b7a",
+            "badge": {
+              "text": "@方舟 Ag...",
+              "title": "方舟 Agent Plan"
+            },
+            "cells": [
+              {
+                "text": "max"
+              },
+              {
+                "text": "68.1",
+                "cls": "score"
+              },
+              {
+                "text": "18/0"
+              },
+              {
+                "text": "23.9/0.0",
+                "delta": {
+                  "text": "+23.9",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "55/0"
+              },
+              {
+                "text": "24"
+              },
+              {
+                "text": "1"
+              },
+              {
+                "text": "98%"
+              },
+              {
+                "text": "1.29/0.00"
+              },
+              {
+                "text": "4.69/0.00"
+              }
+            ]
+          },
+          {
+            "rank": "4",
             "name": "Gemini 3.8 Flash",
             "dot": "#4f8a8b",
             "badge": null,
@@ -2093,41 +2405,84 @@
                 "text": "high"
               },
               {
-                "text": "58.0",
+                "text": "46.7",
                 "cls": "score"
               },
               {
-                "text": "3/4"
+                "text": "20/3"
               },
               {
-                "text": "14.3/17.2",
+                "text": "17.8/16.7",
                 "delta": {
-                  "text": "-2.9",
-                  "cls": "down"
+                  "text": "+1.1",
+                  "cls": "up"
                 }
               },
               {
-                "text": "4/7"
+                "text": "45/12"
               },
               {
-                "text": "4"
+                "text": "15"
               },
               {
-                "text": "0"
+                "text": "3"
               },
               {
-                "text": "100%"
+                "text": "94%"
               },
               {
-                "text": "0.08/0.10"
+                "text": "0.93/0.80"
               },
               {
-                "text": "3.00/4.00"
+                "text": "4.00/0.00"
               }
             ]
           },
           {
-            "rank": "3※",
+            "rank": "5",
+            "name": "GLM-5.3",
+            "dot": "#b0674a",
+            "badge": null,
+            "cells": [
+              {
+                "text": "max"
+              },
+              {
+                "text": "43.8",
+                "cls": "score"
+              },
+              {
+                "text": "21/3"
+              },
+              {
+                "text": "16.6/0.0",
+                "delta": {
+                  "text": "+16.6",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "46/0"
+              },
+              {
+                "text": "7"
+              },
+              {
+                "text": "1"
+              },
+              {
+                "text": "98%"
+              },
+              {
+                "text": "0.86/0.09"
+              },
+              {
+                "text": "3.79/0.00"
+              }
+            ]
+          },
+          {
+            "rank": "6",
             "name": "Grok 4.6 Extra High",
             "dot": "#4a6fa5",
             "badge": null,
@@ -2136,24 +2491,153 @@
                 "text": "xhigh"
               },
               {
-                "text": "46.7",
+                "text": "43.6",
                 "cls": "score"
               },
               {
-                "text": "3/4"
+                "text": "20/3"
               },
               {
-                "text": "19.7/24.8",
+                "text": "22.1/-1.0",
                 "delta": {
-                  "text": "-5.1",
-                  "cls": "down"
+                  "text": "+23.1",
+                  "cls": "up"
                 }
               },
               {
-                "text": "6/11"
+                "text": "56/0"
+              },
+              {
+                "text": "24"
+              },
+              {
+                "text": "1"
+              },
+              {
+                "text": "98%"
+              },
+              {
+                "text": "5.97/1.11"
+              },
+              {
+                "text": "4.33/0.00"
+              }
+            ]
+          },
+          {
+            "rank": "7",
+            "name": "DeepSeek V4 Flash",
+            "dot": "#6b8e5a",
+            "badge": null,
+            "cells": [
+              {
+                "text": "max"
+              },
+              {
+                "text": "39.2",
+                "cls": "score"
+              },
+              {
+                "text": "21/0"
+              },
+              {
+                "text": "15.2/0.0",
+                "delta": {
+                  "text": "+15.2",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "43/0"
+              },
+              {
+                "text": "8"
+              },
+              {
+                "text": "1"
+              },
+              {
+                "text": "98%"
+              },
+              {
+                "text": "0.26/0.00"
+              },
+              {
+                "text": "4.07/0.00"
+              }
+            ]
+          },
+          {
+            "rank": "8",
+            "name": "GLM-5.3-Flash",
+            "dot": "#a05a76",
+            "badge": null,
+            "cells": [
+              {
+                "text": "max"
+              },
+              {
+                "text": "35.9",
+                "cls": "score"
+              },
+              {
+                "text": "21/3"
+              },
+              {
+                "text": "15.2/-2.0",
+                "delta": {
+                  "text": "+17.2",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "42/0"
               },
               {
                 "text": "6"
+              },
+              {
+                "text": "1"
+              },
+              {
+                "text": "98%"
+              },
+              {
+                "text": "0.05/0.00"
+              },
+              {
+                "text": "3.88/0.00"
+              }
+            ]
+          },
+          {
+            "rank": "9",
+            "name": "DeepSeek V4.1 Flash",
+            "dot": "#8a7a3f",
+            "badge": null,
+            "cells": [
+              {
+                "text": "max"
+              },
+              {
+                "text": "35.2",
+                "cls": "score"
+              },
+              {
+                "text": "9/0"
+              },
+              {
+                "text": "12.2/0.0",
+                "delta": {
+                  "text": "+12.2",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "11/0"
+              },
+              {
+                "text": "5"
               },
               {
                 "text": "0"
@@ -2162,15 +2646,15 @@
                 "text": "100%"
               },
               {
-                "text": "1.15/1.39"
+                "text": "0.24/0.00"
               },
               {
-                "text": "3.67/5.00"
+                "text": "3.33/0.00"
               }
             ]
           },
           {
-            "rank": "4※",
+            "rank": "10",
             "name": "Muse Spark 1.3 Contributor",
             "dot": "#7d6b8f",
             "badge": null,
@@ -2179,21 +2663,21 @@
                 "text": "xhigh"
               },
               {
-                "text": "44.7",
+                "text": "25.9",
                 "cls": "score"
               },
               {
-                "text": "3/4"
+                "text": "7/0"
               },
               {
-                "text": "9.7/10.5",
+                "text": "10.1/0.0",
                 "delta": {
-                  "text": "-0.8",
-                  "cls": "down"
+                  "text": "+10.1",
+                  "cls": "up"
                 }
               },
               {
-                "text": "1/3"
+                "text": "4/0"
               },
               {
                 "text": "1"
@@ -2205,58 +2689,15 @@
                 "text": "100%"
               },
               {
-                "text": "0.01/0.01"
+                "text": "0.02/0.00"
               },
               {
-                "text": "3.67/3.75"
+                "text": "3.71/0.00"
               }
             ]
           },
           {
-            "rank": "5※",
-            "name": "DeepSeek V4.1 Flash",
-            "dot": "#8a7a3f",
-            "badge": null,
-            "cells": [
-              {
-                "text": "max"
-              },
-              {
-                "text": "31.8",
-                "cls": "score"
-              },
-              {
-                "text": "3/4"
-              },
-              {
-                "text": "6.7/9.5",
-                "delta": {
-                  "text": "-2.8",
-                  "cls": "down"
-                }
-              },
-              {
-                "text": "0/4"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "0%"
-              },
-              {
-                "text": "0.07/0.14"
-              },
-              {
-                "text": "3.33/2.75"
-              }
-            ]
-          },
-          {
-            "rank": "6※",
+            "rank": "11",
             "name": "MiMo V2.5 Pro",
             "dot": "#b08a3e",
             "badge": null,
@@ -2265,170 +2706,41 @@
                 "text": "max"
               },
               {
-                "text": "28.1",
+                "text": "22.8",
                 "cls": "score"
               },
               {
-                "text": "3/4"
+                "text": "18/0"
               },
               {
-                "text": "4.7/5.5",
+                "text": "9.1/0.0",
                 "delta": {
-                  "text": "-0.8",
-                  "cls": "down"
+                  "text": "+9.1",
+                  "cls": "up"
                 }
               },
               {
-                "text": "0/2"
+                "text": "24/0"
               },
               {
-                "text": "0"
+                "text": "2"
               },
               {
-                "text": "0"
+                "text": "9"
               },
               {
-                "text": "0%"
+                "text": "73%"
               },
               {
-                "text": "0.01/0.02"
+                "text": "0.10/0.00"
               },
               {
-                "text": "2.33/2.50"
-              }
-            ]
-          },
-          {
-            "rank": "7※",
-            "name": "GLM-5.3",
-            "dot": "#b0674a",
-            "badge": null,
-            "cells": [
-              {
-                "text": "max"
-              },
-              {
-                "text": "26.9",
-                "cls": "score"
-              },
-              {
-                "text": "3/4"
-              },
-              {
-                "text": "5.3/16.5",
-                "delta": {
-                  "text": "-11.2",
-                  "cls": "down"
-                }
-              },
-              {
-                "text": "0/7"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "0%"
-              },
-              {
-                "text": "0.12/0.18"
-              },
-              {
-                "text": "2.67/4.25"
-              }
-            ]
-          },
-          {
-            "rank": "8※",
-            "name": "GLM-5.3-Flash",
-            "dot": "#a05a76",
-            "badge": null,
-            "cells": [
-              {
-                "text": "max"
-              },
-              {
-                "text": "22.5",
-                "cls": "score"
-              },
-              {
-                "text": "3/4"
-              },
-              {
-                "text": "3.3/11.8",
-                "delta": {
-                  "text": "-8.4",
-                  "cls": "down"
-                }
-              },
-              {
-                "text": "0/4"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "0%"
-              },
-              {
-                "text": "0.01/0.01"
-              },
-              {
-                "text": "2.50/3.75"
-              }
-            ]
-          },
-          {
-            "rank": "9※",
-            "name": "DeepSeek V4 Flash",
-            "dot": "#6b8e5a",
-            "badge": null,
-            "cells": [
-              {
-                "text": "max"
-              },
-              {
-                "text": "22.5",
-                "cls": "score"
-              },
-              {
-                "text": "3/4"
-              },
-              {
-                "text": "0.0/8.8",
-                "delta": {
-                  "text": "-8.8",
-                  "cls": "down"
-                }
-              },
-              {
-                "text": "0/3"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "0%"
-              },
-              {
-                "text": "—/0.05"
-              },
-              {
-                "text": "0.00/3.25"
+                "text": "2.81/0.00"
               }
             ]
           }
         ],
-        "note": "※ 本期样本 < 5 场，结论打折"
+        "note": "主力（≥5 场）第一：K3@Cursor（综合 87.5）"
       },
       "panels": [
         [
@@ -2436,102 +2748,124 @@
             "title": "产出 · 平均质量分 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 57.1,
+                "label": "#1 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 100.0,
                 "now_pct": 100.0,
-                "value": "32.7",
+                "value": "29.0",
                 "delta": {
-                  "text": "+14.0",
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#2 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 48.3,
+                "now_pct": 88.5,
+                "value": "25.7",
+                "delta": {
+                  "text": "+11.7",
                   "cls": "up"
                 }
               },
               {
-                "label": "#2 Grok 4.6 Extra High",
+                "label": "#3 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 82.6,
+                "now_pct": 82.6,
+                "value": "23.9",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#4 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
-                "was_pct": 75.8,
-                "now_pct": 60.2,
-                "value": "19.7",
+                "was_pct": -3.4,
+                "now_pct": 76.2,
+                "value": "22.1",
                 "delta": {
-                  "text": "-5.1",
-                  "cls": "down"
+                  "text": "+23.1",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#3 Gemini 3.8 Flash",
+                "label": "#5 Gemini 3.8 Flash",
                 "tone": "#4f8a8b",
-                "was_pct": 52.8,
-                "now_pct": 43.9,
-                "value": "14.3",
+                "was_pct": 57.5,
+                "now_pct": 61.4,
+                "value": "17.8",
                 "delta": {
-                  "text": "-2.9",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#4 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 32.1,
-                "now_pct": 29.6,
-                "value": "9.7",
-                "delta": {
-                  "text": "-0.8",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#5 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
-                "was_pct": 29.1,
-                "now_pct": 20.4,
-                "value": "6.7",
-                "delta": {
-                  "text": "-2.8",
-                  "cls": "down"
+                  "text": "+1.1",
+                  "cls": "up"
                 }
               },
               {
                 "label": "#6 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 50.5,
-                "now_pct": 16.3,
-                "value": "5.3",
+                "was_pct": 0.0,
+                "now_pct": 57.1,
+                "value": "16.6",
                 "delta": {
-                  "text": "-11.2",
-                  "cls": "down"
+                  "text": "+16.6",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#7 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 16.8,
-                "now_pct": 14.3,
-                "value": "4.7",
-                "delta": {
-                  "text": "-0.8",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#8 GLM-5.3-Flash",
+                "label": "#7 GLM-5.3-Flash",
                 "tone": "#a05a76",
-                "was_pct": 36.0,
-                "now_pct": 10.2,
-                "value": "3.3",
+                "was_pct": -6.9,
+                "now_pct": 52.4,
+                "value": "15.2",
                 "delta": {
-                  "text": "-8.4",
-                  "cls": "down"
+                  "text": "+17.2",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#9 DeepSeek V4 Flash",
+                "label": "#8 DeepSeek V4 Flash",
                 "tone": "#6b8e5a",
-                "was_pct": 26.8,
-                "now_pct": 0.0,
-                "value": "0.0",
+                "was_pct": 52.4,
+                "now_pct": 52.4,
+                "value": "15.2",
                 "delta": {
-                  "text": "-8.8",
-                  "cls": "down"
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#9 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 42.1,
+                "now_pct": 42.1,
+                "value": "12.2",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#10 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 35.0,
+                "now_pct": 35.0,
+                "value": "10.1",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#11 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 31.4,
+                "now_pct": 31.4,
+                "value": "9.1",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               }
             ]
@@ -2540,19 +2874,8 @@
             "title": "精准 · 准确率 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 87.5,
-                "now_pct": 100.0,
-                "value": "100%",
-                "delta": {
-                  "text": "+12%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#2 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
+                "label": "#1 Fable 5.1",
+                "tone": "#a45a52",
                 "was_pct": 100.0,
                 "now_pct": 100.0,
                 "value": "100%",
@@ -2562,8 +2885,8 @@
                 }
               },
               {
-                "label": "#3 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
+                "label": "#2 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
                 "was_pct": 100.0,
                 "now_pct": 100.0,
                 "value": "100%",
@@ -2573,7 +2896,7 @@
                 }
               },
               {
-                "label": "#4 Muse Spark 1.3 Contributor",
+                "label": "#3 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
                 "was_pct": 100.0,
                 "now_pct": 100.0,
@@ -2584,58 +2907,91 @@
                 }
               },
               {
-                "label": "#5 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 100.0,
-                "now_pct": 0.0,
-                "value": "0%",
+                "label": "#4 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 0.0,
+                "now_pct": 98.2,
+                "value": "98%",
                 "delta": {
-                  "text": "-100%",
-                  "cls": "down"
+                  "text": "+98%",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#6 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 100.0,
-                "now_pct": 0.0,
-                "value": "0%",
+                "label": "#5 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 98.2,
+                "now_pct": 98.2,
+                "value": "98%",
                 "delta": {
-                  "text": "-100%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#6 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 0.0,
+                "now_pct": 97.9,
+                "value": "98%",
+                "delta": {
+                  "text": "+98%",
+                  "cls": "up"
                 }
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
                 "tone": "#6b8e5a",
-                "was_pct": 75.0,
-                "now_pct": 0.0,
-                "value": "0%",
+                "was_pct": 97.7,
+                "now_pct": 97.7,
+                "value": "98%",
                 "delta": {
-                  "text": "-75%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#8 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
+                "label": "#8 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 0.0,
+                "now_pct": 97.7,
+                "value": "98%",
+                "delta": {
+                  "text": "+98%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#9 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 91.7,
+                "now_pct": 95.0,
+                "value": "95%",
+                "delta": {
+                  "text": "+3%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#10 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
                 "was_pct": 100.0,
-                "now_pct": 0.0,
-                "value": "0%",
+                "now_pct": 93.8,
+                "value": "94%",
                 "delta": {
-                  "text": "-100%",
+                  "text": "-6%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#9 MiMo V2.5 Pro",
+                "label": "#11 MiMo V2.5 Pro",
                 "tone": "#b08a3e",
-                "was_pct": 50.0,
-                "now_pct": 0.0,
-                "value": "0%",
+                "was_pct": 72.7,
+                "now_pct": 72.7,
+                "value": "73%",
                 "delta": {
-                  "text": "-50%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               }
             ]
@@ -2648,97 +3004,119 @@
               {
                 "label": "#1 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 57.1,
+                "was_pct": 43.2,
                 "now_pct": 100.0,
-                "value": "100%",
+                "value": "84%",
                 "delta": {
-                  "text": "+43%",
+                  "text": "+48%",
                   "cls": "up"
                 }
               },
               {
-                "label": "#2 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 57.1,
-                "now_pct": 100.0,
-                "value": "100%",
-                "delta": {
-                  "text": "+43%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#3 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 63.6,
-                "now_pct": 100.0,
-                "value": "100%",
-                "delta": {
-                  "text": "+36%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#4 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 0.0,
-                "now_pct": 100.0,
-                "value": "100%",
-                "delta": {
-                  "text": "+100%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#5 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 42.9,
-                "now_pct": 0.0,
-                "value": "0%",
-                "delta": {
-                  "text": "-43%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#6 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 25.0,
-                "now_pct": 0.0,
-                "value": "0%",
-                "delta": {
-                  "text": "-25%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#7 DeepSeek V4 Flash",
-                "tone": "#6b8e5a",
-                "was_pct": 0.0,
-                "now_pct": 0.0,
-                "value": "0%",
+                "label": "#2 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 70.2,
+                "now_pct": 70.2,
+                "value": "59%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
                 }
               },
               {
-                "label": "#8 DeepSeek V4.1 Flash",
+                "label": "#3 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
-                "was_pct": 50.0,
-                "now_pct": 0.0,
-                "value": "0%",
+                "was_pct": 54.0,
+                "now_pct": 54.0,
+                "value": "45%",
                 "delta": {
-                  "text": "-50%",
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#4 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 51.8,
+                "now_pct": 51.8,
+                "value": "44%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#5 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 0.0,
+                "now_pct": 50.9,
+                "value": "43%",
+                "delta": {
+                  "text": "+43%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#6 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 49.5,
+                "now_pct": 39.6,
+                "value": "33%",
+                "delta": {
+                  "text": "-8%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#9 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
+                "label": "#7 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 29.7,
+                "now_pct": 29.7,
+                "value": "25%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#8 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 22.1,
+                "now_pct": 22.1,
+                "value": "19%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#9 GLM-5.3",
+                "tone": "#b0674a",
                 "was_pct": 0.0,
-                "now_pct": 0.0,
-                "value": "0%",
+                "now_pct": 18.1,
+                "value": "15%",
+                "delta": {
+                  "text": "+15%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#10 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 0.0,
+                "now_pct": 17.0,
+                "value": "14%",
+                "delta": {
+                  "text": "+14%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#11 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 9.9,
+                "now_pct": 9.9,
+                "value": "8%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
@@ -2750,102 +3128,124 @@
             "title": "性价比 · 效率分 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 49.9,
-                "now_pct": 100.0,
-                "value": "9.48",
+                "label": "#1 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 77.9,
+                "now_pct": 77.9,
+                "value": "10.72",
                 "delta": {
-                  "text": "+4.75",
-                  "cls": "up"
+                  "text": "+0.00",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#2 Gemini 3.8 Flash",
                 "tone": "#4f8a8b",
-                "was_pct": 87.9,
-                "now_pct": 70.9,
-                "value": "6.72",
+                "was_pct": 42.7,
+                "now_pct": 74.5,
+                "value": "10.26",
                 "delta": {
-                  "text": "-1.62",
+                  "text": "+4.38",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#3 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 73.6,
+                "now_pct": 73.6,
+                "value": "10.13",
+                "delta": {
+                  "text": "+0.00",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#4 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 100.0,
+                "now_pct": 51.6,
+                "value": "7.11",
+                "delta": {
+                  "text": "-6.66",
                   "cls": "down"
                 }
               },
               {
-                "label": "#3 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 28.3,
-                "now_pct": 26.4,
-                "value": "2.50",
-                "delta": {
-                  "text": "-0.19",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#4 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 33.0,
-                "now_pct": 23.4,
-                "value": "2.22",
-                "delta": {
-                  "text": "-0.91",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#5 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 34.9,
-                "now_pct": 0.0,
-                "value": "0.00",
-                "delta": {
-                  "text": "-3.30",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#6 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 9.5,
-                "now_pct": 0.0,
-                "value": "0.00",
-                "delta": {
-                  "text": "-0.91",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#7 DeepSeek V4 Flash",
-                "tone": "#6b8e5a",
-                "was_pct": 23.7,
-                "now_pct": 0.0,
-                "value": "0.00",
-                "delta": {
-                  "text": "-2.25",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#8 DeepSeek V4.1 Flash",
+                "label": "#5 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
-                "was_pct": 64.3,
-                "now_pct": 0.0,
-                "value": "0.00",
+                "was_pct": 44.7,
+                "now_pct": 44.7,
+                "value": "6.16",
                 "delta": {
-                  "text": "-6.10",
-                  "cls": "down"
+                  "text": "+0.00",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#9 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 12.9,
-                "now_pct": 0.0,
-                "value": "0.00",
+                "label": "#6 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 0.0,
+                "now_pct": 44.6,
+                "value": "6.15",
                 "delta": {
-                  "text": "-1.23",
-                  "cls": "down"
+                  "text": "+6.15",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#7 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 34.7,
+                "now_pct": 34.7,
+                "value": "4.77",
+                "delta": {
+                  "text": "+0.00",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#8 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 0.0,
+                "now_pct": 27.3,
+                "value": "3.76",
+                "delta": {
+                  "text": "+3.76",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#9 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 0.0,
+                "now_pct": 26.4,
+                "value": "3.64",
+                "delta": {
+                  "text": "+3.64",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#10 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 24.2,
+                "now_pct": 24.2,
+                "value": "3.33",
+                "delta": {
+                  "text": "+0.00",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#11 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 18.9,
+                "now_pct": 18.9,
+                "value": "2.61",
+                "delta": {
+                  "text": "+0.00",
+                  "cls": "flat"
                 }
               }
             ]
@@ -2858,100 +3258,122 @@
               {
                 "label": "#1 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 35.9,
-                "now_pct": 100.0,
-                "value": "51%",
+                "was_pct": 100.0,
+                "now_pct": 54.8,
+                "value": "31%",
                 "delta": {
-                  "text": "+32%",
-                  "cls": "up"
+                  "text": "-25%",
+                  "cls": "down"
                 }
               },
               {
-                "label": "#2 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 44.3,
-                "now_pct": 52.1,
-                "value": "26%",
+                "label": "#2 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 41.4,
+                "now_pct": 41.4,
+                "value": "23%",
                 "delta": {
-                  "text": "+4%",
-                  "cls": "up"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#3 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 28.6,
-                "now_pct": 35.4,
+                "label": "#3 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 32.7,
+                "now_pct": 32.7,
                 "value": "18%",
                 "delta": {
-                  "text": "+3%",
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#4 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 0.0,
+                "now_pct": 30.5,
+                "value": "17%",
+                "delta": {
+                  "text": "+17%",
                   "cls": "up"
                 }
               },
               {
-                "label": "#4 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 11.8,
-                "now_pct": 10.4,
-                "value": "5%",
+                "label": "#5 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 93.9,
+                "now_pct": 24.2,
+                "value": "14%",
                 "delta": {
-                  "text": "-1%",
+                  "text": "-39%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#5 GLM-5.3",
+                "label": "#6 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 25.6,
-                "now_pct": 0.0,
-                "value": "0%",
+                "was_pct": 0.0,
+                "now_pct": 23.7,
+                "value": "13%",
                 "delta": {
-                  "text": "-13%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#6 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 14.8,
-                "now_pct": 0.0,
-                "value": "0%",
-                "delta": {
-                  "text": "-7%",
-                  "cls": "down"
+                  "text": "+13%",
+                  "cls": "up"
                 }
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
                 "tone": "#6b8e5a",
-                "was_pct": 11.8,
-                "now_pct": 0.0,
-                "value": "0%",
+                "was_pct": 22.6,
+                "now_pct": 22.6,
+                "value": "13%",
                 "delta": {
-                  "text": "-6%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#8 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
-                "was_pct": 11.8,
-                "now_pct": 0.0,
-                "value": "0%",
+                "label": "#8 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 0.0,
+                "now_pct": 21.8,
+                "value": "12%",
                 "delta": {
-                  "text": "-6%",
-                  "cls": "down"
+                  "text": "+12%",
+                  "cls": "up"
                 }
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
                 "tone": "#b08a3e",
-                "was_pct": 7.9,
-                "now_pct": 0.0,
-                "value": "0%",
+                "was_pct": 14.3,
+                "now_pct": 14.3,
+                "value": "8%",
                 "delta": {
-                  "text": "-4%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#10 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 13.7,
+                "now_pct": 13.7,
+                "value": "8%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#11 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 10.2,
+                "now_pct": 10.2,
+                "value": "6%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               }
             ]
@@ -2960,83 +3382,101 @@
             "title": "成立密度 · 每次（越多越好） · 本项排名（彩＝成立，粉＝说错；均为每次）",
             "rows": [
               {
-                "label": "#1 K3@Cursor",
-                "tone": "#6b5b95",
+                "label": "#1 Fable 5.1",
+                "tone": "#a45a52",
                 "was_pct": 0.0,
                 "now_pct": 100.0,
-                "value": "4.00",
+                "value": "3.67",
                 "bad_pct": 0.0,
                 "bad_text": "0.00"
               },
               {
-                "label": "#2 Grok 4.6 Extra High",
+                "label": "#2 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 0.0,
+                "now_pct": 86.4,
+                "value": "3.17",
+                "bad_pct": 4.5,
+                "bad_text": "0.17"
+              },
+              {
+                "label": "#3 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 0.0,
+                "now_pct": 83.3,
+                "value": "3.06",
+                "bad_pct": 1.5,
+                "bad_text": "0.06"
+              },
+              {
+                "label": "#4 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
                 "was_pct": 0.0,
-                "now_pct": 50.0,
-                "value": "2.00",
-                "bad_pct": 0.0,
-                "bad_text": "0.00"
+                "now_pct": 76.4,
+                "value": "2.80",
+                "bad_pct": 1.4,
+                "bad_text": "0.05"
               },
               {
-                "label": "#3 Gemini 3.8 Flash",
+                "label": "#5 Gemini 3.8 Flash",
                 "tone": "#4f8a8b",
                 "was_pct": 0.0,
-                "now_pct": 33.3,
-                "value": "1.33",
-                "bad_pct": 0.0,
-                "bad_text": "0.00"
+                "now_pct": 61.4,
+                "value": "2.25",
+                "bad_pct": 4.1,
+                "bad_text": "0.15"
               },
               {
-                "label": "#4 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 0.0,
-                "now_pct": 8.3,
-                "value": "0.33",
-                "bad_pct": 0.0,
-                "bad_text": "0.00"
-              },
-              {
-                "label": "#5 GLM-5.3",
+                "label": "#6 GLM-5.3",
                 "tone": "#b0674a",
                 "was_pct": 0.0,
-                "now_pct": 0.0,
-                "value": "0.00",
-                "bad_pct": 0.0,
-                "bad_text": "0.00"
-              },
-              {
-                "label": "#6 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 0.0,
-                "now_pct": 0.0,
-                "value": "0.00",
-                "bad_pct": 0.0,
-                "bad_text": "0.00"
+                "now_pct": 59.7,
+                "value": "2.19",
+                "bad_pct": 1.3,
+                "bad_text": "0.05"
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
                 "tone": "#6b8e5a",
                 "was_pct": 0.0,
-                "now_pct": 0.0,
-                "value": "0.00",
-                "bad_pct": 0.0,
-                "bad_text": "0.00"
+                "now_pct": 55.8,
+                "value": "2.05",
+                "bad_pct": 1.3,
+                "bad_text": "0.05"
               },
               {
-                "label": "#8 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
+                "label": "#8 GLM-5.3-Flash",
+                "tone": "#a05a76",
                 "was_pct": 0.0,
-                "now_pct": 0.0,
-                "value": "0.00",
-                "bad_pct": 0.0,
-                "bad_text": "0.00"
+                "now_pct": 54.5,
+                "value": "2.00",
+                "bad_pct": 1.3,
+                "bad_text": "0.05"
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
                 "tone": "#b08a3e",
                 "was_pct": 0.0,
-                "now_pct": 0.0,
-                "value": "0.00",
+                "now_pct": 36.4,
+                "value": "1.33",
+                "bad_pct": 13.6,
+                "bad_text": "0.50"
+              },
+              {
+                "label": "#10 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 0.0,
+                "now_pct": 33.3,
+                "value": "1.22",
+                "bad_pct": 0.0,
+                "bad_text": "0.00"
+              },
+              {
+                "label": "#11 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 0.0,
+                "now_pct": 15.6,
+                "value": "0.57",
                 "bad_pct": 0.0,
                 "bad_text": "0.00"
               }
@@ -3054,98 +3494,125 @@
             "title": "每次花费（越低越省） · 本项排名（上灰＝上期）",
             "rows": [
               {
-                "label": "#1 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 1.3,
-                "now_pct": 0.1,
-                "value": "$0.00",
-                "delta": {
-                  "text": "-$0.02",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#2 Muse Spark 1.3 Contributor",
+                "label": "#1 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 0.7,
+                "was_pct": 0.0,
                 "now_pct": 0.2,
                 "value": "$0.00",
                 "delta": {
-                  "text": "-$0.01",
-                  "cls": "down"
+                  "text": "+$0.00",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#3 GLM-5.3-Flash",
+                "label": "#2 GLM-5.3-Flash",
                 "tone": "#a05a76",
-                "was_pct": 0.9,
+                "was_pct": 0.4,
                 "now_pct": 0.2,
                 "value": "$0.00",
                 "delta": {
-                  "text": "-$0.01",
+                  "text": "-$0.00",
                   "cls": "down"
                 }
               },
               {
-                "label": "#4 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
-                "was_pct": 10.0,
-                "now_pct": 1.7,
-                "value": "$0.02",
+                "label": "#3 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 0.0,
+                "now_pct": 0.5,
+                "value": "$0.01",
                 "delta": {
-                  "text": "-$0.12",
-                  "cls": "down"
+                  "text": "+$0.01",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#5 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 7.5,
-                "now_pct": 1.8,
+                "label": "#4 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 0.0,
+                "now_pct": 1.1,
+                "value": "$0.01",
+                "delta": {
+                  "text": "+$0.01",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#5 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 0.0,
+                "now_pct": 2.4,
                 "value": "$0.03",
                 "delta": {
-                  "text": "-$0.08",
-                  "cls": "down"
+                  "text": "+$0.03",
+                  "cls": "up"
                 }
               },
               {
                 "label": "#6 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 13.1,
-                "now_pct": 2.9,
+                "was_pct": 7.9,
+                "now_pct": 3.7,
                 "value": "$0.04",
                 "delta": {
-                  "text": "-$0.14",
+                  "text": "-$0.05",
                   "cls": "down"
                 }
               },
               {
-                "label": "#7 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 37.0,
-                "now_pct": 9.0,
-                "value": "$0.12",
+                "label": "#7 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 71.3,
+                "now_pct": 4.2,
+                "value": "$0.05",
                 "delta": {
-                  "text": "-$0.39",
+                  "text": "-$0.75",
                   "cls": "down"
                 }
               },
               {
-                "label": "#8 Grok 4.6 Extra High",
+                "label": "#8 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 0.0,
+                "now_pct": 6.4,
+                "value": "$0.07",
+                "delta": {
+                  "text": "+$0.07",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#9 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 91.1,
+                "now_pct": 13.3,
+                "value": "$0.15",
+                "delta": {
+                  "text": "-$0.87",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#10 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
                 "was_pct": 100.0,
-                "now_pct": 27.5,
-                "value": "$0.38",
+                "now_pct": 26.8,
+                "value": "$0.30",
                 "delta": {
-                  "text": "-$1.01",
+                  "text": "-$0.82",
                   "cls": "down"
                 }
-              }
-            ],
-            "legend": [
+              },
               {
-                "text": "未采集金额：DeepSeek V4 Flash（这批调用缺金额数据，不参与花费排名，不当 0）",
-                "tone": null
+                "label": "#11 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 0.0,
+                "now_pct": 54.2,
+                "value": "$0.60",
+                "delta": {
+                  "text": "+$0.60",
+                  "cls": "up"
+                }
               }
             ]
           },
@@ -3153,54 +3620,125 @@
             "title": "每条成立花费（越低越省） · 本项排名（上灰＝上期）",
             "rows": [
               {
-                "label": "#1 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 0.7,
-                "now_pct": 0.5,
-                "value": "$0.01",
+                "label": "#1 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 0.4,
+                "now_pct": 0.1,
+                "value": "$0.00",
                 "delta": {
                   "text": "-$0.00",
                   "cls": "down"
                 }
               },
               {
-                "label": "#2 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 7.5,
-                "now_pct": 1.4,
+                "label": "#2 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 0.0,
+                "now_pct": 0.4,
+                "value": "$0.00",
+                "delta": {
+                  "text": "+$0.00",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#3 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 0.0,
+                "now_pct": 0.4,
+                "value": "$0.00",
+                "delta": {
+                  "text": "+$0.00",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#4 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 0.0,
+                "now_pct": 0.5,
+                "value": "$0.01",
+                "delta": {
+                  "text": "+$0.01",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#5 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 7.9,
+                "now_pct": 1.7,
                 "value": "$0.02",
                 "delta": {
-                  "text": "-$0.08",
+                  "text": "-$0.07",
                   "cls": "down"
                 }
               },
               {
-                "label": "#3 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 37.0,
-                "now_pct": 2.2,
-                "value": "$0.03",
+                "label": "#6 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 71.3,
+                "now_pct": 1.8,
+                "value": "$0.02",
                 "delta": {
-                  "text": "-$0.48",
+                  "text": "-$0.77",
                   "cls": "down"
                 }
               },
               {
-                "label": "#4 Grok 4.6 Extra High",
+                "label": "#7 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 0.0,
+                "now_pct": 1.9,
+                "value": "$0.02",
+                "delta": {
+                  "text": "+$0.02",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#8 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 0.0,
+                "now_pct": 2.1,
+                "value": "$0.02",
+                "delta": {
+                  "text": "+$0.02",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#9 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 91.1,
+                "now_pct": 4.2,
+                "value": "$0.05",
+                "delta": {
+                  "text": "-$0.97",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#10 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
                 "was_pct": 100.0,
-                "now_pct": 13.7,
-                "value": "$0.19",
+                "now_pct": 9.6,
+                "value": "$0.11",
                 "delta": {
-                  "text": "-$1.20",
+                  "text": "-$1.01",
                   "cls": "down"
                 }
-              }
-            ],
-            "legend": [
+              },
               {
-                "text": "未采集金额：DeepSeek V4 Flash（这批调用缺金额数据，不参与花费排名，不当 0）",
-                "tone": null
+                "label": "#11 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 0.0,
+                "now_pct": 14.8,
+                "value": "$0.16",
+                "delta": {
+                  "text": "+$0.16",
+                  "cls": "up"
+                }
               }
             ]
           }
@@ -3210,101 +3748,123 @@
             "title": "执行时间 · 平均每次分钟 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 DeepSeek V4 Flash",
-                "tone": "#6b8e5a",
-                "was_pct": 23.4,
-                "now_pct": 7.2,
-                "value": "0.3",
-                "delta": {
-                  "text": "-0.7",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#2 DeepSeek V4.1 Flash",
+                "label": "#1 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
-                "was_pct": 17.9,
-                "now_pct": 7.6,
-                "value": "0.3",
-                "delta": {
-                  "text": "-0.4",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#3 Muse Spark 1.3 Contributor",
-                "tone": "#7d6b8f",
-                "was_pct": 25.2,
-                "now_pct": 13.9,
-                "value": "0.6",
-                "delta": {
-                  "text": "-0.5",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#4 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 21.5,
-                "now_pct": 20.1,
+                "was_pct": 18.1,
+                "now_pct": 18.1,
                 "value": "0.8",
                 "delta": {
-                  "text": "-0.1",
-                  "cls": "down"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#5 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 26.0,
-                "now_pct": 25.0,
+                "label": "#2 Muse Spark 1.3 Contributor",
+                "tone": "#7d6b8f",
+                "was_pct": 19.7,
+                "now_pct": 19.7,
+                "value": "0.8",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#3 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 56.3,
+                "now_pct": 24.8,
                 "value": "1.0",
                 "delta": {
-                  "text": "-0.0",
+                  "text": "-1.3",
                   "cls": "down"
                 }
               },
               {
-                "label": "#6 GLM-5.3",
+                "label": "#4 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 25.9,
+                "now_pct": 25.9,
+                "value": "1.1",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#5 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 31.5,
+                "now_pct": 31.5,
+                "value": "1.3",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#6 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 37.7,
+                "now_pct": 37.7,
+                "value": "1.6",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#7 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 54.9,
-                "now_pct": 38.3,
-                "value": "1.5",
+                "was_pct": 62.5,
+                "now_pct": 40.3,
+                "value": "1.7",
                 "delta": {
-                  "text": "-0.7",
+                  "text": "-0.9",
                   "cls": "down"
                 }
               },
               {
-                "label": "#7 K3@Cursor",
+                "label": "#8 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 51.2,
-                "now_pct": 45.2,
-                "value": "1.8",
+                "was_pct": 39.0,
+                "now_pct": 46.5,
+                "value": "1.9",
                 "delta": {
-                  "text": "-0.2",
-                  "cls": "down"
+                  "text": "+0.3",
+                  "cls": "up"
                 }
               },
               {
-                "label": "#8 GLM-5.3-Flash",
+                "label": "#9 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 52.8,
+                "now_pct": 52.8,
+                "value": "2.2",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#10 GLM-5.3-Flash",
                 "tone": "#a05a76",
-                "was_pct": 90.8,
-                "now_pct": 63.4,
-                "value": "2.6",
+                "was_pct": 100.0,
+                "now_pct": 67.6,
+                "value": "2.8",
                 "delta": {
-                  "text": "-1.1",
+                  "text": "-1.4",
                   "cls": "down"
                 }
               },
               {
-                "label": "#9 Grok 4.6 Extra High",
+                "label": "#11 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
-                "was_pct": 96.0,
-                "now_pct": 100.0,
-                "value": "4.0",
+                "was_pct": 52.3,
+                "now_pct": 81.1,
+                "value": "3.4",
                 "delta": {
-                  "text": "+0.2",
+                  "text": "+1.2",
                   "cls": "up"
                 }
               }
@@ -3317,88 +3877,121 @@
                 "label": "#1 DeepSeek V4.1 Flash",
                 "tone": "#8a7a3f",
                 "was_pct": 100.0,
-                "now_pct": 97.1,
-                "value": "139.4",
+                "now_pct": 100.0,
+                "value": "96.6",
                 "delta": {
-                  "text": "-4.1",
-                  "cls": "down"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#2 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 53.1,
-                "now_pct": 77.1,
-                "value": "110.6",
+                "was_pct": 89.3,
+                "now_pct": 89.3,
+                "value": "86.3",
                 "delta": {
-                  "text": "+34.4",
-                  "cls": "up"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
                 "label": "#3 GLM-5.3",
                 "tone": "#b0674a",
-                "was_pct": 39.9,
-                "now_pct": 44.8,
-                "value": "64.3",
+                "was_pct": 10.0,
+                "now_pct": 61.3,
+                "value": "59.2",
                 "delta": {
-                  "text": "+7.1",
+                  "text": "+49.6",
                   "cls": "up"
                 }
               },
               {
-                "label": "#4 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 33.8,
-                "now_pct": 34.6,
-                "value": "49.7",
-                "delta": {
-                  "text": "+1.2",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#5 K3@Cursor",
+                "label": "#4 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 43.2,
-                "now_pct": 28.4,
-                "value": "40.7",
+                "was_pct": 65.3,
+                "now_pct": 53.8,
+                "value": "52.0",
                 "delta": {
-                  "text": "-21.2",
+                  "text": "-11.1",
                   "cls": "down"
                 }
               },
               {
-                "label": "#6 GLM-5.3-Flash",
+                "label": "#5 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 49.1,
+                "now_pct": 49.1,
+                "value": "47.5",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#6 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 54.7,
+                "now_pct": 47.3,
+                "value": "45.7",
+                "delta": {
+                  "text": "-7.2",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#7 GLM-5.3-Flash",
                 "tone": "#a05a76",
-                "was_pct": 24.4,
-                "now_pct": 24.6,
-                "value": "35.3",
+                "was_pct": 5.1,
+                "now_pct": 38.4,
+                "value": "37.1",
                 "delta": {
-                  "text": "+0.2",
+                  "text": "+32.2",
                   "cls": "up"
                 }
               },
               {
-                "label": "#7 MiMo V2.5 Pro",
+                "label": "#8 MiMo V2.5 Pro",
                 "tone": "#b08a3e",
-                "was_pct": 24.2,
-                "now_pct": 22.5,
-                "value": "32.3",
+                "was_pct": 38.1,
+                "now_pct": 38.1,
+                "value": "36.8",
                 "delta": {
-                  "text": "-2.4",
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#9 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 35.6,
+                "now_pct": 35.6,
+                "value": "34.4",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#10 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 86.3,
+                "now_pct": 33.2,
+                "value": "32.1",
+                "delta": {
+                  "text": "-51.3",
                   "cls": "down"
                 }
               },
               {
-                "label": "#8 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 16.0,
-                "now_pct": 16.8,
-                "value": "24.1",
+                "label": "#11 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 28.7,
+                "now_pct": 28.7,
+                "value": "27.8",
                 "delta": {
-                  "text": "+1.1",
-                  "cls": "up"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               }
             ]
@@ -3409,46 +4002,123 @@
             "title": "Token · 每条成立千枚 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 K3@Cursor",
-                "tone": "#6b5b95",
-                "was_pct": 13.5,
-                "now_pct": 4.4,
-                "value": "7.8",
+                "label": "#1 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
+                "was_pct": 1.7,
+                "now_pct": 1.7,
+                "value": "4.9",
                 "delta": {
-                  "text": "-16.2",
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#2 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 0.0,
+                "now_pct": 3.1,
+                "value": "9.0",
+                "delta": {
+                  "text": "+9.0",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#3 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 0.0,
+                "now_pct": 3.5,
+                "value": "10.0",
+                "delta": {
+                  "text": "+10.0",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#4 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 3.8,
+                "now_pct": 3.8,
+                "value": "10.7",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#5 K3@Cursor",
+                "tone": "#6b5b95",
+                "was_pct": 41.5,
+                "now_pct": 4.8,
+                "value": "13.7",
+                "delta": {
+                  "text": "-104.3",
                   "cls": "down"
                 }
               },
               {
-                "label": "#2 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
-                "was_pct": 9.6,
-                "now_pct": 12.4,
-                "value": "22.0",
+                "label": "#6 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 5.0,
+                "now_pct": 5.0,
+                "value": "14.4",
                 "delta": {
-                  "text": "+5.0",
-                  "cls": "up"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#3 Muse Spark 1.3 Contributor",
+                "label": "#7 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 9.7,
+                "now_pct": 9.7,
+                "value": "27.5",
+                "delta": {
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#8 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 14.3,
-                "now_pct": 30.1,
-                "value": "53.6",
+                "was_pct": 11.4,
+                "now_pct": 11.4,
+                "value": "32.5",
                 "delta": {
-                  "text": "+28.2",
-                  "cls": "up"
+                  "text": "+0.0",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#4 Grok 4.6 Extra High",
-                "tone": "#4a6fa5",
-                "was_pct": 69.6,
-                "now_pct": 100.0,
-                "value": "178.1",
+                "label": "#9 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 14.1,
+                "now_pct": 14.1,
+                "value": "40.1",
                 "delta": {
-                  "text": "+54.1",
+                  "text": "+0.0",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#10 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 100.0,
+                "now_pct": 18.3,
+                "value": "52.0",
+                "delta": {
+                  "text": "-232.6",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#11 Grok 4.6 Extra High",
+                "tone": "#4a6fa5",
+                "was_pct": 0.0,
+                "now_pct": 36.0,
+                "value": "102.5",
+                "delta": {
+                  "text": "+102.5",
                   "cls": "up"
                 }
               }
@@ -3458,102 +4128,124 @@
             "title": "缓存命中率 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
-                "label": "#1 MiMo V2.5 Pro",
-                "tone": "#b08a3e",
-                "was_pct": 62.8,
+                "label": "#1 Fable 5.1",
+                "tone": "#a45a52",
+                "was_pct": 100.0,
                 "now_pct": 100.0,
-                "value": "96%",
+                "value": "100%",
                 "delta": {
-                  "text": "+36%",
-                  "cls": "up"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#2 Grok 4.6 Extra High",
+                "label": "#2 MiMo V2.5 Pro",
+                "tone": "#b08a3e",
+                "was_pct": 86.3,
+                "now_pct": 86.3,
+                "value": "86%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#3 Grok 4.6 Extra High",
                 "tone": "#4a6fa5",
-                "was_pct": 79.5,
-                "now_pct": 76.0,
-                "value": "73%",
+                "was_pct": 86.6,
+                "now_pct": 75.1,
+                "value": "75%",
                 "delta": {
-                  "text": "-3%",
+                  "text": "-11%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#3 GLM-5.3",
-                "tone": "#b0674a",
-                "was_pct": 50.3,
-                "now_pct": 34.4,
-                "value": "33%",
+                "label": "#4 Gemini 3.8 Flash",
+                "tone": "#4f8a8b",
+                "was_pct": 82.1,
+                "now_pct": 61.1,
+                "value": "61%",
                 "delta": {
-                  "text": "-15%",
+                  "text": "-21%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#4 K3@Cursor",
+                "label": "#5 K3@Cursor",
                 "tone": "#6b5b95",
-                "was_pct": 70.2,
-                "now_pct": 31.9,
-                "value": "31%",
+                "was_pct": 92.4,
+                "now_pct": 54.6,
+                "value": "55%",
                 "delta": {
-                  "text": "-37%",
+                  "text": "-38%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#5 Muse Spark 1.3 Contributor",
+                "label": "#6 DeepSeek V4 Flash",
+                "tone": "#6b8e5a",
+                "was_pct": 45.1,
+                "now_pct": 45.1,
+                "value": "45%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#7 GLM-5.3",
+                "tone": "#b0674a",
+                "was_pct": 87.2,
+                "now_pct": 29.3,
+                "value": "29%",
+                "delta": {
+                  "text": "-58%",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#8 DeepSeek V4.1 Flash",
+                "tone": "#8a7a3f",
+                "was_pct": 29.0,
+                "now_pct": 29.0,
+                "value": "29%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#9 GLM-5.3-Flash",
+                "tone": "#a05a76",
+                "was_pct": 93.8,
+                "now_pct": 4.8,
+                "value": "5%",
+                "delta": {
+                  "text": "-89%",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#10 Muse Spark 1.3 Contributor",
                 "tone": "#7d6b8f",
-                "was_pct": 1.7,
-                "now_pct": 0.8,
+                "was_pct": 1.3,
+                "now_pct": 1.3,
                 "value": "1%",
                 "delta": {
-                  "text": "-1%",
-                  "cls": "down"
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               },
               {
-                "label": "#6 Gemini 3.8 Flash",
-                "tone": "#4f8a8b",
+                "label": "#11 K3@方舟 Agent Plan",
+                "tone": "#5c6b7a",
                 "was_pct": 0.0,
                 "now_pct": 0.0,
                 "value": "0%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
-              },
-              {
-                "label": "#7 GLM-5.3-Flash",
-                "tone": "#a05a76",
-                "was_pct": 0.0,
-                "now_pct": 0.0,
-                "value": "0%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#8 DeepSeek V4 Flash",
-                "tone": "#6b8e5a",
-                "was_pct": 21.1,
-                "now_pct": 0.0,
-                "value": "0%",
-                "delta": {
-                  "text": "-20%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#9 DeepSeek V4.1 Flash",
-                "tone": "#8a7a3f",
-                "was_pct": 55.2,
-                "now_pct": 0.0,
-                "value": "0%",
-                "delta": {
-                  "text": "-53%",
-                  "cls": "down"
                 }
               }
             ]
@@ -3561,23 +4253,23 @@
         ],
         [
           {
-            "title": "成立重要性（本期合计 23）",
+            "title": "成立重要性（本期合计 367）",
             "wide": true,
             "segments": [
               {
-                "pct": 43.48,
+                "pct": 45.23,
                 "tone": "#7f2d2d"
               },
               {
-                "pct": 26.09,
+                "pct": 33.24,
                 "tone": "#a8493f"
               },
               {
-                "pct": 30.43,
+                "pct": 19.62,
                 "tone": "#c2764f"
               },
               {
-                "pct": 0.0,
+                "pct": 1.91,
                 "tone": "#cfa86a"
               },
               {
@@ -3587,19 +4279,19 @@
             ],
             "legend": [
               {
-                "text": "重要性5 10",
+                "text": "重要性5 166",
                 "tone": "#7f2d2d"
               },
               {
-                "text": "重要性4 6",
+                "text": "重要性4 122",
                 "tone": "#a8493f"
               },
               {
-                "text": "重要性3 7",
+                "text": "重要性3 72",
                 "tone": "#c2764f"
               },
               {
-                "text": "重要性2 0",
+                "text": "重要性2 7",
                 "tone": "#cfa86a"
               },
               {
@@ -3624,65 +4316,82 @@
               "text": "@Curso...",
               "title": "Cursor"
             },
-            "score": "93.9",
-            "pros": "产出最高（均质量 32.7）、最准（100%）、抓得最全（重要性加权占参与轮次 51%）、效率分最高（成立重要性÷耗时 9.48）、方向契合最高（4.33）、每条成立最省 token（8 千）",
-            "cons": "时间相对最弱（每次 1.8 分钟）、样本少（3 场，结论打折）"
+            "score": "87.5",
+            "pros": "抓得最全（重要性加权占参与轮次 31%）",
+            "cons": "时间相对最弱（每次 1.9 分钟）"
           },
           {
-            "rank": "#2 Gemini 3.8 Flash",
+            "rank": "#2 Fable 5.1",
             "badge": null,
-            "score": "58.0",
-            "pros": "独立相对最好（独有占比 100%）",
-            "cons": "无突出短板、样本少（3 场，结论打折）"
+            "score": "78.5",
+            "pros": "产出最高（均质量 29.0）、最准（100%）、效率分最高（成立重要性÷耗时 10.72）、缓存命中最高（100%）",
+            "cons": "每条成立最贵（$0.16）"
           },
           {
-            "rank": "#3 Grok 4.6 Extra High",
+            "rank": "#3 K3",
+            "badge": {
+              "text": "@方舟 Ag...",
+              "title": "方舟 Agent Plan"
+            },
+            "score": "68.1",
+            "pros": "方向契合最高（4.69）、每条成立最省 token（5 千）",
+            "cons": "无突出短板"
+          },
+          {
+            "rank": "#4 Gemini 3.8 Flash",
             "badge": null,
             "score": "46.7",
-            "pros": "独立相对最好（独有占比 100%）",
-            "cons": "每条成立最贵（$0.19）、最慢（每次 4.0 分钟，档位 xhigh）、每条成立最耗 token（178 千）、样本少（3 场，结论打折）"
+            "pros": "各项居中（均质量 17.8、准确率 94%）",
+            "cons": "无突出短板"
           },
           {
-            "rank": "#4 Muse Spark 1.3 Contributor",
+            "rank": "#5 GLM-5.3",
             "badge": null,
-            "score": "44.7",
-            "pros": "每条成立最便宜（$0.01）",
-            "cons": "无突出短板、样本少（3 场，结论打折）"
+            "score": "43.8",
+            "pros": "token相对最好（每条成立 9 千）",
+            "cons": "独立相对最弱（独有占比 15%）"
           },
           {
-            "rank": "#5 DeepSeek V4.1 Flash",
+            "rank": "#6 Grok 4.6 Extra High",
             "badge": null,
-            "score": "31.8",
-            "pros": "各项居中（均质量 6.7、准确率 0%）",
-            "cons": "无突出短板、样本少（3 场，结论打折）"
+            "score": "43.6",
+            "pros": "效果相对最好（均质量 22.1）",
+            "cons": "最慢（每次 3.4 分钟，档位 xhigh）、每条成立最耗 token（103 千）"
           },
           {
-            "rank": "#6 MiMo V2.5 Pro",
+            "rank": "#7 DeepSeek V4 Flash",
             "badge": null,
-            "score": "28.1",
-            "pros": "缓存命中最高（96%）",
-            "cons": "契合最低（2.33）、样本少（3 场，结论打折）"
-          },
-          {
-            "rank": "#7 GLM-5.3",
-            "badge": null,
-            "score": "26.9",
-            "pros": "各项居中（均质量 5.3、准确率 0%）",
-            "cons": "假阳最多（每次 0.00 条，准确率 0%）、样本少（3 场，结论打折）"
+            "score": "39.2",
+            "pros": "花费相对最好（每次 $0.01）",
+            "cons": "独立相对最弱（独有占比 19%）"
           },
           {
             "rank": "#8 GLM-5.3-Flash",
             "badge": null,
-            "score": "22.5",
-            "pros": "各项居中（均质量 3.3、准确率 0%）",
-            "cons": "无突出短板、样本少（3 场，结论打折）"
+            "score": "35.9",
+            "pros": "每条成立最便宜（$0.00）",
+            "cons": "独立相对最弱（独有占比 14%）"
           },
           {
-            "rank": "#9 DeepSeek V4 Flash",
+            "rank": "#9 DeepSeek V4.1 Flash",
             "badge": null,
-            "score": "22.5",
-            "pros": "最快（每次 0.3 分钟，档位 max）",
-            "cons": "花费未采集（该轴按中位记）、均质量垫底（0.0）、样本少（3 场，结论打折）"
+            "score": "35.2",
+            "pros": "最快（每次 0.8 分钟，档位 max）",
+            "cons": "覆盖相对最弱（占参与轮次 8%）"
+          },
+          {
+            "rank": "#10 Muse Spark 1.3 Contributor",
+            "badge": null,
+            "score": "25.9",
+            "pros": "花费相对最好（每次 $0.00）",
+            "cons": "覆盖相对最弱（占参与轮次 6%）"
+          },
+          {
+            "rank": "#11 MiMo V2.5 Pro",
+            "badge": null,
+            "score": "22.8",
+            "pros": "花费相对最好（每次 $0.01）",
+            "cons": "假阳最多（每次 0.50 条，准确率 73%）、均质量垫底（9.1）、契合最低（2.81）"
           }
         ]
       }
@@ -3691,7 +4400,7 @@
   "debt": {
     "title": "未评 / 失败",
     "meta": "未评必须补评（record-findings）才算完成",
-    "note": "",
+    "note": "未评 16 行（$9.15）须补评；失败 23 行（$1.50）不计入对照、花费照计。",
     "head": [
       "场次",
       "未评行",
@@ -3699,7 +4408,113 @@
       "失败行",
       "失败金额"
     ],
-    "rows": []
+    "rows": [
+      [
+        "2026-09-07-2121",
+        "0",
+        "0.00",
+        "1",
+        "0.05"
+      ],
+      [
+        "2026-09-08-1331",
+        "0",
+        "0.00",
+        "3",
+        "0.28"
+      ],
+      [
+        "2026-09-09-0212",
+        "7",
+        "4.49",
+        "0",
+        "0.00"
+      ],
+      [
+        "2026-09-09-0217",
+        "0",
+        "0.00",
+        "1",
+        "0.00"
+      ],
+      [
+        "2026-09-09-0915",
+        "0",
+        "0.00",
+        "2",
+        "0.00"
+      ],
+      [
+        "2026-09-09-1003",
+        "0",
+        "0.00",
+        "4",
+        "0.57"
+      ],
+      [
+        "2026-09-09-1200",
+        "0",
+        "0.00",
+        "2",
+        "0.24"
+      ],
+      [
+        "2026-09-09-1343",
+        "0",
+        "0.00",
+        "1",
+        "0.20"
+      ],
+      [
+        "2026-09-11-0509",
+        "0",
+        "0.00",
+        "3",
+        "0.00"
+      ],
+      [
+        "2026-09-11-0603",
+        "0",
+        "0.00",
+        "1",
+        "0.00"
+      ],
+      [
+        "2026-09-11-0832",
+        "0",
+        "0.00",
+        "1",
+        "0.00"
+      ],
+      [
+        "2026-09-11-0947",
+        "0",
+        "0.00",
+        "1",
+        "0.00"
+      ],
+      [
+        "2026-09-11-1259",
+        "0",
+        "0.00",
+        "2",
+        "0.15"
+      ],
+      [
+        "2026-09-11-1710",
+        "9",
+        "4.65",
+        "0",
+        "0.00"
+      ],
+      [
+        "2026-09-11-1718",
+        "0",
+        "0.00",
+        "1",
+        "0.00"
+      ]
+    ]
   },
   "notes": [
     "综合能力评分（排名用）：6 项按权重（35% 效果 + 30% 覆盖 + 10% 独立 + 10% 时间 + 5% 花费 + 10% token）在同活动类型内 min-max 归一到 0～100 后加权：效果（均质量）、覆盖（重要性加权成立数 ÷ 所参与轮次同口径合计）、独立（独有/成立）、时间（每次分钟，越快越好）、花费（每次花费，越省越好）、token（每条成立 token，越省越好）；某项没采集到时（如订阅制模型没有金额）该轴按中位 50 记，并在评论里标注。效率分（成立重要性÷耗时）只作参考列，不进综合分。 表格按它从优到差排名。契合分与样本量只进评论，不进评分。",

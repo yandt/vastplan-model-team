@@ -1,61 +1,61 @@
 {
   "window": [
-    "2026-09-13",
+    "2026-09-07",
     "2026-09-14"
   ],
   "prev_window": [
-    "2026-09-12",
-    "2026-09-13"
+    "2026-08-31",
+    "2026-09-07"
   ],
-  "generated_at": "2026-09-15 10:13",
+  "generated_at": "2026-09-15 10:16",
   "kinds": {
     "事后审计": {
-      "sessions": 8,
-      "rows": 72,
-      "confirmed": 63,
-      "false_pos": 16,
-      "unique": 38,
-      "usd_rated": 25.42,
+      "sessions": 46,
+      "rows": 319,
+      "confirmed": 519,
+      "false_pos": 140,
+      "unique": 242,
+      "usd_rated": 151.35,
       "top": [
         {
-          "model": "DeepSeek V4.1 Flash",
-          "score": 78.9,
-          "sessions": 8
-        },
-        {
           "model": "K3@Cursor",
-          "score": 66.6,
-          "sessions": 8
+          "score": 74.4,
+          "sessions": 14
         },
         {
-          "model": "Muse Spark 1.3 Contributor",
-          "score": 59.4,
-          "sessions": 8
+          "model": "DeepSeek V4.1 Flash",
+          "score": 74.3,
+          "sessions": 19
+        },
+        {
+          "model": "Grok 4.6 Extra High",
+          "score": 71.6,
+          "sessions": 40
         }
       ]
     },
     "设计分叉": {
-      "sessions": 3,
-      "rows": 27,
-      "confirmed": 23,
-      "false_pos": 0,
-      "unique": 23,
-      "usd_rated": 1.81,
+      "sessions": 25,
+      "rows": 167,
+      "confirmed": 367,
+      "false_pos": 18,
+      "unique": 121,
+      "usd_rated": 14.21,
       "top": [
         {
           "model": "K3@Cursor",
-          "score": 93.9,
-          "sessions": 3
+          "score": 87.5,
+          "sessions": 6
         },
         {
-          "model": "Gemini 3.8 Flash",
-          "score": 58.0,
-          "sessions": 3
+          "model": "Fable 5.1",
+          "score": 78.5,
+          "sessions": 6
         },
         {
-          "model": "Grok 4.6 Extra High",
-          "score": 46.7,
-          "sessions": 3
+          "model": "K3@方舟 Agent Plan",
+          "score": 68.1,
+          "sessions": 18
         }
       ]
     }
@@ -66,11 +66,11 @@
     "images/3-audit-cost.png",
     "images/4-design.png"
   ],
-  "debt_sessions": 0,
+  "debt_sessions": 15,
   "week": "2026-W37",
   "week_label": "2026 年第 37 周",
   "partial": false,
-  "generations": 21,
+  "generations": 22,
   "first_generated_at": "2026-09-15 00:30",
-  "last_generated_at": "2026-09-15 10:13"
+  "last_generated_at": "2026-09-15 10:16"
 }
