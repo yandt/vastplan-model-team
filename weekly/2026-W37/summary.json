@@ -7,7 +7,7 @@
     "2026-08-31",
     "2026-09-07"
   ],
-  "generated_at": "2026-09-15 10:16",
+  "generated_at": "2026-09-15 11:26",
   "kinds": {
     "事后审计": {
       "sessions": 46,
@@ -70,7 +70,7 @@
   "week": "2026-W37",
   "week_label": "2026 年第 37 周",
   "partial": false,
-  "generations": 22,
-  "first_generated_at": "2026-09-15 00:30",
-  "last_generated_at": "2026-09-15 10:16"
+  "generations": 3,
+  "first_generated_at": "2026-09-15 10:38",
+  "last_generated_at": "2026-09-15 11:26"
 }

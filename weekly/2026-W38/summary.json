@@ -7,7 +7,7 @@
     "2026-09-12",
     "2026-09-14"
   ],
-  "generated_at": "2026-09-15 09:36",
+  "generated_at": "2026-09-15 10:34",
   "kinds": {
     "事后审计": {
       "sessions": 9,
@@ -35,27 +35,27 @@
       ]
     },
     "设计分叉": {
-      "sessions": 5,
-      "rows": 43,
-      "confirmed": 88,
-      "false_pos": 10,
-      "unique": 33,
-      "usd_rated": 3.26,
+      "sessions": 6,
+      "rows": 51,
+      "confirmed": 108,
+      "false_pos": 14,
+      "unique": 34,
+      "usd_rated": 3.79,
       "top": [
         {
           "model": "K3@方舟 Agent Plan",
-          "score": 96.1,
-          "sessions": 5
-        },
-        {
-          "model": "GLM-5.3",
-          "score": 64.5,
-          "sessions": 5
+          "score": 96.0,
+          "sessions": 6
         },
         {
           "model": "Grok 4.6 Extra High",
-          "score": 62.0,
-          "sessions": 5
+          "score": 67.5,
+          "sessions": 6
+        },
+        {
+          "model": "Muse Spark 1.3 Contributor",
+          "score": 58.3,
+          "sessions": 6
         }
       ]
     }
@@ -70,7 +70,7 @@
   "week": "2026-W38",
   "week_label": "2026 年第 38 周（进行中）",
   "partial": true,
-  "generations": 7,
+  "generations": 8,
   "first_generated_at": "2026-09-15 02:24",
-  "last_generated_at": "2026-09-15 09:36"
+  "last_generated_at": "2026-09-15 10:34"
 }
