@@ -7,30 +7,30 @@
     "2026-09-12",
     "2026-09-14"
   ],
-  "generated_at": "2026-09-15 02:24",
+  "generated_at": "2026-09-15 08:21",
   "kinds": {
     "事后审计": {
-      "sessions": 6,
-      "rows": 51,
-      "confirmed": 81,
-      "false_pos": 20,
+      "sessions": 9,
+      "rows": 73,
+      "confirmed": 96,
+      "false_pos": 28,
       "unique": 13,
-      "usd_rated": 31.18,
+      "usd_rated": 41.24,
       "top": [
         {
           "model": "Muse Spark 1.3 Contributor",
-          "score": 99.4,
-          "sessions": 6
-        },
-        {
-          "model": "K3@方舟 Agent Plan",
-          "score": 63.8,
-          "sessions": 6
+          "score": 99.2,
+          "sessions": 9
         },
         {
           "model": "GLM-5.3-Flash",
-          "score": 60.0,
-          "sessions": 6
+          "score": 65.3,
+          "sessions": 9
+        },
+        {
+          "model": "K3@方舟 Agent Plan",
+          "score": 58.0,
+          "sessions": 9
         }
       ]
     },
@@ -66,11 +66,11 @@
     "images/3-audit-cost.png",
     "images/4-design.png"
   ],
-  "debt_sessions": 0,
+  "debt_sessions": 2,
   "week": "2026-W38",
   "week_label": "2026 年第 38 周（进行中）",
   "partial": true,
-  "generations": 1,
+  "generations": 3,
   "first_generated_at": "2026-09-15 02:24",
-  "last_generated_at": "2026-09-15 02:24"
+  "last_generated_at": "2026-09-15 08:21"
 }
