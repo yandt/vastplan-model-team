@@ -25,12 +25,46 @@ function escHtml(value) {
   return String(value).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
 }
 
+/** 实体身份：同名不同厂商是两条（与报告里 `名称 厂商` 同一套）。 */
+function entityKey(row) {
+  return row.badge ? `${row.name} ${row.badge}` : row.name;
+}
+
 /** 取一格数值：`14/4`、`6.9/20.8/-13.9` 取「本期」那一段；`—` 当负无穷排到最后。 */
 function cellValue(text) {
   const head = String(text ?? "").split("/")[0].trim();
   if (!head || head === "—" || head === "-") return Number.NEGATIVE_INFINITY;
   const number = Number(head.replace(/[$,%]/g, ""));
   return Number.isFinite(number) ? number : Number.NEGATIVE_INFINITY;
+}
+
+/** 越低越好的指标（与报告 DIMENSIONS 的 ascending 同义）；用于变更列的涨跌配色。 */
+const LOWER_IS_BETTER = ["花费", "假阳", "耗时", "时间", "token", "成本"];
+function metricDirection(metric) {
+  return LOWER_IS_BETTER.some((key) => String(metric).includes(key)) ? -1 : 1;
+}
+
+/** 上期期次（按 board 里的顺序取前一个）。 */
+function previousWeek(stamp) {
+  const weeks = (board?.weeks ?? []).map((week) => week.stamp);
+  const index = weeks.indexOf(stamp);
+  return index > 0 ? weeks[index - 1] : "";
+}
+
+/** 变更列：同模型、同指标对上期的百分比变化。没有上期数据就是 —。 */
+function deltaCell(current, row, index) {
+  const previous = previousWeek(current.week);
+  if (!previous) return `<td class="num delta">—</td>`;
+  const rows = board?.kinds?.[current.kind]?.weeks?.[previous]?.rows ?? [];
+  const match = rows.find((item) => entityKey(item) === entityKey(row));
+  const before = match ? cellValue(match.cells[index]) : Number.NEGATIVE_INFINITY;
+  const now = cellValue(row.cells[index]);
+  if (!Number.isFinite(before) || !Number.isFinite(now) || before === 0) return `<td class="num delta">—</td>`;
+  const change = ((now - before) / Math.abs(before)) * 100;
+  const better = change * metricDirection(current.metric) > 0;
+  const cls = Math.abs(change) < 0.05 ? "flat" : better ? "up" : "down";
+  const sign = change > 0 ? "+" : "";
+  return `<td class="num delta ${cls}">${sign}${change.toFixed(1)}%</td>`;
 }
 
 function state() {
@@ -41,7 +75,10 @@ function state() {
   const week = weeks.includes(raw.get("week")) ? raw.get("week") : weeks[weeks.length - 1] ?? "";
   const metrics = board?.kinds?.[kind]?.metrics ?? [];
   const metric = metrics.includes(raw.get("metric")) ? raw.get("metric") : "综合";
-  return { kind, week, metric: metrics.includes(metric) ? metric : metrics[0] ?? "", q: raw.get("q") ?? "" };
+  return {
+    kind, week, metric: metrics.includes(metric) ? metric : metrics[0] ?? "",
+    q: raw.get("q") ?? "", m: raw.get("m") ?? "",
+  };
 }
 
 function writeState(next, replace) {
@@ -118,10 +155,12 @@ function renderTable(current, data) {
     }).join("");
     return `<tr><td class="rank">${position + 1}</td>` +
       `<td class="name"><i class="dot" style="background:${escHtml(row.dot || "#8a857c")}"></i>${escHtml(row.name)}` +
-      (row.badge ? `<span class="badge" title="${escHtml(row.badge)}">${escHtml(row.badge)}</span>` : "") + `</td>${cells}</tr>`;
+      (row.badge ? `<span class="badge" title="${escHtml(row.badge)}">${escHtml(row.badge)}</span>` : "") + `</td>` +
+      deltaCell(current, row, data.index) + cells + "</tr>";
   }).join("");
   tableBox.innerHTML = data.rows.length
-    ? `<table><thead><tr><th class="rank" title="按当前指标的名次">#</th><th class="name">模型</th>${head}</tr></thead><tbody>${body}</tbody></table>`
+    ? `<table><thead><tr><th class="rank" title="按当前指标的名次">#</th><th class="name">模型</th>` +
+      `<th class="num" title="同模型同指标对上期的变化">变更</th>${head}</tr></thead><tbody>${body}</tbody></table>`
     : '<p class="none">没有匹配的模型（换个搜索词或期次）。</p>';
   noteLine.textContent = data.note;
 }
@@ -139,7 +178,18 @@ function renderChart(current, data) {
   }).join("") || '<p class="none">没有可对比的数据。</p>';
 }
 
-/** 模型长期走势：选中类型下，各模型「综合」分随期次变化（取最近一期前 6 名）。 */
+/** 该类型下最新的模型清单（按最近一期综合分从高到低）。 */
+function modelsOfKind(kind) {
+  const weeks = (board?.weeks ?? []).map((week) => week.stamp);
+  const metrics = board?.kinds?.[kind]?.metrics ?? [];
+  const scoreAt = metrics.indexOf("综合");
+  const latest = board?.kinds?.[kind]?.weeks?.[weeks[weeks.length - 1] ?? ""]?.rows ?? [];
+  return latest
+    .map((row) => ({ name: entityKey(row), tone: row.dot || "#8a857c", score: cellValue(row.cells[scoreAt]) }))
+    .sort((left, right) => right.score - left.score);
+}
+
+/** 模型长期走势：选中类型下，各模型「综合」分随期次变化；画哪些由 chips 决定（状态在 hash 的 m）。 */
 function renderModelTrend(current) {
   const weeks = (board?.weeks ?? []).map((week) => week.stamp);
   const metrics = board?.kinds?.[current.kind]?.metrics ?? [];
@@ -149,9 +199,10 @@ function renderModelTrend(current) {
     for (const row of board?.kinds?.[current.kind]?.weeks?.[stamp]?.rows ?? []) {
       const value = cellValue(row.cells[scoreAt]);
       if (!Number.isFinite(value)) continue;
-      const entry = series.get(row.name) ?? { name: row.name, tone: row.dot || "#8a857c", points: new Map() };
+      const key = entityKey(row);
+      const entry = series.get(key) ?? { name: key, tone: row.dot || "#8a857c", points: new Map() };
       entry.points.set(weekIndex, value);
-      series.set(row.name, entry);
+      series.set(key, entry);
     }
   }
   if (series.size === 0) {
@@ -160,9 +211,14 @@ function renderModelTrend(current) {
     return;
   }
   const lastIndex = weeks.length - 1;
-  const picked = [...series.values()]
-    .sort((left, right) => (right.points.get(lastIndex) ?? -Infinity) - (left.points.get(lastIndex) ?? -Infinity))
-    .slice(0, WEEK_LIMIT);
+  const ranked = [...series.values()]
+    .sort((left, right) => (right.points.get(lastIndex) ?? -Infinity) - (left.points.get(lastIndex) ?? -Infinity));
+  const available = modelsOfKind(current.kind);
+  const chosen = current.m
+    ? new Set(current.m.split("|").filter((name) => series.has(name)))
+    : new Set(ranked.slice(0, WEEK_LIMIT).map((entry) => entry.name));
+  const picked = ranked.filter((entry) => chosen.has(entry.name));
+  renderChips(current, available, chosen);
   const labels = weeks.map((stamp) => weekLabel(stamp).split("（")[0]);
   const x = weeks.map((_stamp, index) => index);
   const data = [x, ...picked.map((entry) => x.map((index) => entry.points.get(index) ?? null))];
@@ -184,7 +240,37 @@ function renderModelTrend(current) {
       points: { show: true, size: 6, stroke: entry.tone, fill: "#fff" },
     }))],
   }, data, modelsBox);
-  modelsNote.textContent = `每期综合分；只画最近一期有分的 ${picked.length} 家（共 ${series.size} 家）。`;
+  modelsNote.textContent = picked.length
+    ? `每期综合分；已画 ${picked.length} 家（共 ${series.size} 家），点上面的名字增删。`
+    : "一个都没选：点上面的模型名把它加回来。";
+}
+
+/** 模型开关：点一下增减，状态写进 hash 的 m（用 | 连接，可分享）。 */
+function renderChips(current, available, chosen) {
+  const box = document.getElementById("board-models-chips") ?? (() => {
+    const node = document.createElement("div");
+    node.id = "board-models-chips";
+    node.className = "chips";
+    modelsBox.parentElement.insertBefore(node, modelsBox);
+    return node;
+  })();
+  box.replaceChildren();
+  for (const model of available) {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = `chip${chosen.has(model.name) ? " on" : ""}`;
+    chip.style.setProperty("--tone", model.tone);
+    chip.textContent = model.name;
+    chip.title = `${model.name}（综合 ${Number.isFinite(model.score) ? model.score.toFixed(1) : "—"}）`;
+    chip.addEventListener("click", () => {
+      const next = new Set(chosen);
+      if (next.has(model.name)) next.delete(model.name);
+      else next.add(model.name);
+      writeState({ ...current, m: [...next].join("|") }, false);
+      render();
+    });
+    box.appendChild(chip);
+  }
 }
 
 function render() {
