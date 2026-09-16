@@ -30,6 +30,12 @@ function entityKey(row) {
   return row.badge ? `${row.name} ${row.badge}` : row.name;
 }
 
+/** 模型选择：hash 的 m（`|` 连接实体名，与「模型长期走势」同一状态）。
+ *  空 = 全部模型（不过滤）；有值 = 只留这些。顶部多选与走势图下的 chips 是同一个开关。 */
+function selectedModels(current) {
+  return current.m ? new Set(current.m.split("|")) : null;
+}
+
 /** 取一格数值：`14/4`、`6.9/20.8/-13.9` 取「本期」那一段；`—` 当负无穷排到最后。 */
 function cellValue(text) {
   const head = String(text ?? "").split("/")[0].trim();
@@ -97,10 +103,12 @@ function weekLabel(stamp) {
 function rowsFor(current) {
   const slice = board?.kinds?.[current.kind]?.weeks?.[current.week];
   const rows = slice?.rows ?? [];
+  const chosen = selectedModels(current);
+  const picked = chosen ? rows.filter((row) => chosen.has(entityKey(row))) : rows;
   const needle = current.q.trim().toLowerCase();
   const filtered = needle
-    ? rows.filter((row) => `${row.name} ${row.badge}`.toLowerCase().includes(needle))
-    : rows;
+    ? picked.filter((row) => `${row.name} ${row.badge}`.toLowerCase().includes(needle))
+    : picked;
   const index = (board?.kinds?.[current.kind]?.metrics ?? []).indexOf(current.metric);
   const sorted = [...filtered].sort((left, right) => {
     const diff = cellValue(right.cells[index]) - cellValue(left.cells[index]);
@@ -246,6 +254,44 @@ function renderModelTrend(current) {
     : "一个都没选：点上面的模型名把它加回来。";
 }
 
+/** 顶部模型多选：整行平铺，与「模型长期走势」下的 chips 同一交互、同一状态（hash 的 m）。
+ *  默认（m 空）＝全部模型；点一下增减，榜单表／本项对比／走势图／本期详情都只留所选模型。 */
+function renderTopModels(current) {
+  const box = document.getElementById("board-models-top");
+  if (!box) return;
+  // 用「选中期」的行建 chips：跨周换过服务商的模型（如 K3 Cursor / K3 方舟 Agent Plan）
+  // 实体名会变，若按最新一期建，过滤时会误删选中期里对不上的行。
+  const sliceRows = board?.kinds?.[current.kind]?.weeks?.[current.week]?.rows ?? [];
+  const scoreAt = (board?.kinds?.[current.kind]?.metrics ?? []).indexOf("综合");
+  const available = [...sliceRows]
+    .sort((left, right) => cellValue(right.cells[scoreAt]) - cellValue(left.cells[scoreAt]))
+    .map((row) => ({ name: entityKey(row), tone: row.dot || "#8a857c" }));
+  const chosen = selectedModels(current);
+  box.replaceChildren();
+  for (const model of available) {
+    const on = !chosen || chosen.has(model.name);
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = `chip${on ? " on" : ""}`;
+    chip.style.setProperty("--tone", model.tone);
+    chip.textContent = model.name;
+    chip.title = `${on ? "点击隐藏" : "点击显示"} ${model.name}（下方表格、图表与详情一起跟随）`;
+    chip.addEventListener("click", () => {
+      const next = chosen ? new Set(chosen) : new Set(available.map((item) => item.name));
+      if (next.has(model.name)) next.delete(model.name);
+      else next.add(model.name);
+      writeState({ ...current, m: [...next].join("|") }, false);
+      render();
+    });
+    box.appendChild(chip);
+  }
+  const hint = document.createElement("span");
+  hint.className = "chip-hint";
+  const on = available.filter((item) => !chosen || chosen.has(item.name)).length;
+  hint.textContent = chosen ? `已选 ${on}/${available.length} 家` : `全部 ${available.length} 家`;
+  box.appendChild(hint);
+}
+
 /** 模型开关：点一下增减，状态写进 hash 的 m（用 | 连接，可分享）。 */
 function renderChips(current, available, chosen) {
   const box = document.getElementById("board-models-chips") ?? (() => {
@@ -282,6 +328,7 @@ async function renderDetail(current) {
   const links = document.getElementById("detail-links");
   const box = document.getElementById("detail");
   const meta = (board?.weeks ?? []).find((week) => week.stamp === current.week);
+  const chosen = selectedModels(current) ? [...selectedModels(current)] : null;
   if (!meta || !box) return;
   head.textContent = `本期详情 · ${current.kind} · ${current.week}`;
   links.replaceChildren();
@@ -310,7 +357,7 @@ async function renderDetail(current) {
   if (detailCache.has(current.week)) {
     const view = detailCache.get(current.week);
     info.textContent = describe(view, meta, current.kind);
-    window.renderReportInto(box, view, { kind: current.kind });
+    window.renderReportInto(box, view, { kind: current.kind, models: chosen });
     return;
   }
   info.textContent = "载入中…";
@@ -322,7 +369,7 @@ async function renderDetail(current) {
     const view = await response.json();
     detailCache.set(current.week, view);
     info.textContent = describe(view, meta, current.kind);
-    window.renderReportInto(box, view, { kind: current.kind });
+    window.renderReportInto(box, view, { kind: current.kind, models: chosen });
   } catch (error) {
     info.textContent = `读不到本期数据（${error && error.message ? error.message : error}）。` +
       "本地直接双击打开时浏览器会拦 fetch，用 http 打开或在线上看。";
@@ -404,6 +451,7 @@ function render() {
     (data.rows.length !== data.all ? `（筛出 ${data.rows.length}）` : "");
   renderTable(current, data);
   renderChart(current, data);
+  renderTopModels(current);
   renderModelTrend(current);
   void renderDetail(current);
 }

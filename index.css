@@ -61,6 +61,10 @@ td.num.on>*{position:relative}
 .bar .track i{display:block;height:7px;border-radius:2px}
 .bar .vals{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+/* 顶部模型多选：整行平铺，和「模型长期走势」下的 chips 同一套观感 */
+.models-row{display:flex;align-items:baseline;gap:10px;margin:2px 0 14px}
+.models-row .control-label{flex:none;font-size:11px;color:var(--muted);letter-spacing:.08em}
+.models-row .chips{margin:0}
 .chip{appearance:none;font:inherit;font-size:11.5px;padding:3px 10px;border-radius:999px;cursor:pointer;
 border:1px solid var(--line);background:#fff;color:var(--muted)}
 .chip.on{border-color:var(--tone);color:var(--tone)}

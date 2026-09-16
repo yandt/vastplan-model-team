@@ -142,20 +142,45 @@ function comments(block, options) {
   return `<div class="comments"><div class="comment chead-row${scoped ? " no-score" : ""}">${head}</div>${rows}</div>`;
 }
 
+/** 筛选用的实体名：面板行与评审行的首格是「#N 名称」，去掉序号再拼服务商即实体名
+ *  （与榜单表「名称 服务商」同口径，靠它把顶部模型多选接到报告里每一行）。 */
+function modelKeyOf(text, badge) {
+  const name = String(text ?? "").replace(/^#\d+\s*/, "").trim();
+  // 报告里的徽标是对象（{text: 短名, title: 全名}），榜单表里是字符串——统一按全名拼
+  const provider = badge && typeof badge === "object" ? badge.title ?? badge.text ?? "" : badge;
+  return provider ? `${name} ${provider}` : name;
+}
+
 /** 一个活动类型的小节。目录页按类型看时（options.kind）不再重复放模型榜单表——
  *  页面上方「榜单」表就是同一份数据且可切指标/搜索/看变更，这里只留图表与优缺点评审。
+ *  options.models 非空时只留这些模型的表格行、面板行与评审行（筛空的面板整块去掉）。
  *  切图外壳走全量模式（无 options），表格照旧，版块序号不会错位。 */
 function kindBlock(kind, options) {
   const scoped = Boolean(options && options.kind);
+  const models = options && Array.isArray(options.models) && options.models.length
+    ? new Set(options.models)
+    : null;
+  const keep = (text, badge) => !models || models.has(modelKeyOf(text, badge));
+  const table = models
+    ? { ...kind.table, rows: (kind.table?.rows ?? []).filter((row) => keep(row.name, row.badge)) }
+    : kind.table;
+  const groups = kind.panels
+    .map((group) => group
+      .map((panel) => (panel.rows ? { ...panel, rows: panel.rows.filter((row) => keep(row.label, row.badge)) } : panel))
+      .filter((panel) => !panel.rows || panel.rows.length > 0))
+    .filter((group) => group.length > 0);
+  const commentsBlock = models && kind.comments
+    ? { ...kind.comments, rows: (kind.comments.rows ?? []).filter((row) => keep(row.rank, row.badge)) }
+    : kind.comments;
   const skip = scoped
     ? '<p class="note">模型榜单见页面上方「榜单」表（可切指标、搜索模型、看对上期变更）；本节只保留图表与优缺点评审。</p>'
     : "";
   return (
     `<h2>${esc(kind.title)}<span>${esc(kind.meta)}</span></h2>` +
     skip +
-    (scoped ? "" : modelTable(kind.table)) +
-    panels(kind.panels) +
-    comments(kind.comments, options)
+    (scoped ? "" : modelTable(table)) +
+    panels(groups) +
+    comments(commentsBlock, options)
   );
 }
 
