@@ -70,9 +70,12 @@ function barRows(panel) {
     .map((r) => {
       // 最后两格分列：本周值固定占一格、环比（或「说错」这类附带值）占另一格。
       // 以前把值＋环比拼在一个单元格里，数字宽度不一就左右参差；分列后各行严格对齐。
-      const secondary = r.bad_text !== undefined
-        ? `<span class="d down">${esc(r.bad_text)}</span>`
-        : r.delta ? `<span class="d ${esc(r.delta.cls)}">${esc(r.delta.text)}</span>` : "";
+      // 覆盖行（有 unique_delta）四格自带两段环比，不再追加合计环比；其余面板照旧
+      const secondary = r.unique_delta && r.other_delta
+        ? ""
+        : r.bad_text !== undefined
+          ? `<span class="d down">${esc(r.bad_text)}</span>`
+          : r.delta ? `<span class="d ${esc(r.delta.cls)}">${esc(r.delta.text)}</span>` : "";
       // 覆盖面板：独有 / 独有环比 / 其他 / 其他环比 四格（两段各自的环比）；其余面板仍是 值 + 环比
       const dcls = (d) => (d && d.cls ? ` ${d.cls}` : "");
       const cell = (d) => (d ? `<span class="val2 d${dcls(d)}">${esc(d.text)}</span>` : "");
