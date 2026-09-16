@@ -113,7 +113,7 @@ function bars(host, spec) {
   const tracks = (options.tracks || []).filter(Boolean);
   const count = Math.max(1, tracks.length);
   const barHeight = Number(options.height) || 11;
-  const gap = options.gap === undefined ? 3 : Number(options.gap);
+  const gap = options.gap === undefined ? 1 : Number(options.gap);
   const height = count * barHeight + (count - 1) * gap;
   const minWidth = options.minWidth || 1;
   const { canvas } = mount(host, height, minWidth);

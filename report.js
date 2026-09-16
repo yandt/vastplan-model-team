@@ -49,7 +49,7 @@ function formula(block) {
 /** 条形的画布规格：上期 1 段（半透明）、本期 1~2 段（覆盖面板拆独有/共同）、可选说错 1 段。
  *  数值文字列仍是 DOM（对齐靠 CSS 网格），这里只把条交给 canvas。 */
 function barSpec(row) {
-  const tracks = [{ parts: [{ value: row.was_pct, color: row.tone, opacity: 0.32 }] }];
+  const tracks = [{ parts: [{ value: row.was_pct, color: row.tone, opacity: 0.5 }] }];
   if (row.unique_pct === undefined) {
     tracks.push({ parts: [{ value: row.now_pct, color: row.tone }] });
   } else {
