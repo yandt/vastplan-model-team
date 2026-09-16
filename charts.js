@@ -1,5 +1,6 @@
 /* VastCharts：归档站唯一的图表组件（Chart.js v4 UMD，无构建、无依赖注入）。
  * 只暴露 window.VastCharts.bars / .lines / .draw；四个图族都经这里出图。
+ * bars 自绘（几何要精确到 1px），lines 仍走 Chart.js。
  *
  * 约定：
  * - bars(host, spec)：把一条/多条细横条画进 host。spec.tracks 自上而下，
@@ -106,7 +107,26 @@ function register(host, chart, resize) {
   return chart;
 }
 
-/** 细横条：spec = { height?, gap?, bg?, minWidth?, tracks:[{parts:[{value,color,opacity?}]}] }。 */
+/** 一段圆角横条：只给指定端点倒角，栈内相邻两段拼成连续条、交界处不留缺口。
+ *  roundRect 的 radii 顺序 [左上,右上,右下,左下]；横条左端＝左上+左下，右端＝右上+右下。 */
+function fillSegment(ctx, x, y, width, height, radius, color, roundLeft, roundRight) {
+  const limit = Math.max(0, Math.min(radius, width / 2, height / 2));
+  const near = roundLeft ? limit : 0;
+  const far = roundRight ? limit : 0;
+  ctx.beginPath();
+  if (typeof ctx.roundRect === "function") {
+    ctx.roundRect(x, y, width, height, [near, far, far, near]);
+  } else {
+    ctx.rect(x, y, width, height);
+  }
+  ctx.fillStyle = color;
+  ctx.fill();
+}
+
+/** 细横条：spec = { height?, gap?, bg?, minWidth?, tracks:[{parts:[{value,color,opacity?}]}] }。
+ *  自绘几何：第 i 条占 [i*(height+gap), i*(height+gap)+height]，缝恒为 gap；画布高
+ *  = count*height + (count-1)*gap。不能用 Chart.js 类目轴：它把条按等分带居中，
+ *  带高 = 画布高/条数，与这个画布高公式差半格，条会被挤成 6px、缝涨到 11px。 */
 function bars(host, spec) {
   if (!host) return null;
   const options = spec || {};
@@ -116,60 +136,55 @@ function bars(host, spec) {
   const gap = options.gap === undefined ? 1 : Number(options.gap);
   const height = count * barHeight + (count - 1) * gap;
   const minWidth = options.minWidth || 1;
-  const { canvas } = mount(host, height, minWidth);
+  const bg = options.bg || TRACK_BG;
 
-  const maxParts = tracks.reduce((most, track) => Math.max(most, (track.parts || []).length), 0);
-  const datasets = [];
-  for (let index = 0; index < maxParts; index += 1) {
-    datasets.push({
-      data: tracks.map((track) => {
-        const part = (track.parts || [])[index];
-        return part ? clamp(part.value) : null;
-      }),
-      backgroundColor: tracks.map((track) => {
-        const part = (track.parts || [])[index];
-        return part ? rgba(part.color, part.opacity) : "transparent";
-      }),
-      stack: "vast",
-      barThickness: barHeight,
-      borderRadius: 2,
-      borderSkipped: false,
+  destroyHost(host);
+  host.replaceChildren();
+  const width = measure(host, minWidth);
+  const canvas = document.createElement("canvas");
+  canvas.style.display = "block";
+  host.appendChild(canvas);
+
+  const paint = (cssWidth) => {
+    const ratio = dpr();
+    canvas.width = Math.max(1, Math.round(cssWidth * ratio));
+    canvas.height = Math.max(1, Math.round(height * ratio));
+    canvas.style.width = `${cssWidth}px`;
+    canvas.style.height = `${height}px`;
+    const ctx = canvas.getContext("2d");
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ctx.clearRect(0, 0, cssWidth, height);
+    tracks.forEach((track, index) => {
+      const segments = (track.parts || [])
+        .filter((part) => part && clamp(part.value) > 0)
+        .map((part) => ({ width: (clamp(part.value) / 100) * cssWidth, color: rgba(part.color, part.opacity) }));
+      const used = (track.parts || []).reduce((sum, part) => sum + clamp(part && part.value), 0);
+      const rest = clamp(100 - used);
+      if (rest > 0) segments.push({ width: (rest / 100) * cssWidth, color: bg });
+      if (!segments.length) return;
+      const y = index * (barHeight + gap);
+      let x = 0;
+      segments.forEach((segment, position) => {
+        const room = cssWidth - x;
+        if (room <= 0) return;
+        fillSegment(ctx, x, y, Math.min(room, segment.width), barHeight, 2, segment.color,
+          position === 0, position === segments.length - 1);
+        x += segment.width;
+      });
     });
-  }
-  datasets.push({
-    data: tracks.map((track) => {
-      const used = (track.parts || []).reduce((sum, part) => sum + clamp(part.value), 0);
-      return clamp(100 - used);
-    }),
-    backgroundColor: options.bg || TRACK_BG,
-    stack: "vast",
-    barThickness: barHeight,
-    borderRadius: 2,
-    borderSkipped: false,
-  });
+  };
+  paint(width);
 
-  const chart = new Chart(canvas, {
-    type: "bar",
-    data: { labels: tracks.map((_track, index) => String(index)), datasets },
-    options: {
-      indexAxis: "y",
-      responsive: false,
-      maintainAspectRatio: false,
-      animation: false,
-      devicePixelRatio: 1,
-      events: [],
-      layout: { padding: 0 },
-      datasets: { bar: { barThickness: barHeight, categoryPercentage: 1, barPercentage: 1 } },
-      scales: {
-        x: { display: false, stacked: true, min: 0, max: 100 },
-        y: { display: false, stacked: true, offset: false },
-      },
-      plugins: { legend: { display: false }, tooltip: { enabled: false } },
+  const renderer = {
+    destroy() {
+      canvas.width = 1;
+      canvas.height = 1;
     },
-  });
-  return register(host, chart, () => {
-    chart.resize(remeasure(host, canvas, minWidth), height);
-  });
+    resize() {
+      paint(remeasure(host, canvas, minWidth));
+    },
+  };
+  return register(host, renderer, () => renderer.resize());
 }
 
 /** 折线：spec = { height?, minWidth?, labels, series:[{label,color,data}], yMin?, yMax?,
