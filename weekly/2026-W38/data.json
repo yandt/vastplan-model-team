@@ -10,7 +10,7 @@
       "2026-09-07",
       "2026-09-14"
     ],
-    "generated_at": "2026-09-16 21:44",
+    "generated_at": "2026-09-16 22:23",
     "partial": true,
     "title": "模型团队周报 2026-W38（2026-09-14 → 2026-09-21）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 38 周（进行中）（2026-W38）",
       "本窗 2026-09-14 → 2026-09-21（环比 2026-09-07 → 2026-09-14）",
-      "生成 2026-09-16 21:44"
+      "生成 2026-09-16 22:23"
     ]
   },
   "kpis": [
@@ -1090,7 +1090,7 @@
             ]
           },
           {
-            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同） · 本项排名（上灰＝上期，下彩＝本期）",
+            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同；末三列＝覆盖率/独有占比/环比） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
                 "label": "#1 DeepSeek V4.1 Flash（max）",
@@ -1105,7 +1105,8 @@
                 },
                 "unique_pct": 35.3,
                 "unique_text": "12%",
-                "other_text": "23%"
+                "other_text": "23%",
+                "unique_ratio_text": "35%"
               },
               {
                 "label": "#2 DeepSeek V4.1 Flash（high）",
@@ -1120,7 +1121,8 @@
                 },
                 "unique_pct": 42.4,
                 "unique_text": "15%",
-                "other_text": "18%"
+                "other_text": "18%",
+                "unique_ratio_text": "45%"
               },
               {
                 "label": "#3 Muse Spark 1.3 Contributor",
@@ -1135,7 +1137,8 @@
                 },
                 "unique_pct": 28.7,
                 "unique_text": "10%",
-                "other_text": "20%"
+                "other_text": "20%",
+                "unique_ratio_text": "34%"
               },
               {
                 "label": "#4 K3",
@@ -1153,7 +1156,8 @@
                 },
                 "unique_pct": 23.3,
                 "unique_text": "8%",
-                "other_text": "19%"
+                "other_text": "19%",
+                "unique_ratio_text": "30%"
               },
               {
                 "label": "#5 Grok 4.6 Extra High",
@@ -1168,7 +1172,8 @@
                 },
                 "unique_pct": 20.7,
                 "unique_text": "7%",
-                "other_text": "19%"
+                "other_text": "19%",
+                "unique_ratio_text": "28%"
               },
               {
                 "label": "#6 GLM-5.3",
@@ -1183,7 +1188,8 @@
                 },
                 "unique_pct": 22.4,
                 "unique_text": "8%",
-                "other_text": "18%"
+                "other_text": "18%",
+                "unique_ratio_text": "31%"
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
@@ -1198,7 +1204,8 @@
                 },
                 "unique_pct": 17.3,
                 "unique_text": "6%",
-                "other_text": "19%"
+                "other_text": "19%",
+                "unique_ratio_text": "24%"
               },
               {
                 "label": "#8 GLM-5.3-Flash",
@@ -1213,7 +1220,8 @@
                 },
                 "unique_pct": 18.2,
                 "unique_text": "6%",
-                "other_text": "19%"
+                "other_text": "19%",
+                "unique_ratio_text": "25%"
               },
               {
                 "label": "#9 Gemini 3.8 Flash",
@@ -1228,7 +1236,8 @@
                 },
                 "unique_pct": 0,
                 "unique_text": "0%",
-                "other_text": "13%"
+                "other_text": "13%",
+                "unique_ratio_text": "0%"
               },
               {
                 "label": "#10 MiMo V2.5 Pro",
@@ -1243,7 +1252,8 @@
                 },
                 "unique_pct": 8.9,
                 "unique_text": "3%",
-                "other_text": "5%"
+                "other_text": "5%",
+                "unique_ratio_text": "40%"
               }
             ]
           }
@@ -3143,7 +3153,7 @@
             ]
           },
           {
-            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同） · 本项排名（上灰＝上期，下彩＝本期）",
+            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同；末三列＝覆盖率/独有占比/环比） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
                 "label": "#1 Gemini 3.8 Flash",
@@ -3158,7 +3168,8 @@
                 },
                 "unique_pct": 0,
                 "unique_text": "0%",
-                "other_text": "47%"
+                "other_text": "47%",
+                "unique_ratio_text": "0%"
               },
               {
                 "label": "#2 K3",
@@ -3176,7 +3187,8 @@
                 },
                 "unique_pct": 50.8,
                 "unique_text": "24%",
-                "other_text": "19%"
+                "other_text": "19%",
+                "unique_ratio_text": "56%"
               },
               {
                 "label": "#3 Grok 4.6 Extra High",
@@ -3191,7 +3203,8 @@
                 },
                 "unique_pct": 41.6,
                 "unique_text": "20%",
-                "other_text": "21%"
+                "other_text": "21%",
+                "unique_ratio_text": "48%"
               },
               {
                 "label": "#4 GLM-5.3",
@@ -3206,7 +3219,8 @@
                 },
                 "unique_pct": 16.4,
                 "unique_text": "8%",
-                "other_text": "20%"
+                "other_text": "20%",
+                "unique_ratio_text": "28%"
               },
               {
                 "label": "#5 DeepSeek V4.1 Flash（max）",
@@ -3221,7 +3235,8 @@
                 },
                 "unique_pct": 12.4,
                 "unique_text": "6%",
-                "other_text": "20%"
+                "other_text": "20%",
+                "unique_ratio_text": "23%"
               },
               {
                 "label": "#6 GLM-5.3-Flash",
@@ -3236,7 +3251,8 @@
                 },
                 "unique_pct": 11.2,
                 "unique_text": "5%",
-                "other_text": "20%"
+                "other_text": "20%",
+                "unique_ratio_text": "21%"
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
@@ -3251,7 +3267,8 @@
                 },
                 "unique_pct": 11.5,
                 "unique_text": "5%",
-                "other_text": "20%"
+                "other_text": "20%",
+                "unique_ratio_text": "22%"
               },
               {
                 "label": "#8 Muse Spark 1.3 Contributor",
@@ -3266,7 +3283,8 @@
                 },
                 "unique_pct": 16.4,
                 "unique_text": "8%",
-                "other_text": "17%"
+                "other_text": "17%",
+                "unique_ratio_text": "31%"
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
@@ -3281,7 +3299,8 @@
                 },
                 "unique_pct": 9.6,
                 "unique_text": "5%",
-                "other_text": "14%"
+                "other_text": "14%",
+                "unique_ratio_text": "24%"
               },
               {
                 "label": "#10 DeepSeek V4.1 Flash（high）",
@@ -3296,7 +3315,8 @@
                 },
                 "unique_pct": 0,
                 "unique_text": "0%",
-                "other_text": "0%"
+                "other_text": "0%",
+                "unique_ratio_text": "0%"
               }
             ]
           }

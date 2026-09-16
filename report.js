@@ -62,11 +62,14 @@ function barRows(panel) {
         ? `<span class="track"><i style="width:${r.now_pct}%;background:${esc(r.tone)}"></i></span>`
         : `<span class="track split"><i style="width:${r.unique_pct}%;background:${esc(r.tone)}"></i>` +
           `<i style="width:${Math.max(0, r.now_pct - r.unique_pct)}%;background:${esc(r.tone)};opacity:.42"></i></span>`;
+      const ratio = r.unique_ratio_text === undefined
+        ? ""
+        : `<span class="val3">${esc(r.unique_ratio_text)}</span>`;
       return (
-        `<div class="bar"><span class="lab">${esc(r.label)}${badge(r.badge)}</span><span class="tracks">` +
+        `<div class="bar${ratio ? " three" : ""}"><span class="lab">${esc(r.label)}${badge(r.badge)}</span><span class="tracks">` +
         `<span class="track was"><i style="width:${r.was_pct}%;background:${esc(r.tone)}"></i></span>` +
         nowTrack + bad + `</span>` +
-        `<span class="val">${esc(r.value)}</span><span class="val2">${secondary}</span></div>`
+        `<span class="val">${esc(r.value)}</span>${ratio}<span class="val2">${secondary}</span></div>`
       );
     })
     .join("");
