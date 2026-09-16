@@ -106,20 +106,22 @@ function modelTable(table) {
   return `<div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>${note}`;
 }
 
-function comments(block) {
+function comments(block, options) {
   if (!block) return "";
+  const scoped = Boolean(options && options.kind);
+  // 按类型看时不重复排名与综合分（那是页面上方「榜单」的事），只留模型/长处/短处
   const rows = block.rows
-    .map(
-      (r) =>
-        `<div class="comment"><span class="chead">${esc(r.rank)}${badge(r.badge)}</span>` +
-        `<span class="cscore">${esc(r.score)}</span><span class="cpro">${esc(r.pros)}</span>` +
-        `<span class="ccon">${esc(r.cons)}</span></div>`,
-    )
+    .map((r) => {
+      const name = scoped ? String(r.rank).replace(/^#\d+\s*/, "") : r.rank;
+      return `<div class="comment${scoped ? " no-score" : ""}"><span class="chead">${esc(name)}${badge(r.badge)}</span>` +
+        (scoped ? "" : `<span class="cscore">${esc(r.score)}</span>`) +
+        `<span class="cpro">${esc(r.pros)}</span><span class="ccon">${esc(r.cons)}</span></div>`;
+    })
     .join("");
-  const head = block.head
-    .map((h, i) => `<span class="${["chead", "cscore", "cpro", "ccon"][i]}">${esc(h)}</span>`)
+  const head = (scoped ? ["模型（按上方榜单顺序）"].concat(block.head.slice(2)) : block.head)
+    .map((h, i) => `<span class="${(scoped ? ["chead", "cpro", "ccon"] : ["chead", "cscore", "cpro", "ccon"])[i]}">${esc(h)}</span>`)
     .join("");
-  return `<div class="comments"><div class="comment chead-row">${head}</div>${rows}</div>`;
+  return `<div class="comments"><div class="comment chead-row${scoped ? " no-score" : ""}">${head}</div>${rows}</div>`;
 }
 
 /** 一个活动类型的小节。目录页按类型看时（options.kind）不再重复放模型榜单表——
@@ -135,7 +137,7 @@ function kindBlock(kind, options) {
     skip +
     (scoped ? "" : modelTable(kind.table)) +
     panels(kind.panels) +
-    comments(kind.comments)
+    comments(kind.comments, options)
   );
 }
 
