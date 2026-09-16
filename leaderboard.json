@@ -7,6 +7,7 @@
       "dir": "weekly/2026-W37",
       "files": [
         "data.json",
+        "post.md",
         "report.md",
         "summary.json"
       ],
@@ -24,6 +25,7 @@
       "dir": "weekly/2026-W38",
       "files": [
         "data.json",
+        "post.md",
         "report.md",
         "summary.json"
       ],
