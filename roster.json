@@ -61,7 +61,7 @@
       ],
       "thinking": "max",
       "pricing": "vendor-api",
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "DeepSeek V4.1 Flash（max）",
