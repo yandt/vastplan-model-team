@@ -333,13 +333,19 @@ async function renderDetail(current) {
 async function openMarkdown(path, title) {
   const box = document.getElementById("md-preview");
   if (!box) return;
-  box.hidden = false;
   box.dataset.source = path;
   box.innerHTML = `<div class="md-head"><b>${escHtml(title)}</b>` +
     `<span class="md-actions"><a href="${escHtml(path)}" target="_blank" rel="noopener">原始文件</a>` +
     `<button type="button" class="ghost" id="md-close">关闭</button></span></div>` +
     `<div class="md-body loading">载入中…</div>`;
-  document.getElementById("md-close")?.addEventListener("click", () => { box.hidden = true; box.replaceChildren(); });
+  document.getElementById("md-close")?.addEventListener("click", () => box.close());
+  // 点遮罩关闭（Esc 是 dialog 自带的）
+  if (!box.dataset.bound) {
+    box.dataset.bound = "1";
+    box.addEventListener("click", (event) => { if (event.target === box) box.close(); });
+  }
+  if (typeof box.showModal === "function" && !box.open) box.showModal();
+  else box.setAttribute("open", "");
   const body = box.querySelector(".md-body");
   try {
     const response = await fetch(path, { cache: "no-cache" });
@@ -347,10 +353,14 @@ async function openMarkdown(path, title) {
     const text = await response.text();
     const renderer = window.marked;
     body.classList.remove("loading");
-    body.innerHTML = renderer && typeof renderer.parse === "function"
-      ? renderer.parse(text.replace(/</g, "&lt;"))
-      : `<pre>${escHtml(text)}</pre>`;
-    box.scrollIntoView({ block: "nearest" });
+    // 开头的 <!-- … --> 是生成信息（模型/耗时/金额）：提出来当一行淡色元信息，不混进正文
+    const head = text.match(/^(?:\s*<!--[\s\S]*?-->\s*)+/);
+    const meta = head ? head[0].replace(/<!--|-->/g, " ").replace(/\s+/g, " ").trim() : "";
+    const restText = head ? text.slice(head[0].length) : text;
+    const metaHtml = meta ? `<p class="md-meta">${escHtml(meta)}</p>` : "";
+    body.innerHTML = metaHtml + (renderer && typeof renderer.parse === "function"
+      ? renderer.parse(restText.replace(/</g, "&lt;"))
+      : `<pre>${escHtml(restText)}</pre>`);
   } catch (error) {
     body.classList.remove("loading");
     body.textContent = `读不到这份 Markdown（${error && error.message ? error.message : error}）。` +
