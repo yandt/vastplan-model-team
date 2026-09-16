@@ -16,7 +16,8 @@ h1{margin:0 0 6px;font-size:25px;font-weight:650}
 .sub a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line)}
 
 /* ── 活动类型标签页 ── */
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px}
+/* 上边距必须留给标题区的分隔线：margin-top 为 0 时按钮会正好压在线上 */
 .tab{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);
 padding:6px 14px;border-radius:999px;font-size:13px;cursor:pointer;font-family:inherit}
 .tab:hover{border-color:var(--accent)}
