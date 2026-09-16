@@ -61,6 +61,7 @@ tbody tr:hover td{background:#f7f5f2}
 .bar .lab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#4a4744}
 .bar .tracks{display:grid;gap:2px}
 .bar .track{height:5px;background:#e9e5df;border-radius:2px;overflow:hidden}
+.bar .track.split{display:flex;gap:0}
 .bar .track i{display:block;height:5px;border-radius:2px}
 .bar .track.was i{opacity:.32}
 .bar .val,.bar .val2{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}

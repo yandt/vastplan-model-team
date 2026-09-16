@@ -10,7 +10,7 @@
       "2026-08-31",
       "2026-09-07"
     ],
-    "generated_at": "2026-09-16 17:52",
+    "generated_at": "2026-09-16 20:40",
     "partial": false,
     "title": "模型团队周报 2026-W37（2026-09-07 → 2026-09-14）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 37 周（2026-W37）",
       "本窗 2026-09-07 → 2026-09-14（环比 2026-08-31 → 2026-09-07）",
-      "生成 2026-09-16 17:52"
+      "生成 2026-09-16 20:40"
     ]
   },
   "kpis": [
@@ -184,13 +184,13 @@
       {
         "name": "覆盖",
         "share": "30%",
-        "desc": "重要性加权成立数 ÷ 所参与轮次同口径合计",
+        "desc": "去重后重要性加权成立数 ÷ 所参与轮次全场去重合计（同名问题只算一次）",
         "low": false
       },
       {
         "name": "独立",
         "share": "10%",
-        "desc": "独有/成立",
+        "desc": "独有（重要性加权）/ 成立（重要性加权）",
         "low": false
       },
       {
@@ -273,7 +273,7 @@
                 "text": "max"
               },
               {
-                "text": "82.2",
+                "text": "82.5",
                 "cls": "score"
               },
               {
@@ -316,7 +316,7 @@
                 "text": "max"
               },
               {
-                "text": "78.0",
+                "text": "75.7",
                 "cls": "score"
               },
               {
@@ -402,7 +402,7 @@
                 "text": "xhigh"
               },
               {
-                "text": "70.6",
+                "text": "70.7",
                 "cls": "score"
               },
               {
@@ -448,7 +448,7 @@
                 "text": "max"
               },
               {
-                "text": "65.6",
+                "text": "65.0",
                 "cls": "score"
               },
               {
@@ -483,49 +483,6 @@
           },
           {
             "rank": "6",
-            "name": "Gemini 3.8 Flash",
-            "dot": "#4f8a8b",
-            "badge": null,
-            "cells": [
-              {
-                "text": "high"
-              },
-              {
-                "text": "61.6",
-                "cls": "score"
-              },
-              {
-                "text": "38/3"
-              },
-              {
-                "text": "6.0/8.3",
-                "delta": {
-                  "text": "-2.3",
-                  "cls": "down"
-                }
-              },
-              {
-                "text": "77/13"
-              },
-              {
-                "text": "36"
-              },
-              {
-                "text": "36"
-              },
-              {
-                "text": "68%"
-              },
-              {
-                "text": "32.67/5.44"
-              },
-              {
-                "text": "0.91"
-              }
-            ]
-          },
-          {
-            "rank": "7",
             "name": "GLM-5.3",
             "dot": "#b0674a",
             "badge": null,
@@ -534,7 +491,7 @@
                 "text": "max"
               },
               {
-                "text": "61.0",
+                "text": "61.2",
                 "cls": "score"
               },
               {
@@ -568,6 +525,49 @@
             ]
           },
           {
+            "rank": "7",
+            "name": "Gemini 3.8 Flash",
+            "dot": "#4f8a8b",
+            "badge": null,
+            "cells": [
+              {
+                "text": "high"
+              },
+              {
+                "text": "60.2",
+                "cls": "score"
+              },
+              {
+                "text": "38/3"
+              },
+              {
+                "text": "6.0/8.3",
+                "delta": {
+                  "text": "-2.3",
+                  "cls": "down"
+                }
+              },
+              {
+                "text": "77/13"
+              },
+              {
+                "text": "36"
+              },
+              {
+                "text": "36"
+              },
+              {
+                "text": "68%"
+              },
+              {
+                "text": "32.67/5.44"
+              },
+              {
+                "text": "0.91"
+              }
+            ]
+          },
+          {
             "rank": "8",
             "name": "GLM-5.3-Flash",
             "dot": "#a05a76",
@@ -577,7 +577,7 @@
                 "text": "max"
               },
               {
-                "text": "57.0",
+                "text": "55.4",
                 "cls": "score"
               },
               {
@@ -620,7 +620,7 @@
                 "text": "max"
               },
               {
-                "text": "38.7",
+                "text": "37.3",
                 "cls": "score"
               },
               {
@@ -663,7 +663,7 @@
                 "text": "max"
               },
               {
-                "text": "19.0",
+                "text": "18.6",
                 "cls": "score"
               },
               {
@@ -697,7 +697,7 @@
             ]
           }
         ],
-        "note": "主力（≥5 场）第一：K3 Cursor（综合 82.2）"
+        "note": "主力（≥5 场）第一：K3 Cursor（综合 82.5）"
       },
       "panels": [
         [
@@ -966,15 +966,15 @@
         ],
         [
           {
-            "title": "独立 · 独有占比 · 本项排名（上灰＝上期，下彩＝本期）",
+            "title": "独立 · 独有占比（重要性加权） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
                 "label": "#1 Muse Spark 1.3 Contributor",
                 "badge": null,
                 "tone": "#7d6b8f",
-                "was_pct": 98,
-                "now_pct": 98,
-                "value": "68%",
+                "was_pct": 100,
+                "now_pct": 100,
+                "value": "70%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
@@ -987,48 +987,48 @@
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
-                "was_pct": 100,
-                "now_pct": 77.4,
-                "value": "54%",
+                "was_pct": 83.5,
+                "now_pct": 80.6,
+                "value": "57%",
                 "delta": {
-                  "text": "-16%",
+                  "text": "-2%",
                   "cls": "down"
                 }
               },
               {
-                "label": "#3 DeepSeek V4.1 Flash（max）",
+                "label": "#3 Grok 4.6 Extra High",
+                "badge": null,
+                "tone": "#4a6fa5",
+                "was_pct": 79,
+                "now_pct": 71.9,
+                "value": "51%",
+                "delta": {
+                  "text": "-5%",
+                  "cls": "down"
+                }
+              },
+              {
+                "label": "#4 DeepSeek V4.1 Flash（max）",
                 "badge": null,
                 "tone": "#8a7a3f",
-                "was_pct": 75,
-                "now_pct": 75,
-                "value": "52%",
+                "was_pct": 65,
+                "now_pct": 65,
+                "value": "46%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
                 }
               },
               {
-                "label": "#4 Grok 4.6 Extra High",
-                "badge": null,
-                "tone": "#4a6fa5",
-                "was_pct": 71.9,
-                "now_pct": 69.8,
-                "value": "49%",
-                "delta": {
-                  "text": "-1%",
-                  "cls": "down"
-                }
-              },
-              {
                 "label": "#5 Gemini 3.8 Flash",
                 "badge": null,
                 "tone": "#4f8a8b",
-                "was_pct": 77.4,
-                "now_pct": 67.2,
-                "value": "47%",
+                "was_pct": 52.4,
+                "now_pct": 61.7,
+                "value": "43%",
                 "delta": {
-                  "text": "-7%",
-                  "cls": "down"
+                  "text": "+7%",
+                  "cls": "up"
                 }
               },
               {
@@ -1038,44 +1038,20 @@
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
-                "was_pct": 58.7,
-                "now_pct": 58.7,
-                "value": "41%",
+                "was_pct": 56.9,
+                "now_pct": 56.9,
+                "value": "40%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
                 }
               },
               {
-                "label": "#7 GLM-5.3-Flash",
-                "badge": null,
-                "tone": "#a05a76",
-                "was_pct": 24,
-                "now_pct": 58.5,
-                "value": "41%",
-                "delta": {
-                  "text": "+24%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#8 DeepSeek V4 Flash",
-                "badge": null,
-                "tone": "#6b8e5a",
-                "was_pct": 56.1,
-                "now_pct": 56.1,
-                "value": "39%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#9 MiMo V2.5 Pro",
+                "label": "#7 MiMo V2.5 Pro",
                 "badge": null,
                 "tone": "#b08a3e",
-                "was_pct": 55.9,
-                "now_pct": 55.9,
+                "was_pct": 54.9,
+                "now_pct": 54.9,
                 "value": "39%",
                 "delta": {
                   "text": "+0%",
@@ -1083,15 +1059,39 @@
                 }
               },
               {
-                "label": "#10 GLM-5.3",
+                "label": "#8 GLM-5.3",
                 "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 0,
-                "now_pct": 49.2,
-                "value": "34%",
+                "now_pct": 51.5,
+                "value": "36%",
                 "delta": {
-                  "text": "+34%",
+                  "text": "+36%",
                   "cls": "up"
+                }
+              },
+              {
+                "label": "#9 GLM-5.3-Flash",
+                "badge": null,
+                "tone": "#a05a76",
+                "was_pct": 10.9,
+                "now_pct": 51.4,
+                "value": "36%",
+                "delta": {
+                  "text": "+28%",
+                  "cls": "up"
+                }
+              },
+              {
+                "label": "#10 DeepSeek V4 Flash",
+                "badge": null,
+                "tone": "#6b8e5a",
+                "was_pct": 50.1,
+                "now_pct": 50.1,
+                "value": "35%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
                 }
               }
             ]
@@ -1230,7 +1230,7 @@
         ],
         [
           {
-            "title": "覆盖 · 重要性加权占参与轮次 · 本项排名（上灰＝上期，下彩＝本期）",
+            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
                 "label": "#1 K3",
@@ -1245,7 +1245,10 @@
                 "delta": {
                   "text": "-26%",
                   "cls": "down"
-                }
+                },
+                "unique_pct": 30.1,
+                "unique_text": "17%",
+                "other_text": "13%"
               },
               {
                 "label": "#2 Gemini 3.8 Flash",
@@ -1257,7 +1260,10 @@
                 "delta": {
                   "text": "-1%",
                   "cls": "down"
-                }
+                },
+                "unique_pct": 23,
+                "unique_text": "13%",
+                "other_text": "17%"
               },
               {
                 "label": "#3 DeepSeek V4.1 Flash（max）",
@@ -1269,7 +1275,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 22.7,
+                "unique_text": "13%",
+                "other_text": "15%"
               },
               {
                 "label": "#4 Grok 4.6 Extra High",
@@ -1281,7 +1290,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "up"
-                }
+                },
+                "unique_pct": 25,
+                "unique_text": "14%",
+                "other_text": "14%"
               },
               {
                 "label": "#5 K3",
@@ -1296,7 +1308,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 19.6,
+                "unique_text": "11%",
+                "other_text": "16%"
               },
               {
                 "label": "#6 GLM-5.3",
@@ -1308,7 +1323,10 @@
                 "delta": {
                   "text": "-5%",
                   "cls": "down"
-                }
+                },
+                "unique_pct": 16.5,
+                "unique_text": "9%",
+                "other_text": "16%"
               },
               {
                 "label": "#7 GLM-5.3-Flash",
@@ -1320,7 +1338,10 @@
                 "delta": {
                   "text": "-19%",
                   "cls": "down"
-                }
+                },
+                "unique_pct": 14.4,
+                "unique_text": "8%",
+                "other_text": "14%"
               },
               {
                 "label": "#8 Muse Spark 1.3 Contributor",
@@ -1332,7 +1353,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 25,
+                "unique_text": "14%",
+                "other_text": "6%"
               },
               {
                 "label": "#9 DeepSeek V4 Flash",
@@ -1344,7 +1368,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 11.3,
+                "unique_text": "6%",
+                "other_text": "12%"
               },
               {
                 "label": "#10 MiMo V2.5 Pro",
@@ -1356,7 +1383,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 6.6,
+                "unique_text": "4%",
+                "other_text": "6%"
               }
             ]
           },
@@ -2335,14 +2365,14 @@
               "text": "Curso...",
               "title": "Cursor"
             },
-            "score": "82.2",
+            "score": "82.5",
             "pros": "抓得最全（重要性加权占参与轮次 29%）",
             "cons": "花费相对最弱（每次 $0.93）"
           },
           {
             "rank": "#2 DeepSeek V4.1 Flash（max）",
             "badge": null,
-            "score": "78.0",
+            "score": "75.7",
             "pros": "产出最高（均质量 8.2）、缓存命中最高（98%）",
             "cons": "无突出短板"
           },
@@ -2356,7 +2386,7 @@
           {
             "rank": "#4 Grok 4.6 Extra High",
             "badge": null,
-            "score": "70.6",
+            "score": "70.7",
             "pros": "覆盖相对最好（占参与轮次 27%）",
             "cons": "每条成立最贵（$0.66）"
           },
@@ -2366,42 +2396,42 @@
               "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
             },
-            "score": "65.6",
+            "score": "65.0",
             "pros": "token相对最好（每条成立 442 千）",
             "cons": "时间相对最弱（每次 8.6 分钟）"
           },
           {
-            "rank": "#6 Gemini 3.8 Flash",
+            "rank": "#6 GLM-5.3",
             "badge": null,
-            "score": "61.6",
+            "score": "61.2",
+            "pros": "token相对最好（每条成立 637 千）",
+            "cons": "独立相对最弱（独有占比 36%）"
+          },
+          {
+            "rank": "#7 Gemini 3.8 Flash",
+            "badge": null,
+            "score": "60.2",
             "pros": "覆盖相对最好（占参与轮次 29%）",
             "cons": "每条成立最耗 token（2,709 千）"
           },
           {
-            "rank": "#7 GLM-5.3",
-            "badge": null,
-            "score": "61.0",
-            "pros": "token相对最好（每条成立 637 千）",
-            "cons": "独立相对最弱（独有占比 34%）"
-          },
-          {
             "rank": "#8 GLM-5.3-Flash",
             "badge": null,
-            "score": "57.0",
+            "score": "55.4",
             "pros": "最准（94%）",
             "cons": "最慢（每次 9.4 分钟，档位 max）"
           },
           {
             "rank": "#9 DeepSeek V4 Flash",
             "badge": null,
-            "score": "38.7",
+            "score": "37.3",
             "pros": "花费相对最好（每次 $0.19）",
-            "cons": "独立相对最弱（独有占比 39%）"
+            "cons": "独立相对最弱（独有占比 35%）"
           },
           {
             "rank": "#10 MiMo V2.5 Pro",
             "badge": null,
-            "score": "19.0",
+            "score": "18.6",
             "pros": "花费相对最好（每次 $0.03）",
             "cons": "假阳最多（每次 0.49 条，准确率 51%）、均质量垫底（0.7）"
           }
@@ -2554,7 +2584,7 @@
                 "text": "max"
               },
               {
-                "text": "72.8",
+                "text": "73.0",
                 "cls": "score"
               },
               {
@@ -2640,7 +2670,7 @@
                 "text": "xhigh"
               },
               {
-                "text": "47.3",
+                "text": "47.0",
                 "cls": "score"
               },
               {
@@ -2683,7 +2713,7 @@
                 "text": "max"
               },
               {
-                "text": "46.6",
+                "text": "46.8",
                 "cls": "score"
               },
               {
@@ -2726,7 +2756,7 @@
                 "text": "max"
               },
               {
-                "text": "41.8",
+                "text": "41.9",
                 "cls": "score"
               },
               {
@@ -2769,7 +2799,7 @@
                 "text": "max"
               },
               {
-                "text": "38.7",
+                "text": "38.6",
                 "cls": "score"
               },
               {
@@ -2812,7 +2842,7 @@
                 "text": "max"
               },
               {
-                "text": "34.9",
+                "text": "34.4",
                 "cls": "score"
               },
               {
@@ -2847,6 +2877,49 @@
           },
           {
             "rank": "10",
+            "name": "Muse Spark 1.3 Contributor",
+            "dot": "#7d6b8f",
+            "badge": null,
+            "cells": [
+              {
+                "text": "xhigh"
+              },
+              {
+                "text": "26.7",
+                "cls": "score"
+              },
+              {
+                "text": "7/0"
+              },
+              {
+                "text": "10.1/0.0",
+                "delta": {
+                  "text": "+10.1",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "4/0"
+              },
+              {
+                "text": "1"
+              },
+              {
+                "text": "0"
+              },
+              {
+                "text": "100%"
+              },
+              {
+                "text": "0.02/0.00"
+              },
+              {
+                "text": "3.71/0.00"
+              }
+            ]
+          },
+          {
+            "rank": "11",
             "name": "MiMo V2.5 Pro",
             "dot": "#b08a3e",
             "badge": null,
@@ -2885,49 +2958,6 @@
               },
               {
                 "text": "2.81/0.00"
-              }
-            ]
-          },
-          {
-            "rank": "11",
-            "name": "Muse Spark 1.3 Contributor",
-            "dot": "#7d6b8f",
-            "badge": null,
-            "cells": [
-              {
-                "text": "xhigh"
-              },
-              {
-                "text": "25.9",
-                "cls": "score"
-              },
-              {
-                "text": "7/0"
-              },
-              {
-                "text": "10.1/0.0",
-                "delta": {
-                  "text": "+10.1",
-                  "cls": "up"
-                }
-              },
-              {
-                "text": "4/0"
-              },
-              {
-                "text": "1"
-              },
-              {
-                "text": "0"
-              },
-              {
-                "text": "100%"
-              },
-              {
-                "text": "0.02/0.00"
-              },
-              {
-                "text": "3.71/0.00"
               }
             ]
           }
@@ -3225,7 +3255,7 @@
         ],
         [
           {
-            "title": "独立 · 独有占比 · 本项排名（上灰＝上期，下彩＝本期）",
+            "title": "独立 · 独有占比（重要性加权） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
                 "label": "#1 K3",
@@ -3234,11 +3264,11 @@
                   "title": "Cursor"
                 },
                 "tone": "#6b5b95",
-                "was_pct": 43.2,
-                "now_pct": 100,
+                "was_pct": 37,
+                "now_pct": 84,
                 "value": "84%",
                 "delta": {
-                  "text": "+48%",
+                  "text": "+47%",
                   "cls": "up"
                 }
               },
@@ -3246,36 +3276,36 @@
                 "label": "#2 Fable 5.1",
                 "badge": null,
                 "tone": "#a45a52",
-                "was_pct": 70.2,
-                "now_pct": 70.2,
-                "value": "59%",
+                "was_pct": 58.3,
+                "now_pct": 58.3,
+                "value": "58%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
                 }
               },
               {
-                "label": "#3 DeepSeek V4.1 Flash（max）",
-                "badge": null,
-                "tone": "#8a7a3f",
-                "was_pct": 54,
-                "now_pct": 54,
-                "value": "45%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#4 K3",
+                "label": "#3 K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
                 },
                 "tone": "#6b5b95",
-                "was_pct": 51.8,
-                "now_pct": 51.8,
+                "was_pct": 43.8,
+                "now_pct": 43.8,
                 "value": "44%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                }
+              },
+              {
+                "label": "#4 DeepSeek V4.1 Flash（max）",
+                "badge": null,
+                "tone": "#8a7a3f",
+                "was_pct": 40,
+                "now_pct": 40,
+                "value": "40%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
@@ -3286,10 +3316,10 @@
                 "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 0,
-                "now_pct": 50.9,
-                "value": "43%",
+                "now_pct": 39.4,
+                "value": "39%",
                 "delta": {
-                  "text": "+43%",
+                  "text": "+39%",
                   "cls": "up"
                 }
               },
@@ -3297,11 +3327,11 @@
                 "label": "#6 Gemini 3.8 Flash",
                 "badge": null,
                 "tone": "#4f8a8b",
-                "was_pct": 49.5,
-                "now_pct": 39.6,
-                "value": "33%",
+                "was_pct": 35.2,
+                "now_pct": 32.2,
+                "value": "32%",
                 "delta": {
-                  "text": "-8%",
+                  "text": "-3%",
                   "cls": "down"
                 }
               },
@@ -3309,9 +3339,9 @@
                 "label": "#7 Muse Spark 1.3 Contributor",
                 "badge": null,
                 "tone": "#7d6b8f",
-                "was_pct": 29.7,
-                "now_pct": 29.7,
-                "value": "25%",
+                "was_pct": 29.4,
+                "now_pct": 29.4,
+                "value": "29%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
@@ -3321,9 +3351,9 @@
                 "label": "#8 DeepSeek V4 Flash",
                 "badge": null,
                 "tone": "#6b8e5a",
-                "was_pct": 22.1,
-                "now_pct": 22.1,
-                "value": "19%",
+                "was_pct": 17.7,
+                "now_pct": 17.7,
+                "value": "18%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
@@ -3334,19 +3364,7 @@
                 "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 0,
-                "now_pct": 18.1,
-                "value": "15%",
-                "delta": {
-                  "text": "+15%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#10 GLM-5.3-Flash",
-                "badge": null,
-                "tone": "#a05a76",
-                "was_pct": 0,
-                "now_pct": 17,
+                "now_pct": 14.4,
                 "value": "14%",
                 "delta": {
                   "text": "+14%",
@@ -3354,12 +3372,24 @@
                 }
               },
               {
+                "label": "#10 GLM-5.3-Flash",
+                "badge": null,
+                "tone": "#a05a76",
+                "was_pct": 100,
+                "now_pct": 11.9,
+                "value": "12%",
+                "delta": {
+                  "text": "-88%",
+                  "cls": "down"
+                }
+              },
+              {
                 "label": "#11 MiMo V2.5 Pro",
                 "badge": null,
                 "tone": "#b08a3e",
-                "was_pct": 9.9,
-                "now_pct": 9.9,
-                "value": "8%",
+                "was_pct": 6.2,
+                "now_pct": 6.2,
+                "value": "6%",
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
@@ -3513,7 +3543,7 @@
         ],
         [
           {
-            "title": "覆盖 · 重要性加权占参与轮次 · 本项排名（上灰＝上期，下彩＝本期）",
+            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
                 "label": "#1 Fable 5.1",
@@ -3525,7 +3555,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 47.5,
+                "unique_text": "39%",
+                "other_text": "28%"
               },
               {
                 "label": "#2 K3",
@@ -3540,7 +3573,10 @@
                 "delta": {
                   "text": "-18%",
                   "cls": "down"
-                }
+                },
+                "unique_pct": 49.9,
+                "unique_text": "41%",
+                "other_text": "8%"
               },
               {
                 "label": "#3 K3",
@@ -3555,7 +3591,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 24.9,
+                "unique_text": "21%",
+                "other_text": "27%"
               },
               {
                 "label": "#4 Grok 4.6 Extra High",
@@ -3567,7 +3606,10 @@
                 "delta": {
                   "text": "+38%",
                   "cls": "up"
-                }
+                },
+                "unique_pct": 20.2,
+                "unique_text": "17%",
+                "other_text": "26%"
               },
               {
                 "label": "#5 Gemini 3.8 Flash",
@@ -3579,7 +3621,10 @@
                 "delta": {
                   "text": "-49%",
                   "cls": "down"
-                }
+                },
+                "unique_pct": 13.1,
+                "unique_text": "11%",
+                "other_text": "23%"
               },
               {
                 "label": "#6 GLM-5.3",
@@ -3591,7 +3636,10 @@
                 "delta": {
                   "text": "+32%",
                   "cls": "up"
-                }
+                },
+                "unique_pct": 5.5,
+                "unique_text": "5%",
+                "other_text": "27%"
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
@@ -3603,7 +3651,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 6.4,
+                "unique_text": "5%",
+                "other_text": "25%"
               },
               {
                 "label": "#8 GLM-5.3-Flash",
@@ -3615,7 +3666,10 @@
                 "delta": {
                   "text": "+19%",
                   "cls": "up"
-                }
+                },
+                "unique_pct": 4.2,
+                "unique_text": "3%",
+                "other_text": "26%"
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
@@ -3627,7 +3681,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 1.5,
+                "unique_text": "1%",
+                "other_text": "19%"
               },
               {
                 "label": "#10 DeepSeek V4.1 Flash（max）",
@@ -3639,7 +3696,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 6,
+                "unique_text": "5%",
+                "other_text": "7%"
               },
               {
                 "label": "#11 Muse Spark 1.3 Contributor",
@@ -3651,7 +3711,10 @@
                 "delta": {
                   "text": "+0%",
                   "cls": "flat"
-                }
+                },
+                "unique_pct": 3,
+                "unique_text": "2%",
+                "other_text": "6%"
               }
             ]
           },
@@ -4729,7 +4792,7 @@
               "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
             },
-            "score": "72.8",
+            "score": "73.0",
             "pros": "方向契合最高（4.69）、每条成立最省 token（5 千）",
             "cons": "无突出短板"
           },
@@ -4743,51 +4806,51 @@
           {
             "rank": "#5 Grok 4.6 Extra High",
             "badge": null,
-            "score": "47.3",
+            "score": "47.0",
             "pros": "效果相对最好（均质量 22.1）",
             "cons": "最慢（每次 3.4 分钟，档位 xhigh）、每条成立最耗 token（103 千）"
           },
           {
             "rank": "#6 GLM-5.3",
             "badge": null,
-            "score": "46.6",
+            "score": "46.8",
             "pros": "token相对最好（每条成立 9 千）",
-            "cons": "独立相对最弱（独有占比 15%）"
+            "cons": "独立相对最弱（独有占比 14%）"
           },
           {
             "rank": "#7 DeepSeek V4 Flash",
             "badge": null,
-            "score": "41.8",
+            "score": "41.9",
             "pros": "花费相对最好（每次 $0.01）",
-            "cons": "独立相对最弱（独有占比 19%）"
+            "cons": "独立相对最弱（独有占比 18%）"
           },
           {
             "rank": "#8 GLM-5.3-Flash",
             "badge": null,
-            "score": "38.7",
+            "score": "38.6",
             "pros": "每条成立最便宜（$0.00）",
-            "cons": "独立相对最弱（独有占比 14%）"
+            "cons": "独立相对最弱（独有占比 12%）"
           },
           {
             "rank": "#9 DeepSeek V4.1 Flash（max）",
             "badge": null,
-            "score": "34.9",
+            "score": "34.4",
             "pros": "最快（每次 0.8 分钟，档位 max）",
             "cons": "覆盖相对最弱（占参与轮次 12%）"
           },
           {
-            "rank": "#10 MiMo V2.5 Pro",
+            "rank": "#10 Muse Spark 1.3 Contributor",
+            "badge": null,
+            "score": "26.7",
+            "pros": "花费相对最好（每次 $0.00）",
+            "cons": "覆盖相对最弱（占参与轮次 8%）"
+          },
+          {
+            "rank": "#11 MiMo V2.5 Pro",
             "badge": null,
             "score": "26.1",
             "pros": "花费相对最好（每次 $0.01）",
             "cons": "假阳最多（每次 0.50 条，准确率 73%）、均质量垫底（9.1）、契合最低（2.81）"
-          },
-          {
-            "rank": "#11 Muse Spark 1.3 Contributor",
-            "badge": null,
-            "score": "25.9",
-            "pros": "花费相对最好（每次 $0.00）",
-            "cons": "覆盖相对最弱（占参与轮次 8%）"
           }
         ]
       }

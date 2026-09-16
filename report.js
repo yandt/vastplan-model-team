@@ -57,10 +57,15 @@ function barRows(panel) {
       const secondary = r.bad_text !== undefined
         ? `<span class="d down">${esc(r.bad_text)}</span>`
         : r.delta ? `<span class="d ${esc(r.delta.cls)}">${esc(r.delta.text)}</span>` : "";
+      // 覆盖面板：本期条拆两段——前段独有（实色）、后段共同（半透明）
+      const nowTrack = r.unique_pct === undefined
+        ? `<span class="track"><i style="width:${r.now_pct}%;background:${esc(r.tone)}"></i></span>`
+        : `<span class="track split"><i style="width:${r.unique_pct}%;background:${esc(r.tone)}"></i>` +
+          `<i style="width:${Math.max(0, r.now_pct - r.unique_pct)}%;background:${esc(r.tone)};opacity:.42"></i></span>`;
       return (
         `<div class="bar"><span class="lab">${esc(r.label)}${badge(r.badge)}</span><span class="tracks">` +
         `<span class="track was"><i style="width:${r.was_pct}%;background:${esc(r.tone)}"></i></span>` +
-        `<span class="track"><i style="width:${r.now_pct}%;background:${esc(r.tone)}"></i></span>${bad}</span>` +
+        nowTrack + bad + `</span>` +
         `<span class="val">${esc(r.value)}</span><span class="val2">${secondary}</span></div>`
       );
     })
