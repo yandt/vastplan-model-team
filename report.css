@@ -63,6 +63,9 @@ tbody tr:hover td{background:#f7f5f2}
 .bar .track i{display:block;height:5px;border-radius:2px}
 .bar .track.was i{opacity:.32}
 .bar .val,.bar .val2{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+/* 顶部「本项对比」图表只有 名称｜条｜值 三格（值是「本/上」一对），用独立列宽 */
+.bar.pair{grid-template-columns:210px 1fr 96px}
+.bar.pair .vals{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
 .bar .val2{white-space:nowrap}
 .sev{display:flex;height:9px;border-radius:2px;overflow:hidden;background:#e9e5df}
 .sev i{display:block;height:9px}

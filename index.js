@@ -172,7 +172,8 @@ function renderChart(current, data) {
     const text = row.cells[data.index] ?? "";
     const value = cellValue(text);
     const width = Number.isFinite(value) ? Math.max(0, Math.min(100, (value / peak) * 100)) : 0;
-    return `<div class="bar"><span class="lab">${escHtml(row.name)}</span>` +
+    // 顶部图表的值是「本/上」一对，只有三格；自带 pair 类，免得跟详情面板的四列规则串味
+    return `<div class="bar pair"><span class="lab">${escHtml(row.name)}</span>` +
       `<span class="track"><i style="width:${width}%;background:${escHtml(row.dot || "#8a857c")}"></i></span>` +
       `<span class="vals">${escHtml(text)}</span></div>`;
   }).join("") || '<p class="none">没有可对比的数据。</p>';
