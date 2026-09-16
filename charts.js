@@ -6,6 +6,7 @@
  * - bars(host, spec)：把一条/多条细横条画进 host。spec.tracks 自上而下，
  *   每条 track.parts 自左向右堆叠；未占满的余量用灰底补齐。
  * - lines(host, spec)：折线图。labels + series，xFormat/yFormat 控制刻度文案。
+ * - scatter(host, spec)：散点图。points:[{x,y,label,color}]，x/y 都是数值轴，附平均参考虚线。
  * - draw(root)：扫描 root 内 [data-vast-bars] 占位（JSON spec）并出图，供报告/榜单批量调用。
  *
  * 画布尺寸按 host 实测（写死宽度会撑破窄屏）；窗口变化时统一重测重画。
@@ -254,6 +255,90 @@ function lines(host, spec) {
   });
 }
 
+/** 散点：spec = { height?, minWidth?, points:[{x,y,label,color}], xLabel?, yLabel?,
+ *  xFormat?, yFormat?, avgX?, avgY? }。x 轴＝每次花费（$），y 轴＝综合得分；
+ *  平均线（有数据才画）用虚线参考，点色＝模型 tone。 */
+function scatter(host, spec) {
+  if (!host) return null;
+  const options = spec || {};
+  const height = Number(options.height) || 220;
+  const minWidth = options.minWidth || 240;
+  const { canvas } = mount(host, height, minWidth);
+  const points = (options.points || [])
+    .filter((point) => point && Number.isFinite(point.x) && Number.isFinite(point.y));
+
+  const datasets = [{
+    label: options.label || "模型",
+    data: points.map((point) => ({ x: point.x, y: point.y, label: point.label })),
+    backgroundColor: points.map((point) => point.color || "#8a857c"),
+    borderColor: "#fff",
+    borderWidth: 1.5,
+    pointRadius: 5,
+    pointHoverRadius: 7,
+  }];
+  const mean = (values) => (values.length
+    ? values.reduce((sum, value) => sum + value, 0) / values.length : undefined);
+  const xs = points.map((point) => point.x);
+  const ys = points.map((point) => point.y);
+  const avgX = Number.isFinite(options.avgX) ? options.avgX : mean(xs);
+  const avgY = Number.isFinite(options.avgY) ? options.avgY : mean(ys);
+  const reference = (data) => ({
+    label: "", isRef: true, data,
+    borderColor: rgba(MUTED, 0.5), borderWidth: 1, borderDash: [4, 4],
+    pointRadius: 0, pointHoverRadius: 0, showLine: true,
+  });
+  if (points.length > 1 && Number.isFinite(avgX)) {
+    datasets.push(reference([{ x: avgX, y: Math.min(...ys) }, { x: avgX, y: Math.max(...ys) }]));
+  }
+  if (points.length > 1 && Number.isFinite(avgY)) {
+    datasets.push(reference([{ x: Math.min(...xs), y: avgY }, { x: Math.max(...xs), y: avgY }]));
+  }
+
+  const axis = (title, format) => {
+    const scale = {
+      type: "linear",
+      grid: { color: GRID, drawTicks: false },
+      border: { color: AXIS },
+      ticks: { color: MUTED, font: { size: 11 }, padding: 4, maxTicksLimit: 6 },
+      title: { display: true, text: title, color: MUTED, font: { size: 11 }, padding: { top: 2, bottom: 2 } },
+    };
+    if (format) scale.ticks.callback = (value) => format(value);
+    return scale;
+  };
+
+  const chart = new Chart(canvas, {
+    type: "scatter",
+    data: { datasets },
+    options: {
+      responsive: false,
+      maintainAspectRatio: false,
+      animation: false,
+      devicePixelRatio: dpr(),
+      layout: { padding: { top: 8, right: 12, bottom: 0, left: 0 } },
+      scales: {
+        x: axis(options.xLabel || "每次花费（$）", options.xFormat),
+        y: axis(options.yLabel || "综合得分", options.yFormat),
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          displayColors: false,
+          filter: (item) => !item.dataset.isRef,
+          callbacks: {
+            label: (item) => {
+              const raw = item.raw || {};
+              return `${raw.label || ""} · 每次花费 $${Number(raw.x).toFixed(2)} · 综合 ${raw.y}`;
+            },
+          },
+        },
+      },
+    },
+  });
+  return register(host, chart, () => {
+    chart.resize(remeasure(host, canvas, minWidth), height);
+  });
+}
+
 /** 批量出图：root 内所有带 data-vast-bars 的占位（JSON spec）。 */
 function draw(root) {
   if (!root) return [];
@@ -292,5 +377,5 @@ window.addEventListener("resize", () => {
   });
 });
 
-window.VastCharts = { bars, lines, draw };
+window.VastCharts = { bars, lines, scatter, draw };
 })();

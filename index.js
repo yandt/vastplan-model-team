@@ -43,6 +43,14 @@ function cellValue(text) {
   return Number.isFinite(number) ? number : Number.NEGATIVE_INFINITY;
 }
 
+/** 花费值：`13.07/6.38` 取「本期」（斜杠前）那一段；`—`/未采集/空 视为不可比（NaN，不进散点）。 */
+function costValue(text) {
+  const head = String(text ?? "").split("/")[0].trim();
+  if (!head || head === "—" || head === "-") return Number.NaN;
+  const number = Number(head.replace(/[$,%]/g, ""));
+  return Number.isFinite(number) ? number : Number.NaN;
+}
+
 /** 越低越好的指标（与报告 DIMENSIONS 的 ascending 同义）；用于变更列的涨跌配色。 */
 const LOWER_IS_BETTER = ["花费", "假阳", "耗时", "时间", "token", "成本"];
 function metricDirection(metric) {
@@ -172,7 +180,39 @@ function renderTable(current, data) {
   noteLine.textContent = data.note;
 }
 
+/** 当前散点图实例：换指标/换期次/改筛选前先销毁，别让 Chart 实例越积越多。 */
+let scatterChart = null;
+
+/** 综合指标改成散点：x＝每次花费（$）、y＝综合得分，一屏看性价比分布；其余指标仍是横条。 */
+function renderScatterChart(current, data, costAt) {
+  const points = data.rows.map((row) => {
+    const cost = costValue(row.cells[costAt]);
+    const score = cellValue(row.cells[data.index]);
+    if (!Number.isFinite(cost) || !Number.isFinite(score)) return null;
+    return { x: cost, y: score, label: entityKey(row), color: row.dot || "#8a857c" };
+  }).filter(Boolean);
+  chartTitle.textContent = "对比 · 性价比（横轴 每次花费 $，纵轴 综合）";
+  if (!points.length) {
+    chartBox.innerHTML = '<p class="none">没有可对比的数据。</p>';
+    return;
+  }
+  chartBox.innerHTML = '<div class="scatter-host"></div>';
+  if (window.VastCharts) {
+    scatterChart = window.VastCharts.scatter(chartBox.firstChild, { height: 240, minWidth: 240, points });
+  }
+}
+
 function renderChart(current, data) {
+  if (scatterChart) {
+    try { scatterChart.destroy(); } catch (_error) { /* 已经销毁过就忽略 */ }
+    scatterChart = null;
+  }
+  const metrics = board?.kinds?.[current.kind]?.metrics ?? [];
+  const costAt = metrics.findIndex((name) => String(name).includes("花费"));
+  if (current.metric === "综合" && costAt >= 0) {
+    renderScatterChart(current, data, costAt);
+    return;
+  }
   chartTitle.textContent = `本项对比 · ${current.metric}`;
   const peak = Math.max(...data.rows.map((row) => cellValue(row.cells[data.index])).filter(Number.isFinite), 0) || 1;
   chartBox.innerHTML = data.rows.map((row) => {
