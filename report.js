@@ -212,7 +212,9 @@ function reportHtml(view, options) {
     `<p class="kicker">${esc(head.kicker)}</p><h1>${esc(head.h1)}</h1></div>` +
     `<p class="meta">${head.meta.map(esc).join("<br>")}</p></header>` +
     kpis(view.kpis) +
-    `<div class="legend">${chips(view.legend)}</div>` +
+    // 目录页按类型看时不再重复列一遍模型（顶部「模型」多选就是这份名单，且带配色点）；
+    // 切图外壳走全量模式，图例照旧——它是独立图片的配色说明，去掉还会打乱版块序号。
+    (options && options.kind ? "" : `<div class="legend">${chips(view.legend)}</div>`) +
     formula(view.formula) +
     kinds.map((block) => kindBlock(block, options)).join("") +
     debtBlock(view.debt) +
