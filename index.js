@@ -19,7 +19,6 @@ const modelsBox = document.getElementById("board-models");
 const modelsNote = document.getElementById("board-models-note");
 
 const board = boardNode ? JSON.parse(boardNode.textContent) : null;
-const WEEK_LIMIT = 6;
 
 function escHtml(value) {
   return String(value).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
@@ -222,12 +221,12 @@ function renderModelTrend(current) {
   const lastIndex = weeks.length - 1;
   const ranked = [...series.values()]
     .sort((left, right) => (right.points.get(lastIndex) ?? -Infinity) - (left.points.get(lastIndex) ?? -Infinity));
-  const available = modelsOfKind(current.kind);
+  // 画哪几家由顶部「模型」多选决定（同一状态 m）：不再有"默认只画前 N 家"的隐规则，
+  // 图与榜单严格同源——选了几家就画几家。
   const chosen = current.m
     ? new Set(current.m.split("|").filter((name) => series.has(name)))
-    : new Set(ranked.slice(0, WEEK_LIMIT).map((entry) => entry.name));
+    : new Set(ranked.map((entry) => entry.name));
   const picked = ranked.filter((entry) => chosen.has(entry.name));
-  renderChips(current, available, chosen);
   const labels = weeks.map((stamp) => weekLabel(stamp).split("（")[0]);
   const x = weeks.map((_stamp, index) => index);
   const data = [x, ...picked.map((entry) => x.map((index) => entry.points.get(index) ?? null))];
@@ -250,8 +249,8 @@ function renderModelTrend(current) {
     }))],
   }, data, modelsBox);
   modelsNote.textContent = picked.length
-    ? `每期综合分；已画 ${picked.length} 家（共 ${series.size} 家），点上面的名字增删。`
-    : "一个都没选：点上面的模型名把它加回来。";
+    ? `每期综合分；已画 ${picked.length}/${series.size} 家，改上面的「模型」选择可增删。`
+    : "一个都没选：在顶部「模型」里点一下把它加回来。";
 }
 
 /** 顶部模型多选：整行平铺，与「模型长期走势」下的 chips 同一交互、同一状态（hash 的 m）。
@@ -290,34 +289,6 @@ function renderTopModels(current) {
   const on = available.filter((item) => !chosen || chosen.has(item.name)).length;
   hint.textContent = chosen ? `已选 ${on}/${available.length} 家` : `全部 ${available.length} 家`;
   box.appendChild(hint);
-}
-
-/** 模型开关：点一下增减，状态写进 hash 的 m（用 | 连接，可分享）。 */
-function renderChips(current, available, chosen) {
-  const box = document.getElementById("board-models-chips") ?? (() => {
-    const node = document.createElement("div");
-    node.id = "board-models-chips";
-    node.className = "chips";
-    modelsBox.parentElement.insertBefore(node, modelsBox);
-    return node;
-  })();
-  box.replaceChildren();
-  for (const model of available) {
-    const chip = document.createElement("button");
-    chip.type = "button";
-    chip.className = `chip${chosen.has(model.name) ? " on" : ""}`;
-    chip.style.setProperty("--tone", model.tone);
-    chip.textContent = model.name;
-    chip.title = `${model.name}（综合 ${Number.isFinite(model.score) ? model.score.toFixed(1) : "—"}）`;
-    chip.addEventListener("click", () => {
-      const next = new Set(chosen);
-      if (next.has(model.name)) next.delete(model.name);
-      else next.add(model.name);
-      writeState({ ...current, m: [...next].join("|") }, false);
-      render();
-    });
-    box.appendChild(chip);
-  }
 }
 
 /** 选中期次的详情：读该期 data.json，用同一个报告渲染器画进 #detail（不再为每期生成 HTML）。 */
