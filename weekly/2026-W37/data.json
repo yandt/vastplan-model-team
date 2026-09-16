@@ -10,7 +10,7 @@
       "2026-08-31",
       "2026-09-07"
     ],
-    "generated_at": "2026-09-16 23:28",
+    "generated_at": "2026-09-16 23:45",
     "partial": false,
     "title": "模型团队周报 2026-W37（2026-09-07 → 2026-09-14）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 37 周（2026-W37）",
       "本窗 2026-09-07 → 2026-09-14（环比 2026-08-31 → 2026-09-07）",
-      "生成 2026-09-16 23:28"
+      "生成 2026-09-16 23:45"
     ]
   },
   "kpis": [
@@ -1097,7 +1097,7 @@
             ]
           },
           {
-            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同；末三列＝覆盖率/独有覆盖率/环比） · 本项排名（上灰＝上期，下彩＝本期）",
+            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同；末四列＝独有/独有环比/其他/其他环比） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
                 "label": "#1 K3",
@@ -1116,7 +1116,15 @@
                 "unique_pct": 30.1,
                 "unique_text": "17%",
                 "other_text": "13%",
-                "unique_ratio_text": "57%"
+                "unique_ratio_text": "57%",
+                "unique_delta": {
+                  "text": "-16%",
+                  "cls": "down"
+                },
+                "other_delta": {
+                  "text": "-10%",
+                  "cls": "down"
+                }
               },
               {
                 "label": "#2 Gemini 3.8 Flash",
@@ -1132,7 +1140,15 @@
                 "unique_pct": 23,
                 "unique_text": "13%",
                 "other_text": "17%",
-                "unique_ratio_text": "43%"
+                "unique_ratio_text": "43%",
+                "unique_delta": {
+                  "text": "+2%",
+                  "cls": "up"
+                },
+                "other_delta": {
+                  "text": "-2%",
+                  "cls": "down"
+                }
               },
               {
                 "label": "#3 DeepSeek V4.1 Flash（max）",
@@ -1148,7 +1164,15 @@
                 "unique_pct": 22.7,
                 "unique_text": "13%",
                 "other_text": "15%",
-                "unique_ratio_text": "46%"
+                "unique_ratio_text": "46%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+13%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#4 Grok 4.6 Extra High",
@@ -1164,7 +1188,15 @@
                 "unique_pct": 25,
                 "unique_text": "14%",
                 "other_text": "14%",
-                "unique_ratio_text": "51%"
+                "unique_ratio_text": "51%",
+                "unique_delta": {
+                  "text": "-1%",
+                  "cls": "down"
+                },
+                "other_delta": {
+                  "text": "+1%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#5 K3",
@@ -1183,7 +1215,15 @@
                 "unique_pct": 19.6,
                 "unique_text": "11%",
                 "other_text": "16%",
-                "unique_ratio_text": "40%"
+                "unique_ratio_text": "40%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+11%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#6 GLM-5.3",
@@ -1199,7 +1239,15 @@
                 "unique_pct": 16.5,
                 "unique_text": "9%",
                 "other_text": "16%",
-                "unique_ratio_text": "36%"
+                "unique_ratio_text": "36%",
+                "unique_delta": {
+                  "text": "+9%",
+                  "cls": "up"
+                },
+                "other_delta": {
+                  "text": "-14%",
+                  "cls": "down"
+                }
               },
               {
                 "label": "#7 GLM-5.3-Flash",
@@ -1215,7 +1263,15 @@
                 "unique_pct": 14.4,
                 "unique_text": "8%",
                 "other_text": "14%",
-                "unique_ratio_text": "36%"
+                "unique_ratio_text": "36%",
+                "unique_delta": {
+                  "text": "+5%",
+                  "cls": "up"
+                },
+                "other_delta": {
+                  "text": "-24%",
+                  "cls": "down"
+                }
               },
               {
                 "label": "#8 Muse Spark 1.3 Contributor",
@@ -1231,7 +1287,15 @@
                 "unique_pct": 25,
                 "unique_text": "14%",
                 "other_text": "6%",
-                "unique_ratio_text": "70%"
+                "unique_ratio_text": "70%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+6%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#9 DeepSeek V4 Flash",
@@ -1247,7 +1311,15 @@
                 "unique_pct": 11.3,
                 "unique_text": "6%",
                 "other_text": "12%",
-                "unique_ratio_text": "35%"
+                "unique_ratio_text": "35%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+6%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#10 MiMo V2.5 Pro",
@@ -1263,7 +1335,15 @@
                 "unique_pct": 6.6,
                 "unique_text": "4%",
                 "other_text": "6%",
-                "unique_ratio_text": "39%"
+                "unique_ratio_text": "39%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+4%",
+                  "cls": "up"
+                }
               }
             ]
           }
@@ -3278,7 +3358,7 @@
             ]
           },
           {
-            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同；末三列＝覆盖率/独有覆盖率/环比） · 本项排名（上灰＝上期，下彩＝本期）",
+            "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同；末四列＝独有/独有环比/其他/其他环比） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
                 "label": "#1 Fable 5.1",
@@ -3294,7 +3374,15 @@
                 "unique_pct": 47.5,
                 "unique_text": "39%",
                 "other_text": "28%",
-                "unique_ratio_text": "58%"
+                "unique_ratio_text": "58%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+28%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#2 K3",
@@ -3313,7 +3401,15 @@
                 "unique_pct": 49.9,
                 "unique_text": "41%",
                 "other_text": "8%",
-                "unique_ratio_text": "84%"
+                "unique_ratio_text": "84%",
+                "unique_delta": {
+                  "text": "+16%",
+                  "cls": "up"
+                },
+                "other_delta": {
+                  "text": "-35%",
+                  "cls": "down"
+                }
               },
               {
                 "label": "#3 K3",
@@ -3332,7 +3428,15 @@
                 "unique_pct": 24.9,
                 "unique_text": "21%",
                 "other_text": "27%",
-                "unique_ratio_text": "44%"
+                "unique_ratio_text": "44%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+21%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#4 Grok 4.6 Extra High",
@@ -3348,7 +3452,15 @@
                 "unique_pct": 20.2,
                 "unique_text": "17%",
                 "other_text": "26%",
-                "unique_ratio_text": "39%"
+                "unique_ratio_text": "39%",
+                "unique_delta": {
+                  "text": "+17%",
+                  "cls": "up"
+                },
+                "other_delta": {
+                  "text": "+21%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#5 Gemini 3.8 Flash",
@@ -3364,7 +3476,15 @@
                 "unique_pct": 13.1,
                 "unique_text": "11%",
                 "other_text": "23%",
-                "unique_ratio_text": "32%"
+                "unique_ratio_text": "32%",
+                "unique_delta": {
+                  "text": "-18%",
+                  "cls": "down"
+                },
+                "other_delta": {
+                  "text": "-31%",
+                  "cls": "down"
+                }
               },
               {
                 "label": "#6 GLM-5.3",
@@ -3380,7 +3500,15 @@
                 "unique_pct": 5.5,
                 "unique_text": "5%",
                 "other_text": "27%",
-                "unique_ratio_text": "14%"
+                "unique_ratio_text": "14%",
+                "unique_delta": {
+                  "text": "+5%",
+                  "cls": "up"
+                },
+                "other_delta": {
+                  "text": "+27%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#7 DeepSeek V4 Flash",
@@ -3396,7 +3524,15 @@
                 "unique_pct": 6.4,
                 "unique_text": "5%",
                 "other_text": "25%",
-                "unique_ratio_text": "18%"
+                "unique_ratio_text": "18%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+5%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#8 GLM-5.3-Flash",
@@ -3412,7 +3548,15 @@
                 "unique_pct": 4.2,
                 "unique_text": "3%",
                 "other_text": "26%",
-                "unique_ratio_text": "12%"
+                "unique_ratio_text": "12%",
+                "unique_delta": {
+                  "text": "-6%",
+                  "cls": "down"
+                },
+                "other_delta": {
+                  "text": "+26%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#9 MiMo V2.5 Pro",
@@ -3428,7 +3572,15 @@
                 "unique_pct": 1.5,
                 "unique_text": "1%",
                 "other_text": "19%",
-                "unique_ratio_text": "6%"
+                "unique_ratio_text": "6%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+1%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#10 DeepSeek V4.1 Flash（max）",
@@ -3444,7 +3596,15 @@
                 "unique_pct": 6,
                 "unique_text": "5%",
                 "other_text": "7%",
-                "unique_ratio_text": "40%"
+                "unique_ratio_text": "40%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+5%",
+                  "cls": "up"
+                }
               },
               {
                 "label": "#11 Muse Spark 1.3 Contributor",
@@ -3460,7 +3620,15 @@
                 "unique_pct": 3,
                 "unique_text": "2%",
                 "other_text": "6%",
-                "unique_ratio_text": "29%"
+                "unique_ratio_text": "29%",
+                "unique_delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "other_delta": {
+                  "text": "+2%",
+                  "cls": "up"
+                }
               }
             ]
           }

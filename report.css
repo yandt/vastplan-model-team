@@ -72,6 +72,7 @@ tbody tr:hover td{background:#f7f5f2}
 .bar .val2{white-space:nowrap}
 /* 覆盖图：多一列「独有占比」（灰字），三列都右对齐等宽数字 */
 .bar.three{grid-template-columns:206px 1fr 50px 54px 58px}
+.bar.four{grid-template-columns:200px 1fr 48px 58px 48px 58px}
 .bar .val3{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);opacity:.85;white-space:nowrap}
 .sev{display:flex;height:9px;border-radius:2px;overflow:hidden;background:#e9e5df;min-width:0}
 .sev i{display:block;height:9px}

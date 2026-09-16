@@ -73,13 +73,19 @@ function barRows(panel) {
       const secondary = r.bad_text !== undefined
         ? `<span class="d down">${esc(r.bad_text)}</span>`
         : r.delta ? `<span class="d ${esc(r.delta.cls)}">${esc(r.delta.text)}</span>` : "";
-      // 中间列与榜单「独有覆盖率」同名同值；独有占比（独有/成立）不同分母，放 title 悬停看，避免误读
-      const ratio = r.unique_text === undefined
-        ? ""
-        : `<span class="val3" title="独有覆盖率${r.unique_ratio_text ? `；独有占比 ${r.unique_ratio_text}` : ""}">${esc(r.unique_text)}</span>`;
+      // 覆盖面板：独有 / 独有环比 / 其他 / 其他环比 四格（两段各自的环比）；其余面板仍是 值 + 环比
+      const dcls = (d) => (d && d.cls ? ` ${d.cls}` : "");
+      const cell = (d) => (d ? `<span class="val2 d${dcls(d)}">${esc(d.text)}</span>` : "");
+      const ratio = r.unique_delta && r.other_delta
+        ? `<span class="val3" title="独有覆盖率${r.unique_ratio_text ? `；独有占比 ${r.unique_ratio_text}` : ""}">${esc(r.unique_text)}</span>` +
+          cell(r.unique_delta) +
+          `<span class="val3">${esc(r.other_text)}</span>` + cell(r.other_delta)
+        : r.unique_text === undefined
+          ? ""
+          : `<span class="val3" title="独有覆盖率${r.unique_ratio_text ? `；独有占比 ${r.unique_ratio_text}` : ""}">${esc(r.unique_text)}</span>`;
       const chart = `<span class="tracks" data-vast-bars="${esc(JSON.stringify(barSpec(r)))}"></span>`;
       return (
-        `<div class="bar${ratio ? " three" : ""}"><span class="lab">${esc(r.label)}${badge(r.badge)}</span>` +
+        `<div class="bar${ratio ? (r.unique_delta ? " four" : " three") : ""}"><span class="lab">${esc(r.label)}${badge(r.badge)}</span>` +
         chart +
         `<span class="val">${esc(r.value)}</span>${ratio}<span class="val2">${secondary}</span></div>`
       );
