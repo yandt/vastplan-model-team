@@ -143,10 +143,15 @@ function debtBlock(debt) {
   return `<h2>${esc(debt.title)}<span>${esc(debt.meta)}</span></h2>${note}${body}`;
 }
 
-/** 把一期数据拼成报告 HTML（不含外壳）。目录页也用它渲染「详情」，渲染器只此一份。 */
-function reportHtml(view) {
+/** 把一期数据拼成报告 HTML（不含外壳）。目录页也用它渲染「详情」，渲染器只此一份。
+ *  options.kind 只渲染该活动类型的小节（目录页顶部选了哪个就显示哪个）；缺省渲染全部
+ *  （切图外壳走缺省，必须保留全部类型）。类型名对不上时退回全部：宁可多显示，不留空白。 */
+function reportHtml(view, options) {
   window.__falseTone = view.false_pos_tone || "#d7c3b8";
   const head = view.head;
+  const wanted = options && options.kind;
+  const picked = (wanted ? view.kinds.filter((block) => block.title === wanted) : view.kinds) || [];
+  const kinds = picked.length ? picked : view.kinds;
   // 注意：`return` 后面必须紧跟表达式；换行会被 ASI 补分号，函数就返回 undefined（踩过）
   return (
     '<main>' +
@@ -156,7 +161,7 @@ function reportHtml(view) {
     kpis(view.kpis) +
     `<div class="legend">${chips(view.legend)}</div>` +
     formula(view.formula) +
-    view.kinds.map(kindBlock).join("") +
+    kinds.map(kindBlock).join("") +
     debtBlock(view.debt) +
     `<footer>${view.notes.map((n) => `<p>${esc(n)}</p>`).join("")}</footer>` +
     "</main>");
@@ -170,9 +175,9 @@ function render(view) {
 }
 
 /** 目录页用：把某期数据渲染进指定容器（同一个渲染器，不再为每期生成 HTML）。 */
-window.renderReportInto = (target, view) => {
+window.renderReportInto = (target, view, options) => {
   if (!target || !view) return null;
-  target.innerHTML = reportHtml(view);
+  target.innerHTML = reportHtml(view, options);
   return target;
 };
 

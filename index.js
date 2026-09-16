@@ -282,7 +282,7 @@ async function renderDetail(current) {
   const box = document.getElementById("detail");
   const meta = (board?.weeks ?? []).find((week) => week.stamp === current.week);
   if (!meta || !box) return;
-  head.textContent = `本期详情 · ${current.week}`;
+  head.textContent = `本期详情 · ${current.kind} · ${current.week}`;
   links.replaceChildren();
   for (const [file, label] of [["report.md", "报告（Markdown）"], ["post.md", "发帖稿"],
                                ["data.json", "数据（JSON）"], ["summary.json", "摘要"]] ) {
@@ -300,7 +300,7 @@ async function renderDetail(current) {
     button.addEventListener("click", () => void openMarkdown(`${meta.dir}/${file}`, label));
     links.appendChild(button);
   }
-  for (const image of (meta.images ?? []).slice(0, 4)) {
+  for (const image of (meta.images ?? []).filter((item) => imageBelongsTo(item, current.kind)).slice(0, 4)) {
     const a = document.createElement("a");
     a.href = image;
     a.textContent = `配图 ${image.split("/").pop()}`;
@@ -308,8 +308,8 @@ async function renderDetail(current) {
   }
   if (detailCache.has(current.week)) {
     const view = detailCache.get(current.week);
-    info.textContent = describe(view, meta);
-    window.renderReportInto(box, view);
+    info.textContent = describe(view, meta, current.kind);
+    window.renderReportInto(box, view, { kind: current.kind });
     return;
   }
   info.textContent = "载入中…";
@@ -320,8 +320,8 @@ async function renderDetail(current) {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const view = await response.json();
     detailCache.set(current.week, view);
-    info.textContent = describe(view, meta);
-    window.renderReportInto(box, view);
+    info.textContent = describe(view, meta, current.kind);
+    window.renderReportInto(box, view, { kind: current.kind });
   } catch (error) {
     info.textContent = `读不到本期数据（${error && error.message ? error.message : error}）。` +
       "本地直接双击打开时浏览器会拦 fetch，用 http 打开或在线上看。";
@@ -369,10 +369,22 @@ async function openMarkdown(path, title) {
   }
 }
 
-function describe(view, meta) {
+/** 配图与活动类型的对应：取图名里的关键词（与 cli 的切图配置同名）。
+ *  audit → 事后审计、design → 设计分叉，其余（1-ranking 总览）两类都显示。 */
+function imageBelongsTo(image, kind) {
+  const name = String(image).toLowerCase();
+  if (name.includes("audit")) return kind === "事后审计";
+  if (name.includes("design")) return kind === "设计分叉";
+  return true;
+}
+
+/** 详情区信息行：跟着顶部所选类型走（下方报告与配图也只画该类型）。 */
+function describe(view, meta, kind) {
   const window = (view?.week?.window ?? []).join(" → ");
   const partial = meta.partial ? "（进行中）" : "";
-  return `${window}${partial} · 生成 ${view?.week?.generated_at ?? "—"} · ${view?.kinds?.length ?? 0} 个活动类型`;
+  const total = view?.kinds?.length ?? 0;
+  const scope = kind ? `当前显示「${kind}」· 本期共 ${total} 个活动类型` : `${total} 个活动类型`;
+  return `${window}${partial} · 生成 ${view?.week?.generated_at ?? "—"} · ${scope}`;
 }
 
 function render() {
