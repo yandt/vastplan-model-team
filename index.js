@@ -291,6 +291,14 @@ async function renderDetail(current) {
     a.href = `${meta.dir}/${file}`;
     a.textContent = label;
     links.appendChild(a);
+    if (!file.endsWith(".md")) continue;
+    // Markdown 可在线阅读：按钮展开预览，链接仍是原始文件
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "ghost";
+    button.textContent = `预览 ${label.replace("（Markdown）", "")}`;
+    button.addEventListener("click", () => void openMarkdown(`${meta.dir}/${file}`, label, current));
+    links.appendChild(button);
   }
   for (const image of (meta.images ?? []).slice(0, 4)) {
     const a = document.createElement("a");
@@ -318,6 +326,37 @@ async function renderDetail(current) {
     info.textContent = `读不到本期数据（${error && error.message ? error.message : error}）。` +
       "本地直接双击打开时浏览器会拦 fetch，用 http 打开或在线上看。";
   }
+}
+
+/** Markdown 在线预览：取原文 → 渲染进面板。模型写的贴文也算不可信输入，
+ *  所以先转义原生 HTML 再交给 marked（不引入消毒库，也不放行裸标签）。 */
+async function openMarkdown(path, title, current) {
+  const box = document.getElementById("md-preview");
+  if (!box) return;
+  box.hidden = false;
+  box.dataset.source = path;
+  box.innerHTML = `<div class="md-head"><b>${escHtml(title)}</b>` +
+    `<span class="md-actions"><a href="${escHtml(path)}" target="_blank" rel="noopener">原始文件</a>` +
+    `<button type="button" class="ghost" id="md-close">关闭</button></span></div>` +
+    `<div class="md-body loading">载入中…</div>`;
+  document.getElementById("md-close")?.addEventListener("click", () => { box.hidden = true; box.replaceChildren(); });
+  const body = box.querySelector(".md-body");
+  try {
+    const response = await fetch(path, { cache: "no-cache" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const text = await response.text();
+    const renderer = window.marked;
+    body.classList.remove("loading");
+    body.innerHTML = renderer && typeof renderer.parse === "function"
+      ? renderer.parse(text.replace(/</g, "&lt;"))
+      : `<pre>${escHtml(text)}</pre>`;
+    box.scrollIntoView({ block: "nearest" });
+  } catch (error) {
+    body.classList.remove("loading");
+    body.textContent = `读不到这份 Markdown（${error && error.message ? error.message : error}）。` +
+      "本地直接双击打开时浏览器会拦 fetch，用 http 打开或在线上看。";
+  }
+  void current;
 }
 
 function describe(view, meta) {

@@ -66,6 +66,32 @@ td.delta.up{color:var(--up,#3f6f52);font-weight:600}
 td.delta.down{color:var(--down,#9a6b2f);font-weight:600}
 td.delta.flat{color:var(--muted)}
 
+/* ── Markdown 在线预览 ── */
+.ghost{appearance:none;font:inherit;font-size:12.5px;padding:3px 11px;border-radius:999px;cursor:pointer;
+border:1px dashed var(--line);background:#fff;color:var(--accent)}
+.ghost:hover{border-style:solid;border-color:var(--accent)}
+.md-preview{margin:12px 0 0;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:14px 16px}
+.md-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between;
+padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--line);font-size:13px}
+.md-actions{display:flex;gap:10px;align-items:center;font-size:12px}
+.md-actions a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line)}
+.md-body{font-size:13px;line-height:1.75;overflow-x:auto}
+.md-body.loading{color:var(--muted)}
+.md-body h1{font-size:18px;margin:14px 0 8px}
+.md-body h2{font-size:15px;margin:18px 0 8px;padding-top:10px;border-top:1px solid var(--line);display:block}
+.md-body h3{font-size:13.5px;margin:14px 0 6px}
+.md-body p{margin:8px 0}
+.md-body ul,.md-body ol{margin:8px 0;padding-left:20px}
+.md-body li{margin:3px 0}
+.md-body code{background:#f1ede7;border-radius:3px;padding:1px 5px;font-size:12px}
+.md-body pre{background:#f1ede7;border-radius:6px;padding:10px 12px;overflow-x:auto}
+.md-body pre code{background:none;padding:0}
+.md-body blockquote{margin:8px 0;padding:2px 12px;border-left:3px solid var(--line);color:var(--muted)}
+.md-body table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12.5px}
+.md-body th,.md-body td{border-bottom:1px solid var(--line);padding:6px 9px;text-align:left;white-space:nowrap}
+.md-body a{color:var(--accent)}
+.md-body hr{border:0;border-top:1px solid var(--line);margin:14px 0}
+
 /* ── 跨周趋势（trend.js 用） ── */
 .trend{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px;margin:0 0 22px;min-width:0}
 .trend-legend{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:0;font-size:12px;color:var(--muted)}
