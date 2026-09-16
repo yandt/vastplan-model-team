@@ -297,7 +297,7 @@ async function renderDetail(current) {
     button.type = "button";
     button.className = "ghost";
     button.textContent = `预览 ${label.replace("（Markdown）", "")}`;
-    button.addEventListener("click", () => void openMarkdown(`${meta.dir}/${file}`, label, current));
+    button.addEventListener("click", () => void openMarkdown(`${meta.dir}/${file}`, label));
     links.appendChild(button);
   }
   for (const image of (meta.images ?? []).slice(0, 4)) {
@@ -330,7 +330,7 @@ async function renderDetail(current) {
 
 /** Markdown 在线预览：取原文 → 渲染进面板。模型写的贴文也算不可信输入，
  *  所以先转义原生 HTML 再交给 marked（不引入消毒库，也不放行裸标签）。 */
-async function openMarkdown(path, title, current) {
+async function openMarkdown(path, title) {
   const box = document.getElementById("md-preview");
   if (!box) return;
   box.hidden = false;
@@ -356,7 +356,6 @@ async function openMarkdown(path, title, current) {
     body.textContent = `读不到这份 Markdown（${error && error.message ? error.message : error}）。` +
       "本地直接双击打开时浏览器会拦 fetch，用 http 打开或在线上看。";
   }
-  void current;
 }
 
 function describe(view, meta) {
@@ -384,6 +383,9 @@ function render() {
   renderModelTrend(current);
   void renderDetail(current);
 }
+
+// 归档说明（README）也用同一个预览器
+document.getElementById("readme-preview")?.addEventListener("click", () => void openMarkdown("README.md", "归档说明（README）"));
 
 if (board) {
   searchInput.addEventListener("input", () => {
