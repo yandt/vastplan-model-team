@@ -122,10 +122,18 @@ function comments(block) {
   return `<div class="comments"><div class="comment chead-row">${head}</div>${rows}</div>`;
 }
 
-function kindBlock(kind) {
+/** 一个活动类型的小节。目录页按类型看时（options.kind）不再重复放模型榜单表——
+ *  页面上方「榜单」表就是同一份数据且可切指标/搜索/看变更，这里只留图表与优缺点评审。
+ *  切图外壳走全量模式（无 options），表格照旧，版块序号不会错位。 */
+function kindBlock(kind, options) {
+  const scoped = Boolean(options && options.kind);
+  const skip = scoped
+    ? '<p class="note">模型榜单见页面上方「榜单」表（可切指标、搜索模型、看对上期变更）；本节只保留图表与优缺点评审。</p>'
+    : "";
   return (
     `<h2>${esc(kind.title)}<span>${esc(kind.meta)}</span></h2>` +
-    modelTable(kind.table) +
+    skip +
+    (scoped ? "" : modelTable(kind.table)) +
     panels(kind.panels) +
     comments(kind.comments)
   );
@@ -161,7 +169,7 @@ function reportHtml(view, options) {
     kpis(view.kpis) +
     `<div class="legend">${chips(view.legend)}</div>` +
     formula(view.formula) +
-    kinds.map(kindBlock).join("") +
+    kinds.map((block) => kindBlock(block, options)).join("") +
     debtBlock(view.debt) +
     `<footer>${view.notes.map((n) => `<p>${esc(n)}</p>`).join("")}</footer>` +
     "</main>");
