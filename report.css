@@ -114,6 +114,9 @@ footer{margin-top:34px;border-top:1px solid var(--line);padding-top:14px;font-si
   .panels{grid-template-columns:1fr}
   .panel{padding:12px 13px}
   .bar{grid-template-columns:1fr auto auto;gap:3px 10px}
+  /* 三/四列变体（覆盖面板等）在窄屏同样收窄：名称独占一行，其余各格自动排 */
+  .bar.three{grid-template-columns:1fr auto auto auto}
+  .bar.four{grid-template-columns:1fr auto auto auto auto}
   .bar .lab{grid-column:1 / -1}
   .bar .tracks{grid-column:1}
   .bar .vals{grid-column:2}
