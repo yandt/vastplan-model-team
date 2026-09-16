@@ -1,3 +1,8 @@
+
+/* 整份包在 IIFE 里：这些资产会同页共存（目录页同时加载 report.js 与 trend.js），
+   顶层重名（如 esc）会让后一个脚本整个中止（踩过两次）。 */
+(() => {
+"use strict";
 /* 跨周趋势：uPlot 画线。数据来自归档根的 trend.json（同时内嵌在 index.html 里）。
  * 画布宽度按卡片实测（写死宽度会撑破版面）；只有一周数据时不画线，改为一句说明。 */
 
@@ -187,3 +192,4 @@ if (document.readyState === "loading") {
 } else {
   draw();
 }
+})();

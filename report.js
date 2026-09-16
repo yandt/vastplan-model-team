@@ -1,3 +1,8 @@
+
+/* 整份包在 IIFE 里：这些资产会同页共存（目录页同时加载 report.js 与 trend.js），
+   顶层重名（如 esc）会让后一个脚本整个中止（踩过两次）。 */
+(() => {
+"use strict";
 /* 周报渲染器：只吃数据（<script id="report-data"> 里的 JSON），不写死任何一期内容。
  * 放在归档根，所有周报共用；改排版/样式只改这一个文件 + report.css，历史周报一起生效。 */
 
@@ -138,10 +143,12 @@ function debtBlock(debt) {
   return `<h2>${esc(debt.title)}<span>${esc(debt.meta)}</span></h2>${note}${body}`;
 }
 
-function render(view) {
+/** 把一期数据拼成报告 HTML（不含外壳）。目录页也用它渲染「详情」，渲染器只此一份。 */
+function reportHtml(view) {
   window.__falseTone = view.false_pos_tone || "#d7c3b8";
   const head = view.head;
-  const html =
+  // 注意：`return` 后面必须紧跟表达式；换行会被 ASI 补分号，函数就返回 undefined（踩过）
+  return (
     '<main>' +
     `<header><div><a class="back" href="${esc(head.back.href)}">${esc(head.back.text)}</a>` +
     `<p class="kicker">${esc(head.kicker)}</p><h1>${esc(head.h1)}</h1></div>` +
@@ -152,10 +159,22 @@ function render(view) {
     view.kinds.map(kindBlock).join("") +
     debtBlock(view.debt) +
     `<footer>${view.notes.map((n) => `<p>${esc(n)}</p>`).join("")}</footer>` +
-    "</main>";
-  document.getElementById("app").innerHTML = html;
+    "</main>");
+}
+
+function render(view) {
+  const app = document.getElementById("app");
+  if (!app) return;
+  app.innerHTML = reportHtml(view);
   document.documentElement.dataset.reportReady = "1";
 }
+
+/** 目录页用：把某期数据渲染进指定容器（同一个渲染器，不再为每期生成 HTML）。 */
+window.renderReportInto = (target, view) => {
+  if (!target || !view) return null;
+  target.innerHTML = reportHtml(view);
+  return target;
+};
 
 function boot() {
   const node = document.getElementById("report-data");
@@ -168,3 +187,4 @@ if (document.readyState === "loading") {
 } else {
   boot();
 }
+})();

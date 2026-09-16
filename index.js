@@ -273,6 +273,59 @@ function renderChips(current, available, chosen) {
   }
 }
 
+/** 选中期次的详情：读该期 data.json，用同一个报告渲染器画进 #detail（不再为每期生成 HTML）。 */
+const detailCache = new Map();
+async function renderDetail(current) {
+  const head = document.getElementById("detail-head");
+  const info = document.getElementById("detail-meta");
+  const links = document.getElementById("detail-links");
+  const box = document.getElementById("detail");
+  const meta = (board?.weeks ?? []).find((week) => week.stamp === current.week);
+  if (!meta || !box) return;
+  head.textContent = `本期详情 · ${current.week}`;
+  links.replaceChildren();
+  for (const [file, label] of [["report.md", "报告（Markdown）"], ["post.md", "发帖稿"],
+                               ["data.json", "数据（JSON）"], ["summary.json", "摘要"]] ) {
+    if (!(meta.files ?? []).includes(file)) continue;
+    const a = document.createElement("a");
+    a.href = `${meta.dir}/${file}`;
+    a.textContent = label;
+    links.appendChild(a);
+  }
+  for (const image of (meta.images ?? []).slice(0, 4)) {
+    const a = document.createElement("a");
+    a.href = image;
+    a.textContent = `配图 ${image.split("/").pop()}`;
+    links.appendChild(a);
+  }
+  if (detailCache.has(current.week)) {
+    const view = detailCache.get(current.week);
+    info.textContent = describe(view, meta);
+    window.renderReportInto(box, view);
+    return;
+  }
+  info.textContent = "载入中…";
+  box.replaceChildren();
+  try {
+    // 用相对路径取本期数据（线上走 https；本地需用 http 打开，file:// 会被浏览器拦）
+    const response = await fetch(`${meta.dir}/data.json`, { cache: "no-cache" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const view = await response.json();
+    detailCache.set(current.week, view);
+    info.textContent = describe(view, meta);
+    window.renderReportInto(box, view);
+  } catch (error) {
+    info.textContent = `读不到本期数据（${error && error.message ? error.message : error}）。` +
+      "本地直接双击打开时浏览器会拦 fetch，用 http 打开或在线上看。";
+  }
+}
+
+function describe(view, meta) {
+  const window = (view?.week?.window ?? []).join(" → ");
+  const partial = meta.partial ? "（进行中）" : "";
+  return `${window}${partial} · 生成 ${view?.week?.generated_at ?? "—"} · ${view?.kinds?.length ?? 0} 个活动类型`;
+}
+
 function render() {
   if (!board || !board.kinds) return;
   const current = state();
@@ -290,6 +343,7 @@ function render() {
   renderTable(current, data);
   renderChart(current, data);
   renderModelTrend(current);
+  void renderDetail(current);
 }
 
 if (board) {
