@@ -361,6 +361,7 @@ async function openMarkdown(path, title) {
     body.innerHTML = metaHtml + (renderer && typeof renderer.parse === "function"
       ? renderer.parse(restText.replace(/</g, "&lt;"))
       : `<pre>${escHtml(restText)}</pre>`);
+    body.classList.add("md-in");   // 内容到达时淡入上浮，接住开窗动效
   } catch (error) {
     body.classList.remove("loading");
     body.textContent = `读不到这份 Markdown（${error && error.message ? error.message : error}）。` +
