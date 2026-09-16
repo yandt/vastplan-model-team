@@ -70,7 +70,7 @@ function barRows(panel) {
   const first = panel.rows[0] ?? {};
   const four = Boolean(first.unique_delta && first.other_delta);
   const labels = four
-    ? ["模型", "条（上＝上期，下＝本期）", "独有", "独有环比", "其他", "其他环比"]
+    ? ["模型", "条（上＝上期，下＝本期）", "独有", "独有环比", "共有", "共有环比"]
     : first.bad_text !== undefined
       ? ["模型", "条（上＝上期，下＝本期）", "本期", "说错"]
       : ["模型", "条（上＝上期，下＝本期）", "本期", "环比"];
