@@ -156,10 +156,10 @@ function bars(host, spec) {
       responsive: false,
       maintainAspectRatio: false,
       animation: false,
-      devicePixelRatio: dpr(),
+      devicePixelRatio: 1,
       events: [],
       layout: { padding: 0 },
-      datasets: { bar: { categoryPercentage: barHeight / (barHeight + gap), barPercentage: 1 } },
+      datasets: { bar: { barThickness: barHeight, categoryPercentage: 1, barPercentage: 1 } },
       scales: {
         x: { display: false, stacked: true, min: 0, max: 100 },
         y: { display: false, stacked: true, offset: false },
