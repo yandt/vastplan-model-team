@@ -115,7 +115,9 @@ padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--line);font-s
 .md-body pre{background:#f1ede7;border-radius:6px;padding:10px 12px;overflow-x:auto}
 .md-body pre code{background:none;padding:0}
 .md-body blockquote{margin:8px 0;padding:2px 12px;border-left:3px solid var(--line);color:var(--muted)}
-.md-body table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12.5px}
+/* 按内容自适应宽度：窄表（如环比表的 指标/本期/上期/环比）列挨着列，
+   不再被拉满整行、本期与上期隔出几百像素；宽表仍受容器宽度约束 */
+.md-body table{width:auto;max-width:100%;border-collapse:collapse;margin:10px 0;font-size:12.5px}
 .md-body th,.md-body td{border-bottom:1px solid var(--line);padding:6px 9px;text-align:left;white-space:nowrap}
 .md-body a{color:var(--accent)}
 .md-body hr{border:0;border-top:1px solid var(--line);margin:14px 0}
