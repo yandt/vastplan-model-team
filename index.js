@@ -179,11 +179,13 @@ function renderChart(current, data) {
     const text = row.cells[data.index] ?? "";
     const value = cellValue(text);
     const width = Number.isFinite(value) ? Math.max(0, Math.min(100, (value / peak) * 100)) : 0;
+    const spec = { height: 7, gap: 0, tracks: [{ parts: [{ value: width, color: row.dot || "#8a857c" }] }] };
     // 顶部图表的值是「本/上」一对，只有三格；自带 pair 类，免得跟详情面板的四列规则串味
     return `<div class="bar pair"><span class="lab">${escHtml(row.name)}</span>` +
-      `<span class="track"><i style="width:${width}%;background:${escHtml(row.dot || "#8a857c")}"></i></span>` +
+      `<span class="tracks" data-vast-bars="${escHtml(JSON.stringify(spec))}"></span>` +
       `<span class="vals">${escHtml(text)}</span></div>`;
   }).join("") || '<p class="none">没有可对比的数据。</p>';
+  if (window.VastCharts) window.VastCharts.draw(chartBox);
 }
 
 /** 该类型下最新的模型清单（按最近一期综合分从高到低）。 */
@@ -228,26 +230,15 @@ function renderModelTrend(current) {
     : new Set(ranked.map((entry) => entry.name));
   const picked = ranked.filter((entry) => chosen.has(entry.name));
   const labels = weeks.map((stamp) => weekLabel(stamp).split("（")[0]);
-  const x = weeks.map((_stamp, index) => index);
-  const data = [x, ...picked.map((entry) => x.map((index) => entry.points.get(index) ?? null))];
-  modelsBox.replaceChildren();
-  new uPlot({
-    width: Math.max(260, modelsBox.clientWidth || 320), height: 200, padding: [10, 12, 0, 4],
-    scales: { x: { time: false, range: (_u, min, max) => [min - 0.35, max + 0.35] } },
-    axes: [
-      {
-        stroke: "#8c857c", size: 26, font: "11px sans-serif", grid: { show: false },
-        splits: () => x, values: (_u, splits) => splits.map((index) => String(labels[index] ?? "").slice(-6)),
-      },
-      { stroke: "#8c857c", size: 46, font: "11px sans-serif" },
-    ],
-    legend: { show: false },
-    cursor: { focus: { prox: 24 } },
-    series: [{ label: "期次" }, ...picked.map((entry) => ({
-      label: entry.name, stroke: entry.tone, width: 2,
-      points: { show: true, size: 6, stroke: entry.tone, fill: "#fff" },
-    }))],
-  }, data, modelsBox);
+  window.VastCharts.lines(modelsBox, {
+    height: 200, minWidth: 260, labels,
+    xTicksMax: 8,
+    xFormat: (label) => String(label ?? "").slice(-6),
+    series: picked.map((entry) => ({
+      label: entry.name, color: entry.tone,
+      data: weeks.map((_stamp, index) => entry.points.get(index) ?? null),
+    })),
+  });
   modelsNote.textContent = picked.length
     ? `每期综合分；已画 ${picked.length}/${series.size} 家，改上面的「模型」选择可增删。`
     : "一个都没选：在顶部「模型」里点一下把它加回来。";

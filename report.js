@@ -46,29 +46,40 @@ function formula(block) {
   );
 }
 
+/** 条形的画布规格：上期 1 段（半透明）、本期 1~2 段（覆盖面板拆独有/共同）、可选说错 1 段。
+ *  数值文字列仍是 DOM（对齐靠 CSS 网格），这里只把条交给 canvas。 */
+function barSpec(row) {
+  const tracks = [{ parts: [{ value: row.was_pct, color: row.tone, opacity: 0.32 }] }];
+  if (row.unique_pct === undefined) {
+    tracks.push({ parts: [{ value: row.now_pct, color: row.tone }] });
+  } else {
+    tracks.push({ parts: [
+      { value: row.unique_pct, color: row.tone },
+      { value: Math.max(0, row.now_pct - row.unique_pct), color: row.tone, opacity: 0.42 },
+    ] });
+  }
+  if (row.bad_pct !== undefined) {
+    tracks.push({ parts: [{ value: row.bad_pct, color: window.__falseTone || "#d7c3b8" }] });
+  }
+  return { tracks };
+}
+
 function barRows(panel) {
   const wide = panel.wide ? " wide" : "";
   const rows = panel.rows
     .map((r) => {
-      const bad = r.bad_pct === undefined ? "" :
-        `<span class="track"><i style="width:${r.bad_pct}%;background:${esc(window.__falseTone || "#d7c3b8")}"></i></span>`;
       // 最后两格分列：本周值固定占一格、环比（或「说错」这类附带值）占另一格。
       // 以前把值＋环比拼在一个单元格里，数字宽度不一就左右参差；分列后各行严格对齐。
       const secondary = r.bad_text !== undefined
         ? `<span class="d down">${esc(r.bad_text)}</span>`
         : r.delta ? `<span class="d ${esc(r.delta.cls)}">${esc(r.delta.text)}</span>` : "";
-      // 覆盖面板：本期条拆两段——前段独有（实色）、后段共同（半透明）
-      const nowTrack = r.unique_pct === undefined
-        ? `<span class="track"><i style="width:${r.now_pct}%;background:${esc(r.tone)}"></i></span>`
-        : `<span class="track split"><i style="width:${r.unique_pct}%;background:${esc(r.tone)}"></i>` +
-          `<i style="width:${Math.max(0, r.now_pct - r.unique_pct)}%;background:${esc(r.tone)};opacity:.42"></i></span>`;
       const ratio = r.unique_ratio_text === undefined
         ? ""
         : `<span class="val3">${esc(r.unique_ratio_text)}</span>`;
+      const chart = `<span class="tracks" data-vast-bars="${esc(JSON.stringify(barSpec(r)))}"></span>`;
       return (
-        `<div class="bar${ratio ? " three" : ""}"><span class="lab">${esc(r.label)}${badge(r.badge)}</span><span class="tracks">` +
-        `<span class="track was"><i style="width:${r.was_pct}%;background:${esc(r.tone)}"></i></span>` +
-        nowTrack + bad + `</span>` +
+        `<div class="bar${ratio ? " three" : ""}"><span class="lab">${esc(r.label)}${badge(r.badge)}</span>` +
+        chart +
         `<span class="val">${esc(r.value)}</span>${ratio}<span class="val2">${secondary}</span></div>`
       );
     })
@@ -78,10 +89,12 @@ function barRows(panel) {
 }
 
 function severity(panel) {
-  const bar = panel.segments
-    .map((s) => `<i style="width:${s.pct}%;background:${esc(s.tone)}"></i>`)
-    .join("");
-  return `<div class="panel wide"><h3>${esc(panel.title)}</h3><div class="sev">${bar}</div>` +
+  const spec = {
+    height: 9, gap: 0,
+    tracks: [{ parts: panel.segments.map((s) => ({ value: s.pct, color: s.tone })) }],
+  };
+  return `<div class="panel wide"><h3>${esc(panel.title)}</h3>` +
+    `<div class="sev" data-vast-bars="${esc(JSON.stringify(spec))}"></div>` +
     `<div class="sev-legend">${chips(panel.legend)}</div></div>`;
 }
 
@@ -234,6 +247,8 @@ function render(view) {
   const app = document.getElementById("app");
   if (!app) return;
   app.innerHTML = reportHtml(view);
+  if (window.VastCharts) window.VastCharts.draw(app);
+  // 切图外壳等这个标记：所有条形都在 draw() 里同步画完（animation:false）后才置位，图不会是空白。
   document.documentElement.dataset.reportReady = "1";
 }
 
@@ -241,6 +256,7 @@ function render(view) {
 window.renderReportInto = (target, view, options) => {
   if (!target || !view) return null;
   target.innerHTML = reportHtml(view, options);
+  if (window.VastCharts) window.VastCharts.draw(target);
   return target;
 };
 

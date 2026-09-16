@@ -53,13 +53,14 @@ td.score{font-weight:700;color:#3f3a34}
 .ccon{color:var(--down)}
 tbody tr:hover td{background:#f7f5f2}
 .panels{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 4px}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:14px 16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:14px 16px;min-width:0}
 .panel.wide{grid-column:1 / -1}
 .panel h3{margin:0 0 12px;font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:600;text-transform:uppercase}
 .bar{display:grid;grid-template-columns:210px 1fr 52px 56px;gap:6px;align-items:center;margin:5px 0;font-size:11px}
 /* 本期值与它的环比挨近些：两列各自收窄、列距 10→6（两列右边缘距离 86→62px），仍各自右对齐 */
 .bar .lab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#4a4744}
-.bar .tracks{display:grid;gap:2px}
+.bar .tracks{display:grid;gap:2px;min-width:0}
+.bar .tracks canvas{display:block;max-width:100%}
 .bar .track{height:5px;background:#e9e5df;border-radius:2px;overflow:hidden}
 .bar .track.split{display:flex;gap:0}
 .bar .track i{display:block;height:5px;border-radius:2px}
@@ -72,7 +73,7 @@ tbody tr:hover td{background:#f7f5f2}
 /* 覆盖图：多一列「独有占比」（灰字），三列都右对齐等宽数字 */
 .bar.three{grid-template-columns:206px 1fr 50px 54px 58px}
 .bar .val3{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);opacity:.85;white-space:nowrap}
-.sev{display:flex;height:9px;border-radius:2px;overflow:hidden;background:#e9e5df}
+.sev{display:flex;height:9px;border-radius:2px;overflow:hidden;background:#e9e5df;min-width:0}
 .sev i{display:block;height:9px}
 .sev-legend{display:flex;flex-wrap:wrap;gap:5px 14px;margin-top:9px;font-size:10.5px;color:var(--muted)}
 .debt td{color:#8a4b42}
@@ -111,6 +112,15 @@ footer{margin-top:34px;border-top:1px solid var(--line);padding-top:14px;font-si
   .bar .lab{grid-column:1 / -1}
   .bar .tracks{grid-column:1}
   .bar .vals{grid-column:2}
+  /* 覆盖面板（五列）与顶部对比（三列）在窄屏也要折回「标签一行、轨道 + 数值一行」，
+     否则固定列宽会把面板最小宽度顶到视口之外。 */
+  .bar.three{grid-template-columns:1fr auto auto auto}
+  .bar.three .val{grid-column:2}
+  .bar.three .val3{grid-column:3}
+  .bar.three .val2{grid-column:4}
+  .bar.pair{grid-template-columns:1fr auto}
+  .bar.pair .tracks{grid-column:1}
+  .bar.pair .vals{grid-column:2}
   .formula{padding:11px 12px 9px}
   footer{margin-top:26px}
 }
