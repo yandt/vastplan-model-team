@@ -10,7 +10,7 @@
       "2026-09-07",
       "2026-09-14"
     ],
-    "generated_at": "2026-09-17 01:41",
+    "generated_at": "2026-09-17 01:55",
     "partial": true,
     "title": "模型团队周报 2026-W38（2026-09-14 → 2026-09-21）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 38 周（进行中）（2026-W38）",
       "本窗 2026-09-14 → 2026-09-21（环比 2026-09-07 → 2026-09-14）",
-      "生成 2026-09-17 01:41"
+      "生成 2026-09-17 01:55"
     ]
   },
   "kpis": [
@@ -182,43 +182,43 @@
     "axes": [
       {
         "name": "效果",
-        "share": "30%",
+        "share": "41%",
         "desc": "均质量",
         "low": false
       },
       {
         "name": "覆盖",
-        "share": "25%",
+        "share": "34%",
         "desc": "去重后重要性加权成立数 ÷ 所参与轮次全场去重合计（同名问题只算一次）",
         "low": false
       },
       {
         "name": "独立",
-        "share": "20%",
+        "share": "25%",
         "desc": "独有（重要性加权）/ 成立（重要性加权）",
         "low": false
       },
       {
         "name": "时间",
-        "share": "10%",
+        "share": "0%",
         "desc": "每次分钟，越快越好",
         "low": true
       },
       {
         "name": "花费",
-        "share": "5%",
+        "share": "0%",
         "desc": "每次花费，越省越好",
         "low": true
       },
       {
         "name": "token",
-        "share": "10%",
+        "share": "0%",
         "desc": "每条成立 token，越省越好",
         "low": true
       }
     ],
-    "weights_line": "效果 30% ｜ 覆盖 25% ｜ 独立 20% ｜ 时间 10%↓ ｜ 花费 5%↓ ｜ token 10%↓",
-    "note": "效果 30% ｜ 覆盖 25% ｜ 独立 20% ｜ 时间 10%↓ ｜ 花费 5%↓ ｜ token 10%↓；同一活动类型内每轴 min-max 归一到 0～100 后按权重相加，带 ↓ 的轴越低越好（归一后取反）；某项未采集到时按中位 50 记并在评论里标注；契合分与样本量只进评论，不进评分；效率分（成立重要性÷耗时）只作参考列。"
+    "weights_line": "效果 41% ｜ 覆盖 34% ｜ 独立 25% ｜ 时间 0%↓ ｜ 花费 0%↓ ｜ token 0%↓",
+    "note": "效果 41% ｜ 覆盖 34% ｜ 独立 25% ｜ 时间 0%↓ ｜ 花费 0%↓ ｜ token 0%↓；同一活动类型内每轴 min-max 归一到 0～100 后按权重相加，带 ↓ 的轴越低越好（归一后取反）；某项未采集到时按中位 50 记并在评论里标注；契合分与样本量只进评论，不进评分；效率分（成立重要性÷耗时）只作参考列。"
   },
   "kinds": [
     {
@@ -267,49 +267,6 @@
         "rows": [
           {
             "rank": "1",
-            "name": "DeepSeek V4.1 Flash（high）",
-            "dot": "#8a7a3f",
-            "badge": null,
-            "cells": [
-              {
-                "text": "high"
-              },
-              {
-                "text": "88.9",
-                "cls": "score"
-              },
-              {
-                "text": "11/0"
-              },
-              {
-                "text": "6.5/0.0",
-                "delta": {
-                  "text": "+6.5",
-                  "cls": "up"
-                }
-              },
-              {
-                "text": "24/0"
-              },
-              {
-                "text": "10"
-              },
-              {
-                "text": "8"
-              },
-              {
-                "text": "75%"
-              },
-              {
-                "text": "1.07/0.00"
-              },
-              {
-                "text": "1.17"
-              }
-            ]
-          },
-          {
-            "rank": "2",
             "name": "DeepSeek V4.1 Flash（max）",
             "dot": "#8a7a3f",
             "badge": null,
@@ -318,7 +275,7 @@
                 "text": "max"
               },
               {
-                "text": "84.2",
+                "text": "97.0",
                 "cls": "score"
               },
               {
@@ -352,6 +309,49 @@
             ]
           },
           {
+            "rank": "2",
+            "name": "DeepSeek V4.1 Flash（high）",
+            "dot": "#8a7a3f",
+            "badge": null,
+            "cells": [
+              {
+                "text": "high"
+              },
+              {
+                "text": "93.7",
+                "cls": "score"
+              },
+              {
+                "text": "11/0"
+              },
+              {
+                "text": "6.5/0.0",
+                "delta": {
+                  "text": "+6.5",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "24/0"
+              },
+              {
+                "text": "10"
+              },
+              {
+                "text": "8"
+              },
+              {
+                "text": "75%"
+              },
+              {
+                "text": "1.07/0.00"
+              },
+              {
+                "text": "1.17"
+              }
+            ]
+          },
+          {
             "rank": "3",
             "name": "Muse Spark 1.3 Contributor",
             "dot": "#7d6b8f",
@@ -361,7 +361,7 @@
                 "text": "xhigh"
               },
               {
-                "text": "81.1",
+                "text": "74.6",
                 "cls": "score"
               },
               {
@@ -396,49 +396,6 @@
           },
           {
             "rank": "4",
-            "name": "GLM-5.3",
-            "dot": "#b0674a",
-            "badge": null,
-            "cells": [
-              {
-                "text": "max"
-              },
-              {
-                "text": "67.8",
-                "cls": "score"
-              },
-              {
-                "text": "28/43"
-              },
-              {
-                "text": "4.5/5.3",
-                "delta": {
-                  "text": "-0.8",
-                  "cls": "down"
-                }
-              },
-              {
-                "text": "43/73"
-              },
-              {
-                "text": "13"
-              },
-              {
-                "text": "14"
-              },
-              {
-                "text": "75%"
-              },
-              {
-                "text": "12.16/17.91"
-              },
-              {
-                "text": "0.84"
-              }
-            ]
-          },
-          {
-            "rank": "5",
             "name": "K3",
             "dot": "#6b5b95",
             "badge": {
@@ -450,7 +407,7 @@
                 "text": "max"
               },
               {
-                "text": "66.9",
+                "text": "69.5",
                 "cls": "score"
               },
               {
@@ -484,7 +441,7 @@
             ]
           },
           {
-            "rank": "6",
+            "rank": "5",
             "name": "Grok 4.6 Extra High",
             "dot": "#4a6fa5",
             "badge": null,
@@ -493,7 +450,7 @@
                 "text": "xhigh"
               },
               {
-                "text": "63.2",
+                "text": "67.0",
                 "cls": "score"
               },
               {
@@ -527,6 +484,49 @@
             ]
           },
           {
+            "rank": "6",
+            "name": "GLM-5.3",
+            "dot": "#b0674a",
+            "badge": null,
+            "cells": [
+              {
+                "text": "max"
+              },
+              {
+                "text": "66.3",
+                "cls": "score"
+              },
+              {
+                "text": "28/43"
+              },
+              {
+                "text": "4.5/5.3",
+                "delta": {
+                  "text": "-0.8",
+                  "cls": "down"
+                }
+              },
+              {
+                "text": "43/73"
+              },
+              {
+                "text": "13"
+              },
+              {
+                "text": "14"
+              },
+              {
+                "text": "75%"
+              },
+              {
+                "text": "12.16/17.91"
+              },
+              {
+                "text": "0.84"
+              }
+            ]
+          },
+          {
             "rank": "7",
             "name": "GLM-5.3-Flash",
             "dot": "#a05a76",
@@ -536,7 +536,7 @@
                 "text": "max"
               },
               {
-                "text": "62.6",
+                "text": "64.3",
                 "cls": "score"
               },
               {
@@ -579,7 +579,7 @@
                 "text": "max"
               },
               {
-                "text": "60.7",
+                "text": "62.3",
                 "cls": "score"
               },
               {
@@ -622,7 +622,7 @@
                 "text": "max"
               },
               {
-                "text": "41.3",
+                "text": "24.5",
                 "cls": "score"
               },
               {
@@ -665,7 +665,7 @@
                 "text": "high"
               },
               {
-                "text": "16.6",
+                "text": "18.6",
                 "cls": "score"
               },
               {
@@ -699,7 +699,7 @@
             ]
           }
         ],
-        "note": "※ 本期样本 < 5 场，结论打折；主力（≥5 场）第一：DeepSeek V4.1 Flash（high）（综合 88.9）"
+        "note": "※ 本期样本 < 5 场，结论打折；主力（≥5 场）第一：DeepSeek V4.1 Flash（max）（综合 97.0）"
       },
       "panels": [
         [
@@ -2289,75 +2289,75 @@
         ],
         "rows": [
           {
-            "rank": "#1 DeepSeek V4.1 Flash（high）",
+            "rank": "#1 DeepSeek V4.1 Flash（max）",
             "badge": null,
-            "score": "88.9",
-            "pros": "独立相对最好（独有占比 40%）",
-            "cons": "无突出短板"
-          },
-          {
-            "rank": "#2 DeepSeek V4.1 Flash（max）",
-            "badge": null,
-            "score": "84.2",
+            "score": "97.0",
             "pros": "产出最高（均质量 7.4）、抓得最全（重要性加权占参与轮次 36%）、缓存命中最高（98%）",
             "cons": "时间相对最弱（每次 10.2 分钟）"
           },
           {
+            "rank": "#2 DeepSeek V4.1 Flash（high）",
+            "badge": null,
+            "score": "93.7",
+            "pros": "独立相对最好（独有占比 40%）",
+            "cons": "无突出短板"
+          },
+          {
             "rank": "#3 Muse Spark 1.3 Contributor",
             "badge": null,
-            "score": "81.1",
+            "score": "74.6",
             "pros": "效率分最高（成立重要性÷耗时 3.05）、每条成立最便宜（$0.01）、最快（每次 2.5 分钟，档位 xhigh）、每条成立最省 token（306 千）",
             "cons": "效果相对最弱（均质量 4.8）"
           },
           {
-            "rank": "#4 GLM-5.3",
-            "badge": null,
-            "score": "67.8",
-            "pros": "token相对最好（每条成立 741 千）",
-            "cons": "无突出短板"
-          },
-          {
-            "rank": "#5 K3",
+            "rank": "#4 K3",
             "badge": {
               "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
             },
-            "score": "66.9",
+            "score": "69.5",
             "pros": "token相对最好（每条成立 464 千）",
             "cons": "时间相对最弱（每次 9.4 分钟）"
           },
           {
-            "rank": "#6 Grok 4.6 Extra High",
+            "rank": "#5 Grok 4.6 Extra High",
             "badge": null,
-            "score": "63.2",
+            "score": "67.0",
             "pros": "各项居中（均质量 4.8、准确率 78%）",
             "cons": "花费相对最弱（每次 $1.36）"
           },
           {
+            "rank": "#6 GLM-5.3",
+            "badge": null,
+            "score": "66.3",
+            "pros": "token相对最好（每条成立 741 千）",
+            "cons": "无突出短板"
+          },
+          {
             "rank": "#7 GLM-5.3-Flash",
             "badge": null,
-            "score": "62.6",
+            "score": "64.3",
             "pros": "最准（83%）",
             "cons": "最慢（每次 11.0 分钟，档位 max）"
           },
           {
             "rank": "#8 DeepSeek V4 Flash",
             "badge": null,
-            "score": "60.7",
+            "score": "62.3",
             "pros": "各项居中（均质量 4.5、准确率 77%）",
             "cons": "时间相对最弱（每次 9.9 分钟）"
           },
           {
             "rank": "#9 MiMo V2.5 Pro",
             "badge": null,
-            "score": "41.3",
+            "score": "24.5",
             "pros": "花费相对最好（每次 $0.03）",
             "cons": "假阳最多（每次 0.86 条，准确率 37%）、均质量垫底（-0.7）"
           },
           {
             "rank": "#10 Gemini 3.8 Flash",
             "badge": null,
-            "score": "16.6",
+            "score": "18.6",
             "pros": "各项居中（均质量 1.7、准确率 67%）",
             "cons": "每条成立最贵（$1.87）、每条成立最耗 token（11,881 千）、样本少（3 场，结论打折）"
           }
@@ -2421,7 +2421,7 @@
                 "text": "max"
               },
               {
-                "text": "91.9",
+                "text": "96.9",
                 "cls": "score"
               },
               {
@@ -2464,7 +2464,7 @@
                 "text": "xhigh"
               },
               {
-                "text": "69.1",
+                "text": "92.1",
                 "cls": "score"
               },
               {
@@ -2507,7 +2507,7 @@
                 "text": "high"
               },
               {
-                "text": "65.5",
+                "text": "61.6",
                 "cls": "score"
               },
               {
@@ -2542,92 +2542,6 @@
           },
           {
             "rank": "4",
-            "name": "Muse Spark 1.3 Contributor",
-            "dot": "#7d6b8f",
-            "badge": null,
-            "cells": [
-              {
-                "text": "xhigh"
-              },
-              {
-                "text": "65.3",
-                "cls": "score"
-              },
-              {
-                "text": "17/7"
-              },
-              {
-                "text": "16.4/10.1",
-                "delta": {
-                  "text": "+6.3",
-                  "cls": "up"
-                }
-              },
-              {
-                "text": "31/4"
-              },
-              {
-                "text": "10"
-              },
-              {
-                "text": "1"
-              },
-              {
-                "text": "97%"
-              },
-              {
-                "text": "0.04/0.02"
-              },
-              {
-                "text": "4.33/3.71"
-              }
-            ]
-          },
-          {
-            "rank": "5",
-            "name": "DeepSeek V4.1 Flash（max）",
-            "dot": "#8a7a3f",
-            "badge": null,
-            "cells": [
-              {
-                "text": "max"
-              },
-              {
-                "text": "60.2",
-                "cls": "score"
-              },
-              {
-                "text": "17/9"
-              },
-              {
-                "text": "16.1/12.2",
-                "delta": {
-                  "text": "+3.9",
-                  "cls": "up"
-                }
-              },
-              {
-                "text": "32/11"
-              },
-              {
-                "text": "8"
-              },
-              {
-                "text": "2"
-              },
-              {
-                "text": "94%"
-              },
-              {
-                "text": "0.65/0.24"
-              },
-              {
-                "text": "4.40/3.33"
-              }
-            ]
-          },
-          {
-            "rank": "6",
             "name": "GLM-5.3",
             "dot": "#b0674a",
             "badge": null,
@@ -2636,7 +2550,7 @@
                 "text": "max"
               },
               {
-                "text": "57.5",
+                "text": "57.9",
                 "cls": "score"
               },
               {
@@ -2670,6 +2584,92 @@
             ]
           },
           {
+            "rank": "5",
+            "name": "Muse Spark 1.3 Contributor",
+            "dot": "#7d6b8f",
+            "badge": null,
+            "cells": [
+              {
+                "text": "xhigh"
+              },
+              {
+                "text": "55.9",
+                "cls": "score"
+              },
+              {
+                "text": "17/7"
+              },
+              {
+                "text": "16.4/10.1",
+                "delta": {
+                  "text": "+6.3",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "31/4"
+              },
+              {
+                "text": "10"
+              },
+              {
+                "text": "1"
+              },
+              {
+                "text": "97%"
+              },
+              {
+                "text": "0.04/0.02"
+              },
+              {
+                "text": "4.33/3.71"
+              }
+            ]
+          },
+          {
+            "rank": "6",
+            "name": "DeepSeek V4.1 Flash（max）",
+            "dot": "#8a7a3f",
+            "badge": null,
+            "cells": [
+              {
+                "text": "max"
+              },
+              {
+                "text": "52.0",
+                "cls": "score"
+              },
+              {
+                "text": "17/9"
+              },
+              {
+                "text": "16.1/12.2",
+                "delta": {
+                  "text": "+3.9",
+                  "cls": "up"
+                }
+              },
+              {
+                "text": "32/11"
+              },
+              {
+                "text": "8"
+              },
+              {
+                "text": "2"
+              },
+              {
+                "text": "94%"
+              },
+              {
+                "text": "0.65/0.24"
+              },
+              {
+                "text": "4.40/3.33"
+              }
+            ]
+          },
+          {
             "rank": "7",
             "name": "GLM-5.3-Flash",
             "dot": "#a05a76",
@@ -2679,7 +2679,7 @@
                 "text": "max"
               },
               {
-                "text": "50.8",
+                "text": "49.5",
                 "cls": "score"
               },
               {
@@ -2722,7 +2722,7 @@
                 "text": "max"
               },
               {
-                "text": "50.4",
+                "text": "48.4",
                 "cls": "score"
               },
               {
@@ -2765,7 +2765,7 @@
                 "text": "max"
               },
               {
-                "text": "44.5",
+                "text": "35.2",
                 "cls": "score"
               },
               {
@@ -2808,7 +2808,7 @@
                 "text": "high"
               },
               {
-                "text": "24.9",
+                "text": "0.0",
                 "cls": "score"
               },
               {
@@ -2842,7 +2842,7 @@
             ]
           }
         ],
-        "note": "※ 本期样本 < 5 场，结论打折；主力（≥5 场）第一：K3 方舟 Agent Plan（综合 91.9）"
+        "note": "※ 本期样本 < 5 场，结论打折；主力（≥5 场）第一：K3 方舟 Agent Plan（综合 96.9）"
       },
       "panels": [
         [
@@ -4413,70 +4413,70 @@
               "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
             },
-            "score": "91.9",
+            "score": "96.9",
             "pros": "每条成立最省 token（5 千）",
             "cons": "时间相对最弱（每次 1.7 分钟）"
           },
           {
             "rank": "#2 Grok 4.6 Extra High",
             "badge": null,
-            "score": "69.1",
+            "score": "92.1",
             "pros": "产出最高（均质量 23.8）",
             "cons": "每条成立最贵（$0.11）、每条成立最耗 token（106 千）"
           },
           {
             "rank": "#3 Gemini 3.8 Flash",
             "badge": null,
-            "score": "65.5",
+            "score": "61.6",
             "pros": "最准（100%）、抓得最全（重要性加权占参与轮次 47%）、方向契合最高（4.67）",
             "cons": "独立相对最弱（独有占比 0%）、样本少（3 场，结论打折）"
           },
           {
-            "rank": "#4 Muse Spark 1.3 Contributor",
+            "rank": "#4 GLM-5.3",
             "badge": null,
-            "score": "65.3",
-            "pros": "每条成立最便宜（$0.00）",
-            "cons": "覆盖相对最弱（占参与轮次 25%）"
-          },
-          {
-            "rank": "#5 DeepSeek V4.1 Flash（max）",
-            "badge": null,
-            "score": "60.2",
-            "pros": "效率分最高（成立重要性÷耗时 15.50）",
-            "cons": "独立相对最弱（独有占比 23%）"
-          },
-          {
-            "rank": "#6 GLM-5.3",
-            "badge": null,
-            "score": "57.5",
+            "score": "57.9",
             "pros": "token相对最好（每条成立 11 千）",
             "cons": "时间相对最弱（每次 3.2 分钟）"
           },
           {
+            "rank": "#5 Muse Spark 1.3 Contributor",
+            "badge": null,
+            "score": "55.9",
+            "pros": "每条成立最便宜（$0.00）",
+            "cons": "覆盖相对最弱（占参与轮次 25%）"
+          },
+          {
+            "rank": "#6 DeepSeek V4.1 Flash（max）",
+            "badge": null,
+            "score": "52.0",
+            "pros": "效率分最高（成立重要性÷耗时 15.50）",
+            "cons": "独立相对最弱（独有占比 23%）"
+          },
+          {
             "rank": "#7 GLM-5.3-Flash",
             "badge": null,
-            "score": "50.8",
+            "score": "49.5",
             "pros": "花费相对最好（每次 $0.00）",
             "cons": "最慢（每次 3.4 分钟，档位 max）"
           },
           {
             "rank": "#8 DeepSeek V4 Flash",
             "badge": null,
-            "score": "50.4",
+            "score": "48.4",
             "pros": "花费相对最好（每次 $0.02）",
             "cons": "时间相对最弱（每次 3.2 分钟）"
           },
           {
             "rank": "#9 MiMo V2.5 Pro",
             "badge": null,
-            "score": "44.5",
+            "score": "35.2",
             "pros": "缓存命中最高（91%）",
             "cons": "效果相对最弱（均质量 10.7）"
           },
           {
             "rank": "#10 DeepSeek V4.1 Flash（high）",
             "badge": null,
-            "score": "24.9",
+            "score": "0.0",
             "pros": "最快（每次 0.5 分钟，档位 high）",
             "cons": "假阳最多（每次 0.00 条，准确率 0%）、均质量垫底（6.0）、契合最低（3.00）、样本少（2 场，结论打折）"
           }

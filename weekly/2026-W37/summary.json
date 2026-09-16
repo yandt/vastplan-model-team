@@ -7,7 +7,7 @@
     "2026-08-31",
     "2026-09-07"
   ],
-  "generated_at": "2026-09-17 01:41",
+  "generated_at": "2026-09-17 01:55",
   "week": "2026-W37",
   "week_label": "2026 年第 37 周",
   "partial": false,
@@ -22,18 +22,18 @@
       "top": [
         {
           "model": "K3 Cursor",
-          "score": 79.2,
-          "sessions": 14
-        },
-        {
-          "model": "Muse Spark 1.3 Contributor",
-          "score": 75.9,
+          "score": 85.6,
           "sessions": 14
         },
         {
           "model": "DeepSeek V4.1 Flash（max）",
-          "score": 69.1,
+          "score": 79.3,
           "sessions": 19
+        },
+        {
+          "model": "Grok 4.6 Extra High",
+          "score": 76.9,
+          "sessions": 40
         }
       ]
     },
@@ -47,17 +47,17 @@
       "top": [
         {
           "model": "Fable 5.1",
-          "score": 84.3,
+          "score": 91.8,
           "sessions": 6
         },
         {
           "model": "K3 Cursor",
-          "score": 80.6,
+          "score": 82.7,
           "sessions": 6
         },
         {
           "model": "K3 方舟 Agent Plan",
-          "score": 70.8,
+          "score": 65,
           "sessions": 18
         }
       ]
@@ -70,7 +70,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 15,
-  "generations": 48,
+  "generations": 50,
   "first_generated_at": "2026-09-15 10:38",
-  "last_generated_at": "2026-09-17 01:41"
+  "last_generated_at": "2026-09-17 01:55"
 }
