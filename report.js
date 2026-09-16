@@ -52,13 +52,16 @@ function barRows(panel) {
     .map((r) => {
       const bad = r.bad_pct === undefined ? "" :
         `<span class="track"><i style="width:${r.bad_pct}%;background:${esc(window.__falseTone || "#d7c3b8")}"></i></span>`;
-      const badText = r.bad_text === undefined ? "" : ` <span class="d down">${esc(r.bad_text)}</span>`;
-      const delta = r.delta ? ` <span class="d ${esc(r.delta.cls)}">${esc(r.delta.text)}</span>` : "";
+      // 最后两格分列：本周值固定占一格、环比（或「说错」这类附带值）占另一格。
+      // 以前把值＋环比拼在一个单元格里，数字宽度不一就左右参差；分列后各行严格对齐。
+      const secondary = r.bad_text !== undefined
+        ? `<span class="d down">${esc(r.bad_text)}</span>`
+        : r.delta ? `<span class="d ${esc(r.delta.cls)}">${esc(r.delta.text)}</span>` : "";
       return (
         `<div class="bar"><span class="lab">${esc(r.label)}${badge(r.badge)}</span><span class="tracks">` +
         `<span class="track was"><i style="width:${r.was_pct}%;background:${esc(r.tone)}"></i></span>` +
         `<span class="track"><i style="width:${r.now_pct}%;background:${esc(r.tone)}"></i></span>${bad}</span>` +
-        `<span class="vals">${esc(r.value)}${badText}${delta}</span></div>`
+        `<span class="val">${esc(r.value)}</span><span class="val2">${secondary}</span></div>`
       );
     })
     .join("");

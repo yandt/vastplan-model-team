@@ -56,13 +56,14 @@ tbody tr:hover td{background:#f7f5f2}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:14px 16px}
 .panel.wide{grid-column:1 / -1}
 .panel h3{margin:0 0 12px;font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:600;text-transform:uppercase}
-.bar{display:grid;grid-template-columns:158px 1fr 128px;gap:10px;align-items:center;margin:5px 0;font-size:11px}
+.bar{display:grid;grid-template-columns:210px 1fr 62px 76px;gap:10px;align-items:center;margin:5px 0;font-size:11px}
 .bar .lab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#4a4744}
 .bar .tracks{display:grid;gap:2px}
 .bar .track{height:5px;background:#e9e5df;border-radius:2px;overflow:hidden}
 .bar .track i{display:block;height:5px;border-radius:2px}
 .bar .track.was i{opacity:.32}
-.bar .vals{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.bar .val,.bar .val2{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.bar .val2{white-space:nowrap}
 .sev{display:flex;height:9px;border-radius:2px;overflow:hidden;background:#e9e5df}
 .sev i{display:block;height:9px}
 .sev-legend{display:flex;flex-wrap:wrap;gap:5px 14px;margin-top:9px;font-size:10.5px;color:var(--muted)}
@@ -98,7 +99,7 @@ footer{margin-top:34px;border-top:1px solid var(--line);padding-top:14px;font-si
   /* 面板与条形：单列；条形改成「标签一行、轨道 + 数值一行」 */
   .panels{grid-template-columns:1fr}
   .panel{padding:12px 13px}
-  .bar{grid-template-columns:1fr auto;gap:3px 8px}
+  .bar{grid-template-columns:1fr auto auto;gap:3px 10px}
   .bar .lab{grid-column:1 / -1}
   .bar .tracks{grid-column:1}
   .bar .vals{grid-column:2}
