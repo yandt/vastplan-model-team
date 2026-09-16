@@ -179,7 +179,7 @@ function renderChart(current, data) {
     const text = row.cells[data.index] ?? "";
     const value = cellValue(text);
     const width = Number.isFinite(value) ? Math.max(0, Math.min(100, (value / peak) * 100)) : 0;
-    const spec = { height: 7, gap: 0, tracks: [{ parts: [{ value: width, color: row.dot || "#8a857c" }] }] };
+    const spec = { height: 11, gap: 3, tracks: [{ parts: [{ value: width, color: row.dot || "#8a857c" }] }] };
     // 顶部图表的值是「本/上」一对，只有三格；自带 pair 类，免得跟详情面板的四列规则串味
     return `<div class="bar pair"><span class="lab">${escHtml(row.name)}</span>` +
       `<span class="tracks" data-vast-bars="${escHtml(JSON.stringify(spec))}"></span>` +
