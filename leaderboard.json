@@ -24,7 +24,6 @@
       "dir": "weekly/2026-W38",
       "files": [
         "data.json",
-        "post.md",
         "report.md",
         "summary.json"
       ],

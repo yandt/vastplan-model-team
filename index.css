@@ -17,6 +17,9 @@ h1{margin:0 0 6px;font-size:25px;font-weight:650}
 
 /* ── 活动类型标签页 ── */
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px}
+/* 榜单表列多（13 列）且单元格不换行：窄屏交给本容器横滑，别把整页撑宽 */
+#board-table{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+#board-table table{min-width:max-content}
 /* 上边距必须留给标题区的分隔线：margin-top 为 0 时按钮会正好压在线上 */
 .tab{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);
 padding:6px 14px;border-radius:999px;font-size:13px;cursor:pointer;font-family:inherit}
