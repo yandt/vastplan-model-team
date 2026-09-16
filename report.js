@@ -66,6 +66,17 @@ function barSpec(row) {
 
 function barRows(panel) {
   const wide = panel.wide ? " wide" : "";
+  // 表头：按本面板的列结构给各列一个说法（覆盖面板六列、成立密度带「说错」、其余四列）
+  const first = panel.rows[0] ?? {};
+  const four = Boolean(first.unique_delta && first.other_delta);
+  const labels = four
+    ? ["模型", "条（上＝上期，下＝本期）", "独有", "独有环比", "其他", "其他环比"]
+    : first.bad_text !== undefined
+      ? ["模型", "条（上＝上期，下＝本期）", "本期", "说错"]
+      : ["模型", "条（上＝上期，下＝本期）", "本期", "环比"];
+  const head = `<div class="bar head${four ? " four" : ""}">` +
+    labels.map((text, i) => `<span class="${i === 0 ? "lab" : i === 1 ? "tracks" : "valh"}">${esc(text)}</span>`).join("") +
+    "</div>";
   const rows = panel.rows
     .map((r) => {
       // 最后两格分列：本周值固定占一格、环比（或「说错」这类附带值）占另一格。
@@ -95,7 +106,7 @@ function barRows(panel) {
     })
     .join("");
   const legend = panel.legend ? `<div class="sev-legend">${chips(panel.legend)}</div>` : "";
-  return `<div class="panel${wide}"><h3>${esc(panel.title)}</h3>${rows}${legend}</div>`;
+  return `<div class="panel${wide}"><h3>${esc(panel.title)}</h3>${head}${rows}${legend}</div>`;
 }
 
 function severity(panel) {
