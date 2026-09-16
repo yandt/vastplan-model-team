@@ -7,33 +7,33 @@
     "2026-09-07",
     "2026-09-14"
   ],
-  "generated_at": "2026-09-16 20:57",
+  "generated_at": "2026-09-16 21:44",
   "week": "2026-W38",
   "week_label": "2026 年第 38 周",
   "partial": true,
   "kinds": {
     "事后审计": {
       "sessions": 28,
-      "rows": 213,
-      "confirmed": 351,
-      "false_pos": 132,
+      "rows": 220,
+      "confirmed": 358,
+      "false_pos": 137,
       "unique": 113,
-      "usd_rated": 90.31,
+      "usd_rated": 92.28,
       "top": [
         {
           "model": "DeepSeek V4.1 Flash（high）",
-          "score": 84.2,
-          "sessions": 9
+          "score": 87.2,
+          "sessions": 10
         },
         {
           "model": "DeepSeek V4.1 Flash（max）",
-          "score": 80.9,
-          "sessions": 23
+          "score": 82.2,
+          "sessions": 24
         },
         {
           "model": "Muse Spark 1.3 Contributor",
-          "score": 78.9,
-          "sessions": 26
+          "score": 80.5,
+          "sessions": 27
         }
       ]
     },
@@ -70,7 +70,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 8,
-  "generations": 30,
+  "generations": 32,
   "first_generated_at": "2026-09-15 02:24",
-  "last_generated_at": "2026-09-16 20:57"
+  "last_generated_at": "2026-09-16 21:44"
 }

@@ -10,7 +10,7 @@
       "2026-08-31",
       "2026-09-07"
     ],
-    "generated_at": "2026-09-16 20:56",
+    "generated_at": "2026-09-16 21:44",
     "partial": false,
     "title": "模型团队周报 2026-W37（2026-09-07 → 2026-09-14）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 37 周（2026-W37）",
       "本窗 2026-09-07 → 2026-09-14（环比 2026-08-31 → 2026-09-07）",
-      "生成 2026-09-16 20:56"
+      "生成 2026-09-16 21:44"
     ]
   },
   "kpis": [
@@ -966,137 +966,6 @@
         ],
         [
           {
-            "title": "独立 · 独有占比（重要性加权） · 本项排名（上灰＝上期，下彩＝本期）",
-            "rows": [
-              {
-                "label": "#1 Muse Spark 1.3 Contributor",
-                "badge": null,
-                "tone": "#7d6b8f",
-                "was_pct": 100,
-                "now_pct": 100,
-                "value": "70%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#2 K3",
-                "badge": {
-                  "text": "Curso...",
-                  "title": "Cursor"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 83.5,
-                "now_pct": 80.6,
-                "value": "57%",
-                "delta": {
-                  "text": "-2%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#3 Grok 4.6 Extra High",
-                "badge": null,
-                "tone": "#4a6fa5",
-                "was_pct": 79,
-                "now_pct": 71.9,
-                "value": "51%",
-                "delta": {
-                  "text": "-5%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#4 DeepSeek V4.1 Flash（max）",
-                "badge": null,
-                "tone": "#8a7a3f",
-                "was_pct": 65,
-                "now_pct": 65,
-                "value": "46%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#5 Gemini 3.8 Flash",
-                "badge": null,
-                "tone": "#4f8a8b",
-                "was_pct": 52.4,
-                "now_pct": 61.7,
-                "value": "43%",
-                "delta": {
-                  "text": "+7%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#6 K3",
-                "badge": {
-                  "text": "方舟 Ag...",
-                  "title": "方舟 Agent Plan"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 56.9,
-                "now_pct": 56.9,
-                "value": "40%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#7 MiMo V2.5 Pro",
-                "badge": null,
-                "tone": "#b08a3e",
-                "was_pct": 54.9,
-                "now_pct": 54.9,
-                "value": "39%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#8 GLM-5.3",
-                "badge": null,
-                "tone": "#b0674a",
-                "was_pct": 0,
-                "now_pct": 51.5,
-                "value": "36%",
-                "delta": {
-                  "text": "+36%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#9 GLM-5.3-Flash",
-                "badge": null,
-                "tone": "#a05a76",
-                "was_pct": 10.9,
-                "now_pct": 51.4,
-                "value": "36%",
-                "delta": {
-                  "text": "+28%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#10 DeepSeek V4 Flash",
-                "badge": null,
-                "tone": "#6b8e5a",
-                "was_pct": 50.1,
-                "now_pct": 50.1,
-                "value": "35%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              }
-            ]
-          },
-          {
             "title": "性价比 · 效率分 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
@@ -1226,9 +1095,7 @@
                 }
               }
             ]
-          }
-        ],
-        [
+          },
           {
             "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
@@ -1387,123 +1254,6 @@
                 "unique_pct": 6.6,
                 "unique_text": "4%",
                 "other_text": "6%"
-              }
-            ]
-          },
-          {
-            "title": "成立密度 · 每次（越多越好） · 本项排名（彩＝成立，粉＝说错；均为每次）",
-            "rows": [
-              {
-                "label": "#1 DeepSeek V4.1 Flash（max）",
-                "badge": null,
-                "tone": "#8a7a3f",
-                "was_pct": 0,
-                "now_pct": 100,
-                "value": "2.42",
-                "bad_pct": 13,
-                "bad_text": "0.32"
-              },
-              {
-                "label": "#2 Gemini 3.8 Flash",
-                "badge": null,
-                "tone": "#4f8a8b",
-                "was_pct": 0,
-                "now_pct": 83.7,
-                "value": "2.03",
-                "bad_pct": 39.1,
-                "bad_text": "0.95"
-              },
-              {
-                "label": "#3 K3",
-                "badge": {
-                  "text": "Curso...",
-                  "title": "Cursor"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 0,
-                "now_pct": 76.7,
-                "value": "1.86",
-                "bad_pct": 14.8,
-                "bad_text": "0.36"
-              },
-              {
-                "label": "#4 Grok 4.6 Extra High",
-                "badge": null,
-                "tone": "#4a6fa5",
-                "was_pct": 0,
-                "now_pct": 72.3,
-                "value": "1.75",
-                "bad_pct": 9.3,
-                "bad_text": "0.23"
-              },
-              {
-                "label": "#5 GLM-5.3",
-                "badge": null,
-                "tone": "#b0674a",
-                "was_pct": 0,
-                "now_pct": 70.1,
-                "value": "1.70",
-                "bad_pct": 20.2,
-                "bad_text": "0.49"
-              },
-              {
-                "label": "#6 K3",
-                "badge": {
-                  "text": "方舟 Ag...",
-                  "title": "方舟 Agent Plan"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 0,
-                "now_pct": 69.8,
-                "value": "1.69",
-                "bad_pct": 15.7,
-                "bad_text": "0.38"
-              },
-              {
-                "label": "#7 Muse Spark 1.3 Contributor",
-                "badge": null,
-                "tone": "#7d6b8f",
-                "was_pct": 0,
-                "now_pct": 64.9,
-                "value": "1.57",
-                "bad_pct": 20.7,
-                "bad_text": "0.50"
-              },
-              {
-                "label": "#8 GLM-5.3-Flash",
-                "badge": null,
-                "tone": "#a05a76",
-                "was_pct": 0,
-                "now_pct": 60.9,
-                "value": "1.48",
-                "bad_pct": 4.1,
-                "bad_text": "0.10"
-              },
-              {
-                "label": "#9 DeepSeek V4 Flash",
-                "badge": null,
-                "tone": "#6b8e5a",
-                "was_pct": 0,
-                "now_pct": 48.4,
-                "value": "1.17",
-                "bad_pct": 13,
-                "bad_text": "0.31"
-              },
-              {
-                "label": "#10 MiMo V2.5 Pro",
-                "badge": null,
-                "tone": "#b08a3e",
-                "was_pct": 0,
-                "now_pct": 21.2,
-                "value": "0.51",
-                "bad_pct": 20.1,
-                "bad_text": "0.49"
-              }
-            ],
-            "legend": [
-              {
-                "text": "每次说错",
-                "tone": "#d7c3b8"
               }
             ]
           }
@@ -2298,6 +2048,126 @@
                 }
               }
             ]
+          }
+        ],
+        [
+          {
+            "title": "成立密度 · 每次（越多越好） · 本项排名（彩＝成立，粉＝说错；均为每次）",
+            "rows": [
+              {
+                "label": "#1 DeepSeek V4.1 Flash（max）",
+                "badge": null,
+                "tone": "#8a7a3f",
+                "was_pct": 0,
+                "now_pct": 100,
+                "value": "2.42",
+                "bad_pct": 13,
+                "bad_text": "0.32"
+              },
+              {
+                "label": "#2 Gemini 3.8 Flash",
+                "badge": null,
+                "tone": "#4f8a8b",
+                "was_pct": 0,
+                "now_pct": 83.7,
+                "value": "2.03",
+                "bad_pct": 39.1,
+                "bad_text": "0.95"
+              },
+              {
+                "label": "#3 K3",
+                "badge": {
+                  "text": "Curso...",
+                  "title": "Cursor"
+                },
+                "tone": "#6b5b95",
+                "was_pct": 0,
+                "now_pct": 76.7,
+                "value": "1.86",
+                "bad_pct": 14.8,
+                "bad_text": "0.36"
+              },
+              {
+                "label": "#4 Grok 4.6 Extra High",
+                "badge": null,
+                "tone": "#4a6fa5",
+                "was_pct": 0,
+                "now_pct": 72.3,
+                "value": "1.75",
+                "bad_pct": 9.3,
+                "bad_text": "0.23"
+              },
+              {
+                "label": "#5 GLM-5.3",
+                "badge": null,
+                "tone": "#b0674a",
+                "was_pct": 0,
+                "now_pct": 70.1,
+                "value": "1.70",
+                "bad_pct": 20.2,
+                "bad_text": "0.49"
+              },
+              {
+                "label": "#6 K3",
+                "badge": {
+                  "text": "方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
+                "tone": "#6b5b95",
+                "was_pct": 0,
+                "now_pct": 69.8,
+                "value": "1.69",
+                "bad_pct": 15.7,
+                "bad_text": "0.38"
+              },
+              {
+                "label": "#7 Muse Spark 1.3 Contributor",
+                "badge": null,
+                "tone": "#7d6b8f",
+                "was_pct": 0,
+                "now_pct": 64.9,
+                "value": "1.57",
+                "bad_pct": 20.7,
+                "bad_text": "0.50"
+              },
+              {
+                "label": "#8 GLM-5.3-Flash",
+                "badge": null,
+                "tone": "#a05a76",
+                "was_pct": 0,
+                "now_pct": 60.9,
+                "value": "1.48",
+                "bad_pct": 4.1,
+                "bad_text": "0.10"
+              },
+              {
+                "label": "#9 DeepSeek V4 Flash",
+                "badge": null,
+                "tone": "#6b8e5a",
+                "was_pct": 0,
+                "now_pct": 48.4,
+                "value": "1.17",
+                "bad_pct": 13,
+                "bad_text": "0.31"
+              },
+              {
+                "label": "#10 MiMo V2.5 Pro",
+                "badge": null,
+                "tone": "#b08a3e",
+                "was_pct": 0,
+                "now_pct": 21.2,
+                "value": "0.51",
+                "bad_pct": 20.1,
+                "bad_text": "0.49"
+              }
+            ],
+            "legend": [
+              {
+                "text": "每次说错",
+                "tone": "#d7c3b8"
+              }
+            ],
+            "wide": true
           }
         ],
         [
@@ -3255,149 +3125,6 @@
         ],
         [
           {
-            "title": "独立 · 独有占比（重要性加权） · 本项排名（上灰＝上期，下彩＝本期）",
-            "rows": [
-              {
-                "label": "#1 K3",
-                "badge": {
-                  "text": "Curso...",
-                  "title": "Cursor"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 37,
-                "now_pct": 84,
-                "value": "84%",
-                "delta": {
-                  "text": "+47%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#2 Fable 5.1",
-                "badge": null,
-                "tone": "#a45a52",
-                "was_pct": 58.3,
-                "now_pct": 58.3,
-                "value": "58%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#3 K3",
-                "badge": {
-                  "text": "方舟 Ag...",
-                  "title": "方舟 Agent Plan"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 43.8,
-                "now_pct": 43.8,
-                "value": "44%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#4 DeepSeek V4.1 Flash（max）",
-                "badge": null,
-                "tone": "#8a7a3f",
-                "was_pct": 40,
-                "now_pct": 40,
-                "value": "40%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#5 Grok 4.6 Extra High",
-                "badge": null,
-                "tone": "#4a6fa5",
-                "was_pct": 0,
-                "now_pct": 39.4,
-                "value": "39%",
-                "delta": {
-                  "text": "+39%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#6 Gemini 3.8 Flash",
-                "badge": null,
-                "tone": "#4f8a8b",
-                "was_pct": 35.2,
-                "now_pct": 32.2,
-                "value": "32%",
-                "delta": {
-                  "text": "-3%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#7 Muse Spark 1.3 Contributor",
-                "badge": null,
-                "tone": "#7d6b8f",
-                "was_pct": 29.4,
-                "now_pct": 29.4,
-                "value": "29%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#8 DeepSeek V4 Flash",
-                "badge": null,
-                "tone": "#6b8e5a",
-                "was_pct": 17.7,
-                "now_pct": 17.7,
-                "value": "18%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              },
-              {
-                "label": "#9 GLM-5.3",
-                "badge": null,
-                "tone": "#b0674a",
-                "was_pct": 0,
-                "now_pct": 14.4,
-                "value": "14%",
-                "delta": {
-                  "text": "+14%",
-                  "cls": "up"
-                }
-              },
-              {
-                "label": "#10 GLM-5.3-Flash",
-                "badge": null,
-                "tone": "#a05a76",
-                "was_pct": 100,
-                "now_pct": 11.9,
-                "value": "12%",
-                "delta": {
-                  "text": "-88%",
-                  "cls": "down"
-                }
-              },
-              {
-                "label": "#11 MiMo V2.5 Pro",
-                "badge": null,
-                "tone": "#b08a3e",
-                "was_pct": 6.2,
-                "now_pct": 6.2,
-                "value": "6%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                }
-              }
-            ]
-          },
-          {
             "title": "性价比 · 效率分 · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
               {
@@ -3539,9 +3266,7 @@
                 }
               }
             ]
-          }
-        ],
-        [
+          },
           {
             "title": "覆盖 · 重要性加权占参与轮次（深＝独有，浅＝共同） · 本项排名（上灰＝上期，下彩＝本期）",
             "rows": [
@@ -3715,133 +3440,6 @@
                 "unique_pct": 3,
                 "unique_text": "2%",
                 "other_text": "6%"
-              }
-            ]
-          },
-          {
-            "title": "成立密度 · 每次（越多越好） · 本项排名（彩＝成立，粉＝说错；均为每次）",
-            "rows": [
-              {
-                "label": "#1 Fable 5.1",
-                "badge": null,
-                "tone": "#a45a52",
-                "was_pct": 0,
-                "now_pct": 100,
-                "value": "3.67",
-                "bad_pct": 0,
-                "bad_text": "0.00"
-              },
-              {
-                "label": "#2 K3",
-                "badge": {
-                  "text": "Curso...",
-                  "title": "Cursor"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 0,
-                "now_pct": 86.4,
-                "value": "3.17",
-                "bad_pct": 4.5,
-                "bad_text": "0.17"
-              },
-              {
-                "label": "#3 K3",
-                "badge": {
-                  "text": "方舟 Ag...",
-                  "title": "方舟 Agent Plan"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 0,
-                "now_pct": 83.3,
-                "value": "3.06",
-                "bad_pct": 1.5,
-                "bad_text": "0.06"
-              },
-              {
-                "label": "#4 Grok 4.6 Extra High",
-                "badge": null,
-                "tone": "#4a6fa5",
-                "was_pct": 0,
-                "now_pct": 76.4,
-                "value": "2.80",
-                "bad_pct": 1.4,
-                "bad_text": "0.05"
-              },
-              {
-                "label": "#5 Gemini 3.8 Flash",
-                "badge": null,
-                "tone": "#4f8a8b",
-                "was_pct": 0,
-                "now_pct": 61.4,
-                "value": "2.25",
-                "bad_pct": 4.1,
-                "bad_text": "0.15"
-              },
-              {
-                "label": "#6 GLM-5.3",
-                "badge": null,
-                "tone": "#b0674a",
-                "was_pct": 0,
-                "now_pct": 59.7,
-                "value": "2.19",
-                "bad_pct": 1.3,
-                "bad_text": "0.05"
-              },
-              {
-                "label": "#7 DeepSeek V4 Flash",
-                "badge": null,
-                "tone": "#6b8e5a",
-                "was_pct": 0,
-                "now_pct": 55.8,
-                "value": "2.05",
-                "bad_pct": 1.3,
-                "bad_text": "0.05"
-              },
-              {
-                "label": "#8 GLM-5.3-Flash",
-                "badge": null,
-                "tone": "#a05a76",
-                "was_pct": 0,
-                "now_pct": 54.5,
-                "value": "2.00",
-                "bad_pct": 1.3,
-                "bad_text": "0.05"
-              },
-              {
-                "label": "#9 MiMo V2.5 Pro",
-                "badge": null,
-                "tone": "#b08a3e",
-                "was_pct": 0,
-                "now_pct": 36.4,
-                "value": "1.33",
-                "bad_pct": 13.6,
-                "bad_text": "0.50"
-              },
-              {
-                "label": "#10 DeepSeek V4.1 Flash（max）",
-                "badge": null,
-                "tone": "#8a7a3f",
-                "was_pct": 0,
-                "now_pct": 33.3,
-                "value": "1.22",
-                "bad_pct": 0,
-                "bad_text": "0.00"
-              },
-              {
-                "label": "#11 Muse Spark 1.3 Contributor",
-                "badge": null,
-                "tone": "#7d6b8f",
-                "was_pct": 0,
-                "now_pct": 15.6,
-                "value": "0.57",
-                "bad_pct": 0,
-                "bad_text": "0.00"
-              }
-            ],
-            "legend": [
-              {
-                "text": "每次说错",
-                "tone": "#d7c3b8"
               }
             ]
           }
@@ -4708,6 +4306,136 @@
                 }
               }
             ]
+          }
+        ],
+        [
+          {
+            "title": "成立密度 · 每次（越多越好） · 本项排名（彩＝成立，粉＝说错；均为每次）",
+            "rows": [
+              {
+                "label": "#1 Fable 5.1",
+                "badge": null,
+                "tone": "#a45a52",
+                "was_pct": 0,
+                "now_pct": 100,
+                "value": "3.67",
+                "bad_pct": 0,
+                "bad_text": "0.00"
+              },
+              {
+                "label": "#2 K3",
+                "badge": {
+                  "text": "Curso...",
+                  "title": "Cursor"
+                },
+                "tone": "#6b5b95",
+                "was_pct": 0,
+                "now_pct": 86.4,
+                "value": "3.17",
+                "bad_pct": 4.5,
+                "bad_text": "0.17"
+              },
+              {
+                "label": "#3 K3",
+                "badge": {
+                  "text": "方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
+                "tone": "#6b5b95",
+                "was_pct": 0,
+                "now_pct": 83.3,
+                "value": "3.06",
+                "bad_pct": 1.5,
+                "bad_text": "0.06"
+              },
+              {
+                "label": "#4 Grok 4.6 Extra High",
+                "badge": null,
+                "tone": "#4a6fa5",
+                "was_pct": 0,
+                "now_pct": 76.4,
+                "value": "2.80",
+                "bad_pct": 1.4,
+                "bad_text": "0.05"
+              },
+              {
+                "label": "#5 Gemini 3.8 Flash",
+                "badge": null,
+                "tone": "#4f8a8b",
+                "was_pct": 0,
+                "now_pct": 61.4,
+                "value": "2.25",
+                "bad_pct": 4.1,
+                "bad_text": "0.15"
+              },
+              {
+                "label": "#6 GLM-5.3",
+                "badge": null,
+                "tone": "#b0674a",
+                "was_pct": 0,
+                "now_pct": 59.7,
+                "value": "2.19",
+                "bad_pct": 1.3,
+                "bad_text": "0.05"
+              },
+              {
+                "label": "#7 DeepSeek V4 Flash",
+                "badge": null,
+                "tone": "#6b8e5a",
+                "was_pct": 0,
+                "now_pct": 55.8,
+                "value": "2.05",
+                "bad_pct": 1.3,
+                "bad_text": "0.05"
+              },
+              {
+                "label": "#8 GLM-5.3-Flash",
+                "badge": null,
+                "tone": "#a05a76",
+                "was_pct": 0,
+                "now_pct": 54.5,
+                "value": "2.00",
+                "bad_pct": 1.3,
+                "bad_text": "0.05"
+              },
+              {
+                "label": "#9 MiMo V2.5 Pro",
+                "badge": null,
+                "tone": "#b08a3e",
+                "was_pct": 0,
+                "now_pct": 36.4,
+                "value": "1.33",
+                "bad_pct": 13.6,
+                "bad_text": "0.50"
+              },
+              {
+                "label": "#10 DeepSeek V4.1 Flash（max）",
+                "badge": null,
+                "tone": "#8a7a3f",
+                "was_pct": 0,
+                "now_pct": 33.3,
+                "value": "1.22",
+                "bad_pct": 0,
+                "bad_text": "0.00"
+              },
+              {
+                "label": "#11 Muse Spark 1.3 Contributor",
+                "badge": null,
+                "tone": "#7d6b8f",
+                "was_pct": 0,
+                "now_pct": 15.6,
+                "value": "0.57",
+                "bad_pct": 0,
+                "bad_text": "0.00"
+              }
+            ],
+            "legend": [
+              {
+                "text": "每次说错",
+                "tone": "#d7c3b8"
+              }
+            ],
+            "wide": true
           }
         ],
         [
