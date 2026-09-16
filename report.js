@@ -90,7 +90,7 @@ function barRows(panel) {
       return (
         `<div class="bar${ratio ? (r.unique_delta ? " four" : " three") : ""}"><span class="lab">${esc(r.label)}${badge(r.badge)}</span>` +
         chart +
-        `<span class="val">${esc(r.value)}</span>${ratio}<span class="val2">${secondary}</span></div>`
+        `${r.unique_delta && r.other_delta ? "" : `<span class="val">${esc(r.value)}</span>`}${ratio}${secondary ? `<span class="val2">${secondary}</span>` : ""}</div>`
       );
     })
     .join("");
