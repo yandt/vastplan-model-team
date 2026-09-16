@@ -78,8 +78,23 @@ function panelBlock(panel) {
   return panel.segments ? severity(panel) : barRows(panel);
 }
 
+/** 面板展示顺序：把「覆盖」提到**第二排第二列**（第 4 格，紧跟 产出/精准/独立）。
+ *  覆盖是选型主看的轴，排在第三排太靠后。只调展示，data.json 里的原序不动；
+ *  同一规则对全部期次与两个活动类型一致生效（切图外壳共用这个渲染器）。 */
+function orderedPanels(rows) {
+  const flat = rows.flat();
+  const at = flat.findIndex((panel) => String(panel.title).startsWith("覆盖"));
+  if (at < 0 || at === 3) return rows;
+  const moved = flat.slice();
+  const [panel] = moved.splice(at, 1);
+  moved.splice(3, 0, panel);
+  const out = [];
+  for (let i = 0; i < moved.length; i += 2) out.push(moved.slice(i, i + 2));
+  return out;
+}
+
 function panels(rows) {
-  return rows.map((row) => `<div class="panels">${row.map(panelBlock).join("")}</div>`).join("");
+  return orderedPanels(rows).map((row) => `<div class="panels">${row.map(panelBlock).join("")}</div>`).join("");
 }
 
 function modelTable(table) {
