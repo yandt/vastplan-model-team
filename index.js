@@ -193,24 +193,17 @@ function scatterGroupKey(row) {
   return `${baseModelName(row.name)}\u0000${row.badge ?? ""}`;
 }
 
-/** 综合指标改成散点：x＝每次已评运行花费（表里「花费 本/上」是本期总额，除以「场 本/上」折成每次，
- *  与报告「每次花费（越低越省）」面板同口径）、y＝综合得分，一屏看性价比分布；点旁标模型名，
+/** 综合指标改成散点：x＝每次花费（看板「花费」列已折成每次，优先用面板精确值 cost_run 防二次舍入）、
+ *  y＝综合得分，一屏看性价比分布；点旁标模型名，
  *  同基名同厂商且思考档不同（如 max/high）的点用同色实线连起来；其余指标仍是横条。 */
 function renderScatterChart(current, data, costAt) {
   const metrics = board?.kinds?.[current.kind]?.metrics ?? [];
   const thinkAt = metrics.findIndex((name) => String(name).includes("思考"));
-  const runsAt = metrics.findIndex((name) => String(name).trim().startsWith("场"));
   const points = [];
   const groups = new Map();
   for (const row of data.rows) {
-    const runs = runsAt >= 0 ? cellValue(row.cells[runsAt]) : Number.NEGATIVE_INFINITY;
-    const total = costValue(row.cells[costAt]);
-    // 首选看板带上的「每次花费」面板值（避免分位二次舍入）；旧看板没有该字段时才用「花费÷场」折
-    const cost = Number.isFinite(row.cost_run)
-      ? row.cost_run
-      : (Number.isFinite(total) && Number.isFinite(runs) && runs > 0 ? total / runs : Number.NaN);
+    const cost = Number.isFinite(row.cost_run) ? row.cost_run : costValue(row.cells[costAt]);
     const score = cellValue(row.cells[data.index]);
-    // 金额未采集（—）或场次为 0 的，折不出「每次」：不进散点（与「每次花费」面板一致）
     if (!Number.isFinite(cost) || !Number.isFinite(score)) continue;
     const point = { x: cost, y: score, label: entityKey(row), color: row.dot || "#8a857c" };
     points.push(point);
