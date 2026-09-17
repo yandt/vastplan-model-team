@@ -205,10 +205,14 @@ function renderScatterChart(current, data, costAt) {
   for (const row of data.rows) {
     const runs = runsAt >= 0 ? cellValue(row.cells[runsAt]) : Number.NEGATIVE_INFINITY;
     const total = costValue(row.cells[costAt]);
+    // 首选看板带上的「每次花费」面板值（避免分位二次舍入）；旧看板没有该字段时才用「花费÷场」折
+    const cost = Number.isFinite(row.cost_run)
+      ? row.cost_run
+      : (Number.isFinite(total) && Number.isFinite(runs) && runs > 0 ? total / runs : Number.NaN);
     const score = cellValue(row.cells[data.index]);
     // 金额未采集（—）或场次为 0 的，折不出「每次」：不进散点（与「每次花费」面板一致）
-    if (!Number.isFinite(total) || !Number.isFinite(runs) || runs <= 0 || !Number.isFinite(score)) continue;
-    const point = { x: total / runs, y: score, label: entityKey(row), color: row.dot || "#8a857c" };
+    if (!Number.isFinite(cost) || !Number.isFinite(score)) continue;
+    const point = { x: cost, y: score, label: entityKey(row), color: row.dot || "#8a857c" };
     points.push(point);
     const thinking = thinkAt >= 0 ? String(row.cells[thinkAt] ?? "").trim() : "";
     if (!thinking) continue;
