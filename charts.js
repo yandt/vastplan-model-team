@@ -6,7 +6,8 @@
  * - bars(host, spec)：把一条/多条细横条画进 host。spec.tracks 自上而下，
  *   每条 track.parts 自左向右堆叠；未占满的余量用灰底补齐。
  * - lines(host, spec)：折线图。labels + series，xFormat/yFormat 控制刻度文案。
- * - scatter(host, spec)：散点图。points:[{x,y,label,color}]，x/y 都是数值轴，附平均参考虚线。
+ * - scatter(host, spec)：散点图。points:[{x,y,label,color}]，x/y 都是数值轴，附平均参考虚线；
+ *   links:[{color,points:[{x,y}]}] 画「同模型不同思考档」的连线（在点下层），点旁标 label。
  * - draw(root)：扫描 root 内 [data-vast-bars] 占位（JSON spec）并出图，供报告/榜单批量调用。
  *
  * 画布尺寸按 host 实测（写死宽度会撑破窄屏）；窗口变化时统一重测重画。
@@ -255,9 +256,10 @@ function lines(host, spec) {
   });
 }
 
-/** 散点：spec = { height?, minWidth?, points:[{x,y,label,color}], xLabel?, yLabel?,
- *  xFormat?, yFormat?, avgX?, avgY? }。x 轴＝每次花费（$），y 轴＝综合得分；
- *  平均线（有数据才画）用虚线参考，点色＝模型 tone。 */
+/** 散点：spec = { height?, minWidth?, points:[{x,y,label,color}], links?:[{color,points:[{x,y}]}],
+ *  xLabel?, yLabel?, xFormat?, yFormat?, avgX?, avgY? }。x 轴＝每次花费（$），y 轴＝综合得分；
+ *  平均线（有数据才画）用虚线参考，点色＝模型 tone；links 是「同模型不同思考档」的实线，
+ *  画在点下层；每个点旁标 label（白描边＋暗字，按已放置标签与画布边界贪心避让）。 */
 function scatter(host, spec) {
   if (!host) return null;
   const options = spec || {};
@@ -266,8 +268,16 @@ function scatter(host, spec) {
   const { canvas } = mount(host, height, minWidth);
   const points = (options.points || [])
     .filter((point) => point && Number.isFinite(point.x) && Number.isFinite(point.y));
+  const links = (options.links || [])
+    .map((link) => ({
+      color: (link && link.color) || MUTED,
+      data: ((link && link.points) || [])
+        .filter((point) => point && Number.isFinite(point.x) && Number.isFinite(point.y)),
+    }))
+    .filter((link) => link.data.length > 1);
 
   const datasets = [{
+    kind: "points",
     label: options.label || "模型",
     data: points.map((point) => ({ x: point.x, y: point.y, label: point.label })),
     backgroundColor: points.map((point) => point.color || "#8a857c"),
@@ -306,9 +316,96 @@ function scatter(host, spec) {
     return scale;
   };
 
+  /** 连线画在点下层：同模型不同思考档（如 max/high）用该模型色连起来。 */
+  const linkPlugin = {
+    id: "vastScatterLinks",
+    beforeDatasetsDraw(chart) {
+      if (!links.length) return;
+      const ctx = chart.ctx;
+      const xScale = chart.scales && chart.scales.x;
+      const yScale = chart.scales && chart.scales.y;
+      if (!ctx || !xScale || !yScale) return;
+      ctx.save();
+      ctx.lineWidth = 1.5;
+      ctx.lineJoin = "round";
+      for (const link of links) {
+        ctx.strokeStyle = rgba(link.color, 0.7);
+        ctx.beginPath();
+        link.data.forEach((point, index) => {
+          const px = xScale.getPixelForValue(point.x);
+          const py = yScale.getPixelForValue(point.y);
+          if (index === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        });
+        ctx.stroke();
+      }
+      ctx.restore();
+    },
+  };
+
+  /** 点旁写模型名：右→右下→右上→左→左下→左上依次试，避开已放的标签和画布边界。 */
+  const labelPlugin = {
+    id: "vastScatterLabels",
+    afterDatasetsDraw(chart) {
+      const index = chart.data.datasets.findIndex((dataset) => dataset.kind === "points");
+      if (index < 0) return;
+      const meta = chart.getDatasetMeta(index);
+      const data = chart.data.datasets[index].data || [];
+      const area = chart.chartArea;
+      const ctx = chart.ctx;
+      if (!ctx || !area || !meta) return;
+      const placed = [];
+      const offsets = [
+        [7, 0], [-7, 0],
+        [7, 13], [7, -13], [-7, 13], [-7, -13],
+        [7, 26], [7, -26], [-7, 26], [-7, -26],
+        [7, 39], [7, -39], [-7, 39], [-7, -39],
+      ];
+      ctx.save();
+      ctx.font = `600 10px ${Chart.defaults.font.family}`;
+      ctx.textBaseline = "middle";
+      const overlapArea = (box, other) => Math.max(0, Math.min(box.right, other.right) - Math.max(box.left, other.left)) *
+        Math.max(0, Math.min(box.bottom, other.bottom) - Math.max(box.top, other.top));
+      meta.data.forEach((element, i) => {
+        const label = data[i] && data[i].label;
+        if (!label || !element) return;
+        const width = ctx.measureText(label).width;
+        const height = 12;
+        let best = null;
+        let bestOverlap = Infinity;
+        for (const [dx, dy] of offsets) {
+          const box = {
+            left: dx > 0 ? element.x + dx : element.x + dx - width,
+            right: dx > 0 ? element.x + dx + width : element.x + dx,
+            top: element.y + dy - height / 2,
+            bottom: element.y + dy + height / 2,
+          };
+          if (box.left < area.left + 1 || box.right > area.right - 1 ||
+              box.top < area.top + 1 || box.bottom > area.bottom - 1) continue;
+          const overlap = placed.reduce((sum, other) => sum + overlapArea(box, other), 0);
+          if (overlap === 0) { best = { box, dx }; bestOverlap = 0; break; }
+          if (overlap < bestOverlap) { best = { box, dx }; bestOverlap = overlap; }
+        }
+        const anchorX = best
+          ? (best.dx > 0 ? best.box.left : best.box.right)
+          : Math.min(element.x + 7, area.right - width - 1);
+        const anchorY = best ? (best.box.top + best.box.bottom) / 2 : element.y;
+        ctx.textAlign = best && best.dx < 0 ? "right" : "left";
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "#fff";
+        ctx.strokeText(label, anchorX, anchorY);
+        ctx.fillStyle = "rgba(47,44,41,.82)";
+        ctx.fillText(label, anchorX, anchorY);
+        placed.push(best ? best.box : { left: anchorX, right: anchorX + width, top: anchorY - height / 2, bottom: anchorY + height / 2 });
+      });
+      ctx.restore();
+    },
+  };
+
   const chart = new Chart(canvas, {
     type: "scatter",
     data: { datasets },
+    plugins: [linkPlugin, labelPlugin],
     options: {
       responsive: false,
       maintainAspectRatio: false,

@@ -183,14 +183,42 @@ function renderTable(current, data) {
 /** 当前散点图实例：换指标/换期次/改筛选前先销毁，别让 Chart 实例越积越多。 */
 let scatterChart = null;
 
-/** 综合指标改成散点：x＝每次花费（$）、y＝综合得分，一屏看性价比分布；其余指标仍是横条。 */
+/** 名称里的思考档括注：「DeepSeek V4.1 Flash（max）」→「DeepSeek V4.1 Flash」（全/半角都收）。 */
+function baseModelName(name) {
+  return String(name ?? "").replace(/[（(][^（）()]*[)）]\s*$/, "").trim();
+}
+
+/** 散点连线的分组键：同基名且同厂商才算同一模型（K3 Cursor 与 K3 方舟是两条，不连）。 */
+function scatterGroupKey(row) {
+  return `${baseModelName(row.name)}\u0000${row.badge ?? ""}`;
+}
+
+/** 综合指标改成散点：x＝每次花费（$）、y＝综合得分，一屏看性价比分布；点旁标模型名，
+ *  同基名同厂商且思考档不同（如 max/high）的点用同色实线连起来；其余指标仍是横条。 */
 function renderScatterChart(current, data, costAt) {
-  const points = data.rows.map((row) => {
+  const metrics = board?.kinds?.[current.kind]?.metrics ?? [];
+  const thinkAt = metrics.findIndex((name) => String(name).includes("思考"));
+  const points = [];
+  const groups = new Map();
+  for (const row of data.rows) {
     const cost = costValue(row.cells[costAt]);
     const score = cellValue(row.cells[data.index]);
-    if (!Number.isFinite(cost) || !Number.isFinite(score)) return null;
-    return { x: cost, y: score, label: entityKey(row), color: row.dot || "#8a857c" };
-  }).filter(Boolean);
+    if (!Number.isFinite(cost) || !Number.isFinite(score)) continue;
+    const point = { x: cost, y: score, label: entityKey(row), color: row.dot || "#8a857c" };
+    points.push(point);
+    const thinking = thinkAt >= 0 ? String(row.cells[thinkAt] ?? "").trim() : "";
+    if (!thinking) continue;
+    const key = scatterGroupKey(row);
+    const list = groups.get(key) ?? [];
+    list.push({ ...point, thinking });
+    groups.set(key, list);
+  }
+  const links = [];
+  for (const list of groups.values()) {
+    if (list.length < 2 || new Set(list.map((item) => item.thinking)).size < 2) continue;
+    const sorted = [...list].sort((left, right) => left.x - right.x);
+    links.push({ color: sorted[0].color, points: sorted.map(({ x, y }) => ({ x, y })) });
+  }
   chartTitle.textContent = "对比 · 性价比（横轴 每次花费 $，纵轴 综合）";
   if (!points.length) {
     chartBox.innerHTML = '<p class="none">没有可对比的数据。</p>';
@@ -198,7 +226,7 @@ function renderScatterChart(current, data, costAt) {
   }
   chartBox.innerHTML = '<div class="scatter-host"></div>';
   if (window.VastCharts) {
-    scatterChart = window.VastCharts.scatter(chartBox.firstChild, { height: 240, minWidth: 240, points });
+    scatterChart = window.VastCharts.scatter(chartBox.firstChild, { height: 240, minWidth: 240, points, links });
   }
 }
 
