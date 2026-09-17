@@ -13,12 +13,12 @@
 | 重要性5/4/3/2/1 | 84/125/141/110/21 | 3/0/18/35/6 | — |
 | 场次 | 46 | 14 | +32 |
 | 已评成功行 | 307 | 15 | +292 |
-| 成立缺陷/方向 | 481 | 70 | +411 |
+| 成立/方向 | 481 | 70 | +411 |
 | 独有成立 | 215 | 27 | +188 |
 | 假阳性 | 127 | 14 | +113 |
 | 已评花费 $ | 141.34 | 16.48 | +124.86 |
 | 未采集金额行 | 1 | 0 | +1 |
-| 全部花费 $ | 151.98 | 28.23 | +123.76 |
+| 全部花费（含未评/失败）$ | 151.98 | 28.23 | +123.76 |
 | 输入 token | 45,392,097 | 4,674,277 | +40717820 |
 | 输出 token | 7,129,138 | 451,808 | +6677330 |
 | 缓存读 token | 535,299,260 | 52,721,410 | +482577850 |
@@ -27,7 +27,7 @@
 | 平均每次耗时 分钟 | 7.1 | 8.0 | -0.8 |
 | 缓存命中率 % | 92.2 | 91.9 | +0.3 |
 
-| # | 模型 | 思考 | 综合 | 场(本/上) | 均质量(本/上/Δ) | 成立(本/上) | 独有 | 假阳 | 准确率 | 花费$(本/上) | 效率 |
+| # | 模型 | 思考 | 综合 | 场 本/上 | 均质量 本/上/Δ | 成立 本/上 | 独有 | 假阳 | 准确率 | 花费 本/上 | 效率 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 1 | K3 Cursor | max | 85.6 | 14/4 | 7.4/20.8/-13.4 | 26/23 | 14 | 5 | 84% | 13.07/6.38 | 1.26 |
 | 2 | DeepSeek V4.1 Flash（max） | max | 79.3 | 19/0 | 8.2/0.0/+8.2 | 46/0 | 24 | 6 | 88% | 6.61/0.00 | 1.66 |
@@ -42,13 +42,10 @@
 
 主力（≥5 场）第一：K3 Cursor（综合 85.6）
 
-**分项排名（各自口径，从优到差）**
+**分项排名（各自口径，从优到差；产出/精准/性价比见上表）**
 
-- **产出 · 平均质量分**：1. DeepSeek V4.1 Flash（max）（8.2）、2. K3 Cursor（7.4）、3. Grok 4.6 Extra High（7.2）、4. Gemini 3.8 Flash（6.0）、5. K3 方舟 Agent Plan（5.9）、6. GLM-5.3-Flash（5.7）、7. GLM-5.3（5.3）、8. Muse Spark 1.3 Contributor（5.2）、9. DeepSeek V4 Flash（3.8）、10. MiMo V2.5 Pro（0.7）
-- **精准 · 准确率**：1. GLM-5.3-Flash（94%）、2. Grok 4.6 Extra High（89%）、3. DeepSeek V4.1 Flash（max）（88%）、4. K3 Cursor（84%）、5. K3 方舟 Agent Plan（82%）、6. DeepSeek V4 Flash（79%）、7. GLM-5.3（78%）、8. Muse Spark 1.3 Contributor（76%）、9. Gemini 3.8 Flash（68%）、10. MiMo V2.5 Pro（51%）
 - **覆盖 · 重要性加权占参与轮次**：1. K3 Cursor（29%）、2. Gemini 3.8 Flash（29%）、3. DeepSeek V4.1 Flash（max）（28%）、4. Grok 4.6 Extra High（27%）、5. K3 方舟 Agent Plan（27%）、6. GLM-5.3（25%）、7. GLM-5.3-Flash（22%）、8. Muse Spark 1.3 Contributor（20%）、9. DeepSeek V4 Flash（18%）、10. MiMo V2.5 Pro（9%）
 - **独立 · 独有占比（重要性加权）**：1. Muse Spark 1.3 Contributor（70%）、2. K3 Cursor（57%）、3. Grok 4.6 Extra High（51%）、4. DeepSeek V4.1 Flash（max）（46%）、5. Gemini 3.8 Flash（43%）、6. K3 方舟 Agent Plan（40%）、7. MiMo V2.5 Pro（39%）、8. GLM-5.3（36%）、9. GLM-5.3-Flash（36%）、10. DeepSeek V4 Flash（35%）
-- **性价比 · 效率分**：1. Muse Spark 1.3 Contributor（2.47）、2. DeepSeek V4.1 Flash（max）（1.66）、3. K3 Cursor（1.26）、4. Gemini 3.8 Flash（0.91）、5. GLM-5.3（0.88）、6. Grok 4.6 Extra High（0.77）、7. K3 方舟 Agent Plan（0.73）、8. DeepSeek V4 Flash（0.52）、9. GLM-5.3-Flash（0.50）、10. MiMo V2.5 Pro（0.49）
 - **执行时间 · 平均每次分钟**：1. Muse Spark 1.3 Contributor（1.9）、2. K3 Cursor（4.6）、3. MiMo V2.5 Pro（5.2）、4. GLM-5.3（6.5）、5. DeepSeek V4.1 Flash（max）（6.9）、6. DeepSeek V4 Flash（7.2）、7. Gemini 3.8 Flash（7.9）、8. Grok 4.6 Extra High（8.3）、9. K3 方舟 Agent Plan（8.6）、10. GLM-5.3-Flash（9.4）
 - **Token · 每条成立千枚**：1. Muse Spark 1.3 Contributor（251.6）、2. K3 方舟 Agent Plan（442.2）、3. GLM-5.3（636.5）、4. K3 Cursor（721.7）、5. Grok 4.6 Extra High（824.9）、6. GLM-5.3-Flash（826.0）、7. MiMo V2.5 Pro（953.5）、8. DeepSeek V4.1 Flash（max）（1,823.6）、9. DeepSeek V4 Flash（1,933.2）、10. Gemini 3.8 Flash（2,709.1）
 - **缓存命中率**：1. DeepSeek V4.1 Flash（max）（98%）、2. GLM-5.3-Flash（95%）、3. GLM-5.3（94%）、4. K3 方舟 Agent Plan（93%）、5. K3 Cursor（93%）、6. MiMo V2.5 Pro（92%）、7. Gemini 3.8 Flash（92%）、8. DeepSeek V4 Flash（87%）、9. Grok 4.6 Extra High（87%）、10. Muse Spark 1.3 Contributor（84%）
@@ -77,12 +74,12 @@
 | 重要性5/4/3/2/1 | 166/122/72/7/0 | 17/0/2/0/0 | — |
 | 场次 | 25 | 7 | +18 |
 | 已评成功行 | 167 | 16 | +151 |
-| 成立缺陷/方向 | 367 | 23 | +344 |
+| 成立/方向 | 367 | 23 | +344 |
 | 独有成立 | 121 | 9 | +112 |
 | 假阳性 | 18 | 4 | +14 |
 | 已评花费 $ | 14.21 | 5.30 | +8.90 |
 | 未采集金额行 | 0 | 1 | -1 |
-| 全部花费 $ | 14.21 | 6.09 | +8.11 |
+| 全部花费（含未评/失败）$ | 14.21 | 6.09 | +8.11 |
 | 输入 token | 3,679,950 | 1,540,861 | +2139089 |
 | 输出 token | 821,713 | 145,185 | +676528 |
 | 缓存读 token | 6,901,888 | 11,978,709 | -5076821 |
@@ -91,7 +88,7 @@
 | 平均每次耗时 分钟 | 1.8 | 2.5 | -0.7 |
 | 缓存命中率 % | 65.2 | 88.6 | -23.4 |
 
-| # | 模型 | 思考 | 综合 | 场(本/上) | 均质量(本/上/Δ) | 成立(本/上) | 独有 | 假阳 | 准确率 | 花费$(本/上) | 契合(本/上) |
+| # | 模型 | 思考 | 综合 | 场 本/上 | 均质量 本/上/Δ | 成立 本/上 | 独有 | 假阳 | 准确率 | 花费 本/上 | 契合 本/上 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 1 | Fable 5.1 | high/medium | 91.8 | 6/0 | 29.0/0.0/+29.0 | 22/0 | 13 | 0 | 100% | 3.63/0.00 | 4.33/0.00 |
 | 2 | K3 Cursor | max | 82.7 | 6/4 | 25.7/14.0/+11.7 | 19/11 | 16 | 1 | 95% | 0.89/2.54 | 4.17/0.00 |
@@ -107,13 +104,10 @@
 
 主力（≥5 场）第一：Fable 5.1（综合 91.8）
 
-**分项排名（各自口径，从优到差）**
+**分项排名（各自口径，从优到差；产出/精准/性价比见上表）**
 
-- **产出 · 平均质量分**：1. Fable 5.1（29.0）、2. K3 Cursor（25.7）、3. K3 方舟 Agent Plan（23.9）、4. Grok 4.6 Extra High（22.1）、5. Gemini 3.8 Flash（17.8）、6. GLM-5.3（16.6）、7. GLM-5.3-Flash（15.2）、8. DeepSeek V4 Flash（15.2）、9. DeepSeek V4.1 Flash（max）（12.2）、10. Muse Spark 1.3 Contributor（10.1）、11. MiMo V2.5 Pro（9.1）
-- **精准 · 准确率**：1. Fable 5.1（100%）、2. DeepSeek V4.1 Flash（max）（100%）、3. Muse Spark 1.3 Contributor（100%）、4. Grok 4.6 Extra High（98%）、5. K3 方舟 Agent Plan（98%）、6. GLM-5.3（98%）、7. DeepSeek V4 Flash（98%）、8. GLM-5.3-Flash（98%）、9. K3 Cursor（95%）、10. Gemini 3.8 Flash（94%）、11. MiMo V2.5 Pro（73%）
 - **覆盖 · 重要性加权占参与轮次**：1. Fable 5.1（68%）、2. K3 Cursor（49%）、3. K3 方舟 Agent Plan（47%）、4. Grok 4.6 Extra High（43%）、5. Gemini 3.8 Flash（34%）、6. GLM-5.3（32%）、7. DeepSeek V4 Flash（30%）、8. GLM-5.3-Flash（29%）、9. MiMo V2.5 Pro（20%）、10. DeepSeek V4.1 Flash（max）（12%）、11. Muse Spark 1.3 Contributor（8%）
 - **独立 · 独有占比（重要性加权）**：1. K3 Cursor（84%）、2. Fable 5.1（58%）、3. K3 方舟 Agent Plan（44%）、4. DeepSeek V4.1 Flash（max）（40%）、5. Grok 4.6 Extra High（39%）、6. Gemini 3.8 Flash（32%）、7. Muse Spark 1.3 Contributor（29%）、8. DeepSeek V4 Flash（18%）、9. GLM-5.3（14%）、10. GLM-5.3-Flash（12%）、11. MiMo V2.5 Pro（6%）
-- **性价比 · 效率分**：1. Fable 5.1（10.72）、2. Gemini 3.8 Flash（10.26）、3. K3 方舟 Agent Plan（10.13）、4. K3 Cursor（7.11）、5. DeepSeek V4.1 Flash（max）（6.16）、6. GLM-5.3（6.15）、7. MiMo V2.5 Pro（4.77）、8. GLM-5.3-Flash（3.76）、9. Grok 4.6 Extra High（3.64）、10. DeepSeek V4 Flash（3.33）、11. Muse Spark 1.3 Contributor（2.61）
 - **执行时间 · 平均每次分钟**：1. DeepSeek V4.1 Flash（max）（0.8）、2. Muse Spark 1.3 Contributor（0.8）、3. Gemini 3.8 Flash（1.0）、4. MiMo V2.5 Pro（1.1）、5. K3 方舟 Agent Plan（1.3）、6. Fable 5.1（1.6）、7. GLM-5.3（1.7）、8. K3 Cursor（1.9）、9. DeepSeek V4 Flash（2.2）、10. GLM-5.3-Flash（2.8）、11. Grok 4.6 Extra High（3.4）
 - **Token · 每条成立千枚**：1. K3 方舟 Agent Plan（4.9）、2. GLM-5.3（9.0）、3. GLM-5.3-Flash（10.0）、4. DeepSeek V4 Flash（10.7）、5. K3 Cursor（13.7）、6. Fable 5.1（14.4）、7. DeepSeek V4.1 Flash（max）（27.5）、8. Muse Spark 1.3 Contributor（32.5）、9. MiMo V2.5 Pro（40.1）、10. Gemini 3.8 Flash（52.0）、11. Grok 4.6 Extra High（102.5）
 - **缓存命中率**：1. Fable 5.1（100%）、2. MiMo V2.5 Pro（86%）、3. Grok 4.6 Extra High（75%）、4. Gemini 3.8 Flash（61%）、5. K3 Cursor（55%）、6. DeepSeek V4 Flash（45%）、7. GLM-5.3（29%）、8. DeepSeek V4.1 Flash（max）（29%）、9. GLM-5.3-Flash（5%）、10. Muse Spark 1.3 Contributor（1%）、11. K3 方舟 Agent Plan（0%）
