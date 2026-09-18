@@ -7,58 +7,83 @@
     "2026-09-07",
     "2026-09-14"
   ],
-  "generated_at": "2026-09-17 11:00",
+  "generated_at": "2026-09-18 16:31",
   "week": "2026-W38",
   "week_label": "2026 年第 38 周",
   "partial": true,
   "kinds": {
     "事后审计": {
-      "sessions": 30,
-      "rows": 235,
-      "confirmed": 368,
-      "false_pos": 142,
-      "unique": 119,
-      "usd_rated": 96.64,
+      "sessions": 46,
+      "rows": 355,
+      "confirmed": 545,
+      "false_pos": 203,
+      "unique": 186,
+      "usd_rated": 134.14,
       "top": [
         {
           "model": "DeepSeek V4.1 Flash（max）",
-          "score": 95.4,
-          "sessions": 26
+          "score": 95,
+          "sessions": 41
         },
         {
           "model": "DeepSeek V4.1 Flash（high）",
-          "score": 94.4,
-          "sessions": 12
+          "score": 84.6,
+          "sessions": 27
         },
         {
-          "model": "Muse Spark 1.3 Contributor",
-          "score": 75.5,
-          "sessions": 29
+          "model": "Grok 4.6 Extra High",
+          "score": 78.4,
+          "sessions": 41
         }
       ]
     },
     "设计分叉": {
-      "sessions": 20,
-      "rows": 147,
-      "confirmed": 303,
-      "false_pos": 37,
-      "unique": 102,
-      "usd_rated": 9.79,
+      "sessions": 28,
+      "rows": 215,
+      "confirmed": 485,
+      "false_pos": 42,
+      "unique": 142,
+      "usd_rated": 16.14,
       "top": [
         {
           "model": "K3 方舟 Agent Plan",
-          "score": 97.9,
-          "sessions": 19
+          "score": 92.8,
+          "sessions": 24
         },
         {
           "model": "Grok 4.6 Extra High",
-          "score": 92.8,
-          "sessions": 17
+          "score": 88,
+          "sessions": 25
         },
         {
-          "model": "Gemini 3.8 Flash",
-          "score": 62.1,
+          "model": "K3 Cursor",
+          "score": 77.1,
           "sessions": 3
+        }
+      ]
+    },
+    "专责推理": {
+      "sessions": 1,
+      "rows": 9,
+      "confirmed": 18,
+      "false_pos": 3,
+      "unique": 14,
+      "usd_rated": 1.29,
+      "top": [
+        {
+          "model": "K3 方舟 Agent Plan",
+          "score": 89.1,
+          "sessions": 1
+        },
+        {
+          "model": "GLM-5.3",
+          "score": 73.5,
+          "sessions": 1
+        },
+        {
+          "model": "Grok 4.6 Extra High",
+          "score": 70.5,
+          "sessions": 1
         }
       ]
     }
@@ -69,8 +94,8 @@
     "images/3-audit-cost.png",
     "images/4-design.png"
   ],
-  "debt_sessions": 9,
-  "generations": 60,
+  "debt_sessions": 10,
+  "generations": 61,
   "first_generated_at": "2026-09-15 02:24",
-  "last_generated_at": "2026-09-17 11:00"
+  "last_generated_at": "2026-09-18 16:31"
 }

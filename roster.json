@@ -5,7 +5,8 @@
       "tone": "#6b5b95",
       "providers": [
         "agent",
-        "方舟 Agent Plan"
+        "方舟 Agent Plan",
+        "方舟 Coding Plan"
       ],
       "thinking": "",
       "pricing": "vendor-api",
