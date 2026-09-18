@@ -16,7 +16,10 @@ h1{margin:0 0 6px;font-size:25px;font-weight:650}
 .sub a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line)}
 
 /* ── 活动类型标签页 ── */
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+/* 活动类型与「按厂商/按模型」同一行：左侧类型、右侧口径；窄屏自动换行 */
+.tabs-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:18px 0 14px}
+.tabs-row .gsplit{margin-top:0}
 /* 榜单表列多（13 列）且单元格不换行：窄屏交给本容器横滑，别把整页撑宽 */
 #board-table{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 #board-table table{min-width:max-content}

@@ -29,6 +29,19 @@ function entityKey(row) {
   return row.badge ? `${row.name} ${row.badge}` : row.name;
 }
 
+/** 统计口径（hash 的 g）：空 / s＝按服务商拆（默认，主榜单）；m＝同名模型合并（board.alt，缺省时退回主榜单）。 */
+function groupingOf(current) {
+  return current && current.g === "m" && board?.alt?.kinds ? "m" : "s";
+}
+
+function kindsOf(current) {
+  return groupingOf(current) === "m" ? board.alt.kinds : board?.kinds ?? {};
+}
+
+function kindOf(current) {
+  return kindsOf(current)[current.kind] ?? {};
+}
+
 /** 模型选择：hash 的 m（`|` 连接实体名，与「模型长期走势」同一状态）。
  *  空 = 全部模型（不过滤）；有值 = 只留这些。顶部多选与走势图下的 chips 是同一个开关。 */
 function selectedModels(current) {
@@ -68,7 +81,7 @@ function previousWeek(stamp) {
 function deltaCell(current, row, index) {
   const previous = previousWeek(current.week);
   if (!previous) return `<td class="num delta">—</td>`;
-  const rows = board?.kinds?.[current.kind]?.weeks?.[previous]?.rows ?? [];
+  const rows = kindOf(current)?.weeks?.[previous]?.rows ?? [];
   const match = rows.find((item) => entityKey(item) === entityKey(row));
   const before = match ? cellValue(match.cells[index]) : Number.NEGATIVE_INFINITY;
   const now = cellValue(row.cells[index]);
@@ -86,10 +99,11 @@ function state() {
   const kind = kinds.includes(raw.get("kind")) ? raw.get("kind") : kinds[0] ?? "";
   const weeks = (board?.weeks ?? []).map((week) => week.stamp);
   const week = weeks.includes(raw.get("week")) ? raw.get("week") : weeks[weeks.length - 1] ?? "";
-  const metrics = board?.kinds?.[kind]?.metrics ?? [];
+  const g = raw.get("g") === "m" && board?.alt?.kinds ? "m" : "";
+  const metrics = (g === "m" ? board.alt.kinds : board?.kinds)?.[kind]?.metrics ?? [];
   const metric = metrics.includes(raw.get("metric")) ? raw.get("metric") : "综合";
   return {
-    kind, week, metric: metrics.includes(metric) ? metric : metrics[0] ?? "",
+    kind, week, g, metric: metrics.includes(metric) ? metric : metrics[0] ?? "",
     q: raw.get("q") ?? "", m: raw.get("m") ?? "",
   };
 }
@@ -108,7 +122,7 @@ function weekLabel(stamp) {
 }
 
 function rowsFor(current) {
-  const slice = board?.kinds?.[current.kind]?.weeks?.[current.week];
+  const slice = kindOf(current)?.weeks?.[current.week];
   const rows = slice?.rows ?? [];
   const chosen = selectedModels(current);
   const picked = chosen ? rows.filter((row) => chosen.has(entityKey(row))) : rows;
@@ -116,7 +130,7 @@ function rowsFor(current) {
   const filtered = needle
     ? picked.filter((row) => `${row.name} ${row.badge}`.toLowerCase().includes(needle))
     : picked;
-  const index = (board?.kinds?.[current.kind]?.metrics ?? []).indexOf(current.metric);
+  const index = (kindOf(current)?.metrics ?? []).indexOf(current.metric);
   const sorted = [...filtered].sort((left, right) => {
     const diff = cellValue(right.cells[index]) - cellValue(left.cells[index]);
     return diff !== 0 ? diff : String(left.name).localeCompare(String(right.name));
@@ -134,7 +148,7 @@ function renderTabs(current) {
     const tone = board?.tones?.[kind];
     if (tone) button.style.setProperty("--tone", tone);
     button.addEventListener("click", () => {
-      const metrics = board.kinds[kind]?.metrics ?? [];
+      const metrics = kindsOf(current)[kind]?.metrics ?? [];
       writeState({ ...current, kind, metric: metrics.includes(current.metric) ? current.metric : metrics[0] ?? "" }, false);
       render();
     });
@@ -154,8 +168,30 @@ function renderSelect(node, values, selected, onPick, labelOf) {
   node.onchange = () => onPick(node.value);
 }
 
+/** 统计口径开关「按厂商 / 按模型」（与报告详情同一命名）：board.alt 存在才画；
+ *  换口径会清掉模型选择——两套分组的实体名不同（K3 vs K3 方舟 Agent Plan），留着会筛成空表。 */
+function renderGroup(current) {
+  const box = document.getElementById("board-group");
+  if (!box) return;
+  box.replaceChildren();
+  if (!board?.alt?.kinds) return;
+  const active = groupingOf(current);
+  for (const [key, text] of [["s", "按厂商"], ["m", "按模型"]]) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = key === active ? "on" : "";
+    button.textContent = text;
+    button.addEventListener("click", () => {
+      if (key === active) return;
+      writeState({ ...current, g: key === "m" ? "m" : "", m: "" }, false);
+      render();
+    });
+    box.appendChild(button);
+  }
+}
+
 function renderTable(current, data) {
-  const metrics = board?.kinds?.[current.kind]?.metrics ?? [];
+  const metrics = kindOf(current)?.metrics ?? [];
   const head = metrics.map((name, index) =>
     `<th class="num${index === data.index ? " on" : ""}">${escHtml(name)}</th>`).join("");
   const peak = Math.max(...data.rows.map((row) => cellValue(row.cells[data.index])).filter(Number.isFinite), 0) || 1;
@@ -197,7 +233,7 @@ function scatterGroupKey(row) {
  *  y＝综合得分，一屏看性价比分布；点旁标模型名，
  *  同基名同厂商且思考档不同（如 max/high）的点用同色实线连起来；其余指标仍是横条。 */
 function renderScatterChart(current, data, costAt) {
-  const metrics = board?.kinds?.[current.kind]?.metrics ?? [];
+  const metrics = kindOf(current)?.metrics ?? [];
   const thinkAt = metrics.findIndex((name) => String(name).includes("思考"));
   const points = [];
   const groups = new Map();
@@ -236,7 +272,7 @@ function renderChart(current, data) {
     try { scatterChart.destroy(); } catch (_error) { /* 已经销毁过就忽略 */ }
     scatterChart = null;
   }
-  const metrics = board?.kinds?.[current.kind]?.metrics ?? [];
+  const metrics = kindOf(current)?.metrics ?? [];
   const costAt = metrics.findIndex((name) => String(name).includes("花费"));
   if (current.metric === "综合" && costAt >= 0) {
     renderScatterChart(current, data, costAt);
@@ -271,11 +307,11 @@ function modelsOfKind(kind) {
 /** 模型长期走势：选中类型下，各模型「综合」分随期次变化；画哪些由 chips 决定（状态在 hash 的 m）。 */
 function renderModelTrend(current) {
   const weeks = (board?.weeks ?? []).map((week) => week.stamp);
-  const metrics = board?.kinds?.[current.kind]?.metrics ?? [];
+  const metrics = kindOf(current)?.metrics ?? [];
   const scoreAt = metrics.indexOf("综合");
   const series = new Map();
   for (const [weekIndex, stamp] of weeks.entries()) {
-    for (const row of board?.kinds?.[current.kind]?.weeks?.[stamp]?.rows ?? []) {
+    for (const row of kindOf(current)?.weeks?.[stamp]?.rows ?? []) {
       const value = cellValue(row.cells[scoreAt]);
       if (!Number.isFinite(value)) continue;
       const key = entityKey(row);
@@ -320,8 +356,8 @@ function renderTopModels(current) {
   if (!box) return;
   // 用「选中期」的行建 chips：跨周换过服务商的模型（如 K3 Cursor / K3 方舟 Agent Plan）
   // 实体名会变，若按最新一期建，过滤时会误删选中期里对不上的行。
-  const sliceRows = board?.kinds?.[current.kind]?.weeks?.[current.week]?.rows ?? [];
-  const scoreAt = (board?.kinds?.[current.kind]?.metrics ?? []).indexOf("综合");
+  const sliceRows = kindOf(current)?.weeks?.[current.week]?.rows ?? [];
+  const scoreAt = (kindOf(current)?.metrics ?? []).indexOf("综合");
   const available = [...sliceRows]
     .sort((left, right) => cellValue(right.cells[scoreAt]) - cellValue(left.cells[scoreAt]))
     .map((row) => ({ name: entityKey(row), tone: row.dot || "#8a857c" }));
@@ -360,6 +396,7 @@ async function renderDetail(current) {
   const box = document.getElementById("detail");
   const meta = (board?.weeks ?? []).find((week) => week.stamp === current.week);
   const chosen = selectedModels(current) ? [...selectedModels(current)] : null;
+  const grouping = groupingOf(current) === "m" ? "merged" : "split";
   if (!meta || !box) return;
   head.textContent = `本期详情 · ${current.kind} · ${current.week}`;
   links.replaceChildren();
@@ -388,7 +425,7 @@ async function renderDetail(current) {
   if (detailCache.has(current.week)) {
     const view = detailCache.get(current.week);
     info.textContent = describe(view, meta, current.kind);
-    window.renderReportInto(box, view, { kind: current.kind, models: chosen });
+    window.renderReportInto(box, view, { kind: current.kind, models: chosen, grouping });
     return;
   }
   info.textContent = "载入中…";
@@ -400,7 +437,7 @@ async function renderDetail(current) {
     const view = await response.json();
     detailCache.set(current.week, view);
     info.textContent = describe(view, meta, current.kind);
-    window.renderReportInto(box, view, { kind: current.kind, models: chosen });
+    window.renderReportInto(box, view, { kind: current.kind, models: chosen, grouping });
   } catch (error) {
     info.textContent = `读不到本期数据（${error && error.message ? error.message : error}）。` +
       "本地直接双击打开时浏览器会拦 fetch，用 http 打开或在线上看。";
@@ -471,9 +508,10 @@ function render() {
   const current = state();
   writeState(current, true);
   renderTabs(current);
+  renderGroup(current);
   renderSelect(weekSelect, (board.weeks ?? []).map((week) => week.stamp), current.week,
     (value) => { writeState({ ...current, week: value }, false); render(); }, weekLabel);
-  renderSelect(metricSelect, board.kinds[current.kind]?.metrics ?? [], current.metric,
+  renderSelect(metricSelect, kindOf(current)?.metrics ?? [], current.metric,
     (value) => { writeState({ ...current, metric: value }, false); render(); });
   searchInput.value = current.q;
   const data = rowsFor(current);

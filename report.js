@@ -205,10 +205,12 @@ function kindBlock(kind, options) {
   const keep = (text, badge) => {
     if (!models) return true;
     if (models.has(modelKeyOf(text, badge))) return true;
-    // 合并分组下行没有厂商徽标，而顶部多选给的是「名称 服务商」：按名字前缀也算选中
+    const name = String(text ?? "").replace(/^#\d+\s*/, "").trim();
+    // 合并口径的选择（K3）对整家有效：拆分视图下等于全选该模型的所有厂商行
+    if (models.has(name)) return true;
+    // 拆分口径的选择（K3 方舟 Agent Plan）落到合并行（只有名字）也认
     if (options.mode === "merged") {
-      const name = String(text ?? "").replace(/^#\d+\s*/, "").trim();
-      for (const item of models) if (item === name || item.startsWith(`${name} `)) return true;
+      for (const item of models) if (item.startsWith(`${name} `)) return true;
     }
     return false;
   };
@@ -316,10 +318,14 @@ function render(view) {
   document.documentElement.dataset.reportReady = "1";
 }
 
-/** 目录页用：把某期数据渲染进指定容器（同一个渲染器，不再为每期生成 HTML）。 */
+/** 目录页用：把某期数据渲染进指定容器（同一个渲染器，不再为每期生成 HTML）。
+ *  options.grouping（"split" / "merged"）指定初始口径：入口页的「按厂商/按模型」开关经它同步到详情。 */
 window.renderReportInto = (target, view, options) => {
   if (!target || !view) return null;
-  hostState.set(target, { view, options: options ?? null, mode: view.grouping === "merged" ? "merged" : "split" });
+  const fallback = view.grouping === "merged" ? "merged" : "split";
+  const mode = options && options.grouping === "merged" ? "merged"
+    : options && options.grouping === "split" ? "split" : fallback;
+  hostState.set(target, { view, options: options ?? null, mode });
   paintHost(target);
   return target;
 };
