@@ -202,7 +202,16 @@ function kindBlock(kind, options) {
   const models = options && Array.isArray(options.models) && options.models.length
     ? new Set(options.models)
     : null;
-  const keep = (text, badge) => !models || models.has(modelKeyOf(text, badge));
+  const keep = (text, badge) => {
+    if (!models) return true;
+    if (models.has(modelKeyOf(text, badge))) return true;
+    // 合并分组下行没有厂商徽标，而顶部多选给的是「名称 服务商」：按名字前缀也算选中
+    if (options.mode === "merged") {
+      const name = String(text ?? "").replace(/^#\d+\s*/, "").trim();
+      for (const item of models) if (item === name || item.startsWith(`${name} `)) return true;
+    }
+    return false;
+  };
   const table = models
     ? { ...kind.table, rows: (kind.table?.rows ?? []).filter((row) => keep(row.name, row.badge)) }
     : kind.table;
@@ -238,9 +247,9 @@ function debtBlock(debt) {
   return `<h2>${esc(debt.title)}<span>${esc(debt.meta)}</span></h2>${note}${body}`;
 }
 
-/** 页面开关：独立页（非目录详情）在有另一套分组时，表头下放「按厂商 / 按模型」切换。
- *  只在 standalone 路径渲染（renderReportInto 走目录详情，保持原样）；老数据没有 alt_kinds 就不画，
- *  所以历史周报即使共用新渲染器，DOM 也与原来逐字一致。 */
+/** 页面开关「按厂商 / 按模型」：只在有另一套分组（alt_kinds）时出现。
+ *  目录详情（renderReportInto 带 options）显示；切图外壳走缺省（无 options）不显示，图片保持原样；
+ *  老数据没有 alt_kinds 也不显示，历史周报 DOM 与原来一致。 */
 function groupToggle(view, mode) {
   if (!view.alt_kinds || !view.alt_kinds.length) return "";
   const current = mode === "merged" ? "merged" : "split";
@@ -253,51 +262,56 @@ function groupToggle(view, mode) {
 /** 把一期数据拼成报告 HTML（不含外壳）。目录页也用它渲染「详情」，渲染器只此一份。
  *  options.kind 只渲染该活动类型的小节（目录页顶部选了哪个就显示哪个）；缺省渲染全部
  *  （切图外壳走缺省，必须保留全部类型）。类型名对不上时退回全部：宁可多显示，不留空白。 */
-function reportHtml(view, options, standalone, mode) {
+function reportHtml(view, options, mode) {
   window.__falseTone = view.false_pos_tone || "#d7c3b8";
   const head = view.head;
   const wanted = options && options.kind;
   const picked = (wanted ? view.kinds.filter((block) => block.title === wanted) : view.kinds) || [];
   const kinds = picked.length ? picked : view.kinds;
+  const showToggle = Boolean(options) && Boolean(view.alt_kinds && view.alt_kinds.length);
   // 注意：`return` 后面必须紧跟表达式；换行会被 ASI 补分号，函数就返回 undefined（踩过）
   return (
     '<main>' +
     `<header><div><a class="back" href="${esc(head.back.href)}">${esc(head.back.text)}</a>` +
     `<p class="kicker">${esc(head.kicker)}</p><h1>${esc(head.h1)}</h1>` +
-    (standalone ? groupToggle(view, mode) : "") + "</div>" +
+    (showToggle ? groupToggle(view, mode) : "") + "</div>" +
     `<p class="meta">${head.meta.map(esc).join("<br>")}</p></header>` +
     kpis(view.kpis) +
     // 目录页按类型看时不再重复列一遍模型（顶部「模型」多选就是这份名单，且带配色点）；
     // 切图外壳走全量模式，图例照旧——它是独立图片的配色说明，去掉还会打乱版块序号。
     (options && options.kind ? "" : `<div class="legend">${chips(view.legend)}</div>`) +
     formula(view.formula) +
-    kinds.map((block) => kindBlock(block, options)).join("") +
+    kinds.map((block) => kindBlock(block, options ? { ...options, mode } : options)).join("") +
     debtBlock(view.debt) +
     `<footer>${view.notes.map((n) => `<p>${esc(n)}</p>`).join("")}</footer>` +
     "</main>");
 }
 
-/* 独立页的分组状态：主视图分组由数据的 grouping 决定，点开关只在 kinds/alt_kinds 之间整块互换。
- *  目录详情走 renderReportInto（standalone 为假，不画开关），所以这里的单例状态不会和详情页打架。 */
-let live = null;
+/* 每个渲染容器存一份状态（同一页可能先后渲染不同期）：主分组由数据的 grouping 决定，
+ *  点开关只在 kinds / alt_kinds 之间整块互换，重画进同一个容器。 */
+const hostState = new WeakMap();
 
-function activeKinds() {
-  if (!live || !live.view.alt_kinds || !live.view.alt_kinds.length) return live.view.kinds;
-  const primaryMerged = live.view.grouping === "merged";
-  if (live.mode === "merged") return primaryMerged ? live.view.kinds : live.view.alt_kinds;
-  return primaryMerged ? live.view.alt_kinds : live.view.kinds;
+function activeKindsOf(state) {
+  const alt = state.view.alt_kinds ?? [];
+  if (!alt.length) return state.view.kinds;
+  const primaryMerged = state.view.grouping === "merged";
+  if (state.mode === "merged") return primaryMerged ? state.view.kinds : alt;
+  return primaryMerged ? alt : state.view.kinds;
 }
 
-function renderLive() {
-  const app = document.getElementById("app");
-  if (!app || !live) return;
-  app.innerHTML = reportHtml({ ...live.view, kinds: activeKinds() }, undefined, true, live.mode);
-  if (window.VastCharts) window.VastCharts.draw(app);
+function paintHost(host) {
+  const state = hostState.get(host);
+  if (!state) return;
+  host.innerHTML = reportHtml({ ...state.view, kinds: activeKindsOf(state) }, state.options, state.mode);
+  if (window.VastCharts) window.VastCharts.draw(host);
 }
 
 function render(view) {
-  live = { view, mode: view.grouping === "merged" ? "merged" : "split" };
-  renderLive();
+  // 独立页（切图外壳）走缺省：不显示开关，图片与版块序号保持原样
+  const app = document.getElementById("app");
+  if (!app) return;
+  app.innerHTML = reportHtml(view);
+  if (window.VastCharts) window.VastCharts.draw(app);
   // 切图外壳等这个标记：所有条形都在 draw() 里同步画完（animation:false）后才置位，图不会是空白。
   document.documentElement.dataset.reportReady = "1";
 }
@@ -305,8 +319,8 @@ function render(view) {
 /** 目录页用：把某期数据渲染进指定容器（同一个渲染器，不再为每期生成 HTML）。 */
 window.renderReportInto = (target, view, options) => {
   if (!target || !view) return null;
-  target.innerHTML = reportHtml(view, options);
-  if (window.VastCharts) window.VastCharts.draw(target);
+  hostState.set(target, { view, options: options ?? null, mode: view.grouping === "merged" ? "merged" : "split" });
+  paintHost(target);
   return target;
 };
 
@@ -314,11 +328,15 @@ function boot() {
   // 开关走事件委托（IIFE 里只注册一次）：目录页同页共存 trend.js，顶层重名会整段中止，所以 handler 不挂 window。
   document.addEventListener("click", (event) => {
     const button = event.target && event.target.closest ? event.target.closest("[data-vast-group]") : null;
-    if (!button || !live || !live.view.alt_kinds || !live.view.alt_kinds.length) return;
+    if (!button) return;
     const mode = button.getAttribute("data-vast-group");
-    if ((mode !== "split" && mode !== "merged") || mode === live.mode) return;
-    live.mode = mode;
-    renderLive();
+    if (mode !== "split" && mode !== "merged") return;
+    let host = button.parentElement;
+    while (host && !hostState.has(host)) host = host.parentElement;
+    const state = host ? hostState.get(host) : null;
+    if (!state || state.mode === mode || !(state.view.alt_kinds ?? []).length) return;
+    state.mode = mode;
+    paintHost(host);
   });
   const node = document.getElementById("report-data");
   if (!node) return;

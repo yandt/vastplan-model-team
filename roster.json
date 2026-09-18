@@ -113,6 +113,16 @@
       "thinking": "medium",
       "pricing": "cursor-other-models",
       "enabled": false
+    },
+    {
+      "name": "Qwen3.8 Flash",
+      "tone": null,
+      "providers": [
+        "Qoder CN"
+      ],
+      "thinking": "max",
+      "pricing": "subscription",
+      "enabled": true
     }
   ],
   "tones": {
