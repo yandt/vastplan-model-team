@@ -142,3 +142,7 @@ footer{margin-top:34px;border-top:1px solid var(--line);padding-top:14px;font-si
   .kpi .val{font-size:19px}
   table{min-width:560px}
 }
+/* 统计口径开关（按厂商 / 按模型）：只有新数据（带另一套分组）才渲染，老周报不受影响 */
+.gsplit{display:inline-flex;margin-top:10px;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+.gsplit button{border:0;background:transparent;padding:3px 13px;font-size:11px;letter-spacing:.06em;color:var(--muted);cursor:pointer}
+.gsplit button.on{background:var(--ink);color:#fafaf9}

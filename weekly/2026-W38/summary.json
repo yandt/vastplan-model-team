@@ -7,57 +7,57 @@
     "2026-09-07",
     "2026-09-14"
   ],
-  "generated_at": "2026-09-18 16:31",
+  "generated_at": "2026-09-18 23:33",
   "week": "2026-W38",
   "week_label": "2026 年第 38 周",
   "partial": true,
   "kinds": {
     "事后审计": {
-      "sessions": 46,
-      "rows": 355,
-      "confirmed": 545,
-      "false_pos": 203,
-      "unique": 186,
-      "usd_rated": 134.14,
+      "sessions": 48,
+      "rows": 371,
+      "confirmed": 573,
+      "false_pos": 213,
+      "unique": 212,
+      "usd_rated": 139.82,
       "top": [
         {
           "model": "DeepSeek V4.1 Flash（max）",
-          "score": 95,
-          "sessions": 41
+          "score": 96.6,
+          "sessions": 43
         },
         {
           "model": "DeepSeek V4.1 Flash（high）",
-          "score": 84.6,
-          "sessions": 27
+          "score": 92.9,
+          "sessions": 29
         },
         {
           "model": "Grok 4.6 Extra High",
-          "score": 78.4,
-          "sessions": 41
+          "score": 80.2,
+          "sessions": 43
         }
       ]
     },
     "设计分叉": {
-      "sessions": 28,
-      "rows": 215,
-      "confirmed": 485,
+      "sessions": 29,
+      "rows": 224,
+      "confirmed": 514,
       "false_pos": 42,
-      "unique": 142,
-      "usd_rated": 16.14,
+      "unique": 145,
+      "usd_rated": 17.59,
       "top": [
         {
           "model": "K3 方舟 Agent Plan",
-          "score": 92.8,
-          "sessions": 24
-        },
-        {
-          "model": "Grok 4.6 Extra High",
-          "score": 88,
+          "score": 91.5,
           "sessions": 25
         },
         {
+          "model": "Grok 4.6 Extra High",
+          "score": 88.5,
+          "sessions": 26
+        },
+        {
           "model": "K3 Cursor",
-          "score": 77.1,
+          "score": 76,
           "sessions": 3
         }
       ]
@@ -95,7 +95,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 10,
-  "generations": 61,
+  "generations": 62,
   "first_generated_at": "2026-09-15 02:24",
-  "last_generated_at": "2026-09-18 16:31"
+  "last_generated_at": "2026-09-18 23:33"
 }

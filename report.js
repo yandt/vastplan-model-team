@@ -238,10 +238,22 @@ function debtBlock(debt) {
   return `<h2>${esc(debt.title)}<span>${esc(debt.meta)}</span></h2>${note}${body}`;
 }
 
+/** 页面开关：独立页（非目录详情）在有另一套分组时，表头下放「按厂商 / 按模型」切换。
+ *  只在 standalone 路径渲染（renderReportInto 走目录详情，保持原样）；老数据没有 alt_kinds 就不画，
+ *  所以历史周报即使共用新渲染器，DOM 也与原来逐字一致。 */
+function groupToggle(view, mode) {
+  if (!view.alt_kinds || !view.alt_kinds.length) return "";
+  const current = mode === "merged" ? "merged" : "split";
+  const button = (key, text) =>
+    `<button type="button" data-vast-group="${key}"${key === current ? ' class="on"' : ""}>${text}</button>`;
+  return `<div class="gsplit" role="group" aria-label="统计口径">` +
+    button("split", "按厂商") + button("merged", "按模型") + "</div>";
+}
+
 /** 把一期数据拼成报告 HTML（不含外壳）。目录页也用它渲染「详情」，渲染器只此一份。
  *  options.kind 只渲染该活动类型的小节（目录页顶部选了哪个就显示哪个）；缺省渲染全部
  *  （切图外壳走缺省，必须保留全部类型）。类型名对不上时退回全部：宁可多显示，不留空白。 */
-function reportHtml(view, options) {
+function reportHtml(view, options, standalone, mode) {
   window.__falseTone = view.false_pos_tone || "#d7c3b8";
   const head = view.head;
   const wanted = options && options.kind;
@@ -251,7 +263,8 @@ function reportHtml(view, options) {
   return (
     '<main>' +
     `<header><div><a class="back" href="${esc(head.back.href)}">${esc(head.back.text)}</a>` +
-    `<p class="kicker">${esc(head.kicker)}</p><h1>${esc(head.h1)}</h1></div>` +
+    `<p class="kicker">${esc(head.kicker)}</p><h1>${esc(head.h1)}</h1>` +
+    (standalone ? groupToggle(view, mode) : "") + "</div>" +
     `<p class="meta">${head.meta.map(esc).join("<br>")}</p></header>` +
     kpis(view.kpis) +
     // 目录页按类型看时不再重复列一遍模型（顶部「模型」多选就是这份名单，且带配色点）；
@@ -264,11 +277,27 @@ function reportHtml(view, options) {
     "</main>");
 }
 
-function render(view) {
+/* 独立页的分组状态：主视图分组由数据的 grouping 决定，点开关只在 kinds/alt_kinds 之间整块互换。
+ *  目录详情走 renderReportInto（standalone 为假，不画开关），所以这里的单例状态不会和详情页打架。 */
+let live = null;
+
+function activeKinds() {
+  if (!live || !live.view.alt_kinds || !live.view.alt_kinds.length) return live.view.kinds;
+  const primaryMerged = live.view.grouping === "merged";
+  if (live.mode === "merged") return primaryMerged ? live.view.kinds : live.view.alt_kinds;
+  return primaryMerged ? live.view.alt_kinds : live.view.kinds;
+}
+
+function renderLive() {
   const app = document.getElementById("app");
-  if (!app) return;
-  app.innerHTML = reportHtml(view);
+  if (!app || !live) return;
+  app.innerHTML = reportHtml({ ...live.view, kinds: activeKinds() }, undefined, true, live.mode);
   if (window.VastCharts) window.VastCharts.draw(app);
+}
+
+function render(view) {
+  live = { view, mode: view.grouping === "merged" ? "merged" : "split" };
+  renderLive();
   // 切图外壳等这个标记：所有条形都在 draw() 里同步画完（animation:false）后才置位，图不会是空白。
   document.documentElement.dataset.reportReady = "1";
 }
@@ -282,6 +311,15 @@ window.renderReportInto = (target, view, options) => {
 };
 
 function boot() {
+  // 开关走事件委托（IIFE 里只注册一次）：目录页同页共存 trend.js，顶层重名会整段中止，所以 handler 不挂 window。
+  document.addEventListener("click", (event) => {
+    const button = event.target && event.target.closest ? event.target.closest("[data-vast-group]") : null;
+    if (!button || !live || !live.view.alt_kinds || !live.view.alt_kinds.length) return;
+    const mode = button.getAttribute("data-vast-group");
+    if ((mode !== "split" && mode !== "merged") || mode === live.mode) return;
+    live.mode = mode;
+    renderLive();
+  });
   const node = document.getElementById("report-data");
   if (!node) return;
   render(JSON.parse(node.textContent));
