@@ -142,7 +142,7 @@ function panels(rows) {
   return orderedPanels(rows).map((row) => `<div class="panels">${row.map(panelBlock).join("")}</div>`).join("");
 }
 
-function modelTable(table) {
+function modelTable(table, observed) {
   const head = table.head
     .map((h) => `<th${h.left ? ' style="text-align:left"' : ""}>${esc(h.text)}</th>`)
     .join("");
@@ -162,8 +162,23 @@ function modelTable(table) {
     })
     .join("");
   const note = table.note ? `<p class="note">${esc(table.note)}</p>` : "";
+  // 观察区塞在表格同一个滚动容器里：不新增 <main> 子节点，切图版块序号不受影响；老数据没有 observed 就是空串
+  const watched = observedBlock(observed);
   // 表格套一层可横滑的壳：窄屏下靠它横滑，不把整页撑破（桌面下宽度够，不出现滚动条）
-  return `<div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>${note}`;
+  return `<div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>${watched}</div>${note}`;
+}
+
+/** 观察区：样本不足未进排名，只列数字（有分无名次）。 */
+function observedBlock(rows) {
+  if (!rows || !rows.length) return "";
+  const items = rows
+    .map((row) => {
+      const cover = typeof row.coverage === "number" ? `${Math.round(row.coverage * 100)}%` : "—";
+      return `<span>${esc(row.name)}（${row.sessions} 场，均质量 ${Number(row.quality).toFixed(1)}，` +
+        `成立 ${row.confirmed} 条，覆盖 ${cover}）</span>`;
+    })
+    .join("");
+  return `<div class="observed"><b>观察区（样本不足未排名）</b>${items}</div>`;
 }
 
 function comments(block, options) {
@@ -216,8 +231,7 @@ function kindBlock(kind, options) {
   };
   const table = models
     ? { ...kind.table, rows: (kind.table?.rows ?? []).filter((row) => keep(row.name, row.badge)) }
-    : kind.table;
-  const groups = kind.panels
+    : kind.table;  const groups = kind.panels
     .map((group) => group
       .map((panel) => (panel.rows ? { ...panel, rows: panel.rows.filter((row) => keep(row.label, row.badge)) } : panel))
       .filter((panel) => !panel.rows || panel.rows.length > 0))
@@ -231,7 +245,7 @@ function kindBlock(kind, options) {
   return (
     `<h2>${esc(kind.title)}<span>${esc(kind.meta)}</span></h2>` +
     skip +
-    (scoped ? "" : modelTable(table)) +
+    (scoped ? "" : modelTable(table, kind.observed)) +
     panels(groups) +
     comments(commentsBlock, options)
   );

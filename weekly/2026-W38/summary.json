@@ -7,7 +7,7 @@
     "2026-09-07",
     "2026-09-14"
   ],
-  "generated_at": "2026-09-19 14:25",
+  "generated_at": "2026-09-19 15:41",
   "week": "2026-W38",
   "week_label": "2026 年第 38 周",
   "partial": true,
@@ -21,44 +21,44 @@
       "usd_rated": 143.9,
       "top": [
         {
-          "model": "Qwen3.8 Flash",
-          "score": 88.3,
-          "sessions": 2
-        },
-        {
           "model": "DeepSeek V4.1 Flash（high）",
-          "score": 76.6,
+          "score": 94.9,
           "sessions": 31
         },
         {
           "model": "DeepSeek V4.1 Flash（max）",
+          "score": 90.4,
+          "sessions": 45
+        },
+        {
+          "model": "Grok 4.6 Extra High",
           "score": 73.4,
           "sessions": 45
         }
       ]
     },
     "设计分叉": {
-      "sessions": 31,
-      "rows": 244,
-      "confirmed": 518,
+      "sessions": 32,
+      "rows": 254,
+      "confirmed": 522,
       "false_pos": 43,
-      "unique": 149,
-      "usd_rated": 19.66,
+      "unique": 153,
+      "usd_rated": 20.77,
       "top": [
         {
           "model": "K3 方舟 Agent Plan",
-          "score": 89.7,
-          "sessions": 27
-        },
-        {
-          "model": "K3 Cursor",
-          "score": 88.3,
-          "sessions": 3
+          "score": 98.5,
+          "sessions": 28
         },
         {
           "model": "Grok 4.6 Extra High",
-          "score": 87.6,
-          "sessions": 28
+          "score": 90.3,
+          "sessions": 29
+        },
+        {
+          "model": "Fable 5.1",
+          "score": 66.1,
+          "sessions": 8
         }
       ]
     },
@@ -69,23 +69,7 @@
       "false_pos": 3,
       "unique": 14,
       "usd_rated": 1.29,
-      "top": [
-        {
-          "model": "K3 方舟 Agent Plan",
-          "score": 89.1,
-          "sessions": 1
-        },
-        {
-          "model": "GLM-5.3",
-          "score": 73.5,
-          "sessions": 1
-        },
-        {
-          "model": "Grok 4.6 Extra High",
-          "score": 70.5,
-          "sessions": 1
-        }
-      ]
+      "top": []
     }
   },
   "images": [
@@ -95,7 +79,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 10,
-  "generations": 67,
+  "generations": 68,
   "first_generated_at": "2026-09-15 02:24",
-  "last_generated_at": "2026-09-19 14:25"
+  "last_generated_at": "2026-09-19 15:41"
 }
