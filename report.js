@@ -168,13 +168,17 @@ function modelTable(table, observed) {
   return `<div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>${watched}</div>${note}`;
 }
 
-/** 观察区：样本不足未进排名，只列数字（有分无名次）。 */
+/** 观察区：样本不足未进排名，只列数字（有分无名次）。名字里带 @ 的是拆分口径遗留键，照样拆徽标显示。 */
 function observedBlock(rows) {
   if (!rows || !rows.length) return "";
   const items = rows
     .map((row) => {
+      const at = String(row.name).indexOf("@");
+      const base = at < 0 ? row.name : row.name.slice(0, at);
+      const provider = at < 0 ? "" : row.name.slice(at + 1);
+      const tag = provider ? `<span class="badge" title="${esc(provider)}">${esc(provider.length > 5 ? provider.slice(0, 5) + "..." : provider)}</span>` : "";
       const cover = typeof row.coverage === "number" ? `${Math.round(row.coverage * 100)}%` : "—";
-      return `<span>${esc(row.name)}（${row.sessions} 场，均质量 ${Number(row.quality).toFixed(1)}，` +
+      return `<span>${esc(base)}${tag}（${row.sessions} 场，均质量 ${Number(row.quality).toFixed(1)}，` +
         `成立 ${row.confirmed} 条，覆盖 ${cover}）</span>`;
     })
     .join("");
@@ -199,13 +203,17 @@ function comments(block, options) {
   return `<div class="comments"><div class="comment chead-row${scoped ? " no-score" : ""}">${head}</div>${rows}</div>`;
 }
 
-/** 筛选用的实体名：面板行与评审行的首格是「#N 名称」，去掉序号再拼服务商即实体名
- *  （与榜单表「名称 服务商」同口径，靠它把顶部模型多选接到报告里每一行）。 */
-function modelKeyOf(text, badge) {
-  const name = String(text ?? "").replace(/^#\d+\s*/, "").trim();
-  // 报告里的徽标是对象（{text: 短名, title: 全名}），榜单表里是字符串——统一按全名拼
-  const provider = badge && typeof badge === "object" ? badge.title ?? badge.text ?? "" : badge;
-  return provider ? `${name} ${provider}` : name;
+/** 实体保留规则（表格行 / 面板行 / 观察区共用一套）：
+ *  name 是不带序号的本体名，provider 是服务商字符串（可空）。
+ *  精确命中优先；合并口径的选择（K3）对整家有效；拆分口径的选择（K3 方舟 Agent Plan）落到合并行也认。 */
+function keepEntity(name, provider, models, mode) {
+  if (!models) return true;
+  if (models.has(provider ? `${name} ${provider}` : name)) return true;
+  if (models.has(name)) return true;
+  if (!provider && mode === "merged") {
+    for (const item of models) if (item.startsWith(`${name} `)) return true;
+  }
+  return false;
 }
 
 /** 一个活动类型的小节。目录页按类型看时（options.kind）不再重复放模型榜单表——
@@ -218,16 +226,10 @@ function kindBlock(kind, options) {
     ? new Set(options.models)
     : null;
   const keep = (text, badge) => {
-    if (!models) return true;
-    if (models.has(modelKeyOf(text, badge))) return true;
     const name = String(text ?? "").replace(/^#\d+\s*/, "").trim();
-    // 合并口径的选择（K3）对整家有效：拆分视图下等于全选该模型的所有厂商行
-    if (models.has(name)) return true;
-    // 拆分口径的选择（K3 方舟 Agent Plan）落到合并行（只有名字）也认
-    if (options.mode === "merged") {
-      for (const item of models) if (item.startsWith(`${name} `)) return true;
-    }
-    return false;
+    // 报告里的徽标是对象（{text: 短名, title: 全名}），榜单表里是字符串——统一按全名拼
+    const provider = badge && typeof badge === "object" ? badge.title ?? badge.text ?? "" : badge;
+    return keepEntity(name, provider || "", models, options && options.mode);
   };
   const table = models
     ? { ...kind.table, rows: (kind.table?.rows ?? []).filter((row) => keep(row.name, row.badge)) }
@@ -242,12 +244,22 @@ function kindBlock(kind, options) {
   const skip = scoped
     ? '<p class="note">模型榜单见页面上方「榜单」表（可切指标、搜索模型、看对上期变更）；本节只保留图表与优缺点评审。</p>'
     : "";
+  // scoped 详情不渲染主表（也没有观察区容器）：观察区在这里单独补一段，同样跟随模型筛选；
+  // 非 scoped（独立页/切图）走主表容器里的那段，两边不会重复出现
+  const scopedObserved = scoped
+    ? observedBlock((kind.observed ?? []).filter((row) => {
+      const at = String(row.name).indexOf("@");
+      return keepEntity(at < 0 ? row.name : row.name.slice(0, at), at < 0 ? "" : row.name.slice(at + 1),
+        models, options.mode);
+    }))
+    : "";
   return (
     `<h2>${esc(kind.title)}<span>${esc(kind.meta)}</span></h2>` +
     skip +
     (scoped ? "" : modelTable(table, kind.observed)) +
     panels(groups) +
-    comments(commentsBlock, options)
+    comments(commentsBlock, options) +
+    scopedObserved
   );
 }
 
