@@ -1,65 +1,70 @@
-<!-- 生成：K3（k3-pi-coding-plan）· 2026-09-19 12:14:31+08:00 · 耗时 41s · $0.0801（估价） · 窗口 2026-09-14 → 2026-09-21 -->
+<!-- 生成：K3（k3-pi-coding-plan）· 2026-09-19 14:27:17+08:00 · 耗时 93s · $0.1159（估价） · 窗口 2026-09-14 → 2026-09-21 -->
 <!-- 配图：1-ranking.png, 2-audit-quality.png, 3-audit-cost.png, 4-design.png -->
 <!-- 直接发布下面正文；改口吻改 scripts/post_prompt.md -->
 
-《模型团队周报》2026 年第 38 周（进行中，窗口 09-14 → 09-21）。
+第 38 周（9/14–9/21，进行中）模型团队周报。
 
-先交代背景：VastPlan 是我们自研的 Node/TypeScript 插件运行时与 Portal 内核，所有测试都发生在这个真实工程的开发流水线上，不是题库，也不是合成任务。每场都是真实的代码改动、真实的设计决策。
+先交代背景：VastPlan 是我自研的 Node/TypeScript 插件运行时与 Portal 内核的真实工程，测试素材全部来自这个项目的日常开发，不是题库，不是合成任务。每周把多家模型放进同一条工作流里跑，按周出一次相对排名。
 
-本周多模型协作分两部分测试：
+工作流分两部分。一是事后审计：功能代码完成后，多模型并行找 BUG、提优化点，我逐条对照代码判定成立/不成立，并按 1～5 计重要性。二是设计分叉：动手前各模型各自给设计方案，等项目真实选完方向，再回头算方向契合度。本周另有 1 场专责推理，样本太少，只报数不下结论。
 
-① 事后审计：功能代码完成后，多家模型并行找 BUG、提优化点，我再逐条对照真实代码判定成立/不成立，并按 1~5 记重要性。本周 49 场，已评 380 行，成立缺陷 573 条（其中独有 212 条，假阳性 213 条），重要性 5/4/3/2/1 = 63/180/211/104/15。已评部分花费 $142.04，平均每次 7.7 分钟，token 813.7M（缓存命中 95%）。
+本周的量：审计 50 场、成立 585 条（重要性 5 的有 63 条，假阳 216）；设计分叉 31 场、成立 518 条（假阳只有 43，分歧题确实更少翻车）。审计 token 829.8M、缓存命中 95%，平均每次 7.7 分钟；分叉 19.0M、命中 71%，平均 1.9 分钟。
 
-② 设计分叉：遇到有 2~4 条都说得通的路时，各模型各自给设计方案，等项目真实选定方向之后，再回头算各家方案与最终选择的契合度。本周 29 场，成立 514 条，假阳 42 条，花费 $17.59，平均每次仅 1.9 分钟。
-
-综合评分（41% 效果 + 34% 覆盖 + 25% 独立，同活动类型内归一后的相对排名）：
+综合能力评分（41% 效果 + 34% 覆盖 + 25% 独立，同活动类型内归一后的相对排名）：
 
 事后审计：
-1. DeepSeek V4.1 Flash（max） 96.6
-2. DeepSeek V4.1 Flash（high） 93.2
-3. Grok 4.6 Extra High 81.6
-4. Muse Spark 1.3 Contributor 78.7
-5. K3 Cursor 77.1
-6. K3 方舟 Agent Plan 71.3
-7. GLM-5.3-Flash 69.3
-8. DeepSeek V4 Flash 68.0
-9. GLM-5.3 65.4
-10. MiMo V2.5 Pro 30.9
-11. Gemini 3.8 Flash※ 27.1
-12. Qwen3.8 Flash※ 3.7
+1. Qwen3.8 Flash※ 88.3
+2. DeepSeek V4.1 Flash（high）76.6
+3. DeepSeek V4.1 Flash（max）73.4
+4. Grok 4.6 Extra High 62.0
+5. Muse Spark 1.3 Contributor 59.2
+6. K3 Cursor 56.9
+7. K3 方舟 Agent Plan 54.3
+8. GLM-5.3-Flash 52.1
+9. DeepSeek V4 Flash 49.9
+10. GLM-5.3 48.8
+11. MiMo V2.5 Pro 25.0
+12. Gemini 3.8 Flash※ 16.3
+样本 ≥5 场的主力第一：DeepSeek V4.1 Flash（high）。
 
 设计分叉：
-1. K3 方舟 Agent Plan 91.5
-2. Grok 4.6 Extra High 88.5
-3. K3 Cursor※ 76.0
-4. Gemini 3.8 Flash※ 54.7
-5. GLM-5.3 50.8
-6. Fable 5.1 41.3
-7. DeepSeek V4.1 Flash（high） 38.5
-8. Muse Spark 1.3 Contributor 36.5
-9. DeepSeek V4.1 Flash（max） 35.8
-10. DeepSeek V4 Flash 25.4
-11. GLM-5.3-Flash 22.8
-12. MiMo V2.5 Pro 7.7
+1. K3 方舟 Agent Plan 89.7
+2. K3 Cursor※ 88.3
+3. Grok 4.6 Extra High 87.6
+4. Fable 5.1 68.4
+5. GLM-5.3 63.7
+6. Gemini 3.8 Flash※ 63.1
+7. Muse Spark 1.3 Contributor 55.4
+8. DeepSeek V4.1 Flash（max）53.8
+9. DeepSeek V4.1 Flash（high）52.7
+10. DeepSeek V4 Flash 50.6
+11. GLM-5.3-Flash 45.3
+12. MiMo V2.5 Pro 36.5
+13. Qwen3.8 Flash※ 0.0
+主力第一：K3 方舟 Agent Plan。方向契合分最高 Qwen3.8 Flash 5.00，最低 MiMo V2.5 Pro 3.35。
 
-专责推理本周只有 1 场，全员 ※，不展开：K3 方舟 Agent Plan 89.1 领先。
+比总分更有信息量的是分项第一，同一批模型在不同维度换位很明显：
+- 审计平均质量分：Qwen3.8 Flash 8.0
+- 审计覆盖（重要性加权）：Qwen3.8 Flash 56%
+- 审计准确率：Qwen3.8 Flash 100%
+- 审计独有占比：MiMo V2.5 Pro 50%——一半的收获是它独家挖到的
+- 审计成立密度：DeepSeek V4.1 Flash（high）每次 2.13 条
+- 分叉平均质量：K3 Cursor 23.3
+- 分叉覆盖：Gemini 3.8 Flash 47%
+- 分叉独有占比：K3 Cursor 53%
+- 分叉成立密度：K3 Cursor 每次 3.00 条
 
-比总分更有信息量的，是分项第一。
-
-事后审计里：平均质量分第一是 DeepSeek V4.1 Flash（max）6.9；但它不是全包——独立发现（独有占比、重要性加权）第一是 MiMo V2.5 Pro 48%，准确率第一是 GLM-5.3-Flash 84%，生成速度第一是 Gemini 3.8 Flash 每秒 99.0 token。覆盖口径前两名咬得很紧：DeepSeek（max）31%、K3 Cursor 30%。
-
-设计分叉里：平均质量分第一是 Grok 4.6 Extra High 24.1；覆盖率第一 Gemini 3.8 Flash 与 K3 方舟 Agent Plan 并列 47%；独有占比第一 K3 Cursor 53%；准确率第一 Gemini 3.8 Flash 与 K3 Cursor 并列 100%。另外设计分叉契合分最高是 Gemini 3.8 Flash 4.67，最低 DeepSeek V4.1 Flash（high）3.33——总分和契合分并不总是一致。
-
-性价比这块值得单独说。事后审计每条成立缺陷最省的是 Muse Spark 1.3 Contributor，$0.01；最贵的是 Gemini 3.8 Flash，$1.87。每次会话最贵的是 Grok 4.6 Extra High，$1.36，本期合计 $59.72，折合每条成立缺陷 $0.88（成立 68 条）。设计分叉每次最贵是 Fable 5.1，$0.66，每条成立 $0.28。Token 效率差距很大：事后审计每条成立缺陷，Muse Spark 用 349.0 千枚，Gemini 3.8 Flash 用 11,881.5 千枚。
+性价比：
+- 审计最省：Muse Spark 1.3 Contributor，每次 $0.01，每条成立 $0.01
+- 审计每次最贵：Grok 4.6 Extra High $1.35，本期合计 $60.81，折合每条成立 $0.89
+- 审计每条成立最贵：Gemini 3.8 Flash $1.87（样本不足，打折看）
+- 分叉最贵：Fable 5.1 每次 $0.64、每条 $0.28；Muse、GLM-5.3-Flash、MiMo 的分叉账单是 $0.00
 
 口径与坦白：
-
-- 失败 7 行、未评 24 行（3 个场次）不进对照，但失败场次的花费照计。
-- 订阅制模型金额未采集，不记 0。所以表里若干 $0.00、$0.01 的低价项要看这一点，不等于真实免费。
+- 失败 7 行与未评 24 行（3 个场次）不进对照，但花费照计。
+- 订阅制模型金额未采集，不记 0；费用只按已评行合计。
 - 总分是同活动类型内归一后的相对排名，不是绝对能力分。
-- ※ 表示样本不足（本期口径 < 5 场），结论打折。专责推理全员 ※。
-- 百分数照抄原始账本，未做换算。
+- ※ 表示样本 < 5 场，结论打折。专责推理本周仅 1 场（K3 方舟 89.1 第一），不构成趋势。
+- 本周还在进行中，环比窗口是 9/7–9/14，数字还会动。
 
-本周一个直观感受：找 BUG 最强和设计最强不是同一家，DeepSeek V4.1 Flash 在审计上断层领先，K3 方舟 Agent Plan 在设计上拿第一，便宜模型在单项上经常爆冷。多模型互补目前是成立的。
-
-你们团队里审计和设计是同一个模型在做吗？欢迎聊聊。#LLM #AI #Benchmark #MultiModel
+你们在多模型分工里更看重准确率还是覆盖？欢迎聊。#LLM #AI #Benchmark #MultiModel
