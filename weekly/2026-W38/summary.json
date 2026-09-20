@@ -7,10 +7,10 @@
     "2026-09-07",
     "2026-09-14"
   ],
-  "generated_at": "2026-09-21 01:40",
+  "generated_at": "2026-09-21 07:48",
   "week": "2026-W38",
   "week_label": "2026 年第 38 周",
-  "partial": true,
+  "partial": false,
   "kinds": {
     "事后审计": {
       "sessions": 56,
@@ -79,7 +79,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 10,
-  "generations": 74,
+  "generations": 75,
   "first_generated_at": "2026-09-15 02:24",
-  "last_generated_at": "2026-09-21 01:40"
+  "last_generated_at": "2026-09-21 07:48"
 }
