@@ -133,6 +133,16 @@
       "thinking": "max",
       "pricing": "unpublished",
       "enabled": true
+    },
+    {
+      "name": "SWE-2",
+      "tone": null,
+      "providers": [
+        "Devin"
+      ],
+      "thinking": "max",
+      "pricing": "vendor-api",
+      "enabled": true
     }
   ],
   "tones": {

@@ -10,138 +10,140 @@
 
 | 指标 | 本期 | 上期 | 环比 |
 |---|---:|---:|---:|
-| 重要性5/4/3/2/1 | 69/195/229/113/16 | 84/125/141/110/21 | — |
-| 场次 | 55 | 46 | +9 |
-| 已评成功行 | 435 | 307 | +128 |
-| 成立/方向 | 622 | 481 | +141 |
-| 独有成立 | 249 | 215 | +34 |
-| 假阳性 | 224 | 127 | +97 |
-| 已评花费 $ | 156.46 | 141.34 | +15.12 |
-| 未采集金额行 | 10 | 1 | +9 |
-| 全部花费（含未评/失败）$ | 162.82 | 151.98 | +10.84 |
-| 输入 token | 47,732,716 | 45,392,097 | +2340619 |
-| 输出 token | 9,917,746 | 7,129,138 | +2788608 |
-| 缓存读 token | 869,577,466 | 535,299,260 | +334278206 |
+| 重要性5/4/3/2/1 | 72/199/242/120/16 | 84/125/141/110/21 | — |
+| 场次 | 56 | 46 | +10 |
+| 已评成功行 | 446 | 307 | +139 |
+| 成立/方向 | 649 | 481 | +168 |
+| 独有成立 | 276 | 215 | +61 |
+| 假阳性 | 226 | 127 | +99 |
+| 已评花费 $ | 158.66 | 141.34 | +17.32 |
+| 未采集金额行 | 12 | 1 | +11 |
+| 全部花费（含未评/失败）$ | 165.02 | 151.98 | +13.04 |
+| 输入 token | 48,868,547 | 45,392,097 | +3476450 |
+| 输出 token | 10,112,823 | 7,129,138 | +2983685 |
+| 缓存读 token | 892,206,201 | 535,299,260 | +356906941 |
 | 缓存写 token | 0 | 0 | +0 |
-| token 合计 | 927,227,928 | 587,820,495 | +339407433 |
+| token 合计 | 951,187,571 | 587,820,495 | +363367076 |
 | 平均每次耗时 分钟 | 7.6 | 7.1 | +0.5 |
 | 缓存命中率 % | 94.8 | 92.2 | +2.6 |
 
 | # | 模型 | 思考 | 综合 | 场 本/上 | 均质量 本/上/Δ | 成立 本/上 | 独有 | 假阳 | 准确率 | 花费 本/上 | 效率 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | Qwen3.8 Flash | max | 92.5 | 7/0 | 6.4/0.0/+6.4 | 10/0 | 6 | 1 | 91% | —/0.00 | 0.76 |
-| 2 | DeepSeek V4.1 Flash（high） | high | 88.4 | 36/0 | 6.5/0.0/+6.5 | 69/0 | 35 | 18 | 79% | 4.06/0.00 | 0.80 |
-| 3 | DeepSeek V4.1 Flash（max） | max | 86.2 | 50/19 | 6.4/8.2/-1.8 | 92/46 | 41 | 30 | 75% | 20.41/6.61 | 0.88 |
-| 4 | Grok 4.6 Extra High | xhigh | 72.8 | 50/40 | 5.3/7.2/-1.9 | 71/70 | 26 | 15 | 83% | 67.58/45.96 | 0.69 |
-| 5 | Muse Spark 1.3 Contributor | xhigh | 72.8 | 53/14 | 4.8/5.2/-0.4 | 100/22 | 46 | 51 | 66% | 0.63/0.12 | 2.66 |
-| 6 | K3 Cursor | max | 65.1 | 7/14 | 5.3/7.4/-2.1 | 12/26 | 3 | 3 | 80% | 5.90/13.07 | 1.02 |
-| 7 | K3 方舟 Agent Plan | max | 59.1 | 46/29 | 4.2/5.9/-1.6 | 64/49 | 23 | 18 | 78% | 23.22/16.31 | 0.62 |
-| 8 | DeepSeek V4 Flash | max | 57.5 | 23/35 | 4.5/3.8/+0.7 | 37/41 | 8 | 11 | 77% | 6.08/6.53 | 0.60 |
-| 9 | GLM-5.3-Flash | max | 55.2 | 53/40 | 4.5/5.7/-1.3 | 71/59 | 23 | 13 | 85% | 1.71/1.05 | 0.42 |
-| 10 | GLM-5.3 | max | 50.5 | 53/43 | 3.5/5.3/-1.9 | 67/73 | 23 | 29 | 70% | 21.41/17.91 | 0.75 |
-| 11 | MiMo V2.5 Pro | max | 22.0 | 53/35 | -0.3/0.7/-1.0 | 22/18 | 12 | 34 | 39% | 1.73/1.11 | 0.46 |
+| 1 | Qwen3.8 Flash | max | 89.0 | 8/0 | 7.6/0.0/+7.6 | 13/0 | 9 | 1 | 93% | —/0.00 | 0.85 |
+| 2 | DeepSeek V4.1 Flash（high） | high | 81.5 | 37/0 | 6.8/0.0/+6.8 | 73/0 | 39 | 18 | 80% | 4.21/0.00 | 0.81 |
+| 3 | DeepSeek V4.1 Flash（max） | max | 80.4 | 51/19 | 6.6/8.2/-1.6 | 95/46 | 44 | 30 | 76% | 20.51/6.61 | 0.91 |
+| 4 | Muse Spark 1.3 Contributor | xhigh | 66.9 | 54/14 | 4.9/5.2/-0.3 | 102/22 | 48 | 51 | 67% | 0.64/0.12 | 2.66 |
+| 5 | Grok 4.6 Extra High | xhigh | 66.5 | 51/40 | 5.4/7.2/-1.8 | 73/70 | 28 | 15 | 83% | 68.81/45.96 | 0.70 |
+| 6 | K3 Cursor | max | 61.1 | 7/14 | 5.3/7.4/-2.1 | 12/26 | 3 | 3 | 80% | 5.90/13.07 | 1.02 |
+| 7 | K3 方舟 Agent Plan | max | 56.6 | 47/29 | 4.5/5.9/-1.4 | 67/49 | 26 | 18 | 79% | 23.61/16.31 | 0.64 |
+| 8 | DeepSeek V4 Flash | max | 54.6 | 23/35 | 4.5/3.8/+0.7 | 37/41 | 8 | 11 | 77% | 6.08/6.53 | 0.60 |
+| 9 | GLM-5.3-Flash | max | 51.4 | 54/40 | 4.6/5.7/-1.2 | 73/59 | 25 | 13 | 85% | 1.73/1.05 | 0.42 |
+| 10 | GLM-5.3 | max | 47.2 | 54/43 | 3.6/5.3/-1.8 | 69/73 | 25 | 29 | 70% | 21.67/17.91 | 0.76 |
+| 11 | MiMo V2.5 Pro | max | 17.9 | 54/35 | -0.3/0.7/-1.0 | 22/18 | 12 | 35 | 39% | 1.76/1.11 | 0.45 |
 
-样本 < 5 场未进排名，见下方观察区（Gemini 3.8 Flash、Step 5 Preview）；主力（≥5 场）第一：Qwen3.8 Flash（综合 92.5）
+样本 < 5 场未进排名，见下方观察区（Gemini 3.8 Flash、Step 5 Preview、SWE-2）；主力（≥5 场）第一：Qwen3.8 Flash（综合 89.0）
 
 **观察区（样本不足未进排名，只列数字）**
 
 - Gemini 3.8 Flash（3 场）：均质量 1.7、成立 2 条、覆盖 18%
-- Step 5 Preview（1 场）：均质量 21.0、成立 5 条、覆盖 22%
+- Step 5 Preview（2 场）：均质量 18.5、成立 8 条、覆盖 18%
+- SWE-2（1 场）：均质量 11.0、成立 3 条、覆盖 15%
 
 **分项排名（各自口径，从优到差；产出/精准/性价比见上表）**
 
-- **覆盖 · 重要性加权占参与轮次**：1. DeepSeek V4.1 Flash（max）（28%）、2. K3 Cursor（26%）、3. DeepSeek V4.1 Flash（high）（26%）、4. Muse Spark 1.3 Contributor（25%）、5. DeepSeek V4 Flash（25%）、6. Qwen3.8 Flash（24%）、7. Grok 4.6 Extra High（24%）、8. K3 方舟 Agent Plan（21%）、9. GLM-5.3-Flash（20%）、10. GLM-5.3（20%）、11. MiMo V2.5 Pro（7%）
-- **独立 · 独有占比（重要性加权）**：1. Qwen3.8 Flash（62%）、2. MiMo V2.5 Pro（57%）、3. DeepSeek V4.1 Flash（high）（51%）、4. Muse Spark 1.3 Contributor（44%）、5. Grok 4.6 Extra High（43%）、6. DeepSeek V4.1 Flash（max）（42%）、7. K3 方舟 Agent Plan（39%）、8. GLM-5.3（36%）、9. GLM-5.3-Flash（33%）、10. K3 Cursor（25%）、11. DeepSeek V4 Flash（24%）
-- **执行时间 · 平均每次分钟**：1. Muse Spark 1.3 Contributor（2.5）、2. MiMo V2.5 Pro（4.8）、3. K3 Cursor（5.9）、4. GLM-5.3（6.7）、5. Qwen3.8 Flash（6.8）、6. K3 方舟 Agent Plan（7.7）、7. Grok 4.6 Extra High（7.7）、8. DeepSeek V4 Flash（9.9）、9. DeepSeek V4.1 Flash（max）（10.1）、10. DeepSeek V4.1 Flash（high）（10.4）、11. GLM-5.3-Flash（11.1）
-- **Token · 每条成立千枚**：1. Muse Spark 1.3 Contributor（349.8）、2. K3 方舟 Agent Plan（485.1）、3. K3 Cursor（705.0）、4. GLM-5.3（821.0）、5. GLM-5.3-Flash（1,143.1）、6. MiMo V2.5 Pro（1,187.6）、7. Grok 4.6 Extra High（1,240.3）、8. DeepSeek V4 Flash（1,815.0）、9. DeepSeek V4.1 Flash（high）（3,001.0）、10. DeepSeek V4.1 Flash（max）（3,230.4）
+- **覆盖 · 重要性加权占参与轮次**：1. DeepSeek V4.1 Flash（max）（27%）、2. K3 Cursor（26%）、3. DeepSeek V4 Flash（25%）、4. DeepSeek V4.1 Flash（high）（24%）、5. Muse Spark 1.3 Contributor（24%）、6. Grok 4.6 Extra High（23%）、7. Qwen3.8 Flash（21%）、8. K3 方舟 Agent Plan（20%）、9. GLM-5.3-Flash（19%）、10. GLM-5.3（19%）、11. MiMo V2.5 Pro（7%）
+- **独立 · 独有占比（重要性加权）**：1. Qwen3.8 Flash（71%）、2. MiMo V2.5 Pro（57%）、3. DeepSeek V4.1 Flash（high）（53%）、4. Muse Spark 1.3 Contributor（45%）、5. Grok 4.6 Extra High（44%）、6. DeepSeek V4.1 Flash（max）（44%）、7. K3 方舟 Agent Plan（42%）、8. GLM-5.3（37%）、9. GLM-5.3-Flash（34%）、10. K3 Cursor（25%）、11. DeepSeek V4 Flash（24%）
+- **执行时间 · 平均每次分钟**：1. Muse Spark 1.3 Contributor（2.5）、2. MiMo V2.5 Pro（4.8）、3. K3 Cursor（5.9）、4. GLM-5.3（6.6）、5. Qwen3.8 Flash（6.8）、6. K3 方舟 Agent Plan（7.7）、7. Grok 4.6 Extra High（7.7）、8. DeepSeek V4 Flash（9.9）、9. DeepSeek V4.1 Flash（max）（10.0）、10. DeepSeek V4.1 Flash（high）（10.3）、11. GLM-5.3-Flash（11.1）
+- **Token · 每条成立千枚**：1. Muse Spark 1.3 Contributor（345.4）、2. K3 方舟 Agent Plan（469.6）、3. K3 Cursor（705.0）、4. GLM-5.3（806.3）、5. GLM-5.3-Flash（1,124.7）、6. MiMo V2.5 Pro（1,201.4）、7. Grok 4.6 Extra High（1,223.2）、8. DeepSeek V4 Flash（1,815.0）、9. DeepSeek V4.1 Flash（high）（2,982.4）、10. DeepSeek V4.1 Flash（max）（3,193.0）
 - **缓存命中率**：1. DeepSeek V4.1 Flash（max）（98%）、2. DeepSeek V4.1 Flash（high）（98%）、3. GLM-5.3-Flash（95%）、4. GLM-5.3（94%）、5. K3 Cursor（94%）、6. K3 方舟 Agent Plan（93%）、7. MiMo V2.5 Pro（91%）、8. Muse Spark 1.3 Contributor（87%）、9. Grok 4.6 Extra High（87%）、10. DeepSeek V4 Flash（86%）、11. Qwen3.8 Flash（0%）
-- **成立密度 · 每次（越多越好）**：1. DeepSeek V4.1 Flash（high）（1.92）、2. Muse Spark 1.3 Contributor（1.89）、3. DeepSeek V4.1 Flash（max）（1.84）、4. K3 Cursor（1.71）、5. DeepSeek V4 Flash（1.61）、6. Qwen3.8 Flash（1.43）、7. Grok 4.6 Extra High（1.42）、8. K3 方舟 Agent Plan（1.39）、9. GLM-5.3-Flash（1.34）、10. GLM-5.3（1.26）、11. MiMo V2.5 Pro（0.42）
-- **生成速度 · 每秒 token（输出）**：1. Muse Spark 1.3 Contributor（82.2）、2. DeepSeek V4.1 Flash（max）（68.2）、3. DeepSeek V4.1 Flash（high）（65.3）、4. DeepSeek V4 Flash（62.9）、5. Grok 4.6 Extra High（53.8）、6. K3 Cursor（53.1）、7. MiMo V2.5 Pro（52.7）、8. GLM-5.3（41.5）、9. GLM-5.3-Flash（29.9）、10. K3 方舟 Agent Plan（25.2）
-- **每条成立花费（越低越省）**：1. Muse Spark 1.3 Contributor（$0.01）、2. GLM-5.3-Flash（$0.02）、3. DeepSeek V4.1 Flash（high）（$0.06）、4. MiMo V2.5 Pro（$0.08）、5. DeepSeek V4 Flash（$0.16）、6. DeepSeek V4.1 Flash（max）（$0.22）、7. GLM-5.3（$0.32）、8. K3 方舟 Agent Plan（$0.36）、9. K3 Cursor（$0.49）、10. Grok 4.6 Extra High（$0.95）
-- **每次花费（越低越省）**：1. Muse Spark 1.3 Contributor（$0.01）、2. GLM-5.3-Flash（$0.03）、3. MiMo V2.5 Pro（$0.03）、4. DeepSeek V4.1 Flash（high）（$0.11）、5. DeepSeek V4 Flash（$0.26）、6. GLM-5.3（$0.40）、7. DeepSeek V4.1 Flash（max）（$0.41）、8. K3 方舟 Agent Plan（$0.50）、9. K3 Cursor（$0.84）、10. Grok 4.6 Extra High（$1.35）
+- **成立密度 · 每次（越多越好）**：1. DeepSeek V4.1 Flash（high）（1.97）、2. Muse Spark 1.3 Contributor（1.89）、3. DeepSeek V4.1 Flash（max）（1.86）、4. K3 Cursor（1.71）、5. Qwen3.8 Flash（1.63）、6. DeepSeek V4 Flash（1.61）、7. Grok 4.6 Extra High（1.43）、8. K3 方舟 Agent Plan（1.43）、9. GLM-5.3-Flash（1.35）、10. GLM-5.3（1.28）、11. MiMo V2.5 Pro（0.41）
+- **生成速度 · 每秒 token（输出）**：1. Muse Spark 1.3 Contributor（82.3）、2. DeepSeek V4.1 Flash（max）（68.4）、3. DeepSeek V4.1 Flash（high）（65.8）、4. DeepSeek V4 Flash（62.9）、5. Grok 4.6 Extra High（53.9）、6. K3 Cursor（53.1）、7. MiMo V2.5 Pro（52.4）、8. GLM-5.3（41.7）、9. GLM-5.3-Flash（29.9）、10. K3 方舟 Agent Plan（25.3）
+- **每条成立花费（越低越省）**：1. Muse Spark 1.3 Contributor（$0.01）、2. GLM-5.3-Flash（$0.02）、3. DeepSeek V4.1 Flash（high）（$0.06）、4. MiMo V2.5 Pro（$0.08）、5. DeepSeek V4 Flash（$0.16）、6. DeepSeek V4.1 Flash（max）（$0.22）、7. GLM-5.3（$0.31）、8. K3 方舟 Agent Plan（$0.35）、9. K3 Cursor（$0.49）、10. Grok 4.6 Extra High（$0.94）
+- **每次花费（越低越省）**：1. Muse Spark 1.3 Contributor（$0.01）、2. GLM-5.3-Flash（$0.03）、3. MiMo V2.5 Pro（$0.03）、4. DeepSeek V4.1 Flash（high）（$0.11）、5. DeepSeek V4 Flash（$0.26）、6. GLM-5.3（$0.40）、7. DeepSeek V4.1 Flash（max）（$0.40）、8. K3 方舟 Agent Plan（$0.50）、9. K3 Cursor（$0.84）、10. Grok 4.6 Extra High（$1.35）
 
 **模型评论（按综合分）**
 
-1. **Qwen3.8 Flash**（综合 92.5）— 长处：最准（91%）；短处：花费未采集（该轴按中位记）
-2. **DeepSeek V4.1 Flash（high）**（综合 88.4）— 长处：产出最高（均质量 6.5）；短处：token 相对最弱（每条成立 3,001 千）
-3. **DeepSeek V4.1 Flash（max）**（综合 86.2）— 长处：抓得最全（重要性加权占参与轮次 28%）、缓存命中最高（98%）；短处：每条成立最耗 token（3,230 千）
-4. **Grok 4.6 Extra High**（综合 72.8）— 长处：效果相对最好（均质量 5.3）；短处：每条成立最贵（$0.95）
-5. **Muse Spark 1.3 Contributor**（综合 72.8）— 长处：效率分最高（成立重要性÷耗时 2.66）、每条成立最便宜（$0.01）、最快（每次 2.5 分钟，档位 xhigh）、每条成立最省 token（350 千）；短处：无突出短板
-6. **K3 Cursor**（综合 65.1）— 长处：覆盖相对最好（占参与轮次 26%）；短处：独立相对最弱（独有占比 25%）
-7. **K3 方舟 Agent Plan**（综合 59.1）— 长处：token 相对最好（每条成立 485 千）；短处：无突出短板
-8. **DeepSeek V4 Flash**（综合 57.5）— 长处：覆盖相对最好（占参与轮次 25%）；短处：独立相对最弱（独有占比 24%）
-9. **GLM-5.3-Flash**（综合 55.2）— 长处：花费相对最好（每次 $0.03）；短处：最慢（每次 11.1 分钟，档位 max）
-10. **GLM-5.3**（综合 50.5）— 长处：token 相对最好（每条成立 821 千）；短处：独立相对最弱（独有占比 36%）
-11. **MiMo V2.5 Pro**（综合 22.0）— 长处：花费相对最好（每次 $0.03）；短处：假阳最多（每次 0.64 条，准确率 39%）、均质量垫底（-0.3）
+1. **Qwen3.8 Flash**（综合 89.0）— 长处：产出最高（均质量 7.6）、最准（93%）；短处：花费未采集（该轴按中位记）
+2. **DeepSeek V4.1 Flash（high）**（综合 81.5）— 长处：花费相对最好（每次 $0.11）；短处：token 相对最弱（每条成立 2,982 千）
+3. **DeepSeek V4.1 Flash（max）**（综合 80.4）— 长处：抓得最全（重要性加权占参与轮次 27%）、缓存命中最高（98%）；短处：每条成立最耗 token（3,193 千）
+4. **Muse Spark 1.3 Contributor**（综合 66.9）— 长处：效率分最高（成立重要性÷耗时 2.66）、每条成立最便宜（$0.01）、最快（每次 2.5 分钟，档位 xhigh）、每条成立最省 token（345 千）；短处：无突出短板
+5. **Grok 4.6 Extra High**（综合 66.5）— 长处：各项居中（均质量 5.4、准确率 83%）；短处：每条成立最贵（$0.94）
+6. **K3 Cursor**（综合 61.1）— 长处：覆盖相对最好（占参与轮次 26%）；短处：独立相对最弱（独有占比 25%）
+7. **K3 方舟 Agent Plan**（综合 56.6）— 长处：token 相对最好（每条成立 470 千）；短处：独立相对最弱（独有占比 42%）
+8. **DeepSeek V4 Flash**（综合 54.6）— 长处：覆盖相对最好（占参与轮次 25%）；短处：独立相对最弱（独有占比 24%）
+9. **GLM-5.3-Flash**（综合 51.4）— 长处：花费相对最好（每次 $0.03）；短处：最慢（每次 11.1 分钟，档位 max）
+10. **GLM-5.3**（综合 47.2）— 长处：token 相对最好（每条成立 806 千）；短处：独立相对最弱（独有占比 37%）
+11. **MiMo V2.5 Pro**（综合 17.9）— 长处：花费相对最好（每次 $0.03）；短处：假阳最多（每次 0.65 条，准确率 39%）、均质量垫底（-0.3）
 
 ## 设计分叉
 
 | 指标 | 本期 | 上期 | 环比 |
 |---|---:|---:|---:|
-| 重要性5/4/3/2/1 | 245/177/137/22/0 | 166/122/72/7/0 | — |
-| 场次 | 39 | 25 | +14 |
-| 已评成功行 | 325 | 167 | +158 |
-| 成立/方向 | 581 | 367 | +214 |
-| 独有成立 | 212 | 121 | +91 |
+| 重要性5/4/3/2/1 | 245/186/140/22/0 | 166/122/72/7/0 | — |
+| 场次 | 40 | 25 | +15 |
+| 已评成功行 | 337 | 167 | +170 |
+| 成立/方向 | 593 | 367 | +226 |
+| 独有成立 | 224 | 121 | +103 |
 | 假阳性 | 43 | 18 | +25 |
-| 已评花费 $ | 29.11 | 14.21 | +14.90 |
-| 未采集金额行 | 12 | 0 | +12 |
-| 全部花费（含未评/失败）$ | 29.77 | 14.21 | +15.57 |
-| 输入 token | 6,358,826 | 3,679,950 | +2678876 |
-| 输出 token | 1,856,120 | 821,713 | +1034407 |
-| 缓存读 token | 16,293,200 | 6,901,888 | +9391312 |
-| 缓存写 token | 575,564 | 210,405 | +365159 |
-| token 合计 | 25,083,710 | 11,613,956 | +13469754 |
+| 已评花费 $ | 30.20 | 14.21 | +15.99 |
+| 未采集金额行 | 14 | 0 | +14 |
+| 全部花费（含未评/失败）$ | 30.86 | 14.21 | +16.65 |
+| 输入 token | 6,514,967 | 3,679,950 | +2835017 |
+| 输出 token | 1,896,834 | 821,713 | +1075121 |
+| 缓存读 token | 16,467,137 | 6,901,888 | +9565249 |
+| 缓存写 token | 626,833 | 210,405 | +416428 |
+| token 合计 | 25,505,771 | 11,613,956 | +13891815 |
 | 平均每次耗时 分钟 | 1.9 | 1.8 | +0.1 |
-| 缓存命中率 % | 71.9 | 65.2 | +6.7 |
+| 缓存命中率 % | 71.7 | 65.2 | +6.4 |
 
 | # | 模型 | 思考 | 综合 | 场 本/上 | 均质量 本/上/Δ | 成立 本/上 | 独有 | 假阳 | 准确率 | 花费 本/上 | 契合 本/上 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | K3 方舟 Agent Plan | max | 83.3 | 35/18 | 20.6/23.9/-3.4 | 91/55 | 44 | 7 | 93% | 3.21/1.29 | 4.34/4.69 |
-| 2 | Grok 4.6 Extra High | xhigh | 74.8 | 36/20 | 20.1/22.1/-2.0 | 88/56 | 38 | 4 | 96% | 12.15/5.97 | 4.30/4.33 |
-| 3 | Fable 5.1 | medium | 64.7 | 15/6 | 18.5/29.0/-10.5 | 30/22 | 20 | 2 | 94% | 9.63/3.63 | 4.77/4.33 |
-| 4 | GLM-5.3 | max | 45.4 | 37/21 | 16.4/16.6/-0.1 | 70/46 | 23 | 4 | 95% | 1.81/0.86 | 4.24/3.79 |
-| 5 | DeepSeek V4 Flash | max | 34.9 | 16/21 | 14.9/15.2/-0.3 | 30/43 | 7 | 2 | 94% | 0.27/0.26 | 3.92/4.07 |
-| 6 | Muse Spark 1.3 Contributor | xhigh | 32.9 | 37/7 | 14.8/10.1/+4.7 | 59/4 | 18 | 3 | 95% | 0.08/0.02 | 4.21/3.71 |
-| 7 | DeepSeek V4.1 Flash（max） | max | 31.9 | 37/9 | 14.6/12.2/+2.4 | 62/11 | 17 | 4 | 94% | 0.92/0.24 | 4.09/3.33 |
-| 8 | Qwen3.8 Flash | max | 25.5 | 10/0 | 10.7/0.0/+10.7 | 7/0 | 7 | 0 | 100% | —/0.00 | 4.38/0.00 |
-| 9 | GLM-5.3-Flash | max | 22.9 | 37/21 | 13.3/15.2/-1.9 | 55/42 | 13 | 3 | 95% | 0.11/0.05 | 4.00/3.88 |
-| 10 | DeepSeek V4.1 Flash（high） | high | 21.1 | 22/0 | 12.2/0.0/+12.2 | 30/0 | 10 | 2 | 94% | 0.31/0.00 | 3.53/0.00 |
-| 11 | MiMo V2.5 Pro | max | 6.9 | 36/18 | 10.6/9.1/+1.5 | 43/24 | 9 | 12 | 78% | 0.17/0.10 | 3.39/2.81 |
+| 1 | K3 方舟 Agent Plan | max | 83.5 | 36/18 | 20.2/23.9/-3.8 | 92/55 | 45 | 7 | 93% | 3.27/1.29 | 4.34/4.69 |
+| 2 | Grok 4.6 Extra High | xhigh | 75.3 | 37/20 | 19.7/22.1/-2.4 | 89/56 | 39 | 4 | 96% | 12.36/5.97 | 4.30/4.33 |
+| 3 | Fable 5.1 | medium | 63.0 | 16/6 | 17.7/29.0/-11.3 | 31/22 | 21 | 2 | 94% | 10.38/3.63 | 4.77/4.33 |
+| 4 | GLM-5.3 | max | 46.8 | 38/21 | 16.2/16.6/-0.4 | 71/46 | 24 | 4 | 95% | 1.86/0.86 | 4.24/3.79 |
+| 5 | DeepSeek V4 Flash | max | 37.9 | 16/21 | 14.9/15.2/-0.3 | 30/43 | 7 | 2 | 94% | 0.27/0.26 | 3.92/4.07 |
+| 6 | Muse Spark 1.3 Contributor | xhigh | 34.3 | 38/7 | 14.6/10.1/+4.4 | 60/4 | 19 | 3 | 95% | 0.08/0.02 | 4.21/3.71 |
+| 7 | DeepSeek V4.1 Flash（max） | max | 33.7 | 38/9 | 14.4/12.2/+2.2 | 63/11 | 18 | 4 | 94% | 0.92/0.24 | 4.09/3.33 |
+| 8 | Qwen3.8 Flash | max | 25.0 | 11/0 | 10.2/0.0/+10.2 | 8/0 | 8 | 0 | 100% | —/0.00 | 4.38/0.00 |
+| 9 | GLM-5.3-Flash | max | 24.9 | 38/21 | 13.1/15.2/-2.1 | 56/42 | 14 | 3 | 95% | 0.11/0.05 | 4.00/3.88 |
+| 10 | DeepSeek V4.1 Flash（high） | high | 22.6 | 23/0 | 11.9/0.0/+11.9 | 31/0 | 11 | 2 | 94% | 0.32/0.00 | 3.53/0.00 |
+| 11 | MiMo V2.5 Pro | max | 9.0 | 37/18 | 10.4/9.1/+1.3 | 44/24 | 10 | 12 | 79% | 0.17/0.10 | 3.39/2.81 |
 
-样本 < 5 场未进排名，见下方观察区（Gemini 3.8 Flash、K3 Cursor、Step 5 Preview）；主力（≥5 场）第一：K3 方舟 Agent Plan（综合 83.3）
+样本 < 5 场未进排名，见下方观察区（Gemini 3.8 Flash、K3 Cursor、Step 5 Preview、SWE-2）；主力（≥5 场）第一：K3 方舟 Agent Plan（综合 83.5）
 
 **观察区（样本不足未进排名，只列数字）**
 
-- Gemini 3.8 Flash（3 场）：均质量 18.0、成立 6 条、覆盖 33%
+- Gemini 3.8 Flash（3 场）：均质量 18.0、成立 6 条、覆盖 32%
 - K3 Cursor（3 场）：均质量 23.3、成立 9 条、覆盖 28%
-- Step 5 Preview（1 场）：均质量 15.0、成立 1 条、覆盖 18%
+- Step 5 Preview（2 场）：均质量 10.5、成立 2 条、覆盖 16%
+- SWE-2（1 场）：均质量 6.0、成立 1 条、覆盖 20%
 
 **分项排名（各自口径，从优到差；产出/精准/性价比见上表）**
 
-- **覆盖 · 重要性加权占参与轮次**：1. K3 方舟 Agent Plan（37%）、2. Grok 4.6 Extra High（34%）、3. GLM-5.3（26%）、4. Fable 5.1（26%）、5. DeepSeek V4 Flash（25%）、6. DeepSeek V4.1 Flash（max）（23%）、7. Muse Spark 1.3 Contributor（23%）、8. GLM-5.3-Flash（21%）、9. DeepSeek V4.1 Flash（high）（21%）、10. MiMo V2.5 Pro（18%）、11. Qwen3.8 Flash（13%）
-- **独立 · 独有占比（重要性加权）**：1. Qwen3.8 Flash（100%）、2. Fable 5.1（65%）、3. K3 方舟 Agent Plan（48%）、4. Grok 4.6 Extra High（40%）、5. DeepSeek V4.1 Flash（high）（33%）、6. GLM-5.3（30%）、7. Muse Spark 1.3 Contributor（28%）、8. DeepSeek V4.1 Flash（max）（24%）、9. GLM-5.3-Flash（22%）、10. MiMo V2.5 Pro（22%）、11. DeepSeek V4 Flash（22%）
-- **执行时间 · 平均每次分钟**：1. DeepSeek V4.1 Flash（max）（0.8）、2. DeepSeek V4.1 Flash（high）（1.0）、3. Muse Spark 1.3 Contributor（1.0）、4. MiMo V2.5 Pro（1.3）、5. Fable 5.1（1.3）、6. Qwen3.8 Flash（1.4）、7. K3 方舟 Agent Plan（1.9）、8. GLM-5.3（2.6）、9. Grok 4.6 Extra High（3.2）、10. DeepSeek V4 Flash（3.2）、11. GLM-5.3-Flash（3.4）
-- **Token · 每条成立千枚**：1. K3 方舟 Agent Plan（9.5）、2. Muse Spark 1.3 Contributor（11.5）、3. GLM-5.3（11.7）、4. DeepSeek V4 Flash（13.5）、5. GLM-5.3-Flash（14.6）、6. Fable 5.1（31.0）、7. DeepSeek V4.1 Flash（max）（49.8）、8. MiMo V2.5 Pro（53.7）、9. DeepSeek V4.1 Flash（high）（111.8）、10. Grok 4.6 Extra High（131.6）
-- **缓存命中率**：1. Fable 5.1（100%）、2. MiMo V2.5 Pro（92%）、3. DeepSeek V4.1 Flash（high）（86%）、4. DeepSeek V4.1 Flash（max）（76%）、5. Grok 4.6 Extra High（74%）、6. DeepSeek V4 Flash（65%）、7. K3 方舟 Agent Plan（39%）、8. GLM-5.3（34%）、9. Muse Spark 1.3 Contributor（6%）、10. GLM-5.3-Flash（0%）、11. Qwen3.8 Flash（0%）
-- **成立密度 · 每次（越多越好）**：1. K3 方舟 Agent Plan（2.60）、2. Grok 4.6 Extra High（2.44）、3. Fable 5.1（2.00）、4. GLM-5.3（1.89）、5. DeepSeek V4 Flash（1.88）、6. DeepSeek V4.1 Flash（max）（1.68）、7. Muse Spark 1.3 Contributor（1.59）、8. GLM-5.3-Flash（1.49）、9. DeepSeek V4.1 Flash（high）（1.36）、10. MiMo V2.5 Pro（1.19）、11. Qwen3.8 Flash（0.70）
-- **生成速度 · 每秒 token（输出）**：1. DeepSeek V4.1 Flash（max）（113.4）、2. DeepSeek V4.1 Flash（high）（105.2）、3. Muse Spark 1.3 Contributor（68.0）、4. DeepSeek V4 Flash（56.0）、5. Grok 4.6 Extra High（50.8）、6. GLM-5.3（49.8）、7. Fable 5.1（39.1）、8. GLM-5.3-Flash（37.4）、9. MiMo V2.5 Pro（35.2）、10. K3 方舟 Agent Plan（28.9）
-- **每条成立花费（越低越省）**：1. Muse Spark 1.3 Contributor（$0.00）、2. GLM-5.3-Flash（$0.00）、3. MiMo V2.5 Pro（$0.00）、4. DeepSeek V4 Flash（$0.01）、5. DeepSeek V4.1 Flash（high）（$0.01）、6. DeepSeek V4.1 Flash（max）（$0.01）、7. GLM-5.3（$0.03）、8. K3 方舟 Agent Plan（$0.04）、9. Grok 4.6 Extra High（$0.14）、10. Fable 5.1（$0.32）
-- **每次花费（越低越省）**：1. Muse Spark 1.3 Contributor（$0.00）、2. GLM-5.3-Flash（$0.00）、3. MiMo V2.5 Pro（$0.00）、4. DeepSeek V4.1 Flash（high）（$0.01）、5. DeepSeek V4 Flash（$0.02）、6. DeepSeek V4.1 Flash（max）（$0.02）、7. GLM-5.3（$0.05）、8. K3 方舟 Agent Plan（$0.09）、9. Grok 4.6 Extra High（$0.34）、10. Fable 5.1（$0.64）
+- **覆盖 · 重要性加权占参与轮次**：1. K3 方舟 Agent Plan（36%）、2. Grok 4.6 Extra High（33%）、3. GLM-5.3（26%）、4. DeepSeek V4 Flash（25%）、5. Fable 5.1（25%）、6. DeepSeek V4.1 Flash（max）（23%）、7. Muse Spark 1.3 Contributor（22%）、8. GLM-5.3-Flash（21%）、9. DeepSeek V4.1 Flash（high）（20%）、10. MiMo V2.5 Pro（17%）、11. Qwen3.8 Flash（12%）
+- **独立 · 独有占比（重要性加权）**：1. Qwen3.8 Flash（100%）、2. Fable 5.1（66%）、3. K3 方舟 Agent Plan（48%）、4. Grok 4.6 Extra High（41%）、5. DeepSeek V4.1 Flash（high）（35%）、6. GLM-5.3（31%）、7. Muse Spark 1.3 Contributor（29%）、8. DeepSeek V4.1 Flash（max）（25%）、9. GLM-5.3-Flash（23%）、10. MiMo V2.5 Pro（23%）、11. DeepSeek V4 Flash（22%）
+- **执行时间 · 平均每次分钟**：1. DeepSeek V4.1 Flash（max）（0.8）、2. DeepSeek V4.1 Flash（high）（0.9）、3. Muse Spark 1.3 Contributor（1.0）、4. MiMo V2.5 Pro（1.3）、5. Fable 5.1（1.3）、6. Qwen3.8 Flash（1.4）、7. K3 方舟 Agent Plan（1.9）、8. GLM-5.3（2.6）、9. Grok 4.6 Extra High（3.1）、10. DeepSeek V4 Flash（3.2）、11. GLM-5.3-Flash（3.3）
+- **Token · 每条成立千枚**：1. K3 方舟 Agent Plan（9.6）、2. Muse Spark 1.3 Contributor（11.6）、3. GLM-5.3（11.8）、4. DeepSeek V4 Flash（13.5）、5. GLM-5.3-Flash（14.7）、6. Fable 5.1（31.7）、7. DeepSeek V4.1 Flash（max）（49.3）、8. MiMo V2.5 Pro（52.9）、9. DeepSeek V4.1 Flash（high）（108.8）、10. Grok 4.6 Extra High（132.5）
+- **缓存命中率**：1. Fable 5.1（100%）、2. MiMo V2.5 Pro（92%）、3. DeepSeek V4.1 Flash（high）（85%）、4. DeepSeek V4.1 Flash（max）（76%）、5. Grok 4.6 Extra High（74%）、6. DeepSeek V4 Flash（65%）、7. K3 方舟 Agent Plan（38%）、8. GLM-5.3（33%）、9. Muse Spark 1.3 Contributor（6%）、10. GLM-5.3-Flash（0%）、11. Qwen3.8 Flash（0%）
+- **成立密度 · 每次（越多越好）**：1. K3 方舟 Agent Plan（2.56）、2. Grok 4.6 Extra High（2.41）、3. Fable 5.1（1.94）、4. DeepSeek V4 Flash（1.88）、5. GLM-5.3（1.87）、6. DeepSeek V4.1 Flash（max）（1.66）、7. Muse Spark 1.3 Contributor（1.58）、8. GLM-5.3-Flash（1.47）、9. DeepSeek V4.1 Flash（high）（1.35）、10. MiMo V2.5 Pro（1.19）、11. Qwen3.8 Flash（0.73）
+- **生成速度 · 每秒 token（输出）**：1. DeepSeek V4.1 Flash（max）（113.8）、2. DeepSeek V4.1 Flash（high）（106.4）、3. Muse Spark 1.3 Contributor（67.4）、4. DeepSeek V4 Flash（56.0）、5. Grok 4.6 Extra High（50.7）、6. GLM-5.3（50.1）、7. Fable 5.1（39.0）、8. GLM-5.3-Flash（37.3）、9. MiMo V2.5 Pro（35.4）、10. K3 方舟 Agent Plan（28.8）
+- **每条成立花费（越低越省）**：1. Muse Spark 1.3 Contributor（$0.00）、2. GLM-5.3-Flash（$0.00）、3. MiMo V2.5 Pro（$0.00）、4. DeepSeek V4 Flash（$0.01）、5. DeepSeek V4.1 Flash（high）（$0.01）、6. DeepSeek V4.1 Flash（max）（$0.01）、7. GLM-5.3（$0.03）、8. K3 方舟 Agent Plan（$0.04）、9. Grok 4.6 Extra High（$0.14）、10. Fable 5.1（$0.33）
+- **每次花费（越低越省）**：1. Muse Spark 1.3 Contributor（$0.00）、2. GLM-5.3-Flash（$0.00）、3. MiMo V2.5 Pro（$0.00）、4. DeepSeek V4.1 Flash（high）（$0.01）、5. DeepSeek V4 Flash（$0.02）、6. DeepSeek V4.1 Flash（max）（$0.02）、7. GLM-5.3（$0.05）、8. K3 方舟 Agent Plan（$0.09）、9. Grok 4.6 Extra High（$0.33）、10. Fable 5.1（$0.65）
 
 **模型评论（按综合分）**
 
-1. **K3 方舟 Agent Plan**（综合 83.3）— 长处：产出最高（均质量 20.6）、抓得最全（重要性加权占参与轮次 37%）、每条成立最省 token（10 千）；短处：无突出短板
-2. **Grok 4.6 Extra High**（综合 74.8）— 长处：效果相对最好（均质量 20.1）；短处：每条成立最耗 token（132 千）
-3. **Fable 5.1**（综合 64.7）— 长处：方向契合最高（4.77）、缓存命中最高（100%）；短处：每条成立最贵（$0.32）
-4. **GLM-5.3**（综合 45.4）— 长处：各项居中（均质量 16.4、准确率 95%）；短处：无突出短板
-5. **DeepSeek V4 Flash**（综合 34.9）— 长处：花费相对最好（每次 $0.02）；短处：独立相对最弱（独有占比 22%）
-6. **Muse Spark 1.3 Contributor**（综合 32.9）— 长处：每条成立最便宜（$0.00）；短处：独立相对最弱（独有占比 28%）
-7. **DeepSeek V4.1 Flash（max）**（综合 31.9）— 长处：效率分最高（成立重要性÷耗时 11.83）、最快（每次 0.8 分钟，档位 max）；短处：独立相对最弱（独有占比 24%）
-8. **Qwen3.8 Flash**（综合 25.5）— 长处：最准（100%）；短处：花费未采集（该轴按中位记）
-9. **GLM-5.3-Flash**（综合 22.9）— 长处：花费相对最好（每次 $0.00）；短处：最慢（每次 3.4 分钟，档位 max）
-10. **DeepSeek V4.1 Flash（high）**（综合 21.1）— 长处：花费相对最好（每次 $0.01）；短处：无突出短板
-11. **MiMo V2.5 Pro**（综合 6.9）— 长处：花费相对最好（每次 $0.00）；短处：假阳最多（每次 0.33 条，准确率 78%）、均质量垫底（10.6）、契合最低（3.39）
+1. **K3 方舟 Agent Plan**（综合 83.5）— 长处：产出最高（均质量 20.2）、抓得最全（重要性加权占参与轮次 36%）、每条成立最省 token（10 千）；短处：无突出短板
+2. **Grok 4.6 Extra High**（综合 75.3）— 长处：效果相对最好（均质量 19.7）；短处：每条成立最耗 token（132 千）
+3. **Fable 5.1**（综合 63.0）— 长处：方向契合最高（4.77）、缓存命中最高（100%）；短处：每条成立最贵（$0.33）
+4. **GLM-5.3**（综合 46.8）— 长处：各项居中（均质量 16.2、准确率 95%）；短处：无突出短板
+5. **DeepSeek V4 Flash**（综合 37.9）— 长处：花费相对最好（每次 $0.02）；短处：独立相对最弱（独有占比 22%）
+6. **Muse Spark 1.3 Contributor**（综合 34.3）— 长处：每条成立最便宜（$0.00）；短处：独立相对最弱（独有占比 29%）
+7. **DeepSeek V4.1 Flash（max）**（综合 33.7）— 长处：效率分最高（成立重要性÷耗时 11.89）、最快（每次 0.8 分钟，档位 max）；短处：独立相对最弱（独有占比 25%）
+8. **Qwen3.8 Flash**（综合 25.0）— 长处：最准（100%）；短处：花费未采集（该轴按中位记）、均质量垫底（10.2）
+9. **GLM-5.3-Flash**（综合 24.9）— 长处：花费相对最好（每次 $0.00）；短处：最慢（每次 3.3 分钟，档位 max）
+10. **DeepSeek V4.1 Flash（high）**（综合 22.6）— 长处：花费相对最好（每次 $0.01）；短处：无突出短板
+11. **MiMo V2.5 Pro**（综合 9.0）— 长处：花费相对最好（每次 $0.00）；短处：假阳最多（每次 0.32 条，准确率 79%）、契合最低（3.39）
 
 ## 未评 / 失败（本期）
 
@@ -171,7 +173,7 @@
 - 花费三看：每次花费（跑一次多少钱）、每条成立花费（每个真问题多少钱）、token（每条成立 token）；按通道拆开后某批调用缺金额或缺 token 数据时，该家不进对应榜单（不按 0 记，也不当最优）。
 - 时间与 token 口径：执行时间＝该模型已评行耗时合计 ÷ 已评运行次数（分钟，未评与失败行没有耗时数据）；token＝输入+输出+缓存读+缓存写；每条成立 token＝token 合计 ÷ 成立数（千枚，成立数为 0 或缺 token 不排）；缓存命中率＝缓存读 ÷（输入+缓存读）。
 - 生成速度口径：每秒 token＝输出 token ÷ 耗时秒（按已评行汇总后相除），只算模型自己吐出来的输出；输入与缓存读是喂进去的、不算生成，推理 token 也不另加（各家输出是否已含思维输出不一致，加了会重复计）。
-- 服务商口径：**按服务商（不是按工具）拆**——同一模型走过多个服务商时分行，名字本体不变，网页里名字只留本体、服务商是旁边的独立徽标（写短名，悬停看全名）；Markdown、图表与数据包写全名「名称 厂商」（空格分隔）。缩写对照：Curso...＝Cursor、方舟 Ag...＝方舟 Agent Plan、方舟 Co...＝方舟 Coding Plan、Z.ai＝Z.ai、OpenCod...＝OpenCode Go、小米 To...＝小米 Token Plan、pi＝pi、Qoder＝Qoder CN、StepF...＝StepFun。服务商取自 models.json 的 providers 表（改一处全站生效）：pi 调用看登记的服务商，agent 工具一律 Cursor，zcode/opencode 分别归 Z.ai / OpenCode Go；同一家的不同写法（zai 与 zai-coding-cn）算一家。拆不拆看本期与上期的并集，保证跨周可比；单服务商的家不拆。
+- 服务商口径：**按服务商（不是按工具）拆**——同一模型走过多个服务商时分行，名字本体不变，网页里名字只留本体、服务商是旁边的独立徽标（写短名，悬停看全名）；Markdown、图表与数据包写全名「名称 厂商」（空格分隔）。缩写对照：Curso...＝Cursor、方舟 Ag...＝方舟 Agent Plan、方舟 Co...＝方舟 Coding Plan、Z.ai＝Z.ai、OpenCod...＝OpenCode Go、小米 To...＝小米 Token Plan、pi＝pi、Qoder＝Qoder CN、StepF...＝StepFun、Devin＝Devin。服务商取自 models.json 的 providers 表（改一处全站生效）：pi 调用看登记的服务商，agent 工具一律 Cursor，zcode/opencode 分别归 Z.ai / OpenCode Go；同一家的不同写法（zai 与 zai-coding-cn）算一家。拆不拆看本期与上期的并集，保证跨周可比；单服务商的家不拆。
 - 口径：失败（退出码≠0/超时）与未评行不计入对照、花费照计；模型名按别名表归一化（k3→K3、glm-5→GLM-5.3、grok-4→Grok 4.6 Extra High、gemini-3→Gemini 3.8 Flash、mimo-v2→MiMo V2.5 Pro、deepseek-v4-flash→DeepSeek V4 Flash、`(zcode)` 并主名）；含通道后缀的行按通道各自归集。
 - 本目录是一次生成的同批产物（report.md / data.json / summary.json / images；贴文 post.md 可选，重生成默认保留原有贴文），按 ISO 周归档（目录名即周号）；同一周再次生成会覆盖本目录，旧版在归档仓的 git 历史里。默认报上一个完整周，`--week current` 可出进行中的本周。
 

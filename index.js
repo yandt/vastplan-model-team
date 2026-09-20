@@ -1,7 +1,9 @@
 /* 归档入口页：筛选驱动的榜单。数据来自内嵌的 #board-data（模板/数据/渲染三层分离，
  * 与 report.js / trend.js 同源共享；改渲染不用重生成历史周报）。
  *
- * 筛选状态放 URL hash（#kind=…&week=…&metric=…&q=…），可分享、可回退。
+ * 综合分不预置：页面加载 `scoring.json` 与 `scoring.js`（与 Node 侧同一份引擎），
+ * 按所选「评分门槛」对全量行实时算分与切分；少于门槛的只进观察区、不排名。
+ * 筛选状态放 URL hash（#kind=…&week=…&metric=…&s=…&m=…），可分享、可回退。
  * 整份包在 IIFE 里：这些资产同处一个全局作用域，顶层重名（如 esc）会让后一个脚本整个中止（踩过）。 */
 (() => {
 "use strict";
@@ -9,7 +11,7 @@ const boardNode = document.getElementById("board-data");
 const tabs = document.getElementById("board-tabs");
 const weekSelect = document.getElementById("board-week");
 const metricSelect = document.getElementById("board-metric");
-const searchInput = document.getElementById("board-search");
+const minSessionsSelect = document.getElementById("board-min-sessions");
 const metaLine = document.getElementById("board-meta");
 const tableBox = document.getElementById("board-table");
 const noteLine = document.getElementById("board-note");
@@ -19,6 +21,15 @@ const modelsBox = document.getElementById("board-models");
 const modelsNote = document.getElementById("board-models-note");
 
 const board = boardNode ? JSON.parse(boardNode.textContent) : null;
+
+/** 打分规则：内嵌一份（生成时快照），再拉归档根 scoring.json——配置改了不必重生成周报。 */
+let SCORING = board?.scoring ?? null;
+if (board) {
+  fetch("scoring.json", { cache: "no-cache" })
+    .then((response) => (response.ok ? response.json() : null))
+    .then((config) => { if (config && Array.isArray(config.axes)) { SCORING = config; render(); } })
+    .catch(() => { /* 离线打开时用内嵌那份 */ });
+}
 
 function escHtml(value) {
   return String(value).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
@@ -77,14 +88,72 @@ function previousWeek(stamp) {
   return index > 0 ? weeks[index - 1] : "";
 }
 
+/** 评分门槛（hash 的 s）：默认取配置（scoring.json 的 min_sessions），可调 1～20。 */
+function minSessionsOf(current) {
+  const value = Number(current && current.s);
+  if (Number.isInteger(value) && value >= 1 && value <= 20) return value;
+  return Number(SCORING && SCORING.min_sessions) || 5;
+}
+
+/** 一期的全量行按门槛实时算分：达标行算综合分，未达标行进观察区。
+ *  没有 sessions/raw 的老期次退回生成时分数（原样返回，不重算）。 */
+function scoreWeek(current, stamp) {
+  const rows = kindOf(current)?.weeks?.[stamp]?.rows ?? [];
+  const minSessions = minSessionsOf(current);
+  const scores = new Map();
+  const engine = window.VastScoring;
+  const scorable = rows.filter((row) => Number.isFinite(row.sessions) && row.raw && row.raw.quality !== undefined);
+  if (!SCORING || !engine || !scorable.length) return { rows, eligible: rows, benched: [], scores };
+  const split = engine.splitByThreshold(scorable, minSessions);
+  for (const item of engine.compositeScores(split.eligible.map((row) => ({ key: entityKey(row), values: row.raw })), SCORING)) {
+    scores.set(item.key, item.score);
+  }
+  const eligible = [];
+  const benched = [];
+  for (const row of rows) {
+    if (Number.isFinite(row.sessions) && row.raw) (row.sessions >= minSessions ? eligible : benched).push(row);
+    else eligible.push(row);
+  }
+  return { rows, eligible, benched, scores };
+}
+
+const weekScoreCache = new Map();
+function scoresForWeek(current, stamp) {
+  const key = `${stamp}|${minSessionsOf(current)}|${current.kind}|${groupingOf(current)}`;
+  if (!weekScoreCache.has(key)) weekScoreCache.set(key, scoreWeek(current, stamp));
+  return weekScoreCache.get(key);
+}
+
+/** 把实时算出的综合分写回「综合」列（行是只读的，浅拷 cells）。 */
+function applyScores(rows, scores, metrics) {
+  const at = metrics.indexOf("综合");
+  if (at < 0 || !scores.size) return rows;
+  return rows.map((row) => {
+    const score = scores.get(entityKey(row));
+    if (!Number.isFinite(score)) return row;
+    const cells = row.cells.slice();
+    cells[at] = score.toFixed(1);
+    return { ...row, cells };
+  });
+}
+
+/** 同模型同指标的取值：综合列走实时算分，其余走生成时的单元格。 */
+function metricValue(current, row, index, stamp) {
+  if (current.metric === "综合" && SCORING && window.VastScoring) {
+    const value = scoresForWeek(current, stamp).scores.get(entityKey(row));
+    return Number.isFinite(value) ? value : Number.NEGATIVE_INFINITY;
+  }
+  const rows = kindOf(current)?.weeks?.[stamp]?.rows ?? [];
+  const match = stamp === current.week ? row : rows.find((item) => entityKey(item) === entityKey(row));
+  return match ? cellValue(match.cells[index]) : Number.NEGATIVE_INFINITY;
+}
+
 /** 变更列：同模型、同指标对上期的百分比变化。没有上期数据就是 —。 */
 function deltaCell(current, row, index) {
   const previous = previousWeek(current.week);
   if (!previous) return `<td class="num delta">—</td>`;
-  const rows = kindOf(current)?.weeks?.[previous]?.rows ?? [];
-  const match = rows.find((item) => entityKey(item) === entityKey(row));
-  const before = match ? cellValue(match.cells[index]) : Number.NEGATIVE_INFINITY;
-  const now = cellValue(row.cells[index]);
+  const before = metricValue(current, row, index, previous);
+  const now = metricValue(current, row, index, current.week);
   if (!Number.isFinite(before) || !Number.isFinite(now) || before === 0) return `<td class="num delta">—</td>`;
   const change = ((now - before) / Math.abs(before)) * 100;
   const better = change * metricDirection(current.metric) > 0;
@@ -104,7 +173,7 @@ function state() {
   const metric = metrics.includes(raw.get("metric")) ? raw.get("metric") : "综合";
   return {
     kind, week, g, metric: metrics.includes(metric) ? metric : metrics[0] ?? "",
-    q: raw.get("q") ?? "", m: raw.get("m") ?? "",
+    s: raw.get("s") ?? "", m: raw.get("m") ?? "",
   };
 }
 
@@ -122,20 +191,36 @@ function weekLabel(stamp) {
 }
 
 function rowsFor(current) {
-  const slice = kindOf(current)?.weeks?.[current.week];
-  const rows = slice?.rows ?? [];
+  const metrics = kindOf(current)?.metrics ?? [];
+  const week = scoresForWeek(current, current.week);
+  const minSessions = minSessionsOf(current);
+  const scored = applyScores(week.eligible, week.scores, metrics);
   const chosen = selectedModels(current);
-  const picked = chosen ? rows.filter((row) => chosen.has(entityKey(row))) : rows;
-  const needle = current.q.trim().toLowerCase();
-  const filtered = needle
-    ? picked.filter((row) => `${row.name} ${row.badge}`.toLowerCase().includes(needle))
-    : picked;
-  const index = (kindOf(current)?.metrics ?? []).indexOf(current.metric);
-  const sorted = [...filtered].sort((left, right) => {
+  const picked = chosen ? scored.filter((row) => chosen.has(entityKey(row))) : scored;
+  const index = metrics.indexOf(current.metric);
+  const sorted = [...picked].sort((left, right) => {
     const diff = cellValue(right.cells[index]) - cellValue(left.cells[index]);
     return diff !== 0 ? diff : String(left.name).localeCompare(String(right.name));
   });
-  return { rows: sorted, index, all: rows.length, note: slice?.note ?? "" };
+  const benched = chosen ? week.benched.filter((row) => chosen.has(entityKey(row))) : week.benched;
+  const fallbackNote = kindOf(current)?.weeks?.[current.week]?.note ?? "";
+  return {
+    rows: sorted, index, all: week.rows.length, benched, minSessions,
+    note: week.scores.size ? noteOf(week, benched, minSessions) : fallbackNote,
+  };
+}
+
+/** 榜单注记（与生成侧同口径，按当前门槛实时拼）：观察区名单 + 主力第一。 */
+function noteOf(week, benched, minSessions) {
+  const bits = [];
+  if (benched.length) bits.push(`样本 < ${minSessions} 场未进排名，见下方观察区（${benched.map(entityKey).join("、")}）`);
+  const ranked = week.eligible.filter((row) => Number.isFinite(week.scores.get(entityKey(row))));
+  if (ranked.length) {
+    const top = ranked.reduce((best, row) =>
+      (week.scores.get(entityKey(row)) > week.scores.get(entityKey(best)) ? row : best));
+    bits.push(`主力（≥${minSessions} 场）第一：${entityKey(top)}（综合 ${week.scores.get(entityKey(top)).toFixed(1)}）`);
+  }
+  return bits.join("；");
 }
 
 function renderTabs(current) {
@@ -209,10 +294,21 @@ function renderTable(current, data) {
       (row.badge ? `<span class="badge" title="${escHtml(row.badge)}">${escHtml(row.badge)}</span>` : "") + `</td>` +
       deltaCell(current, row, data.index) + cells + "</tr>";
   }).join("");
-  tableBox.innerHTML = data.rows.length
+  const observed = (data.benched ?? []).map((row) => {
+    const info = row.observed ?? {};
+    const quality = Number.isFinite(Number(info.quality)) ? Number(info.quality).toFixed(1) : "—";
+    const confirmed = Number.isFinite(Number(info.confirmed)) ? String(Math.round(Number(info.confirmed))) : "—";
+    const coverage = Number.isFinite(Number(info.coverage)) ? `${Math.round(Number(info.coverage) * 100)}%` : "—";
+    const badge = row.badge ? `<span class="badge" title="${escHtml(row.badge)}">${escHtml(row.badge)}</span>` : "";
+    return `<span>${escHtml(row.name)}${badge}（${row.sessions} 场，均质量 ${quality}，成立 ${confirmed} 条，覆盖 ${coverage}）</span>`;
+  }).join("");
+  const observedHtml = observed
+    ? `<div class="observed"><b>观察区（样本不足未排名）</b>${observed}</div>`
+    : "";
+  tableBox.innerHTML = (data.rows.length
     ? `<table><thead><tr><th class="rank" title="按当前指标的名次">#</th><th class="name">模型</th>` +
       `<th class="num" title="同模型同指标对上期的变化">变更</th>${head}</tr></thead><tbody>${body}</tbody></table>`
-    : '<p class="none">没有匹配的模型（换个搜索词或期次）。</p>';
+    : '<p class="none">没有达标模型（低于评分门槛的都进了观察区）。</p>') + observedHtml;
   noteLine.textContent = data.note;
 }
 
@@ -311,8 +407,10 @@ function renderModelTrend(current) {
   const scoreAt = metrics.indexOf("综合");
   const series = new Map();
   for (const [weekIndex, stamp] of weeks.entries()) {
-    for (const row of kindOf(current)?.weeks?.[stamp]?.rows ?? []) {
-      const value = cellValue(row.cells[scoreAt]);
+    const week = scoresForWeek(current, stamp);
+    for (const row of week.eligible) {
+      const live = week.scores.get(entityKey(row));
+      const value = Number.isFinite(live) ? live : cellValue(row.cells[scoreAt]);
       if (!Number.isFinite(value)) continue;
       const key = entityKey(row);
       const entry = series.get(key) ?? { name: key, tone: row.dot || "#8a857c", points: new Map() };
@@ -356,10 +454,14 @@ function renderTopModels(current) {
   if (!box) return;
   // 用「选中期」的行建 chips：跨周换过服务商的模型（如 K3 Cursor / K3 方舟 Agent Plan）
   // 实体名会变，若按最新一期建，过滤时会误删选中期里对不上的行。
-  const sliceRows = kindOf(current)?.weeks?.[current.week]?.rows ?? [];
+  const week = scoresForWeek(current, current.week);
   const scoreAt = (kindOf(current)?.metrics ?? []).indexOf("综合");
-  const available = [...sliceRows]
-    .sort((left, right) => cellValue(right.cells[scoreAt]) - cellValue(left.cells[scoreAt]))
+  const rowScore = (row) => {
+    const live = week.scores.get(entityKey(row));
+    return Number.isFinite(live) ? live : cellValue(row.cells[scoreAt]);
+  };
+  const available = [...week.rows]
+    .sort((left, right) => rowScore(right) - rowScore(left))
     .map((row) => ({ name: entityKey(row), tone: row.dot || "#8a857c" }));
   const chosen = selectedModels(current);
   box.replaceChildren();
@@ -513,11 +615,16 @@ function render() {
     (value) => { writeState({ ...current, week: value }, false); render(); }, weekLabel);
   renderSelect(metricSelect, kindOf(current)?.metrics ?? [], current.metric,
     (value) => { writeState({ ...current, metric: value }, false); render(); });
-  searchInput.value = current.q;
+  renderSelect(minSessionsSelect, ["1", "2", "3", "4", "5", "6", "8", "10", "15", "20"], String(minSessionsOf(current)),
+    (value) => {
+      const fallback = String(Number(SCORING && SCORING.min_sessions) || 5);
+      writeState({ ...current, s: value === fallback ? "" : value }, false);
+      render();
+    });
   const data = rowsFor(current);
-  const partial = (board.weeks ?? []).find((week) => week.stamp === current.week)?.partial ? "（进行中）" : "";
-  metaLine.textContent = `${current.kind} · ${weekLabel(current.week)}${partial} · ${data.all} 家` +
-    (data.rows.length !== data.all ? `（筛出 ${data.rows.length}）` : "");
+  const bench = (data.benched ?? []).length;
+  metaLine.textContent = `${current.kind} · ${weekLabel(current.week)} · ${data.all} 家` +
+    (bench ? `（达标 ${data.rows.length} · 观察 ${bench}）` : "");
   renderTable(current, data);
   renderChart(current, data);
   renderTopModels(current);
@@ -529,15 +636,6 @@ function render() {
 document.getElementById("readme-preview")?.addEventListener("click", () => void openMarkdown("README.md", "归档说明（README）"));
 
 if (board) {
-  searchInput.addEventListener("input", () => {
-    const next = { ...state(), q: searchInput.value };
-    writeState(next, true);
-    const data = rowsFor(next);
-    metaLine.textContent = `${next.kind} · ${weekLabel(next.week)} · ${data.all} 家` +
-      (data.rows.length !== data.all ? `（筛出 ${data.rows.length}）` : "");
-    renderTable(next, data);
-    renderChart(next, data);
-  });
   window.addEventListener("hashchange", render);
   window.addEventListener("resize", () => renderModelTrend(state()));
   render();
