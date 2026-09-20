@@ -216,8 +216,12 @@ function keepEntity(name, provider, models, mode) {
   return false;
 }
 
-/** 打分配置：入口页由 index_app 注入 window.VastScoringConfig；切图外壳读内联的 #scoring-config。 */
+/** 当前渲染的那期的规则快照（优先于全站配置）：历史周次按自己的版本算，规则改了不追溯改写。 */
+let viewScoring = null;
+
+/** 打分配置：优先当前期的快照；否则入口页注入的 window.VastScoringConfig；切图外壳读内联的 #scoring-config。 */
 function scoringConfig() {
+  if (viewScoring) return viewScoring;
   if (window.VastScoringConfig) return window.VastScoringConfig;
   const node = document.getElementById("scoring-config");
   if (!node) return null;
@@ -412,6 +416,7 @@ function groupToggle(view, mode) {
  *  （切图外壳走缺省，必须保留全部类型）。类型名对不上时退回全部：宁可多显示，不留空白。 */
 function reportHtml(view, options, mode) {
   window.__falseTone = view.false_pos_tone || "#d7c3b8";
+  viewScoring = view.scoring && Array.isArray(view.scoring.axes) ? view.scoring : null;
   const head = view.head;
   const wanted = options && options.kind;
   const picked = (wanted ? view.kinds.filter((block) => block.title === wanted) : view.kinds) || [];

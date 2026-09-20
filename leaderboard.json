@@ -16,7 +16,56 @@
         "weekly/2026-W37/images/2-audit-quality.png",
         "weekly/2026-W37/images/3-audit-cost.png",
         "weekly/2026-W37/images/4-design.png"
-      ]
+      ],
+      "scoring": {
+        "version": 1,
+        "min_sessions": 5,
+        "neutral_part": 50,
+        "axes": [
+          {
+            "key": "quality",
+            "label": "效果",
+            "desc": "均质量",
+            "weight": 0.41,
+            "invert": false
+          },
+          {
+            "key": "coverage",
+            "label": "覆盖",
+            "desc": "去重后重要性加权成立数 ÷ 所参与轮次全场去重合计（同名问题只算一次）",
+            "weight": 0.34,
+            "invert": false
+          },
+          {
+            "key": "unique_ratio",
+            "label": "独立",
+            "desc": "独有（重要性加权）/ 成立（重要性加权）",
+            "weight": 0.25,
+            "invert": false
+          },
+          {
+            "key": "duration",
+            "label": "时间",
+            "desc": "每次分钟，越快越好",
+            "weight": 0,
+            "invert": true
+          },
+          {
+            "key": "cost",
+            "label": "花费",
+            "desc": "每次花费，越省越好",
+            "weight": 0,
+            "invert": true
+          },
+          {
+            "key": "tokens_per_confirm",
+            "label": "token",
+            "desc": "每条成立 token，越省越好",
+            "weight": 0,
+            "invert": true
+          }
+        ]
+      }
     },
     {
       "stamp": "2026-W38",
@@ -34,7 +83,56 @@
         "weekly/2026-W38/images/2-audit-quality.png",
         "weekly/2026-W38/images/3-audit-cost.png",
         "weekly/2026-W38/images/4-design.png"
-      ]
+      ],
+      "scoring": {
+        "version": 1,
+        "min_sessions": 5,
+        "neutral_part": 50,
+        "axes": [
+          {
+            "key": "quality",
+            "label": "效果",
+            "desc": "均质量",
+            "weight": 0.41,
+            "invert": false
+          },
+          {
+            "key": "coverage",
+            "label": "覆盖",
+            "desc": "去重后重要性加权成立数 ÷ 所参与轮次全场去重合计（同名问题只算一次）",
+            "weight": 0.34,
+            "invert": false
+          },
+          {
+            "key": "unique_ratio",
+            "label": "独立",
+            "desc": "独有（重要性加权）/ 成立（重要性加权）",
+            "weight": 0.25,
+            "invert": false
+          },
+          {
+            "key": "duration",
+            "label": "时间",
+            "desc": "每次分钟，越快越好",
+            "weight": 0,
+            "invert": true
+          },
+          {
+            "key": "cost",
+            "label": "花费",
+            "desc": "每次花费，越省越好",
+            "weight": 0,
+            "invert": true
+          },
+          {
+            "key": "tokens_per_confirm",
+            "label": "token",
+            "desc": "每条成立 token，越省越好",
+            "weight": 0,
+            "invert": true
+          }
+        ]
+      }
     }
   ],
   "kinds": {
@@ -2190,6 +2288,7 @@
   },
   "alt_used": 0,
   "scoring": {
+    "version": 1,
     "min_sessions": 5,
     "neutral_part": 50,
     "axes": [

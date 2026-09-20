@@ -10,7 +10,7 @@
       "2026-08-31",
       "2026-09-07"
     ],
-    "generated_at": "2026-09-21 00:31",
+    "generated_at": "2026-09-21 01:10",
     "partial": false,
     "title": "模型团队周报 2026-W37（2026-09-07 → 2026-09-14）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 37 周（2026-W37）",
       "本窗 2026-09-07 → 2026-09-14（环比 2026-08-31 → 2026-09-07）",
-      "生成 2026-09-21 00:31"
+      "生成 2026-09-21 01:10"
     ]
   },
   "kpis": [
@@ -214,6 +214,55 @@
     ],
     "weights_line": "效果 41% ｜ 覆盖 34% ｜ 独立 25% ｜ 时间 0%↓ ｜ 花费 0%↓ ｜ token 0%↓",
     "note": "效果 41% ｜ 覆盖 34% ｜ 独立 25% ｜ 时间 0%↓ ｜ 花费 0%↓ ｜ token 0%↓；同一活动类型内每轴 min-max 归一到 0～100 后按权重相加，带 ↓ 的轴越低越好（归一后取反）；某项未采集到时按中位 50 记并在评论里标注；契合分与样本量只进评论，不进评分；效率分（成立重要性÷耗时）只作参考列。"
+  },
+  "scoring": {
+    "version": 1,
+    "min_sessions": 5,
+    "neutral_part": 50,
+    "axes": [
+      {
+        "key": "quality",
+        "label": "效果",
+        "desc": "均质量",
+        "weight": 0.41,
+        "invert": false
+      },
+      {
+        "key": "coverage",
+        "label": "覆盖",
+        "desc": "去重后重要性加权成立数 ÷ 所参与轮次全场去重合计（同名问题只算一次）",
+        "weight": 0.34,
+        "invert": false
+      },
+      {
+        "key": "unique_ratio",
+        "label": "独立",
+        "desc": "独有（重要性加权）/ 成立（重要性加权）",
+        "weight": 0.25,
+        "invert": false
+      },
+      {
+        "key": "duration",
+        "label": "时间",
+        "desc": "每次分钟，越快越好",
+        "weight": 0,
+        "invert": true
+      },
+      {
+        "key": "cost",
+        "label": "花费",
+        "desc": "每次花费，越省越好",
+        "weight": 0,
+        "invert": true
+      },
+      {
+        "key": "tokens_per_confirm",
+        "label": "token",
+        "desc": "每条成立 token，越省越好",
+        "weight": 0,
+        "invert": true
+      }
+    ]
   },
   "kinds": [
     {

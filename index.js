@@ -102,11 +102,19 @@ function previousWeek(stamp) {
   return index > 0 ? weeks[index - 1] : "";
 }
 
-/** 评分门槛（hash 的 s）：默认取配置（scoring.json 的 min_sessions），可调 1～20。 */
+/** 某一期的打分规则：优先用该期 data.json 的快照（历史冻结，规则改了不追溯改写），没有才退回当前配置。 */
+function configForWeek(current) {
+  const meta = (board?.weeks ?? []).find((week) => week.stamp === current.week);
+  if (meta && meta.scoring && Array.isArray(meta.scoring.axes)) return meta.scoring;
+  return SCORING;
+}
+
+/** 评分门槛（hash 的 s）：默认取该期配置的 min_sessions，可调 1～20。 */
 function minSessionsOf(current) {
   const value = Number(current && current.s);
   if (Number.isInteger(value) && value >= 1 && value <= 20) return value;
-  return Number(SCORING && SCORING.min_sessions) || 5;
+  const config = configForWeek(current);
+  return Number(config && config.min_sessions) || 5;
 }
 
 /** 一期的全量行按门槛实时算分：达标行算综合分，未达标行进观察区。
@@ -116,10 +124,11 @@ function scoreWeek(current, stamp) {
   const minSessions = minSessionsOf(current);
   const scores = new Map();
   const engine = window.VastScoring;
+  const config = configForWeek(current);
   const scorable = rows.filter((row) => Number.isFinite(row.sessions) && row.raw && row.raw.quality !== undefined);
-  if (!SCORING || !engine || !scorable.length) return { rows, eligible: rows, benched: [], scores };
+  if (!config || !engine || !scorable.length) return { rows, eligible: rows, benched: [], scores };
   const split = engine.splitByThreshold(scorable, minSessions);
-  for (const item of engine.compositeScores(split.eligible.map((row) => ({ key: entityKey(row), values: row.raw })), SCORING)) {
+  for (const item of engine.compositeScores(split.eligible.map((row) => ({ key: entityKey(row), values: row.raw })), config)) {
     scores.set(item.key, item.score);
   }
   const eligible = [];
@@ -133,7 +142,8 @@ function scoreWeek(current, stamp) {
 
 const weekScoreCache = new Map();
 function scoresForWeek(current, stamp) {
-  const key = `${stamp}|${minSessionsOf(current)}|${current.kind}|${groupingOf(current)}`;
+  const config = configForWeek(current);
+  const key = `${stamp}|${minSessionsOf(current)}|${current.kind}|${groupingOf(current)}|${config ? config.version : "?"}`;
   if (!weekScoreCache.has(key)) weekScoreCache.set(key, scoreWeek(current, stamp));
   return weekScoreCache.get(key);
 }
@@ -616,7 +626,8 @@ function describe(view, meta, kind) {
   const partial = meta.partial ? "（进行中）" : "";
   const total = view?.kinds?.length ?? 0;
   const scope = kind ? `当前显示「${kind}」· 本期共 ${total} 个活动类型` : `${total} 个活动类型`;
-  return `${window}${partial} · 生成 ${view?.week?.generated_at ?? "—"} · ${scope}`;
+  const rules = view?.scoring?.version ? ` · 规则 v${view.scoring.version}` : "";
+  return `${window}${partial} · 生成 ${view?.week?.generated_at ?? "—"} · ${scope}${rules}`;
 }
 
 function render() {
@@ -631,14 +642,16 @@ function render() {
     (value) => { writeState({ ...current, metric: value }, false); render(); });
   renderSelect(minSessionsSelect, ["1", "2", "3", "4", "5", "6", "8", "10", "15", "20"], String(minSessionsOf(current)),
     (value) => {
-      const fallback = String(Number(SCORING && SCORING.min_sessions) || 5);
+      const fallback = String(Number(configForWeek(current)?.min_sessions) || 5);
       writeState({ ...current, s: value === fallback ? "" : value }, false);
       render();
     });
   const data = rowsFor(current);
   const bench = (data.benched ?? []).length;
+  const config = configForWeek(current);
   metaLine.textContent = `${current.kind} · ${weekLabel(current.week)} · ${data.all} 家` +
-    (bench ? `（达标 ${data.rows.length} · 观察 ${bench}）` : "");
+    (bench ? `（达标 ${data.rows.length} · 观察 ${bench}）` : "") +
+    (config && config.version ? ` · 规则 v${config.version}` : "");
   renderTable(current, data);
   renderChart(current, data);
   renderTopModels(current);

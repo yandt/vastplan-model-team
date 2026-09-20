@@ -1,4 +1,5 @@
 {
+  "version": 1,
   "min_sessions": 5,
   "neutral_part": 50,
   "axes": [
