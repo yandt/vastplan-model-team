@@ -216,6 +216,90 @@ function keepEntity(name, provider, models, mode) {
   return false;
 }
 
+/** 打分配置：入口页由 index_app 注入 window.VastScoringConfig；切图外壳读内联的 #scoring-config。 */
+function scoringConfig() {
+  if (window.VastScoringConfig) return window.VastScoringConfig;
+  const node = document.getElementById("scoring-config");
+  if (!node) return null;
+  try {
+    window.VastScoringConfig = JSON.parse(node.textContent);
+  } catch {
+    return null;
+  }
+  return window.VastScoringConfig;
+}
+
+/** 当前评分门槛：详情用入口页传进来的值；切图外壳按配置默认值。 */
+function minSessionsOf(options) {
+  const value = Number(options && options.minSessions);
+  if (Number.isInteger(value) && value >= 1) return value;
+  const config = scoringConfig();
+  return Number(config && config.min_sessions) || 5;
+}
+
+/** 实体键（与生成侧一致）：名称@厂商。 */
+function entityOfRow(row) {
+  const badge = row && row.badge && typeof row.badge === "object"
+    ? row.badge.title ?? row.badge.text ?? ""
+    : row && row.badge;
+  return badge ? `${row.name}@${badge}` : String((row && row.name) ?? "");
+}
+
+/** 评审行的实体键：rank 里只有本体名，厂商在徽标里（与生成侧的内部键 名称@厂商 对齐）。 */
+function commentKey(row) {
+  const base = String(row.rank).replace(/^#\d+\s*/, "").trim();
+  const provider = row.badge && typeof row.badge === "object" ? row.badge.title ?? row.badge.text ?? "" : "";
+  return provider ? `${base}@${provider}` : base;
+}
+
+/** 当前门槛下的达标实体集；没有原始行/引擎/配置时给 null（退回生成时资格）。 */
+function eligibleSetOf(kind, minSessions) {
+  const rows = Array.isArray(kind && kind.all_rows) ? kind.all_rows : null;
+  const engine = window.VastScoring;
+  const config = scoringConfig();
+  if (!rows || !engine || !config) return null;
+  const scorable = rows.filter((row) => Number.isFinite(row.sessions) && row.raw);
+  return new Set(engine.splitByThreshold(scorable, minSessions).eligible.map(entityOfRow));
+}
+
+/** 按当前门槛重建一张面板：只留达标行，重排名次、重算条宽；空面板返回 null（整块去掉）。
+ *  老数据（行里没有 model）原样返回，不重建。 */
+function rebuildPanel(panel, eligibleSet) {
+  if (!panel || !panel.rows || !panel.rows.length || !eligibleSet) return panel;
+  if (!panel.rows.some((row) => row.model)) return panel;
+  const rows = panel.rows.filter((row) => (row.model ? eligibleSet.has(row.model) : true));
+  if (!rows.length) return null;
+  const ascending = Boolean(panel.ascending);
+  const sorted = [...rows].sort((left, right) => {
+    const diff = Number(right.now ?? 0) - Number(left.now ?? 0);
+    return (ascending ? -diff : diff) || String(left.model).localeCompare(String(right.model));
+  });
+  const peak = Math.max(...rows.flatMap((row) => [Number(row.now ?? 0), Number(row.was ?? 0)]), 1e-9) || 1;
+  const pct = (value) => Math.max(0, Math.min(100, (Number(value ?? 0) / peak) * 100));
+  return { ...panel, rows: sorted.map((row, index) => ({
+    ...row,
+    label: `#${index + 1} ${row.base ?? row.model}`,
+    now_pct: pct(row.now),
+    was_pct: pct(row.was),
+    ...(row.unique_now !== undefined ? { unique_pct: pct(row.unique_now) } : {}),
+    ...(row.bad_now !== undefined ? { bad_pct: pct(row.bad_now) } : {}),
+  })) };
+}
+
+/** 当前门槛下的观察区行（数字与主表同源）；老数据退回生成时的 observed。 */
+function observedRowsOf(kind, eligibleSet) {
+  const rows = Array.isArray(kind && kind.all_rows) ? kind.all_rows : null;
+  if (!rows || !eligibleSet) return (kind && kind.observed) || [];
+  return rows
+    .filter((row) => !eligibleSet.has(entityOfRow(row)))
+    .map((row) => ({
+      name: entityOfRow(row), sessions: row.sessions,
+      quality: row.observed ? row.observed.quality : 0,
+      confirmed: row.observed ? row.observed.confirmed : 0,
+      coverage: row.observed ? row.observed.coverage : 0,
+    }));
+}
+
 /** 一个活动类型的小节。目录页按类型看时（options.kind）不再重复放模型榜单表——
  *  页面上方「榜单」表就是同一份数据且可切指标/搜索/看变更，这里只留图表与优缺点评审。
  *  options.models 非空时只留这些模型的表格行、面板行与评审行（筛空的面板整块去掉）。
@@ -233,21 +317,44 @@ function kindBlock(kind, options) {
   };
   const table = models
     ? { ...kind.table, rows: (kind.table?.rows ?? []).filter((row) => keep(row.name, row.badge)) }
-    : kind.table;  const groups = kind.panels
+    : kind.table;
+  // 图表与评审按当前评分门槛重建：少于门槛的模型不进图表、不进评审；空面板整块去掉。
+  const minSessions = minSessionsOf(options);
+  const eligibleSet = eligibleSetOf(kind, minSessions);
+  const groups = kind.panels
     .map((group) => group
-      .map((panel) => (panel.rows ? { ...panel, rows: panel.rows.filter((row) => keep(row.label, row.badge)) } : panel))
-      .filter((panel) => !panel.rows || panel.rows.length > 0))
+      .map((panel) => {
+        const rebuilt = rebuildPanel(panel, eligibleSet);
+        if (!rebuilt) return null;
+        if (!rebuilt.rows) return rebuilt;
+        const rows = rebuilt.rows.filter((row) => keep(row.label, row.badge));
+        return rows.length ? { ...rebuilt, rows } : null;
+      })
+      .filter(Boolean))
     .filter((group) => group.length > 0);
-  const commentsBlock = models && kind.comments
-    ? { ...kind.comments, rows: (kind.comments.rows ?? []).filter((row) => keep(row.rank, row.badge)) }
+  const commentsBlock = kind.comments
+    ? {
+      ...kind.comments,
+      rows: (kind.comments.rows ?? []).filter((row) => {
+        const key = commentKey(row);
+        if (eligibleSet && !eligibleSet.has(key)) return false;
+        return models ? keep(row.rank, row.badge) : true;
+      }),
+    }
     : kind.comments;
+  // 评审文案在生成时只给达标模型写：门槛调低后刚达标的模型没有评审，给一行说明（不静默缺）
+  const commented = new Set((commentsBlock?.rows ?? []).map(commentKey));
+  const missingComments = eligibleSet ? [...eligibleSet].filter((key) => !commented.has(key)) : [];
+  const missingNote = missingComments.length ? missingCommentNote(kind, missingComments) : "";
   const skip = scoped
-    ? '<p class="note">模型榜单见页面上方「榜单」表（可切指标、搜索模型、看对上期变更）；本节只保留图表与优缺点评审。</p>'
+    ? '<p class="note">模型榜单见页面上方「榜单」表（可切指标、筛选模型、看对上期变更）；本节只保留图表与优缺点评审。</p>'
     : "";
+  // 观察区按当前门槛实时取（与榜单同一套）：少于门槛的模型列数字、不排名；老数据退回生成时名单
+  const observedRows = observedRowsOf(kind, eligibleSet);
   // scoped 详情不渲染主表（也没有观察区容器）：观察区在这里单独补一段，同样跟随模型筛选；
   // 非 scoped（独立页/切图）走主表容器里的那段，两边不会重复出现
   const scopedObserved = scoped
-    ? observedBlock((kind.observed ?? []).filter((row) => {
+    ? observedBlock(observedRows.filter((row) => {
       const at = String(row.name).indexOf("@");
       return keepEntity(at < 0 ? row.name : row.name.slice(0, at), at < 0 ? "" : row.name.slice(at + 1),
         models, options.mode);
@@ -256,11 +363,24 @@ function kindBlock(kind, options) {
   return (
     `<h2>${esc(kind.title)}<span>${esc(kind.meta)}</span></h2>` +
     skip +
-    (scoped ? "" : modelTable(table, kind.observed)) +
+    (scoped ? "" : modelTable(table, observedRows)) +
     panels(groups) +
     comments(commentsBlock, options) +
+    missingNote +
     scopedObserved
   );
+}
+
+/** 刚达标但生成时没有评审文案的模型：列出名字（带厂商徽标），说明评审按生成门槛计算。 */
+function missingCommentNote(kind, missing) {
+  const rows = (kind.all_rows ?? []).filter((row) => missing.includes(entityOfRow(row)));
+  const names = rows.map((row) => {
+    const badgeHtml = row.badge
+      ? `<span class="badge" title="${esc(row.badge.title ?? "")}">${esc(row.badge.text ?? "")}</span>`
+      : "";
+    return `${esc(row.name)}${badgeHtml}`;
+  }).join("、");
+  return `<p class="note">另有 ${missing.length} 家刚达标（${names}）：优缺点评审按生成门槛计算，暂未生成。</p>`;
 }
 
 function debtBlock(debt) {

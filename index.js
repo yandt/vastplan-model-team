@@ -22,12 +22,26 @@ const modelsNote = document.getElementById("board-models-note");
 
 const board = boardNode ? JSON.parse(boardNode.textContent) : null;
 
-/** 打分规则：内嵌一份（生成时快照），再拉归档根 scoring.json——配置改了不必重生成周报。 */
-let SCORING = board?.scoring ?? null;
+/** 打分规则：内嵌一份（生成时快照），再拉归档根 scoring.json——配置改了不必重生成周报。
+ *  详情渲染器（report.js）读同一份：挂到 window 上给它用。 */
+const configNode = document.getElementById("scoring-config");
+let SCORING = null;
+try {
+  SCORING = configNode ? JSON.parse(configNode.textContent) : board?.scoring ?? null;
+} catch {
+  SCORING = board?.scoring ?? null;
+}
+window.VastScoringConfig = SCORING;
 if (board) {
   fetch("scoring.json", { cache: "no-cache" })
     .then((response) => (response.ok ? response.json() : null))
-    .then((config) => { if (config && Array.isArray(config.axes)) { SCORING = config; render(); } })
+    .then((config) => {
+      if (config && Array.isArray(config.axes)) {
+        SCORING = config;
+        window.VastScoringConfig = config;
+        render();
+      }
+    })
     .catch(() => { /* 离线打开时用内嵌那份 */ });
 }
 
@@ -527,7 +541,7 @@ async function renderDetail(current) {
   if (detailCache.has(current.week)) {
     const view = detailCache.get(current.week);
     info.textContent = describe(view, meta, current.kind);
-    window.renderReportInto(box, view, { kind: current.kind, models: chosen, grouping });
+    window.renderReportInto(box, view, { kind: current.kind, models: chosen, grouping, minSessions: minSessionsOf(current) });
     return;
   }
   info.textContent = "载入中…";
@@ -539,7 +553,7 @@ async function renderDetail(current) {
     const view = await response.json();
     detailCache.set(current.week, view);
     info.textContent = describe(view, meta, current.kind);
-    window.renderReportInto(box, view, { kind: current.kind, models: chosen, grouping });
+    window.renderReportInto(box, view, { kind: current.kind, models: chosen, grouping, minSessions: minSessionsOf(current) });
   } catch (error) {
     info.textContent = `读不到本期数据（${error && error.message ? error.message : error}）。` +
       "本地直接双击打开时浏览器会拦 fetch，用 http 打开或在线上看。";
