@@ -10,7 +10,7 @@
       "2026-09-07",
       "2026-09-14"
     ],
-    "generated_at": "2026-09-21 01:10",
+    "generated_at": "2026-09-21 01:40",
     "partial": true,
     "title": "模型团队周报 2026-W38（2026-09-14 → 2026-09-21）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 38 周（进行中）（2026-W38）",
       "本窗 2026-09-14 → 2026-09-21（环比 2026-09-07 → 2026-09-14）",
-      "生成 2026-09-21 01:10"
+      "生成 2026-09-21 01:40"
     ]
   },
   "kpis": [
@@ -151,7 +151,7 @@
       "badge": null
     },
     {
-      "name": "K3",
+      "name": "Kimi K3",
       "tone": "#6b5b95",
       "badge": {
         "text": "Curso...",
@@ -159,7 +159,7 @@
       }
     },
     {
-      "name": "K3",
+      "name": "Kimi K3",
       "tone": "#6b5b95",
       "badge": {
         "text": "方舟 Ag...",
@@ -546,7 +546,7 @@
           },
           {
             "rank": "6",
-            "name": "K3",
+            "name": "Kimi K3",
             "dot": "#6b5b95",
             "badge": {
               "text": "Curso...",
@@ -592,7 +592,7 @@
           },
           {
             "rank": "7",
-            "name": "K3",
+            "name": "Kimi K3",
             "dot": "#6b5b95",
             "badge": {
               "text": "方舟 Ag...",
@@ -1125,7 +1125,7 @@
         },
         {
           "rank": "6",
-          "name": "K3",
+          "name": "Kimi K3",
           "dot": "#6b5b95",
           "badge": {
             "text": "Curso...",
@@ -1185,7 +1185,7 @@
         },
         {
           "rank": "7",
-          "name": "K3",
+          "name": "Kimi K3",
           "dot": "#6b5b95",
           "badge": {
             "text": "方舟 Ag...",
@@ -1751,7 +1751,7 @@
                 "eligible": true
               },
               {
-                "label": "#7 K3",
+                "label": "#7 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -1764,8 +1764,8 @@
                   "text": "-2.1",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 5.285714285714286,
                 "was": 7.357142857142857,
                 "eligible": true
@@ -1805,7 +1805,7 @@
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -1818,8 +1818,8 @@
                   "text": "-1.4",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 4.48936170212766,
                 "was": 5.862068965517241,
                 "eligible": true
@@ -1985,7 +1985,7 @@
                 "eligible": true
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -1998,14 +1998,14 @@
                   "text": "-4%",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 0.8,
                 "was": 0.8387096774193549,
                 "eligible": true
               },
               {
-                "label": "#7 K3",
+                "label": "#7 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -2018,8 +2018,8 @@
                   "text": "-3%",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.788235294117647,
                 "was": 0.8166666666666667,
                 "eligible": true
@@ -2170,7 +2170,7 @@
                 "eligible": true
               },
               {
-                "label": "#2 K3",
+                "label": "#2 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -2183,8 +2183,8 @@
                   "text": "-0.24",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 1.0171428571428571,
                 "was": 1.2550000000000001,
                 "eligible": true
@@ -2309,7 +2309,7 @@
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -2322,8 +2322,8 @@
                   "text": "-0.09",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.6414893617021279,
                 "was": 0.7293103448275862,
                 "eligible": true
@@ -2437,7 +2437,7 @@
                 "other_was": 0.14665115086185448
               },
               {
-                "label": "#2 K3",
+                "label": "#2 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -2450,8 +2450,8 @@
                   "text": "-2%",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 0.2584708088829839,
                 "was": 0.2800169799071099,
                 "eligible": true,
@@ -2638,7 +2638,7 @@
                 "other_was": 0
               },
               {
-                "label": "#8 K3",
+                "label": "#8 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -2651,8 +2651,8 @@
                   "text": "-7%",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.2005489742674353,
                 "was": 0.2666764803226576,
                 "eligible": true,
@@ -3017,7 +3017,7 @@
                 "eligible": true
               },
               {
-                "label": "#9 K3",
+                "label": "#9 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -3030,14 +3030,14 @@
                   "text": "-$15.81",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.5022655531914894,
                 "was": 16.3136,
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -3050,8 +3050,8 @@
                   "text": "-$12.22",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 0.8431731428571428,
                 "was": 13.066612,
                 "eligible": true
@@ -3240,7 +3240,7 @@
                 "eligible": true
               },
               {
-                "label": "#9 K3",
+                "label": "#9 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -3253,14 +3253,14 @@
                   "text": "-$15.96",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.35233553731343287,
                 "was": 16.3136,
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -3273,8 +3273,8 @@
                   "text": "-$12.57",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 0.491851,
                 "was": 13.066612,
                 "eligible": true
@@ -3363,7 +3363,7 @@
                 "eligible": true
               },
               {
-                "label": "#3 K3",
+                "label": "#3 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -3376,8 +3376,8 @@
                   "text": "+1.3",
                   "cls": "up"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 5.93095238095238,
                 "was": 4.64404761904762,
                 "eligible": true
@@ -3417,7 +3417,7 @@
                 "eligible": true
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -3430,8 +3430,8 @@
                   "text": "-0.9",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 7.6879432624113475,
                 "was": 8.558045977011494,
                 "eligible": true
@@ -3682,7 +3682,7 @@
                 "eligible": true
               },
               {
-                "label": "#7 K3",
+                "label": "#7 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -3695,8 +3695,8 @@
                   "text": "-15.1",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 53.121236451224405,
                 "was": 68.26377851832864,
                 "eligible": true
@@ -3770,7 +3770,7 @@
                 "eligible": true
               },
               {
-                "label": "#12 K3",
+                "label": "#12 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -3783,8 +3783,8 @@
                   "text": "-1.1",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 25.2799815498155,
                 "was": 26.34416761802431,
                 "eligible": true
@@ -3850,7 +3850,7 @@
                 "eligible": true
               },
               {
-                "label": "#3 K3",
+                "label": "#3 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -3863,14 +3863,14 @@
                   "text": "+27.4",
                   "cls": "up"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 469.57167164179106,
                 "was": 442.21395918367347,
                 "eligible": true
               },
               {
-                "label": "#4 K3",
+                "label": "#4 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -3883,8 +3883,8 @@
                   "text": "-16.8",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 704.9794166666667,
                 "was": 721.7381153846154,
                 "eligible": true
@@ -4135,7 +4135,7 @@
                 "eligible": true
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -4148,14 +4148,14 @@
                   "text": "+1%",
                   "cls": "up"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 0.9368837533029406,
                 "was": 0.9294754594517921,
                 "eligible": true
               },
               {
-                "label": "#7 K3",
+                "label": "#7 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -4168,8 +4168,8 @@
                   "text": "-0%",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.9267787981534897,
                 "was": 0.9295617876750789,
                 "eligible": true
@@ -4383,7 +4383,7 @@
                 "eligible": true
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -4394,8 +4394,8 @@
                 "value": "1.71",
                 "bad_pct": 10.7,
                 "bad_text": "0.43",
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 1.7142857142857142,
                 "was": 0,
                 "bad_now": 0.42857142857142855,
@@ -4450,7 +4450,7 @@
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -4461,8 +4461,8 @@
                 "value": "1.43",
                 "bad_pct": 9.6,
                 "bad_text": "0.38",
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 1.425531914893617,
                 "was": 0,
                 "bad_now": 0.3829787234042553,
@@ -4639,7 +4639,7 @@
             "cons": "每条成立最贵（$0.94）"
           },
           {
-            "rank": "#6 K3",
+            "rank": "#6 Kimi K3",
             "badge": {
               "text": "Curso...",
               "title": "Cursor"
@@ -4649,7 +4649,7 @@
             "cons": "独立相对最弱（独有占比 25%）"
           },
           {
-            "rank": "#7 K3",
+            "rank": "#7 Kimi K3",
             "badge": {
               "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
@@ -4735,7 +4735,7 @@
         "rows": [
           {
             "rank": "1",
-            "name": "K3",
+            "name": "Kimi K3",
             "dot": "#6b5b95",
             "badge": {
               "text": "方舟 Ag...",
@@ -5210,7 +5210,7 @@
             ]
           }
         ],
-        "note": "样本 < 5 场未进排名，见下方观察区（Gemini 3.8 Flash、K3 Cursor、Step 5 Preview、SWE-2）；主力（≥5 场）第一：K3 方舟 Agent Plan（综合 83.5）"
+        "note": "样本 < 5 场未进排名，见下方观察区（Gemini 3.8 Flash、Kimi K3 Cursor、Step 5 Preview、SWE-2）；主力（≥5 场）第一：Kimi K3 方舟 Agent Plan（综合 83.5）"
       },
       "observed": [
         {
@@ -5222,7 +5222,7 @@
           "coverage": 0.3247318222657062
         },
         {
-          "name": "K3@Cursor",
+          "name": "Kimi K3@Cursor",
           "sessions": 3,
           "thinking": "max",
           "quality": 23.333333333333332,
@@ -5249,7 +5249,7 @@
       "all_rows": [
         {
           "rank": "1",
-          "name": "K3",
+          "name": "Kimi K3",
           "dot": "#6b5b95",
           "badge": {
             "text": "方舟 Ag...",
@@ -5936,7 +5936,7 @@
         },
         {
           "rank": "",
-          "name": "K3",
+          "name": "Kimi K3",
           "dot": "#6b5b95",
           "badge": {
             "text": "Curso...",
@@ -6115,7 +6115,7 @@
             "title": "产出 · 平均质量分 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -6128,14 +6128,14 @@
                   "text": "-2.3",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 23.333333333333332,
                 "was": 25.666666666666668,
                 "eligible": false
               },
               {
-                "label": "#2 K3",
+                "label": "#2 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -6148,8 +6148,8 @@
                   "text": "-3.8",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 20.166666666666668,
                 "was": 23.944444444444443,
                 "eligible": true
@@ -6400,7 +6400,7 @@
                 "eligible": false
               },
               {
-                "label": "#2 K3",
+                "label": "#2 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -6413,8 +6413,8 @@
                   "text": "+5%",
                   "cls": "up"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 1,
                 "was": 0.95,
                 "eligible": false
@@ -6607,7 +6607,7 @@
                 "eligible": true
               },
               {
-                "label": "#14 K3",
+                "label": "#14 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -6620,8 +6620,8 @@
                   "text": "-5%",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.9292929292929293,
                 "was": 0.9821428571428571,
                 "eligible": true
@@ -6687,7 +6687,7 @@
                 "eligible": true
               },
               {
-                "label": "#3 K3",
+                "label": "#3 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -6700,8 +6700,8 @@
                   "text": "+2.67",
                   "cls": "up"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 9.776666666666666,
                 "was": 7.105,
                 "eligible": false
@@ -6741,7 +6741,7 @@
                 "eligible": false
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -6754,8 +6754,8 @@
                   "text": "-2.41",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 7.720833333333333,
                 "was": 10.133333333333333,
                 "eligible": true
@@ -6921,7 +6921,7 @@
             "title": "覆盖 · 重要性加权占参与轮次 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -6934,8 +6934,8 @@
                   "text": "-9%",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.36008239193226144,
                 "was": 0.4475397501701756,
                 "eligible": true,
@@ -7023,7 +7023,7 @@
                 "other_was": 0.2283372767226101
               },
               {
-                "label": "#4 K3",
+                "label": "#4 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -7036,8 +7036,8 @@
                   "text": "-15%",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 0.27932144653326135,
                 "was": 0.4263503049504389,
                 "eligible": false,
@@ -7584,7 +7584,7 @@
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -7597,14 +7597,14 @@
                   "text": "-$1.19",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.0908916111111111,
                 "was": 1.285281,
                 "eligible": true
               },
               {
-                "label": "#11 K3",
+                "label": "#11 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -7617,8 +7617,8 @@
                   "text": "-$0.77",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 0.11969999999999999,
                 "was": 0.8878339999999999,
                 "eligible": false
@@ -7824,7 +7824,7 @@
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -7837,14 +7837,14 @@
                   "text": "-$1.25",
                   "cls": "down"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.03556628260869565,
                 "was": 1.285281,
                 "eligible": true
               },
               {
-                "label": "#11 K3",
+                "label": "#11 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -7857,8 +7857,8 @@
                   "text": "-$0.85",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 0.0399,
                 "was": 0.8878339999999999,
                 "eligible": false
@@ -7998,7 +7998,7 @@
                 "eligible": true
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -8011,8 +8011,8 @@
                   "text": "-0.7",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 1.2611111111111113,
                 "was": 1.9416666666666667,
                 "eligible": false
@@ -8086,7 +8086,7 @@
                 "eligible": false
               },
               {
-                "label": "#11 K3",
+                "label": "#11 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -8099,8 +8099,8 @@
                   "text": "+0.6",
                   "cls": "up"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 1.8824074074074073,
                 "was": 1.3148148148148147,
                 "eligible": true
@@ -8266,7 +8266,7 @@
                 "eligible": false
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -8279,8 +8279,8 @@
                   "text": "+2.5",
                   "cls": "up"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 54.47136563876652,
                 "was": 51.96280400572246,
                 "eligible": false
@@ -8405,7 +8405,7 @@
                 "eligible": false
               },
               {
-                "label": "#14 K3",
+                "label": "#14 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -8418,8 +8418,8 @@
                   "text": "+1.1",
                   "cls": "up"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 28.827840629611412,
                 "was": 27.772535211267606,
                 "eligible": true
@@ -8451,7 +8451,7 @@
                 "eligible": false
               },
               {
-                "label": "#2 K3",
+                "label": "#2 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -8464,14 +8464,14 @@
                   "text": "+4.7",
                   "cls": "up"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 9.606608695652174,
                 "was": 4.921436363636364,
                 "eligible": true
               },
               {
-                "label": "#3 K3",
+                "label": "#3 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -8484,8 +8484,8 @@
                   "text": "-3.5",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 10.26088888888889,
                 "was": 13.736315789473686,
                 "eligible": false
@@ -8787,7 +8787,7 @@
                 "eligible": true
               },
               {
-                "label": "#7 K3",
+                "label": "#7 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -8800,8 +8800,8 @@
                   "text": "+38%",
                   "cls": "up"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.3796951189286637,
                 "was": 0,
                 "eligible": true
@@ -8841,7 +8841,7 @@
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -8854,8 +8854,8 @@
                   "text": "-24%",
                   "cls": "down"
                 },
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 0.30711526199317357,
                 "was": 0.5456584827389749,
                 "eligible": false
@@ -8955,7 +8955,7 @@
             "title": "成立密度 · 每次（越多越好） · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": {
                   "text": "Curso...",
                   "title": "Cursor"
@@ -8966,15 +8966,15 @@
                 "value": "3.00",
                 "bad_pct": 0,
                 "bad_text": "0.00",
-                "model": "K3@Cursor",
-                "base": "K3",
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
                 "now": 3,
                 "was": 0,
                 "bad_now": 0,
                 "eligible": false
               },
               {
-                "label": "#2 K3",
+                "label": "#2 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -8985,8 +8985,8 @@
                 "value": "2.56",
                 "bad_pct": 6.5,
                 "bad_text": "0.19",
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 2.5555555555555554,
                 "was": 0,
                 "bad_now": 0.19444444444444445,
@@ -9272,7 +9272,7 @@
         ],
         "rows": [
           {
-            "rank": "#1 K3",
+            "rank": "#1 Kimi K3",
             "badge": {
               "text": "方舟 Ag...",
               "title": "方舟 Agent Plan"
@@ -9398,7 +9398,7 @@
           }
         ],
         "rows": [],
-        "note": "样本 < 5 场未进排名，见下方观察区（DeepSeek V4.1 Flash（high）、DeepSeek V4.1 Flash（max）、Fable 5.1、GLM-5.3、GLM-5.3-Flash、Grok 4.6 Extra High、K3 方舟 Agent Plan、MiMo V2.5 Pro、Muse Spark 1.3 Contributor）"
+        "note": "样本 < 5 场未进排名，见下方观察区（DeepSeek V4.1 Flash（high）、DeepSeek V4.1 Flash（max）、Fable 5.1、GLM-5.3、GLM-5.3-Flash、Grok 4.6 Extra High、Kimi K3 方舟 Agent Plan、MiMo V2.5 Pro、Muse Spark 1.3 Contributor）"
       },
       "observed": [
         {
@@ -9450,7 +9450,7 @@
           "coverage": 0.18178353295410155
         },
         {
-          "name": "K3@方舟 Agent Plan",
+          "name": "Kimi K3@方舟 Agent Plan",
           "sessions": 1,
           "thinking": "max",
           "quality": 36,
@@ -9477,7 +9477,7 @@
       "all_rows": [
         {
           "rank": "",
-          "name": "K3",
+          "name": "Kimi K3",
           "dot": "#6b5b95",
           "badge": {
             "text": "方舟 Ag...",
@@ -9998,7 +9998,7 @@
             "title": "产出 · 平均质量分 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -10011,8 +10011,8 @@
                   "text": "+0.0",
                   "cls": "flat"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 36,
                 "was": 36,
                 "eligible": false
@@ -10161,7 +10161,7 @@
             "title": "精准 · 准确率 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -10174,8 +10174,8 @@
                   "text": "+0%",
                   "cls": "flat"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 1,
                 "was": 1,
                 "eligible": false
@@ -10326,7 +10326,7 @@
             "title": "性价比 · 效率分 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -10339,8 +10339,8 @@
                   "text": "+0.00",
                   "cls": "flat"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 15.33,
                 "was": 15.33,
                 "eligible": false
@@ -10489,7 +10489,7 @@
             "title": "覆盖 · 重要性加权占参与轮次 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -10502,8 +10502,8 @@
                   "text": "+0%",
                   "cls": "flat"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.21136933177066958,
                 "was": 0.21136933177066958,
                 "eligible": false,
@@ -10900,7 +10900,7 @@
                 "eligible": false
               },
               {
-                "label": "#7 K3",
+                "label": "#7 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -10913,8 +10913,8 @@
                   "text": "+$0.08",
                   "cls": "up"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.080784,
                 "was": 0,
                 "eligible": false
@@ -11029,7 +11029,7 @@
                 "eligible": false
               },
               {
-                "label": "#5 K3",
+                "label": "#5 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -11042,8 +11042,8 @@
                   "text": "+$0.02",
                   "cls": "up"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0.0161568,
                 "was": 0,
                 "eligible": false
@@ -11160,7 +11160,7 @@
                 "eligible": false
               },
               {
-                "label": "#4 K3",
+                "label": "#4 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -11173,8 +11173,8 @@
                   "text": "+0.0",
                   "cls": "flat"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 1.5,
                 "was": 1.5,
                 "eligible": false
@@ -11408,7 +11408,7 @@
                 "eligible": false
               },
               {
-                "label": "#9 K3",
+                "label": "#9 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -11421,8 +11421,8 @@
                   "text": "+0.0",
                   "cls": "flat"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 29.877777777777776,
                 "was": 29.877777777777776,
                 "eligible": false
@@ -11437,7 +11437,7 @@
             "title": "Token · 每条成立千枚 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -11450,8 +11450,8 @@
                   "text": "+0.0",
                   "cls": "flat"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 3.2344,
                 "was": 3.2344,
                 "eligible": false
@@ -11702,7 +11702,7 @@
                 "eligible": false
               },
               {
-                "label": "#8 K3",
+                "label": "#8 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -11715,8 +11715,8 @@
                   "text": "+0%",
                   "cls": "flat"
                 },
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 0,
                 "was": 0,
                 "eligible": false
@@ -11748,7 +11748,7 @@
             "title": "成立密度 · 每次（越多越好） · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -11759,8 +11759,8 @@
                 "value": "5.00",
                 "bad_pct": 0,
                 "bad_text": "0.00",
-                "model": "K3@方舟 Agent Plan",
-                "base": "K3",
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 5,
                 "was": 0,
                 "bad_now": 0,
@@ -12053,7 +12053,7 @@
     "时间与 token 口径：执行时间＝该模型已评行耗时合计 ÷ 已评运行次数（分钟，未评与失败行没有耗时数据）；token＝输入+输出+缓存读+缓存写；每条成立 token＝token 合计 ÷ 成立数（千枚，成立数为 0 或缺 token 不排）；缓存命中率＝缓存读 ÷（输入+缓存读）。",
     "生成速度口径：每秒 token＝输出 token ÷ 耗时秒（按已评行汇总后相除），只算模型自己吐出来的输出；输入与缓存读是喂进去的、不算生成，推理 token 也不另加（各家输出是否已含思维输出不一致，加了会重复计）。",
     "服务商口径：**按服务商（不是按工具）拆**——同一模型走过多个服务商时分行，名字本体不变，网页里名字只留本体、服务商是旁边的独立徽标（写短名，悬停看全名）；Markdown、图表与数据包写全名「名称 厂商」（空格分隔）。缩写对照：Curso...＝Cursor、方舟 Ag...＝方舟 Agent Plan、方舟 Co...＝方舟 Coding Plan、Z.ai＝Z.ai、OpenCod...＝OpenCode Go、小米 To...＝小米 Token Plan、pi＝pi、Qoder＝Qoder CN、StepF...＝StepFun、Devin＝Devin。服务商取自 models.json 的 providers 表（改一处全站生效）：pi 调用看登记的服务商，agent 工具一律 Cursor，zcode/opencode 分别归 Z.ai / OpenCode Go；同一家的不同写法（zai 与 zai-coding-cn）算一家。拆不拆看本期与上期的并集，保证跨周可比；单服务商的家不拆。",
-    "口径：失败（退出码≠0/超时）与未评行不计入对照、花费照计；模型名按别名表归一化（k3→K3、glm-5→GLM-5.3、grok-4→Grok 4.6 Extra High、gemini-3→Gemini 3.8 Flash、mimo-v2→MiMo V2.5 Pro、deepseek-v4-flash→DeepSeek V4 Flash、`(zcode)` 并主名）；含通道后缀的行按通道各自归集。",
+    "口径：失败（退出码≠0/超时）与未评行不计入对照、花费照计；模型名按别名表归一化（k3→Kimi K3、glm-5→GLM-5.3、grok-4→Grok 4.6 Extra High、gemini-3→Gemini 3.8 Flash、mimo-v2→MiMo V2.5 Pro、deepseek-v4-flash→DeepSeek V4 Flash、`(zcode)` 并主名）；含通道后缀的行按通道各自归集。",
     "本目录是一次生成的同批产物（report.md / data.json / summary.json / images；贴文 post.md 可选，重生成默认保留原有贴文），按 ISO 周归档（目录名即周号）；同一周再次生成会覆盖本目录，旧版在归档仓的 git 历史里。默认报上一个完整周，`--week current` 可出进行中的本周。"
   ],
   "false_pos_tone": "#d7c3b8",
@@ -12320,7 +12320,7 @@
           },
           {
             "rank": "6",
-            "name": "K3",
+            "name": "Kimi K3",
             "dot": "#6b5b95",
             "badge": null,
             "cells": [
@@ -12850,7 +12850,7 @@
         },
         {
           "rank": "6",
-          "name": "K3",
+          "name": "Kimi K3",
           "dot": "#6b5b95",
           "badge": null,
           "cells": [
@@ -13430,7 +13430,7 @@
                 "eligible": true
               },
               {
-                "label": "#8 K3",
+                "label": "#8 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 34.3,
@@ -13440,8 +13440,8 @@
                   "text": "-1.8",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 4.592592592592593,
                 "was": 6.348837209302325,
                 "eligible": true
@@ -13624,7 +13624,7 @@
                 "eligible": true
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 82.4,
@@ -13634,8 +13634,8 @@
                   "text": "-3%",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.79,
                 "was": 0.8241758241758241,
                 "eligible": true
@@ -13905,7 +13905,7 @@
                 "eligible": true
               },
               {
-                "label": "#9 K3",
+                "label": "#9 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 33.8,
@@ -13915,8 +13915,8 @@
                   "text": "-0.21",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.6901851851851853,
                 "was": 0.9004651162790698,
                 "eligible": true
@@ -14162,7 +14162,7 @@
                 "other_was": 0.13513612296098304
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 95.6,
@@ -14172,8 +14172,8 @@
                   "text": "-7%",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.20976451136544583,
                 "was": 0.2750533532216548,
                 "eligible": true,
@@ -14571,7 +14571,7 @@
                 "eligible": true
               },
               {
-                "label": "#9 K3",
+                "label": "#9 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 63.9,
@@ -14581,8 +14581,8 @@
                   "text": "-$28.83",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.5464572777777778,
                 "was": 29.380212000000007,
                 "eligible": true
@@ -14771,7 +14771,7 @@
                 "eligible": true
               },
               {
-                "label": "#9 K3",
+                "label": "#9 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 63.9,
@@ -14781,8 +14781,8 @@
                   "text": "-$29.01",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.3735277594936709,
                 "was": 29.380212000000007,
                 "eligible": true
@@ -14905,7 +14905,7 @@
                 "eligible": true
               },
               {
-                "label": "#5 K3",
+                "label": "#5 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 47.8,
@@ -14915,8 +14915,8 @@
                   "text": "+0.2",
                   "cls": "up"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 7.460185185185185,
                 "was": 7.283720930232558,
                 "eligible": true
@@ -15235,7 +15235,7 @@
                 "eligible": true
               },
               {
-                "label": "#11 K3",
+                "label": "#11 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 35.4,
@@ -15245,8 +15245,8 @@
                   "text": "-6.9",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 28.149228414215383,
                 "was": 35.04618986802895,
                 "eligible": true
@@ -15312,7 +15312,7 @@
                 "eligible": true
               },
               {
-                "label": "#3 K3",
+                "label": "#3 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 4.5,
@@ -15322,8 +15322,8 @@
                   "text": "-33.8",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 505.3298101265823,
                 "was": 539.1156666666666,
                 "eligible": true
@@ -15574,7 +15574,7 @@
                 "eligible": true
               },
               {
-                "label": "#6 K3",
+                "label": "#6 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 94.5,
@@ -15584,8 +15584,8 @@
                   "text": "-0%",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.9289232138297369,
                 "was": 0.9295216375013837,
                 "eligible": true
@@ -15831,7 +15831,7 @@
                 "eligible": true
               },
               {
-                "label": "#8 K3",
+                "label": "#8 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 0,
@@ -15839,8 +15839,8 @@
                 "value": "1.46",
                 "bad_pct": 9.7,
                 "bad_text": "0.39",
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 1.462962962962963,
                 "was": 0,
                 "bad_now": 0.3888888888888889,
@@ -16033,7 +16033,7 @@
             "cons": "每条成立最贵（$0.94）"
           },
           {
-            "rank": "#6 K3",
+            "rank": "#6 Kimi K3",
             "badge": null,
             "score": "57.3",
             "pros": "token 相对最好（每条成立 505 千）",
@@ -16116,7 +16116,7 @@
         "rows": [
           {
             "rank": "1",
-            "name": "K3",
+            "name": "Kimi K3",
             "dot": "#6b5b95",
             "badge": null,
             "cells": [
@@ -16588,7 +16588,7 @@
             ]
           }
         ],
-        "note": "样本 < 5 场未进排名，见下方观察区（Gemini 3.8 Flash、Step 5 Preview、SWE-2）；主力（≥5 场）第一：K3（综合 83.6）"
+        "note": "样本 < 5 场未进排名，见下方观察区（Gemini 3.8 Flash、Step 5 Preview、SWE-2）；主力（≥5 场）第一：Kimi K3（综合 83.6）"
       },
       "observed": [
         {
@@ -16619,7 +16619,7 @@
       "all_rows": [
         {
           "rank": "1",
-          "name": "K3",
+          "name": "Kimi K3",
           "dot": "#6b5b95",
           "badge": null,
           "cells": [
@@ -17422,7 +17422,7 @@
             "title": "产出 · 平均质量分 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 84.1,
@@ -17432,8 +17432,8 @@
                   "text": "-4.0",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 20.41025641025641,
                 "was": 24.375,
                 "eligible": true
@@ -17871,7 +17871,7 @@
                 "eligible": true
               },
               {
-                "label": "#13 K3",
+                "label": "#13 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 97.4,
@@ -17881,8 +17881,8 @@
                   "text": "-4%",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.9351851851851852,
                 "was": 0.9736842105263158,
                 "eligible": true
@@ -17982,7 +17982,7 @@
                 "eligible": false
               },
               {
-                "label": "#5 K3",
+                "label": "#5 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 78.8,
@@ -17992,8 +17992,8 @@
                   "text": "-1.50",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 7.87897435897436,
                 "was": 9.37625,
                 "eligible": true
@@ -18159,7 +18159,7 @@
             "title": "覆盖 · 重要性加权占参与轮次 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 86.1,
@@ -18169,8 +18169,8 @@
                   "text": "-10%",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.35546674596094757,
                 "was": 0.4571590025482905,
                 "eligible": true,
@@ -18783,7 +18783,7 @@
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 36.4,
@@ -18793,8 +18793,8 @@
                   "text": "-$2.08",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.09310764102564102,
                 "was": 2.1731149999999997,
                 "eligible": true
@@ -19000,7 +19000,7 @@
                 "eligible": true
               },
               {
-                "label": "#10 K3",
+                "label": "#10 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 36.4,
@@ -19010,8 +19010,8 @@
                   "text": "-$2.14",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.035952455445544554,
                 "was": 2.1731149999999997,
                 "eligible": true
@@ -19202,7 +19202,7 @@
                 "eligible": false
               },
               {
-                "label": "#9 K3",
+                "label": "#9 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 43.5,
@@ -19212,8 +19212,8 @@
                   "text": "+0.4",
                   "cls": "up"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 1.8346153846153848,
                 "was": 1.4715277777777778,
                 "eligible": true
@@ -19515,7 +19515,7 @@
                 "eligible": false
               },
               {
-                "label": "#13 K3",
+                "label": "#13 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 31.4,
@@ -19525,8 +19525,8 @@
                   "text": "-5.6",
                   "cls": "down"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 30.18378756114605,
                 "was": 35.752241623407265,
                 "eligible": true
@@ -19558,7 +19558,7 @@
                 "eligible": false
               },
               {
-                "label": "#2 K3",
+                "label": "#2 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 5.4,
@@ -19568,8 +19568,8 @@
                   "text": "+2.5",
                   "cls": "up"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 9.664910891089109,
                 "was": 7.1847162162162155,
                 "eligible": true
@@ -19888,7 +19888,7 @@
                 "eligible": false
               },
               {
-                "label": "#8 K3",
+                "label": "#8 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 26.9,
@@ -19898,8 +19898,8 @@
                   "text": "+10%",
                   "cls": "up"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.3728379107866148,
                 "was": 0.26889517667960783,
                 "eligible": true
@@ -20016,7 +20016,7 @@
             "title": "成立密度 · 每次（越多越好） · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 0,
@@ -20024,8 +20024,8 @@
                 "value": "2.59",
                 "bad_pct": 6.9,
                 "bad_text": "0.18",
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 2.58974358974359,
                 "was": 0,
                 "bad_now": 0.1794871794871795,
@@ -20311,7 +20311,7 @@
         ],
         "rows": [
           {
-            "rank": "#1 K3",
+            "rank": "#1 Kimi K3",
             "badge": null,
             "score": "83.6",
             "pros": "产出最高（均质量 20.4）、抓得最全（重要性加权占参与轮次 36%）、每条成立最省 token（10 千）",
@@ -20434,7 +20434,7 @@
           }
         ],
         "rows": [],
-        "note": "样本 < 5 场未进排名，见下方观察区（DeepSeek V4.1 Flash（high）、DeepSeek V4.1 Flash（max）、Fable 5.1、GLM-5.3、GLM-5.3-Flash、Grok 4.6 Extra High、K3、MiMo V2.5 Pro、Muse Spark 1.3 Contributor）"
+        "note": "样本 < 5 场未进排名，见下方观察区（DeepSeek V4.1 Flash（high）、DeepSeek V4.1 Flash（max）、Fable 5.1、GLM-5.3、GLM-5.3-Flash、Grok 4.6 Extra High、Kimi K3、MiMo V2.5 Pro、Muse Spark 1.3 Contributor）"
       },
       "observed": [
         {
@@ -20486,7 +20486,7 @@
           "coverage": 0.18178353295410155
         },
         {
-          "name": "K3",
+          "name": "Kimi K3",
           "sessions": 1,
           "thinking": "max",
           "quality": 36,
@@ -20513,7 +20513,7 @@
       "all_rows": [
         {
           "rank": "",
-          "name": "K3",
+          "name": "Kimi K3",
           "dot": "#6b5b95",
           "badge": null,
           "cells": [
@@ -21031,7 +21031,7 @@
             "title": "产出 · 平均质量分 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 100,
@@ -21041,8 +21041,8 @@
                   "text": "+0.0",
                   "cls": "flat"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 36,
                 "was": 36,
                 "eligible": false
@@ -21191,7 +21191,7 @@
             "title": "精准 · 准确率 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 100,
@@ -21201,8 +21201,8 @@
                   "text": "+0%",
                   "cls": "flat"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 1,
                 "was": 1,
                 "eligible": false
@@ -21353,7 +21353,7 @@
             "title": "性价比 · 效率分 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 100,
@@ -21363,8 +21363,8 @@
                   "text": "+0.00",
                   "cls": "flat"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 15.33,
                 "was": 15.33,
                 "eligible": false
@@ -21513,7 +21513,7 @@
             "title": "覆盖 · 重要性加权占参与轮次 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 100,
@@ -21523,8 +21523,8 @@
                   "text": "+0%",
                   "cls": "flat"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.21136933177066958,
                 "was": 0.21136933177066958,
                 "eligible": false,
@@ -21921,7 +21921,7 @@
                 "eligible": false
               },
               {
-                "label": "#7 K3",
+                "label": "#7 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 0,
@@ -21931,8 +21931,8 @@
                   "text": "+$0.08",
                   "cls": "up"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.080784,
                 "was": 0,
                 "eligible": false
@@ -22047,7 +22047,7 @@
                 "eligible": false
               },
               {
-                "label": "#5 K3",
+                "label": "#5 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 0,
@@ -22057,8 +22057,8 @@
                   "text": "+$0.02",
                   "cls": "up"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0.0161568,
                 "was": 0,
                 "eligible": false
@@ -22175,7 +22175,7 @@
                 "eligible": false
               },
               {
-                "label": "#4 K3",
+                "label": "#4 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 29.3,
@@ -22185,8 +22185,8 @@
                   "text": "+0.0",
                   "cls": "flat"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 1.5,
                 "was": 1.5,
                 "eligible": false
@@ -22420,7 +22420,7 @@
                 "eligible": false
               },
               {
-                "label": "#9 K3",
+                "label": "#9 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 22.2,
@@ -22430,8 +22430,8 @@
                   "text": "+0.0",
                   "cls": "flat"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 29.877777777777776,
                 "was": 29.877777777777776,
                 "eligible": false
@@ -22446,7 +22446,7 @@
             "title": "Token · 每条成立千枚 · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 0.4,
@@ -22456,8 +22456,8 @@
                   "text": "+0.0",
                   "cls": "flat"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 3.2344,
                 "was": 3.2344,
                 "eligible": false
@@ -22708,7 +22708,7 @@
                 "eligible": false
               },
               {
-                "label": "#8 K3",
+                "label": "#8 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 0,
@@ -22718,8 +22718,8 @@
                   "text": "+0%",
                   "cls": "flat"
                 },
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0,
                 "was": 0,
                 "eligible": false
@@ -22751,7 +22751,7 @@
             "title": "成立密度 · 每次（越多越好） · 本项排名",
             "rows": [
               {
-                "label": "#1 K3",
+                "label": "#1 Kimi K3",
                 "badge": null,
                 "tone": "#6b5b95",
                 "was_pct": 0,
@@ -22759,8 +22759,8 @@
                 "value": "5.00",
                 "bad_pct": 0,
                 "bad_text": "0.00",
-                "model": "K3",
-                "base": "K3",
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 5,
                 "was": 0,
                 "bad_now": 0,

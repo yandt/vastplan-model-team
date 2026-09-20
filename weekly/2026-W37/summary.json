@@ -7,7 +7,7 @@
     "2026-08-31",
     "2026-09-07"
   ],
-  "generated_at": "2026-09-21 01:10",
+  "generated_at": "2026-09-21 01:40",
   "week": "2026-W37",
   "week_label": "2026 年第 37 周",
   "partial": false,
@@ -21,7 +21,7 @@
       "usd_rated": 141.34,
       "top": [
         {
-          "model": "K3 Cursor",
+          "model": "Kimi K3 Cursor",
           "score": 84.1,
           "sessions": 14
         },
@@ -51,12 +51,12 @@
           "sessions": 6
         },
         {
-          "model": "K3 Cursor",
+          "model": "Kimi K3 Cursor",
           "score": 83.5,
           "sessions": 6
         },
         {
-          "model": "K3 方舟 Agent Plan",
+          "model": "Kimi K3 方舟 Agent Plan",
           "score": 69,
           "sessions": 18
         }
@@ -70,7 +70,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 15,
-  "generations": 60,
+  "generations": 61,
   "first_generated_at": "2026-09-15 10:38",
-  "last_generated_at": "2026-09-21 01:10"
+  "last_generated_at": "2026-09-21 01:40"
 }

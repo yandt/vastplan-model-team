@@ -7,7 +7,7 @@
     "2026-09-07",
     "2026-09-14"
   ],
-  "generated_at": "2026-09-21 01:10",
+  "generated_at": "2026-09-21 01:40",
   "week": "2026-W38",
   "week_label": "2026 年第 38 周",
   "partial": true,
@@ -46,7 +46,7 @@
       "usd_rated": 30.2,
       "top": [
         {
-          "model": "K3 方舟 Agent Plan",
+          "model": "Kimi K3 方舟 Agent Plan",
           "score": 83.5,
           "sessions": 36
         },
@@ -79,7 +79,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 10,
-  "generations": 73,
+  "generations": 74,
   "first_generated_at": "2026-09-15 02:24",
-  "last_generated_at": "2026-09-21 01:10"
+  "last_generated_at": "2026-09-21 01:40"
 }
