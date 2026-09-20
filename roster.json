@@ -123,6 +123,16 @@
       "thinking": "max",
       "pricing": "subscription",
       "enabled": true
+    },
+    {
+      "name": "Step 5 Preview",
+      "tone": null,
+      "providers": [
+        "StepFun"
+      ],
+      "thinking": "max",
+      "pricing": "unpublished",
+      "enabled": true
     }
   ],
   "tones": {

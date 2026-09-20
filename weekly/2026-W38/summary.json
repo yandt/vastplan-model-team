@@ -7,58 +7,58 @@
     "2026-09-07",
     "2026-09-14"
   ],
-  "generated_at": "2026-09-19 15:41",
+  "generated_at": "2026-09-20 22:34",
   "week": "2026-W38",
   "week_label": "2026 年第 38 周",
   "partial": true,
   "kinds": {
     "事后审计": {
-      "sessions": 50,
-      "rows": 389,
-      "confirmed": 585,
-      "false_pos": 216,
-      "unique": 218,
-      "usd_rated": 143.9,
+      "sessions": 55,
+      "rows": 435,
+      "confirmed": 622,
+      "false_pos": 224,
+      "unique": 249,
+      "usd_rated": 156.46,
       "top": [
         {
+          "model": "Qwen3.8 Flash",
+          "score": 92.5,
+          "sessions": 7
+        },
+        {
           "model": "DeepSeek V4.1 Flash（high）",
-          "score": 94.9,
-          "sessions": 31
+          "score": 88.4,
+          "sessions": 36
         },
         {
           "model": "DeepSeek V4.1 Flash（max）",
-          "score": 90.4,
-          "sessions": 45
-        },
-        {
-          "model": "Grok 4.6 Extra High",
-          "score": 73.4,
-          "sessions": 45
+          "score": 86.2,
+          "sessions": 50
         }
       ]
     },
     "设计分叉": {
-      "sessions": 32,
-      "rows": 254,
-      "confirmed": 522,
+      "sessions": 39,
+      "rows": 325,
+      "confirmed": 581,
       "false_pos": 43,
-      "unique": 153,
-      "usd_rated": 20.77,
+      "unique": 212,
+      "usd_rated": 29.11,
       "top": [
         {
           "model": "K3 方舟 Agent Plan",
-          "score": 98.5,
-          "sessions": 28
+          "score": 83.3,
+          "sessions": 35
         },
         {
           "model": "Grok 4.6 Extra High",
-          "score": 90.3,
-          "sessions": 29
+          "score": 74.8,
+          "sessions": 36
         },
         {
           "model": "Fable 5.1",
-          "score": 66.1,
-          "sessions": 8
+          "score": 64.7,
+          "sessions": 15
         }
       ]
     },
@@ -79,7 +79,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 10,
-  "generations": 68,
+  "generations": 70,
   "first_generated_at": "2026-09-15 02:24",
-  "last_generated_at": "2026-09-19 15:41"
+  "last_generated_at": "2026-09-20 22:34"
 }
