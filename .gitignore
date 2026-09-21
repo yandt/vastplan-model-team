@@ -4,3 +4,7 @@ __pycache__/
 .gstack/
 # 单场会话日志：本地调试用，不进公开归档（weekly/ 照常入仓）
 runs/
+# 账本（库 + xlsx 快照）：本机私有数据，绝不进公开归档仓
+ledger/
+# 数据根自描述文件：机器本地元数据
+.model-team-data-root.json
