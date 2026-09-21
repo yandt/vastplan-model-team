@@ -1,0 +1,60 @@
+{
+  "window": [
+    "2026-09-21",
+    "2026-09-22"
+  ],
+  "prev_window": [
+    "2026-09-20",
+    "2026-09-21"
+  ],
+  "generated_at": "2026-09-21 23:19",
+  "week": "2026-W39",
+  "week_label": "2026 年第 39 周",
+  "partial": true,
+  "kinds": {
+    "事后审计": {
+      "sessions": 9,
+      "rows": 94,
+      "confirmed": 277,
+      "false_pos": 19,
+      "unique": 212,
+      "usd_rated": 20.11,
+      "top": [
+        {
+          "model": "Step 5 Preview",
+          "score": 79.3,
+          "sessions": 8
+        },
+        {
+          "model": "MiniMax M3",
+          "score": 70.4,
+          "sessions": 6
+        },
+        {
+          "model": "Grok 4.6 Extra High",
+          "score": 67.3,
+          "sessions": 8
+        }
+      ]
+    },
+    "设计分叉": {
+      "sessions": 4,
+      "rows": 52,
+      "confirmed": 60,
+      "false_pos": 5,
+      "unique": 60,
+      "usd_rated": 4.64,
+      "top": []
+    }
+  },
+  "images": [
+    "images/1-ranking.png",
+    "images/2-audit-quality.png",
+    "images/3-audit-cost.png",
+    "images/4-design.png"
+  ],
+  "debt_sessions": 1,
+  "generations": 1,
+  "first_generated_at": "2026-09-21 23:19",
+  "last_generated_at": "2026-09-21 23:19"
+}
