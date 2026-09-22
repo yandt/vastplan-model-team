@@ -10,7 +10,7 @@
       "2026-09-07",
       "2026-09-14"
     ],
-    "generated_at": "2026-09-21 23:09",
+    "generated_at": "2026-09-22 10:38",
     "partial": false,
     "title": "模型团队周报 2026-W38（2026-09-14 → 2026-09-21）"
   },
@@ -24,7 +24,7 @@
     "meta": [
       "2026 年第 38 周（2026-W38）",
       "本窗 2026-09-14 → 2026-09-21（环比 2026-09-07 → 2026-09-14）",
-      "生成 2026-09-21 23:09"
+      "生成 2026-09-22 10:38"
     ]
   },
   "kpis": [
@@ -4607,36 +4607,36 @@
             "rank": "#1 Qwen3.8 Flash",
             "badge": null,
             "score": "89.0",
-            "pros": "产出最高（均质量 7.6）、最准（93%）",
-            "cons": "花费未采集（该轴按中位记）"
+            "pros": "综合最高（89.0）、均质量全场最高（7.6）、准确率最高（93%）、假阳最少（1 条）",
+            "cons": "仅 8 场，样本少宜留余地、覆盖 21%（独有 13%）居中"
           },
           {
             "rank": "#2 DeepSeek V4.1 Flash（high）",
             "badge": null,
             "score": "81.5",
-            "pros": "花费相对最好（每次 $0.11）",
-            "cons": "token 相对最弱（每条成立 2,982 千）"
+            "pros": "综合次高（81.5），37 场较扎实、覆盖 24%（独有 13%）、成立 73 条、每条成立 $0.06、缓存命中 98%，档位 high",
+            "cons": "准确率 80%、假阳 18 条偏高、均质量 6.8，低于 Qwen3.8 Flash"
           },
           {
             "rank": "#3 DeepSeek V4.1 Flash（max）",
             "badge": null,
             "score": "80.4",
-            "pros": "抓得最全（重要性加权占参与轮次 27%）、缓存命中最高（98%）",
-            "cons": "每条成立最耗 token（3,193 千）"
+            "pros": "成立 95 条、独有 44 条，均全场最高、覆盖 27% 全场最高、综合 80.4 居前",
+            "cons": "假阳 30 条偏高、每条成立 token 3193 千全场最高"
           },
           {
             "rank": "#4 Muse Spark 1.3 Contributor",
             "badge": null,
             "score": "66.9",
-            "pros": "效率分最高（成立重要性÷耗时 2.66）、每条成立最便宜（$0.01）、最快（每次 2.5 分钟，档位 xhigh）、每条成立最省 token（345 千）",
-            "cons": "无突出短板"
+            "pros": "效率 2.66 全场最高，每次 2.5 分钟、每条成立 $0.01、每次 $0.01 最低、成立 102 条最多",
+            "cons": "假阳 51 条全场最多、准确率 67% 偏低、均质量 4.9"
           },
           {
             "rank": "#5 Grok 4.6 Extra High",
             "badge": null,
             "score": "66.5",
-            "pros": "各项居中（均质量 5.4、准确率 83%）",
-            "cons": "每条成立最贵（$0.94）"
+            "pros": "综合 66.5、准确率 83% 尚可、成立 73 条、独有 28 条",
+            "cons": "每条成立 $0.94、每次 $1.35，均全场最贵、效率 0.70 偏低"
           },
           {
             "rank": "#6 Kimi K3",
@@ -4645,8 +4645,8 @@
               "title": "Cursor"
             },
             "score": "61.1",
-            "pros": "覆盖相对最好（占参与轮次 26%）",
-            "cons": "独立相对最弱（独有占比 25%）"
+            "pros": "覆盖 26%（独有 8%）居前、准确率 80%",
+            "cons": "仅 7 场，样本少宜留余地、每条成立 $0.49 偏高"
           },
           {
             "rank": "#7 Kimi K3",
@@ -4655,36 +4655,36 @@
               "title": "方舟 Agent Plan"
             },
             "score": "56.6",
-            "pros": "token 相对最好（每条成立 470 千）",
-            "cons": "独立相对最弱（独有占比 42%）"
+            "pros": "成立 67 条、独有 26 条、准确率 79% 居中",
+            "cons": "效率 0.64 偏低、均质量 4.5、覆盖 20% 偏后"
           },
           {
             "rank": "#8 DeepSeek V4 Flash",
             "badge": null,
             "score": "54.6",
-            "pros": "覆盖相对最好（占参与轮次 25%）",
-            "cons": "独立相对最弱（独有占比 24%）"
+            "pros": "覆盖 25%（独有 7%）居前、每条成立 $0.16",
+            "cons": "效率 0.60 偏低、均质量 4.5，每条成立 token 1815 千偏高"
           },
           {
             "rank": "#9 GLM-5.3-Flash",
             "badge": null,
             "score": "51.4",
-            "pros": "花费相对最好（每次 $0.03）",
-            "cons": "最慢（每次 11.1 分钟，档位 max）"
+            "pros": "准确率 85%，仅次于 Qwen3.8 Flash、每条成立 $0.02、每次 $0.03 花费低",
+            "cons": "效率 0.42 全场最低、每次 11.1 分钟全场最慢"
           },
           {
             "rank": "#10 GLM-5.3",
             "badge": null,
             "score": "47.2",
-            "pros": "token 相对最好（每条成立 806 千）",
-            "cons": "独立相对最弱（独有占比 37%）"
+            "pros": "成立 69 条、独有 25 条",
+            "cons": "均质量 3.6 偏低、假阳 29 条、综合 47.2 靠后"
           },
           {
             "rank": "#11 MiMo V2.5 Pro",
             "badge": null,
             "score": "17.9",
-            "pros": "花费相对最好（每次 $0.03）",
-            "cons": "假阳最多（每次 0.65 条，准确率 39%）、均质量垫底（-0.3）"
+            "pros": "每条成立 $0.08、每次 $0.03 花费较低",
+            "cons": "综合 17.9、均质量 -0.3、准确率 39% 均垫底、覆盖 7%（独有 4%）垫底、假阳 35 条"
           }
         ]
       }
@@ -5936,66 +5936,6 @@
         },
         {
           "rank": "",
-          "name": "Kimi K3",
-          "dot": "#6b5b95",
-          "badge": {
-            "text": "Curso...",
-            "title": "Cursor"
-          },
-          "cells": [
-            {
-              "text": "max"
-            },
-            {
-              "text": "—",
-              "cls": "score"
-            },
-            {
-              "text": "3/6"
-            },
-            {
-              "text": "23.3/25.7",
-              "delta": {
-                "text": "-2.3",
-                "cls": "down"
-              }
-            },
-            {
-              "text": "9/19"
-            },
-            {
-              "text": "5"
-            },
-            {
-              "text": "0"
-            },
-            {
-              "text": "100%"
-            },
-            {
-              "text": "0.36/0.89"
-            },
-            {
-              "text": "4.00/4.17"
-            }
-          ],
-          "sessions": 3,
-          "raw": {
-            "quality": 23.333333333333332,
-            "coverage": 0.27932144653326135,
-            "unique_ratio": 0.5277777777777778,
-            "duration": 1.2611111111111113,
-            "cost": 0.11969999999999999,
-            "tokens_per_confirm": 10.26088888888889
-          },
-          "observed": {
-            "quality": 23.333333333333332,
-            "confirmed": 9,
-            "coverage": 0.27932144653326135
-          }
-        },
-        {
-          "rank": "",
           "name": "Step 5 Preview",
           "dot": "#5c6b7a",
           "badge": null,
@@ -6106,6 +6046,66 @@
             "quality": 6,
             "confirmed": 1,
             "coverage": 0.19540298242196177
+          }
+        },
+        {
+          "rank": "",
+          "name": "Kimi K3",
+          "dot": "#6b5b95",
+          "badge": {
+            "text": "Curso...",
+            "title": "Cursor"
+          },
+          "cells": [
+            {
+              "text": "max"
+            },
+            {
+              "text": "—",
+              "cls": "score"
+            },
+            {
+              "text": "3/6"
+            },
+            {
+              "text": "23.3/25.7",
+              "delta": {
+                "text": "-2.3",
+                "cls": "down"
+              }
+            },
+            {
+              "text": "9/19"
+            },
+            {
+              "text": "5"
+            },
+            {
+              "text": "0"
+            },
+            {
+              "text": "100%"
+            },
+            {
+              "text": "0.36/0.89"
+            },
+            {
+              "text": "4.00/4.17"
+            }
+          ],
+          "sessions": 3,
+          "raw": {
+            "quality": 23.333333333333332,
+            "coverage": 0.27932144653326135,
+            "unique_ratio": 0.5277777777777778,
+            "duration": 1.2611111111111113,
+            "cost": 0.11969999999999999,
+            "tokens_per_confirm": 10.26088888888889
+          },
+          "observed": {
+            "quality": 23.333333333333332,
+            "confirmed": 9,
+            "coverage": 0.27932144653326135
           }
         }
       ],
@@ -6400,27 +6400,7 @@
                 "eligible": false
               },
               {
-                "label": "#2 Kimi K3",
-                "badge": {
-                  "text": "Curso...",
-                  "title": "Cursor"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 95,
-                "now_pct": 100,
-                "value": "100%",
-                "delta": {
-                  "text": "+5%",
-                  "cls": "up"
-                },
-                "model": "Kimi K3@Cursor",
-                "base": "Kimi K3",
-                "now": 1,
-                "was": 0.95,
-                "eligible": false
-              },
-              {
-                "label": "#3 Qwen3.8 Flash",
+                "label": "#2 Qwen3.8 Flash",
                 "badge": null,
                 "tone": "#5c6b7a",
                 "was_pct": 100,
@@ -6437,7 +6417,7 @@
                 "eligible": true
               },
               {
-                "label": "#4 Step 5 Preview",
+                "label": "#3 Step 5 Preview",
                 "badge": null,
                 "tone": "#5c6b7a",
                 "was_pct": 100,
@@ -6454,7 +6434,7 @@
                 "eligible": false
               },
               {
-                "label": "#5 SWE-2",
+                "label": "#4 SWE-2",
                 "badge": null,
                 "tone": "#8f7f6a",
                 "was_pct": 100,
@@ -6468,6 +6448,26 @@
                 "base": "SWE-2",
                 "now": 1,
                 "was": 1,
+                "eligible": false
+              },
+              {
+                "label": "#5 Kimi K3",
+                "badge": {
+                  "text": "Curso...",
+                  "title": "Cursor"
+                },
+                "tone": "#6b5b95",
+                "was_pct": 95,
+                "now_pct": 100,
+                "value": "100%",
+                "delta": {
+                  "text": "+5%",
+                  "cls": "up"
+                },
+                "model": "Kimi K3@Cursor",
+                "base": "Kimi K3",
+                "now": 1,
+                "was": 0.95,
                 "eligible": false
               },
               {
@@ -9278,78 +9278,78 @@
               "title": "方舟 Agent Plan"
             },
             "score": "83.5",
-            "pros": "产出最高（均质量 20.2）、抓得最全（重要性加权占参与轮次 36%）、每条成立最省 token（10 千）",
-            "cons": "无突出短板"
+            "pros": "综合最高（83.5）、均质量最高（20.2）、覆盖 36%（独有 17%）、成立 92 条均最高、契合 4.34 居前",
+            "cons": "契合 4.34 低于 Fable 5.1 的 4.77、缓存命中 38% 偏低"
           },
           {
             "rank": "#2 Grok 4.6 Extra High",
             "badge": null,
             "score": "75.3",
-            "pros": "效果相对最好（均质量 19.7）",
-            "cons": "每条成立最耗 token（132 千）"
+            "pros": "准确率 96% 全场最高、假阳仅 4 条、均质量 19.7，仅次于方舟 Kimi K3、综合 75.3 次高",
+            "cons": "每条成立 $0.14、每次 $0.33 花费偏高、契合 4.30 居中"
           },
           {
             "rank": "#3 Fable 5.1",
             "badge": null,
             "score": "63.0",
-            "pros": "方向契合最高（4.77）、缓存命中最高（100%）",
-            "cons": "每条成立最贵（$0.33）"
+            "pros": "契合 4.77 全场最高、均质量 17.7 居前、缓存命中 100% 全场最高",
+            "cons": "每条成立 $0.33、每次 $0.65 均全场最贵、仅 16 场，样本较少宜留余地、档位 medium，低于多数家 max"
           },
           {
             "rank": "#4 GLM-5.3",
             "badge": null,
             "score": "46.8",
-            "pros": "各项居中（均质量 16.2、准确率 95%）",
-            "cons": "无突出短板"
+            "pros": "准确率 95%、假阳仅 4 条、每条成立 $0.03、每次 $0.05 花费低",
+            "cons": "综合 46.8、均质量 16.2 靠后、覆盖 26%（独有 8%）不算突出"
           },
           {
             "rank": "#5 DeepSeek V4 Flash",
             "badge": null,
             "score": "37.9",
-            "pros": "花费相对最好（每次 $0.02）",
-            "cons": "独立相对最弱（独有占比 22%）"
+            "pros": "准确率 94%、假阳仅 2 条、每条成立 $0.01、每次 $0.02 花费最低档",
+            "cons": "综合 37.9 靠后、仅 16 场，样本较少宜留余地"
           },
           {
             "rank": "#6 Muse Spark 1.3 Contributor",
             "badge": null,
             "score": "34.3",
-            "pros": "每条成立最便宜（$0.00）",
-            "cons": "独立相对最弱（独有占比 29%）"
+            "pros": "效率 10.18 次高、每次 1.0 分钟、每条成立 $0.00、每次 $0.00 花费最低、准确率 95%、假阳仅 3 条",
+            "cons": "缓存命中 6% 全场最低、综合 34.3、均质量 14.6 靠后"
           },
           {
             "rank": "#7 DeepSeek V4.1 Flash（max）",
             "badge": null,
             "score": "33.7",
-            "pros": "效率分最高（成立重要性÷耗时 11.89）、最快（每次 0.8 分钟，档位 max）",
-            "cons": "独立相对最弱（独有占比 25%）"
+            "pros": "效率 11.89、每次 0.8 分钟，均全场最高、准确率 94%",
+            "cons": "综合 33.7、均质量 14.4 靠后、契合 4.09 偏低"
           },
           {
             "rank": "#8 Qwen3.8 Flash",
             "badge": null,
             "score": "25.0",
-            "pros": "最准（100%）",
-            "cons": "花费未采集（该轴按中位记）、均质量垫底（10.2）"
+            "pros": "准确率 100%、假阳 0，全场唯一、契合 4.38 居前",
+            "cons": "仅 11 场，样本少宜留余地、覆盖 12%（独有 8%）垫底"
           },
           {
             "rank": "#9 GLM-5.3-Flash",
             "badge": null,
             "score": "24.9",
-            "pros": "花费相对最好（每次 $0.00）",
-            "cons": "最慢（每次 3.3 分钟，档位 max）"
+            "pros": "每条成立 $0.00、每次 $0.00 花费最低、准确率 95%、假阳仅 3 条",
+            "cons": "综合 24.9 靠后、覆盖 21%（独有 5%）偏低"
           },
           {
             "rank": "#10 DeepSeek V4.1 Flash（high）",
             "badge": null,
             "score": "22.6",
-            "pros": "花费相对最好（每次 $0.01）",
-            "cons": "无突出短板"
+            "pros": "效率 9.24、每次 0.9 分钟，档位 high 仍快、准确率 94%",
+            "cons": "契合 3.53 偏低、每条成立 token 109 千全场最高"
           },
           {
             "rank": "#11 MiMo V2.5 Pro",
             "badge": null,
             "score": "9.0",
-            "pros": "花费相对最好（每次 $0.00）",
-            "cons": "假阳最多（每次 0.32 条，准确率 79%）、契合最低（3.39）"
+            "pros": "每条成立 $0.00、每次 $0.00 花费最低",
+            "cons": "综合 9.0、契合 3.39 均垫底、准确率 79%、假阳 12 为全场最差、覆盖 17%（独有 4%）垫底"
           }
         ]
       }
@@ -9475,66 +9475,6 @@
         }
       ],
       "all_rows": [
-        {
-          "rank": "",
-          "name": "Kimi K3",
-          "dot": "#6b5b95",
-          "badge": {
-            "text": "方舟 Ag...",
-            "title": "方舟 Agent Plan"
-          },
-          "cells": [
-            {
-              "text": "max"
-            },
-            {
-              "text": "—",
-              "cls": "score"
-            },
-            {
-              "text": "1/0"
-            },
-            {
-              "text": "36.0/0.0",
-              "delta": {
-                "text": "+36.0",
-                "cls": "up"
-              }
-            },
-            {
-              "text": "5/0"
-            },
-            {
-              "text": "3"
-            },
-            {
-              "text": "0"
-            },
-            {
-              "text": "100%"
-            },
-            {
-              "text": "0.08/0.00"
-            },
-            {
-              "text": "15.33"
-            }
-          ],
-          "sessions": 1,
-          "raw": {
-            "quality": 36,
-            "coverage": 0.21136933177066958,
-            "unique_ratio": 0.5652173913043478,
-            "duration": 1.5,
-            "cost": 0.080784,
-            "tokens_per_confirm": 3.2344
-          },
-          "observed": {
-            "quality": 36,
-            "confirmed": 5,
-            "coverage": 0.21136933177066958
-          }
-        },
         {
           "rank": "",
           "name": "Grok 4.6 Extra High",
@@ -9990,6 +9930,66 @@
             "confirmed": 2,
             "coverage": 0.12852909508427904
           }
+        },
+        {
+          "rank": "",
+          "name": "Kimi K3",
+          "dot": "#6b5b95",
+          "badge": {
+            "text": "方舟 Ag...",
+            "title": "方舟 Agent Plan"
+          },
+          "cells": [
+            {
+              "text": "max"
+            },
+            {
+              "text": "—",
+              "cls": "score"
+            },
+            {
+              "text": "1/0"
+            },
+            {
+              "text": "36.0/0.0",
+              "delta": {
+                "text": "+36.0",
+                "cls": "up"
+              }
+            },
+            {
+              "text": "5/0"
+            },
+            {
+              "text": "3"
+            },
+            {
+              "text": "0"
+            },
+            {
+              "text": "100%"
+            },
+            {
+              "text": "0.08/0.00"
+            },
+            {
+              "text": "15.33"
+            }
+          ],
+          "sessions": 1,
+          "raw": {
+            "quality": 36,
+            "coverage": 0.21136933177066958,
+            "unique_ratio": 0.5652173913043478,
+            "duration": 1.5,
+            "cost": 0.080784,
+            "tokens_per_confirm": 3.2344
+          },
+          "observed": {
+            "quality": 36,
+            "confirmed": 5,
+            "coverage": 0.21136933177066958
+          }
         }
       ],
       "panels": [
@@ -10161,27 +10161,7 @@
             "title": "精准 · 准确率 · 本项排名",
             "rows": [
               {
-                "label": "#1 Kimi K3",
-                "badge": {
-                  "text": "方舟 Ag...",
-                  "title": "方舟 Agent Plan"
-                },
-                "tone": "#6b5b95",
-                "was_pct": 100,
-                "now_pct": 100,
-                "value": "100%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                },
-                "model": "Kimi K3@方舟 Agent Plan",
-                "base": "Kimi K3",
-                "now": 1,
-                "was": 1,
-                "eligible": false
-              },
-              {
-                "label": "#2 Grok 4.6 Extra High",
+                "label": "#1 Grok 4.6 Extra High",
                 "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 100,
@@ -10198,7 +10178,7 @@
                 "eligible": false
               },
               {
-                "label": "#3 GLM-5.3",
+                "label": "#2 GLM-5.3",
                 "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 100,
@@ -10215,7 +10195,7 @@
                 "eligible": false
               },
               {
-                "label": "#4 GLM-5.3-Flash",
+                "label": "#3 GLM-5.3-Flash",
                 "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 100,
@@ -10232,7 +10212,7 @@
                 "eligible": false
               },
               {
-                "label": "#5 MiMo V2.5 Pro",
+                "label": "#4 MiMo V2.5 Pro",
                 "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 100,
@@ -10249,7 +10229,7 @@
                 "eligible": false
               },
               {
-                "label": "#6 Muse Spark 1.3 Contributor",
+                "label": "#5 Muse Spark 1.3 Contributor",
                 "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 100,
@@ -10266,7 +10246,7 @@
                 "eligible": false
               },
               {
-                "label": "#7 Fable 5.1",
+                "label": "#6 Fable 5.1",
                 "badge": null,
                 "tone": "#a45a52",
                 "was_pct": 100,
@@ -10278,6 +10258,26 @@
                 },
                 "model": "Fable 5.1",
                 "base": "Fable 5.1",
+                "now": 1,
+                "was": 1,
+                "eligible": false
+              },
+              {
+                "label": "#7 Kimi K3",
+                "badge": {
+                  "text": "方舟 Ag...",
+                  "title": "方舟 Agent Plan"
+                },
+                "tone": "#6b5b95",
+                "was_pct": 100,
+                "now_pct": 100,
+                "value": "100%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "model": "Kimi K3@方舟 Agent Plan",
+                "base": "Kimi K3",
                 "now": 1,
                 "was": 1,
                 "eligible": false
@@ -11702,7 +11702,24 @@
                 "eligible": false
               },
               {
-                "label": "#8 Kimi K3",
+                "label": "#8 GLM-5.3-Flash",
+                "badge": null,
+                "tone": "#a05a76",
+                "was_pct": 0,
+                "now_pct": 0,
+                "value": "0%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "model": "GLM-5.3-Flash",
+                "base": "GLM-5.3-Flash",
+                "now": 0,
+                "was": 0,
+                "eligible": false
+              },
+              {
+                "label": "#9 Kimi K3",
                 "badge": {
                   "text": "方舟 Ag...",
                   "title": "方舟 Agent Plan"
@@ -11717,23 +11734,6 @@
                 },
                 "model": "Kimi K3@方舟 Agent Plan",
                 "base": "Kimi K3",
-                "now": 0,
-                "was": 0,
-                "eligible": false
-              },
-              {
-                "label": "#9 GLM-5.3-Flash",
-                "badge": null,
-                "tone": "#a05a76",
-                "was_pct": 0,
-                "now_pct": 0,
-                "value": "0%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                },
-                "model": "GLM-5.3-Flash",
-                "base": "GLM-5.3-Flash",
                 "now": 0,
                 "was": 0,
                 "eligible": false
@@ -20513,63 +20513,6 @@
       "all_rows": [
         {
           "rank": "",
-          "name": "Kimi K3",
-          "dot": "#6b5b95",
-          "badge": null,
-          "cells": [
-            {
-              "text": "max"
-            },
-            {
-              "text": "—",
-              "cls": "score"
-            },
-            {
-              "text": "1/0"
-            },
-            {
-              "text": "36.0/0.0",
-              "delta": {
-                "text": "+36.0",
-                "cls": "up"
-              }
-            },
-            {
-              "text": "5/0"
-            },
-            {
-              "text": "3"
-            },
-            {
-              "text": "0"
-            },
-            {
-              "text": "100%"
-            },
-            {
-              "text": "0.08/0.00"
-            },
-            {
-              "text": "15.33"
-            }
-          ],
-          "sessions": 1,
-          "raw": {
-            "quality": 36,
-            "coverage": 0.21136933177066958,
-            "unique_ratio": 0.5652173913043478,
-            "duration": 1.5,
-            "cost": 0.080784,
-            "tokens_per_confirm": 3.2344
-          },
-          "observed": {
-            "quality": 36,
-            "confirmed": 5,
-            "coverage": 0.21136933177066958
-          }
-        },
-        {
-          "rank": "",
           "name": "Grok 4.6 Extra High",
           "dot": "#4a6fa5",
           "badge": null,
@@ -21023,6 +20966,63 @@
             "confirmed": 2,
             "coverage": 0.12852909508427904
           }
+        },
+        {
+          "rank": "",
+          "name": "Kimi K3",
+          "dot": "#6b5b95",
+          "badge": null,
+          "cells": [
+            {
+              "text": "max"
+            },
+            {
+              "text": "—",
+              "cls": "score"
+            },
+            {
+              "text": "1/0"
+            },
+            {
+              "text": "36.0/0.0",
+              "delta": {
+                "text": "+36.0",
+                "cls": "up"
+              }
+            },
+            {
+              "text": "5/0"
+            },
+            {
+              "text": "3"
+            },
+            {
+              "text": "0"
+            },
+            {
+              "text": "100%"
+            },
+            {
+              "text": "0.08/0.00"
+            },
+            {
+              "text": "15.33"
+            }
+          ],
+          "sessions": 1,
+          "raw": {
+            "quality": 36,
+            "coverage": 0.21136933177066958,
+            "unique_ratio": 0.5652173913043478,
+            "duration": 1.5,
+            "cost": 0.080784,
+            "tokens_per_confirm": 3.2344
+          },
+          "observed": {
+            "quality": 36,
+            "confirmed": 5,
+            "coverage": 0.21136933177066958
+          }
         }
       ],
       "panels": [
@@ -21191,24 +21191,7 @@
             "title": "精准 · 准确率 · 本项排名",
             "rows": [
               {
-                "label": "#1 Kimi K3",
-                "badge": null,
-                "tone": "#6b5b95",
-                "was_pct": 100,
-                "now_pct": 100,
-                "value": "100%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                },
-                "model": "Kimi K3",
-                "base": "Kimi K3",
-                "now": 1,
-                "was": 1,
-                "eligible": false
-              },
-              {
-                "label": "#2 Grok 4.6 Extra High",
+                "label": "#1 Grok 4.6 Extra High",
                 "badge": null,
                 "tone": "#4a6fa5",
                 "was_pct": 100,
@@ -21225,7 +21208,7 @@
                 "eligible": false
               },
               {
-                "label": "#3 GLM-5.3",
+                "label": "#2 GLM-5.3",
                 "badge": null,
                 "tone": "#b0674a",
                 "was_pct": 100,
@@ -21242,7 +21225,7 @@
                 "eligible": false
               },
               {
-                "label": "#4 GLM-5.3-Flash",
+                "label": "#3 GLM-5.3-Flash",
                 "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 100,
@@ -21259,7 +21242,7 @@
                 "eligible": false
               },
               {
-                "label": "#5 MiMo V2.5 Pro",
+                "label": "#4 MiMo V2.5 Pro",
                 "badge": null,
                 "tone": "#b08a3e",
                 "was_pct": 100,
@@ -21276,7 +21259,7 @@
                 "eligible": false
               },
               {
-                "label": "#6 Muse Spark 1.3 Contributor",
+                "label": "#5 Muse Spark 1.3 Contributor",
                 "badge": null,
                 "tone": "#7d6b8f",
                 "was_pct": 100,
@@ -21293,7 +21276,7 @@
                 "eligible": false
               },
               {
-                "label": "#7 Fable 5.1",
+                "label": "#6 Fable 5.1",
                 "badge": null,
                 "tone": "#a45a52",
                 "was_pct": 100,
@@ -21305,6 +21288,23 @@
                 },
                 "model": "Fable 5.1",
                 "base": "Fable 5.1",
+                "now": 1,
+                "was": 1,
+                "eligible": false
+              },
+              {
+                "label": "#7 Kimi K3",
+                "badge": null,
+                "tone": "#6b5b95",
+                "was_pct": 100,
+                "now_pct": 100,
+                "value": "100%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 1,
                 "was": 1,
                 "eligible": false
@@ -22708,24 +22708,7 @@
                 "eligible": false
               },
               {
-                "label": "#8 Kimi K3",
-                "badge": null,
-                "tone": "#6b5b95",
-                "was_pct": 0,
-                "now_pct": 0,
-                "value": "0%",
-                "delta": {
-                  "text": "+0%",
-                  "cls": "flat"
-                },
-                "model": "Kimi K3",
-                "base": "Kimi K3",
-                "now": 0,
-                "was": 0,
-                "eligible": false
-              },
-              {
-                "label": "#9 GLM-5.3-Flash",
+                "label": "#8 GLM-5.3-Flash",
                 "badge": null,
                 "tone": "#a05a76",
                 "was_pct": 0,
@@ -22737,6 +22720,23 @@
                 },
                 "model": "GLM-5.3-Flash",
                 "base": "GLM-5.3-Flash",
+                "now": 0,
+                "was": 0,
+                "eligible": false
+              },
+              {
+                "label": "#9 Kimi K3",
+                "badge": null,
+                "tone": "#6b5b95",
+                "was_pct": 0,
+                "now_pct": 0,
+                "value": "0%",
+                "delta": {
+                  "text": "+0%",
+                  "cls": "flat"
+                },
+                "model": "Kimi K3",
+                "base": "Kimi K3",
                 "now": 0,
                 "was": 0,
                 "eligible": false
