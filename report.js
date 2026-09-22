@@ -32,6 +32,14 @@ function kpis(cards) {
   );
 }
 
+/** 简报（模型短评）：报告前部第一块，段落保持空行分段的结构；老期次没有 brief 键就不画。 */
+function briefBlock(text) {
+  if (!text) return "";
+  const blocks = String(text).split(/\n{2,}/).map((block) => block.trim()).filter(Boolean);
+  const body = blocks.map((block) => `<p>${esc(block).replace(/\n/g, "<br>")}</p>`).join("");
+  return `<section class="brief"><h3>简报</h3>${body}</section>`;
+}
+
 function formula(block) {
   const axes = block.axes
     .map(
@@ -429,6 +437,7 @@ function reportHtml(view, options, mode) {
     `<p class="kicker">${esc(head.kicker)}</p><h1>${esc(head.h1)}</h1>` +
     (showToggle ? groupToggle(view, mode) : "") + "</div>" +
     `<p class="meta">${head.meta.map(esc).join("<br>")}</p></header>` +
+    briefBlock(view.brief) +
     kpis(view.kpis) +
     // 目录页按类型看时不再重复列一遍模型（顶部「模型」多选就是这份名单，且带配色点）；
     // 切图外壳走全量模式，图例照旧——它是独立图片的配色说明，去掉还会打乱版块序号。

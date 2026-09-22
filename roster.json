@@ -26,7 +26,17 @@
       "name": "Grok 4.6 Extra High",
       "tone": "#4a6fa5",
       "providers": [
-        "agent"
+        "xAI"
+      ],
+      "thinking": "xhigh",
+      "pricing": "vendor-api",
+      "enabled": true
+    },
+    {
+      "name": "Grok 4.7 Extra High",
+      "tone": "#3b5f8f",
+      "providers": [
+        "xAI"
       ],
       "thinking": "xhigh",
       "pricing": "vendor-api",
@@ -169,6 +179,7 @@
   ],
   "tones": {
     "Grok 4.6 Extra High": "#4a6fa5",
+    "Grok 4.7 Extra High": "#3b5f8f",
     "Kimi K3": "#6b5b95",
     "K3": "#6b5b95",
     "Gemini 3.8 Flash": "#4f8a8b",

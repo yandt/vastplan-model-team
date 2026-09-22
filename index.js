@@ -526,7 +526,7 @@ async function renderDetail(current) {
   if (!meta || !box) return;
   head.textContent = `本期详情 · ${current.kind} · ${current.week}`;
   links.replaceChildren();
-  for (const [file, label] of [["report.md", "报告（Markdown）"], ["post.md", "简评"],
+  for (const [file, label] of [["report.md", "报告（Markdown）"], ["post.md", "简报"],
                                ["data.json", "数据（JSON）"], ["summary.json", "摘要"]] ) {
     if (!(meta.files ?? []).includes(file)) continue;
     const a = document.createElement("a");
