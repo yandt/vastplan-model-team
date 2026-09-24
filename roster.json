@@ -137,6 +137,16 @@
       "enabled": false
     },
     {
+      "name": "Opus 5.5（max）",
+      "tone": null,
+      "providers": [
+        "agent"
+      ],
+      "thinking": "max",
+      "pricing": "cursor-other-models",
+      "enabled": false
+    },
+    {
       "name": "Qwen3.8 Flash",
       "tone": null,
       "providers": [
@@ -175,11 +185,23 @@
       "thinking": "max",
       "pricing": "opencode-go",
       "enabled": true
+    },
+    {
+      "name": "Space Bunny Free",
+      "tone": "#6a9ec9",
+      "providers": [
+        "OpenCode Go"
+      ],
+      "thinking": "max",
+      "pricing": "opencode-go",
+      "enabled": true
     }
   ],
   "tones": {
     "Grok 4.6 Extra High": "#4a6fa5",
     "Grok 4.7 Extra High": "#3b5f8f",
+    "Opus 5.5": "#9a5b8f",
+    "Space Bunny Free": "#6a9ec9",
     "Kimi K3": "#6b5b95",
     "K3": "#6b5b95",
     "Gemini 3.8 Flash": "#4f8a8b",
