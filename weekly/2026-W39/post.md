@@ -1,23 +1,36 @@
-<!-- 生成：DeepSeek V4.1 Flash（max）（deepseek-4.1）· 2026-09-22 13:21:39+08:00 · 耗时 7s · $0.0051（估价） · 窗口 2026-09-21 → 2026-09-23 -->
+<!-- 生成：DeepSeek V4.1 Flash（max）（deepseek-4.1）· 2026-09-24 10:50:16+08:00 · 耗时 12s · $0.0067（估价） · 窗口 2026-09-21 → 2026-09-25 -->
 <!-- 配图：1-ranking.png, 2-audit-quality.png, 3-audit-cost.png, 4-design.png -->
 <!-- 直接发布下面正文；改口吻改 scripts/post_prompt.md -->
 
-这周《模型团队周报》看的是 VastPlan 上的真实表现。VastPlan 是我们自研的 Node/TypeScript 插件运行时与 Portal 内核工程，不是题库。
+本期是 VastPlan 模型团队周报 2026 年第 39 周（进行中），窗口 2026-09-21 到 09-25。VastPlan 是我们自研的 Node/TypeScript 插件运行时与 Portal 内核，是真实工程，不是题库。
 
-测两件事：事后审计＝多模型并行找 BUG、再对照代码判定；设计分叉＝各出方案、按用户最终选定算契合度。
+测试分两种：事后审计是多模型并行找 BUG、再对照代码判定；设计分叉是各出方案、按用户最终选定的方案算契合度。口径上，失败与未评场次不进对照但花费照计，订阅制模型未采集到的金额不记 0，总分是同活动类型内的相对排名。
 
-事后审计 12 场，上期 8 场；成立缺陷 350 条，上期 76；假阳 24 条，上期 13；花费 $27.93，上期 $18.84。综合榜前五：
+本周事后审计 20 场，成立 538 条、独有 449 条、假阳 53 条，花费 $81.70；环比场次 27→20，成立 286→538，假阳 87→53。设计分叉 10 场，成立 156 条，花费 $19.38，假阳 10→12，场次 21→10。专责推理本周 0 场。
 
-1. MiniMax M3 84.7
-2. Step 5 Preview 77.1
-3. SWE-2 67.7
-4. DeepSeek V4.1 Flash（high） 66.2
-5. Grok 4.6 Extra High 63.4
+事后审计榜前八：
 
-MiniMax M3 新进榜首，独有占比 100%，但准确率 84% 是全场最低。Qwen3.8 Flash 从第 1 掉到第 8，降 32.6；MiMo V2.5 Pro 第 12，降 21.1。最贵是 Grok 4.6 Extra High，每次 $1.26；最省是 SWE-2，每次 $0.00。
+1. Grok 4.6 Extra High Cursor 78.9
+2. MiniMax M3 72.9
+3. Step 5 Preview 72.5
+4. DeepSeek V4.1 Flash（high） 70.8
+5. DeepSeek V4.1 Flash（max） 68.3
+6. Muse Spark 1.3 Contributor 67.7
+7. Kimi K3 方舟 Agent Plan 60.8
+8. SWE-2 56.6
 
-设计分叉 7 场，上期 11 场；成立 96 条，上期 79；假阳 11 条，上期 1；花费 $8.52，上期 $12.61。Grok 4.6 Extra High 87.5 拿第一，升 59.9；Fable 5.1 从第 1 掉到第 5，降 19.5，也是本学期最贵，每次 $0.73。MiMo V2.5 Pro 第 13，准确率 60%，契合分 2.14 全场最低。
+Grok 4.6 Extra High Cursor 从上期第 3 升到第 1，均质量 5.9→12.5、假阳 4→1，是本期主力里分数最高的一个。Qwen3.8 Flash 成立 13→40、均质量 7.6→10.2 都在涨，排名却从上期第 1 的 83.3 掉到第 11 的 48.3。MiMo V2.5 Pro 垫底 7.1，比上期再降 17.9。
 
-口径：失败与未评场次不进对照但花费照计；订阅制模型金额未采集不记 0；总分是同活动类型内的相对排名。
+设计分叉榜前五：
 
-你更想看哪个模型下期的细分数据？#LLM #AI #Benchmark #MultiModel
+1. Grok 4.6 Extra High Cursor 100.0
+2. SWE-2 72.5
+3. Qwen3.8 Flash 72.3
+4. GLM-5.3 65.5
+5. Fable 5.1 64.7
+
+Grok 4.6 Extra High Cursor 环比 69.2 升 30.8；Fable 5.1 从上期第 1 的 80.5 降到第 5 的 64.7。
+
+性价比上，事后审计每次花费最低是 SWE-2 $0.00、Muse Spark 1.3 Contributor $0.01、MiMo V2.6 Flash $0.02；最贵是 Grok 4.7 Extra High，每次 $4.88，折合每条成立缺陷 $4.27。设计分叉最贵是 Fable 5.1，每次 $0.73。
+
+样本不足的观察区里，事后审计 Space Bunny Free 3 场均质量 11.0；设计分叉 Opus 5.5（max）3 场均质量 17.0，契合分 5.00 为全场最高。数字都在这里，欢迎一起聊口径。#LLM #AI #Benchmark #MultiModel

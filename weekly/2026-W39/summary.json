@@ -1,66 +1,75 @@
 {
   "window": [
     "2026-09-21",
-    "2026-09-23"
+    "2026-09-25"
   ],
   "prev_window": [
-    "2026-09-19",
+    "2026-09-17",
     "2026-09-21"
   ],
-  "generated_at": "2026-09-22 10:39",
+  "generated_at": "2026-09-24 10:50",
   "week": "2026-W39",
   "week_label": "2026 年第 39 周",
   "partial": true,
   "kinds": {
     "事后审计": {
-      "sessions": 12,
-      "rows": 130,
-      "confirmed": 350,
-      "false_pos": 24,
-      "unique": 281,
-      "usd_rated": 27.93,
+      "sessions": 20,
+      "rows": 231,
+      "confirmed": 538,
+      "false_pos": 53,
+      "unique": 449,
+      "usd_rated": 81.7,
       "top": [
         {
+          "model": "Grok 4.6 Extra High Cursor",
+          "score": 78.9,
+          "sessions": 11
+        },
+        {
           "model": "MiniMax M3",
-          "score": 84.7,
-          "sessions": 9
+          "score": 72.9,
+          "sessions": 16
         },
         {
           "model": "Step 5 Preview",
-          "score": 77.1,
-          "sessions": 11
-        },
-        {
-          "model": "SWE-2",
-          "score": 67.7,
-          "sessions": 11
+          "score": 72.5,
+          "sessions": 18
         }
       ]
     },
     "设计分叉": {
-      "sessions": 7,
-      "rows": 91,
-      "confirmed": 96,
-      "false_pos": 11,
-      "unique": 96,
-      "usd_rated": 8.52,
+      "sessions": 10,
+      "rows": 140,
+      "confirmed": 156,
+      "false_pos": 12,
+      "unique": 129,
+      "usd_rated": 19.38,
       "top": [
         {
-          "model": "Grok 4.6 Extra High",
-          "score": 87.5,
-          "sessions": 7
-        },
-        {
-          "model": "Qwen3.8 Flash",
-          "score": 78.3,
+          "model": "Grok 4.6 Extra High Cursor",
+          "score": 100,
           "sessions": 7
         },
         {
           "model": "SWE-2",
-          "score": 74.9,
-          "sessions": 7
+          "score": 72.5,
+          "sessions": 10
+        },
+        {
+          "model": "Qwen3.8 Flash",
+          "score": 72.3,
+          "sessions": 10
         }
       ]
+    },
+    "专责推理": {
+      "sessions": 0,
+      "rows": 0,
+      "confirmed": 0,
+      "false_pos": 0,
+      "unique": 0,
+      "usd_rated": 0,
+      "top": []
     }
   },
   "images": [
@@ -69,8 +78,8 @@
     "images/3-audit-cost.png",
     "images/4-design.png"
   ],
-  "debt_sessions": 1,
-  "generations": 2,
+  "debt_sessions": 2,
+  "generations": 3,
   "first_generated_at": "2026-09-21 23:19",
-  "last_generated_at": "2026-09-22 10:39"
+  "last_generated_at": "2026-09-24 10:50"
 }
