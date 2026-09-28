@@ -7,7 +7,7 @@
     "2026-09-14",
     "2026-09-21"
   ],
-  "generated_at": "2026-09-28 22:49",
+  "generated_at": "2026-09-28 23:31",
   "week": "2026-W39",
   "week_label": "2026 年第 39 周",
   "partial": false,
@@ -79,7 +79,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 2,
-  "generations": 6,
+  "generations": 7,
   "first_generated_at": "2026-09-21 23:19",
-  "last_generated_at": "2026-09-28 22:49"
+  "last_generated_at": "2026-09-28 23:31"
 }
