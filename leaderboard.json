@@ -136,8 +136,8 @@
     },
     {
       "stamp": "2026-W39",
-      "label": "2026 年第 39 周（进行中）",
-      "partial": true,
+      "label": "2026 年第 39 周",
+      "partial": false,
       "dir": "weekly/2026-W39",
       "files": [
         "data.json",
