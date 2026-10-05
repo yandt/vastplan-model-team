@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "entries": {
+    "pi/opencode-go": {
+      "kind": "quota",
+      "at": "2026-10-05T05:58:04.653Z",
+      "until": "2026-10-06T05:58:04.653Z",
+      "untilSource": "config"
+    }
+  }
+}

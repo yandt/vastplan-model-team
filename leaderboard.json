@@ -200,6 +200,73 @@
           }
         ]
       }
+    },
+    {
+      "stamp": "2026-W40",
+      "label": "2026 年第 40 周",
+      "partial": false,
+      "dir": "weekly/2026-W40",
+      "files": [
+        "data.json",
+        "post.md",
+        "report.md",
+        "summary.json"
+      ],
+      "images": [
+        "weekly/2026-W40/images/1-ranking.png",
+        "weekly/2026-W40/images/2-audit-quality.png",
+        "weekly/2026-W40/images/3-audit-cost.png",
+        "weekly/2026-W40/images/4-design.png"
+      ],
+      "scoring": {
+        "version": 1,
+        "min_sessions": 5,
+        "neutral_part": 50,
+        "axes": [
+          {
+            "key": "quality",
+            "label": "效果",
+            "desc": "均质量",
+            "weight": 0.41,
+            "invert": false
+          },
+          {
+            "key": "coverage",
+            "label": "覆盖",
+            "desc": "去重后重要性加权成立数 ÷ 所参与轮次全场去重合计（同名问题只算一次）",
+            "weight": 0.34,
+            "invert": false
+          },
+          {
+            "key": "unique_ratio",
+            "label": "独立",
+            "desc": "独有（重要性加权）/ 成立（重要性加权）",
+            "weight": 0.25,
+            "invert": false
+          },
+          {
+            "key": "duration",
+            "label": "时间",
+            "desc": "每次分钟，越快越好",
+            "weight": 0,
+            "invert": true
+          },
+          {
+            "key": "cost",
+            "label": "花费",
+            "desc": "每次花费，越省越好",
+            "weight": 0,
+            "invert": true
+          },
+          {
+            "key": "tokens_per_confirm",
+            "label": "token",
+            "desc": "每条成立 token，越省越好",
+            "weight": 0,
+            "invert": true
+          }
+        ]
+      }
     }
   ],
   "kinds": {
@@ -1665,6 +1732,641 @@
                 "quality": 5.636363636363637,
                 "confirmed": 17,
                 "coverage": 0.04730923091922693
+              }
+            }
+          ]
+        },
+        "2026-W40": {
+          "note": "样本 < 5 场未进排名，见下方观察区（Muse Spark 1.3 Contributor Cline）；主力（≥5 场）第一：SWE-2（综合 88.6）",
+          "rows": [
+            {
+              "rank": "1",
+              "name": "SWE-2",
+              "badge": "",
+              "dot": "#6b8e5a",
+              "cells": [
+                "max",
+                "88.6",
+                "15/22",
+                "10.9/9.7",
+                "10%",
+                "3%",
+                "33/50",
+                "25",
+                "2",
+                "94%",
+                "0.00/0.00",
+                "0.66"
+              ],
+              "cost_run": 0,
+              "sessions": 15,
+              "raw": {
+                "quality": 10.866666666666667,
+                "coverage": 0.1275460560685022,
+                "unique_ratio": 0.7913669064748201,
+                "duration": 14.52111111111111,
+                "cost": 0,
+                "tokens_per_confirm": 132.9280303030303
+              },
+              "observed": {
+                "quality": 10.866666666666667,
+                "confirmed": 33,
+                "coverage": 0.1275460560685022
+              }
+            },
+            {
+              "rank": "2",
+              "name": "DeepSeek V4.1 Flash（max）",
+              "badge": "Cline",
+              "dot": "#8a7a3f",
+              "cells": [
+                "max",
+                "85.8",
+                "5/0",
+                "12.8/0.0",
+                "8%",
+                "2%",
+                "13/0",
+                "10",
+                "1",
+                "93%",
+                "0.00/0.00",
+                "1.58"
+              ],
+              "cost_run": 0,
+              "sessions": 5,
+              "raw": {
+                "quality": 12.8,
+                "coverage": 0.0967725903489711,
+                "unique_ratio": 0.7959183673469388,
+                "duration": 6.29,
+                "cost": 0,
+                "tokens_per_confirm": 2447.155153846154
+              },
+              "observed": {
+                "quality": 12.8,
+                "confirmed": 13,
+                "coverage": 0.0967725903489711
+              }
+            },
+            {
+              "rank": "3",
+              "name": "Space Bunny Free",
+              "badge": "",
+              "dot": "#6a9ec9",
+              "cells": [
+                "max",
+                "81.0",
+                "15/7",
+                "9.9/10.9",
+                "9%",
+                "2%",
+                "32/16",
+                "26",
+                "3",
+                "91%",
+                "0.00/0.00",
+                "1.10"
+              ],
+              "cost_run": 0,
+              "sessions": 15,
+              "raw": {
+                "quality": 9.933333333333334,
+                "coverage": 0.10756343226311559,
+                "unique_ratio": 0.8448275862068966,
+                "duration": 7.868888888888889,
+                "cost": 0,
+                "tokens_per_confirm": 1435.1871875
+              },
+              "observed": {
+                "quality": 9.933333333333334,
+                "confirmed": 32,
+                "coverage": 0.10756343226311559
+              }
+            },
+            {
+              "rank": "4",
+              "name": "Grok 4.7 Extra High",
+              "badge": "",
+              "dot": "#3b5f8f",
+              "cells": [
+                "xhigh",
+                "80.7",
+                "15/11",
+                "9.9/6.1",
+                "9%",
+                "2%",
+                "28/13",
+                "23",
+                "1",
+                "97%",
+                "4.07/4.26",
+                "0.50"
+              ],
+              "cost_run": 4.07,
+              "sessions": 15,
+              "raw": {
+                "quality": 9.866666666666667,
+                "coverage": 0.1066946225324466,
+                "unique_ratio": 0.8521739130434782,
+                "duration": 15.503333333333334,
+                "cost": 4.067022533333334,
+                "tokens_per_confirm": 3345.8103214285716
+              },
+              "observed": {
+                "quality": 9.866666666666667,
+                "confirmed": 28,
+                "coverage": 0.1066946225324466
+              }
+            },
+            {
+              "rank": "5",
+              "name": "Grok 4.6 Extra High",
+              "badge": "xAI",
+              "dot": "#4a6fa5",
+              "cells": [
+                "xhigh",
+                "71.5",
+                "15/11",
+                "8.7/5.6",
+                "8%",
+                "2%",
+                "25/13",
+                "21",
+                "0",
+                "100%",
+                "1.10/1.20",
+                "0.88"
+              ],
+              "cost_run": 1.1,
+              "sessions": 15,
+              "raw": {
+                "quality": 8.666666666666666,
+                "coverage": 0.09018723764973591,
+                "unique_ratio": 0.8333333333333334,
+                "duration": 7.346666666666667,
+                "cost": 1.0993824,
+                "tokens_per_confirm": 900.61816
+              },
+              "observed": {
+                "quality": 8.666666666666666,
+                "confirmed": 25,
+                "coverage": 0.09018723764973591
+              }
+            },
+            {
+              "rank": "6",
+              "name": "Qwen3.8 Flash",
+              "badge": "",
+              "dot": "#4f8a8b",
+              "cells": [
+                "max",
+                "71.2",
+                "14/22",
+                "8.1/8.8",
+                "8%",
+                "3%",
+                "27/44",
+                "19",
+                "6",
+                "82%",
+                "0.00/0.00",
+                "0.73"
+              ],
+              "cost_run": 0,
+              "sessions": 14,
+              "raw": {
+                "quality": 8.071428571428571,
+                "coverage": 0.10486175474216654,
+                "unique_ratio": 0.7244897959183674,
+                "duration": 9.375,
+                "cost": 0,
+                "tokens_per_confirm": 0
+              },
+              "observed": {
+                "quality": 8.071428571428571,
+                "confirmed": 27,
+                "coverage": 0.10486175474216654
+              }
+            },
+            {
+              "rank": "7",
+              "name": "GLM-5.3",
+              "badge": "",
+              "dot": "#b0674a",
+              "cells": [
+                "max",
+                "63.8",
+                "15/22",
+                "7.1/7.4",
+                "7%",
+                "2%",
+                "22/37",
+                "15",
+                "1",
+                "96%",
+                "0.54/0.40",
+                "0.82"
+              ],
+              "cost_run": 0.54,
+              "sessions": 15,
+              "raw": {
+                "quality": 7.133333333333334,
+                "coverage": 0.08758080845772896,
+                "unique_ratio": 0.7526881720430108,
+                "duration": 6.703333333333333,
+                "cost": 0.54172,
+                "tokens_per_confirm": 1012.8627272727273
+              },
+              "observed": {
+                "quality": 7.133333333333334,
+                "confirmed": 22,
+                "coverage": 0.08758080845772896
+              }
+            },
+            {
+              "rank": "8",
+              "name": "Kimi K3",
+              "badge": "",
+              "dot": "#6b5b95",
+              "cells": [
+                "max",
+                "63.3",
+                "15/22",
+                "6.3/9.0",
+                "7%",
+                "1%",
+                "19/46",
+                "16",
+                "1",
+                "95%",
+                "0.68/0.61",
+                "0.55"
+              ],
+              "cost_run": 0.68,
+              "sessions": 15,
+              "raw": {
+                "quality": 6.333333333333333,
+                "coverage": 0.08323675980438404,
+                "unique_ratio": 0.8863636363636364,
+                "duration": 9.277777777777777,
+                "cost": 0.6833872000000001,
+                "tokens_per_confirm": 767.9235263157894
+              },
+              "observed": {
+                "quality": 6.333333333333333,
+                "confirmed": 19,
+                "coverage": 0.08323675980438404
+              }
+            },
+            {
+              "rank": "9",
+              "name": "GLM-5.3-Flash",
+              "badge": "",
+              "dot": "#a05a76",
+              "cells": [
+                "max",
+                "59.0",
+                "15/22",
+                "6.3/7.9",
+                "6%",
+                "2%",
+                "20/41",
+                "13",
+                "3",
+                "87%",
+                "0.04/0.03",
+                "0.45"
+              ],
+              "cost_run": 0.04,
+              "sessions": 15,
+              "raw": {
+                "quality": 6.333333333333333,
+                "coverage": 0.08323675980438404,
+                "unique_ratio": 0.7159090909090909,
+                "duration": 11.577777777777778,
+                "cost": 0.036889,
+                "tokens_per_confirm": 1333.16805
+              },
+              "observed": {
+                "quality": 6.333333333333333,
+                "confirmed": 20,
+                "coverage": 0.08323675980438404
+              }
+            },
+            {
+              "rank": "10",
+              "name": "DeepSeek V4.1 Flash（high）",
+              "badge": "Cline",
+              "dot": "#8a7a3f",
+              "cells": [
+                "high",
+                "58.8",
+                "5/0",
+                "6.8/0.0",
+                "6%",
+                "2%",
+                "9/0",
+                "6",
+                "3",
+                "75%",
+                "0.00/0.00",
+                "1.15"
+              ],
+              "cost_run": 0,
+              "sessions": 5,
+              "raw": {
+                "quality": 6.8,
+                "coverage": 0.07632966019564912,
+                "unique_ratio": 0.7297297297297297,
+                "duration": 5.666666666666667,
+                "cost": 0,
+                "tokens_per_confirm": 4200.394888888889
+              },
+              "observed": {
+                "quality": 6.8,
+                "confirmed": 9,
+                "coverage": 0.07632966019564912
+              }
+            },
+            {
+              "rank": "11",
+              "name": "Step 5 Preview",
+              "badge": "",
+              "dot": "#5c6b7a",
+              "cells": [
+                "max",
+                "51.1",
+                "15/22",
+                "4.9/12.0",
+                "5%",
+                "1%",
+                "16/57",
+                "11",
+                "1",
+                "94%",
+                "0.00/0.00",
+                "0.33"
+              ],
+              "cost_run": 0,
+              "sessions": 15,
+              "raw": {
+                "quality": 4.866666666666666,
+                "coverage": 0.06586056519100437,
+                "unique_ratio": 0.7941176470588235,
+                "duration": 11.694444444444445,
+                "cost": 0,
+                "tokens_per_confirm": 2760.074375
+              },
+              "observed": {
+                "quality": 4.866666666666666,
+                "confirmed": 16,
+                "coverage": 0.06586056519100437
+              }
+            },
+            {
+              "rank": "12",
+              "name": "MiniMax M3",
+              "badge": "",
+              "dot": "#3e8a7a",
+              "cells": [
+                "max",
+                "48.9",
+                "15/20",
+                "4.3/9.3",
+                "5%",
+                "0%",
+                "12/47",
+                "12",
+                "0",
+                "100%",
+                "0.23/0.26",
+                "0.41"
+              ],
+              "cost_run": 0.23,
+              "sessions": 15,
+              "raw": {
+                "quality": 4.266666666666667,
+                "coverage": 0.047615560846955715,
+                "unique_ratio": 1,
+                "duration": 2.9699999999999998,
+                "cost": 0.23215506666666666,
+                "tokens_per_confirm": 4196.093833333333
+              },
+              "observed": {
+                "quality": 4.266666666666667,
+                "confirmed": 12,
+                "coverage": 0.047615560846955715
+              }
+            },
+            {
+              "rank": "13",
+              "name": "Muse Spark 1.3 Contributor",
+              "badge": "OpenCode Go",
+              "dot": "#7d6b8f",
+              "cells": [
+                "xhigh",
+                "46.5",
+                "9/22",
+                "3.2/10.8",
+                "5%",
+                "0%",
+                "6/61",
+                "6",
+                "2",
+                "75%",
+                "0.01/0.01",
+                "0.59"
+              ],
+              "cost_run": 0.01,
+              "sessions": 9,
+              "raw": {
+                "quality": 3.2222222222222223,
+                "coverage": 0.0505477820259569,
+                "unique_ratio": 1,
+                "duration": 1.9796296296296296,
+                "cost": 0.006304444444444445,
+                "tokens_per_confirm": 401.3935
+              },
+              "observed": {
+                "quality": 3.2222222222222223,
+                "confirmed": 6,
+                "coverage": 0.0505477820259569
+              }
+            },
+            {
+              "rank": "14",
+              "name": "MiMo V2.6 Flash",
+              "badge": "",
+              "dot": "#7a5c2e",
+              "cells": [
+                "max",
+                "45.9",
+                "15/11",
+                "4.1/8.0",
+                "4%",
+                "1%",
+                "10/20",
+                "9",
+                "0",
+                "100%",
+                "0.01/0.02",
+                "0.17"
+              ],
+              "cost_run": 0.01,
+              "sessions": 15,
+              "raw": {
+                "quality": 4.066666666666666,
+                "coverage": 0.0484843705776247,
+                "unique_ratio": 0.8958333333333334,
+                "duration": 6.225555555555556,
+                "cost": 0.011685666666666667,
+                "tokens_per_confirm": 1389.6291999999999
+              },
+              "observed": {
+                "quality": 4.066666666666666,
+                "confirmed": 10,
+                "coverage": 0.0484843705776247
+              }
+            },
+            {
+              "rank": "15",
+              "name": "MiMo V2.6 Pro",
+              "badge": "",
+              "dot": "#d9a441",
+              "cells": [
+                "max",
+                "43.1",
+                "15/11",
+                "4.0/8.5",
+                "4%",
+                "1%",
+                "13/22",
+                "10",
+                "2",
+                "87%",
+                "0.03/0.07",
+                "0.18"
+              ],
+              "cost_run": 0.03,
+              "sessions": 15,
+              "raw": {
+                "quality": 4,
+                "coverage": 0.0484843705776247,
+                "unique_ratio": 0.7916666666666666,
+                "duration": 7.5055555555555555,
+                "cost": 0.034662733333333334,
+                "tokens_per_confirm": 856.1848461538461
+              },
+              "observed": {
+                "quality": 4,
+                "confirmed": 13,
+                "coverage": 0.0484843705776247
+              }
+            },
+            {
+              "rank": "16",
+              "name": "DeepSeek V4.1 Flash（high）",
+              "badge": "OpenCode Go",
+              "dot": "#8a7a3f",
+              "cells": [
+                "high",
+                "28.5",
+                "8/22",
+                "0.6/10.6",
+                "2%",
+                "0%",
+                "1/50",
+                "1",
+                "0",
+                "100%",
+                "0.01/0.10",
+                "0.04"
+              ],
+              "cost_run": 0.01,
+              "sessions": 8,
+              "raw": {
+                "quality": 0.625,
+                "coverage": 0.018069415610110415,
+                "unique_ratio": 1,
+                "duration": 1.1125,
+                "cost": 0.014342875,
+                "tokens_per_confirm": 4024.39
+              },
+              "observed": {
+                "quality": 0.625,
+                "confirmed": 1,
+                "coverage": 0.018069415610110415
+              }
+            },
+            {
+              "rank": "17",
+              "name": "DeepSeek V4.1 Flash（max）",
+              "badge": "OpenCode Go",
+              "dot": "#8a7a3f",
+              "cells": [
+                "max",
+                "0.0",
+                "8/22",
+                "0.0/10.9",
+                "1%",
+                "0%",
+                "0/53",
+                "0",
+                "0",
+                "0%",
+                "0.01/0.11",
+                "0.00"
+              ],
+              "cost_run": 0.01,
+              "sessions": 8,
+              "raw": {
+                "quality": 0,
+                "coverage": 0.01305269320208366,
+                "unique_ratio": 0,
+                "duration": 1.1666666666666667,
+                "cost": 0.0133085,
+                "tokens_per_confirm": 0
+              },
+              "observed": {
+                "quality": 0,
+                "confirmed": 0,
+                "coverage": 0.01305269320208366
+              }
+            },
+            {
+              "rank": "",
+              "name": "Muse Spark 1.3 Contributor",
+              "badge": "Cline",
+              "dot": "#7d6b8f",
+              "cells": [
+                "xhigh",
+                "—",
+                "4/0",
+                "13.3/0.0",
+                "8%",
+                "2%",
+                "11/0",
+                "9",
+                "2",
+                "85%",
+                "0.00/0.00",
+                "1.78"
+              ],
+              "cost_run": 0,
+              "sessions": 4,
+              "raw": {
+                "quality": 13.25,
+                "coverage": 0.10038341517695154,
+                "unique_ratio": 0.8478260869565217,
+                "duration": 5.375,
+                "cost": 0,
+                "tokens_per_confirm": 197.912
+              },
+              "observed": {
+                "quality": 13.25,
+                "confirmed": 11,
+                "coverage": 0.10038341517695154
               }
             }
           ]
@@ -3276,6 +3978,676 @@
               }
             }
           ]
+        },
+        "2026-W40": {
+          "note": "样本 < 5 场未进排名，见下方观察区（DeepSeek V4.1 Flash（high） OpenCode Go、DeepSeek V4.1 Flash（max） OpenCode Go、Muse Spark 1.3 Contributor Cline）；主力（≥5 场）第一：Opus 5.5（max） Cursor（综合 87.5）",
+          "rows": [
+            {
+              "rank": "1",
+              "name": "Opus 5.5（max）",
+              "badge": "Cursor",
+              "dot": "#9a5b8f",
+              "cells": [
+                "max",
+                "87.5",
+                "6/4",
+                "20.8/12.8",
+                "12%",
+                "0%",
+                "11/6",
+                "11",
+                "0",
+                "100%",
+                "2.52/2.07",
+                "4.33/5.00"
+              ],
+              "cost_run": 2.52,
+              "sessions": 6,
+              "raw": {
+                "quality": 20.833333333333332,
+                "coverage": 0.12445652173913044,
+                "unique_ratio": 1,
+                "duration": 12.852777777777778,
+                "cost": 2.5167606666666664,
+                "tokens_per_confirm": 1670.8127272727272
+              },
+              "observed": {
+                "quality": 20.833333333333332,
+                "confirmed": 11,
+                "coverage": 0.12445652173913044
+              }
+            },
+            {
+              "rank": "2",
+              "name": "Grok 4.7 Extra High",
+              "badge": "",
+              "dot": "#3b5f8f",
+              "cells": [
+                "xhigh",
+                "64.2",
+                "6/4",
+                "15.0/7.0",
+                "10%",
+                "0%",
+                "8/4",
+                "8",
+                "1",
+                "89%",
+                "0.59/0.44",
+                "3.50/2.50"
+              ],
+              "cost_run": 0.59,
+              "sessions": 6,
+              "raw": {
+                "quality": 15,
+                "coverage": 0.0983695652173913,
+                "unique_ratio": 1,
+                "duration": 4.883333333333334,
+                "cost": 0.5889356666666666,
+                "tokens_per_confirm": 438.567625
+              },
+              "observed": {
+                "quality": 15,
+                "confirmed": 8,
+                "coverage": 0.0983695652173913
+              }
+            },
+            {
+              "rank": "3",
+              "name": "Kimi K3",
+              "badge": "",
+              "dot": "#6b5b95",
+              "cells": [
+                "max",
+                "56.8",
+                "6/11",
+                "15.2/10.5",
+                "8%",
+                "0%",
+                "7/11",
+                "7",
+                "0",
+                "100%",
+                "0.10/0.08",
+                "4.00/3.44"
+              ],
+              "cost_run": 0.1,
+              "sessions": 6,
+              "raw": {
+                "quality": 15.166666666666666,
+                "coverage": 0.0766304347826087,
+                "unique_ratio": 1,
+                "duration": 1.8388888888888888,
+                "cost": 0.09532249999999999,
+                "tokens_per_confirm": 16.724714285714285
+              },
+              "observed": {
+                "quality": 15.166666666666666,
+                "confirmed": 7,
+                "coverage": 0.0766304347826087
+              }
+            },
+            {
+              "rank": "4",
+              "name": "Space Bunny Free",
+              "badge": "",
+              "dot": "#6a9ec9",
+              "cells": [
+                "max",
+                "56.8",
+                "6/2",
+                "15.2/8.0",
+                "8%",
+                "0%",
+                "7/1",
+                "7",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "4.00/5.00"
+              ],
+              "cost_run": 0,
+              "sessions": 6,
+              "raw": {
+                "quality": 15.166666666666666,
+                "coverage": 0.0766304347826087,
+                "unique_ratio": 1,
+                "duration": 1.8888888888888888,
+                "cost": 0,
+                "tokens_per_confirm": 97.72914285714286
+              },
+              "observed": {
+                "quality": 15.166666666666666,
+                "confirmed": 7,
+                "coverage": 0.0766304347826087
+              }
+            },
+            {
+              "rank": "5",
+              "name": "DeepSeek V4.1 Flash（max）",
+              "badge": "Cline",
+              "dot": "#8a7a3f",
+              "cells": [
+                "max",
+                "48.3",
+                "5/0",
+                "13.6/0.0",
+                "6%",
+                "0%",
+                "5/0",
+                "5",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "3.80/0.00"
+              ],
+              "cost_run": 0,
+              "sessions": 5,
+              "raw": {
+                "quality": 13.6,
+                "coverage": 0.06325301204819277,
+                "unique_ratio": 1,
+                "duration": 1.6333333333333333,
+                "cost": 0,
+                "tokens_per_confirm": 227.40439999999998
+              },
+              "observed": {
+                "quality": 13.6,
+                "confirmed": 5,
+                "coverage": 0.06325301204819277
+              }
+            },
+            {
+              "rank": "6",
+              "name": "GLM-5.3",
+              "badge": "",
+              "dot": "#b0674a",
+              "cells": [
+                "max",
+                "47.7",
+                "6/11",
+                "13.0/11.8",
+                "7%",
+                "0%",
+                "6/12",
+                "6",
+                "0",
+                "100%",
+                "0.05/0.05",
+                "3.50/3.89"
+              ],
+              "cost_run": 0.05,
+              "sessions": 6,
+              "raw": {
+                "quality": 13,
+                "coverage": 0.06576086956521739,
+                "unique_ratio": 1,
+                "duration": 2.411111111111111,
+                "cost": 0.05463566666666666,
+                "tokens_per_confirm": 24.894
+              },
+              "observed": {
+                "quality": 13,
+                "confirmed": 6,
+                "coverage": 0.06576086956521739
+              }
+            },
+            {
+              "rank": "7",
+              "name": "DeepSeek V4.1 Flash（high）",
+              "badge": "Cline",
+              "dot": "#8a7a3f",
+              "cells": [
+                "high",
+                "43.5",
+                "5/0",
+                "11.6/0.0",
+                "6%",
+                "0%",
+                "6/0",
+                "6",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "2.60/0.00"
+              ],
+              "cost_run": 0,
+              "sessions": 5,
+              "raw": {
+                "quality": 11.6,
+                "coverage": 0.06325301204819277,
+                "unique_ratio": 1,
+                "duration": 0.7666666666666667,
+                "cost": 0,
+                "tokens_per_confirm": 117.5755
+              },
+              "observed": {
+                "quality": 11.6,
+                "confirmed": 6,
+                "coverage": 0.06325301204819277
+              }
+            },
+            {
+              "rank": "8",
+              "name": "GLM-5.3-Flash",
+              "badge": "",
+              "dot": "#a05a76",
+              "cells": [
+                "max",
+                "43.4",
+                "6/11",
+                "12.2/11.5",
+                "6%",
+                "0%",
+                "6/11",
+                "6",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "3.33/3.78"
+              ],
+              "cost_run": 0,
+              "sessions": 6,
+              "raw": {
+                "quality": 12.166666666666666,
+                "coverage": 0.05923913043478261,
+                "unique_ratio": 1,
+                "duration": 3.725,
+                "cost": 0.0033601666666666662,
+                "tokens_per_confirm": 25.50933333333333
+              },
+              "observed": {
+                "quality": 12.166666666666666,
+                "confirmed": 6,
+                "coverage": 0.05923913043478261
+              }
+            },
+            {
+              "rank": "9",
+              "name": "Grok 4.6 Extra High",
+              "badge": "xAI",
+              "dot": "#4a6fa5",
+              "cells": [
+                "xhigh",
+                "42.6",
+                "6/4",
+                "11.8/5.0",
+                "6%",
+                "0%",
+                "5/2",
+                "5",
+                "0",
+                "100%",
+                "0.16/0.12",
+                "3.33/2.50"
+              ],
+              "cost_run": 0.16,
+              "sessions": 6,
+              "raw": {
+                "quality": 11.833333333333334,
+                "coverage": 0.05923913043478261,
+                "unique_ratio": 1,
+                "duration": 2.308333333333333,
+                "cost": 0.16114133333333333,
+                "tokens_per_confirm": 146.1984
+              },
+              "observed": {
+                "quality": 11.833333333333334,
+                "confirmed": 5,
+                "coverage": 0.05923913043478261
+              }
+            },
+            {
+              "rank": "10",
+              "name": "Qwen3.8 Flash",
+              "badge": "",
+              "dot": "#4f8a8b",
+              "cells": [
+                "max",
+                "40.3",
+                "6/11",
+                "11.5/12.1",
+                "5%",
+                "0%",
+                "6/12",
+                "6",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "3.17/3.78"
+              ],
+              "cost_run": 0,
+              "sessions": 6,
+              "raw": {
+                "quality": 11.5,
+                "coverage": 0.05489130434782609,
+                "unique_ratio": 1,
+                "duration": 1.2194444444444446,
+                "cost": 0,
+                "tokens_per_confirm": 0
+              },
+              "observed": {
+                "quality": 11.5,
+                "confirmed": 6,
+                "coverage": 0.05489130434782609
+              }
+            },
+            {
+              "rank": "11",
+              "name": "MiMo V2.6 Pro",
+              "badge": "",
+              "dot": "#d9a441",
+              "cells": [
+                "max",
+                "39.8",
+                "6/4",
+                "11.0/4.5",
+                "6%",
+                "0%",
+                "5/2",
+                "5",
+                "0",
+                "100%",
+                "0.01/0.01",
+                "3.60/2.50"
+              ],
+              "cost_run": 0.01,
+              "sessions": 6,
+              "raw": {
+                "quality": 11,
+                "coverage": 0.057065217391304345,
+                "unique_ratio": 1,
+                "duration": 2.2083333333333335,
+                "cost": 0.007019666666666667,
+                "tokens_per_confirm": 31.433799999999998
+              },
+              "observed": {
+                "quality": 11,
+                "confirmed": 5,
+                "coverage": 0.057065217391304345
+              }
+            },
+            {
+              "rank": "12",
+              "name": "MiMo V2.6 Flash",
+              "badge": "",
+              "dot": "#7a5c2e",
+              "cells": [
+                "max",
+                "37.5",
+                "6/4",
+                "10.7/6.8",
+                "5%",
+                "0%",
+                "5/4",
+                "5",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "3.60/2.50"
+              ],
+              "cost_run": 0,
+              "sessions": 6,
+              "raw": {
+                "quality": 10.666666666666666,
+                "coverage": 0.05271739130434783,
+                "unique_ratio": 1,
+                "duration": 1.7694444444444446,
+                "cost": 0.0028938333333333333,
+                "tokens_per_confirm": 22.9372
+              },
+              "observed": {
+                "quality": 10.666666666666666,
+                "confirmed": 5,
+                "coverage": 0.05271739130434783
+              }
+            },
+            {
+              "rank": "13",
+              "name": "SWE-2",
+              "badge": "",
+              "dot": "#6b8e5a",
+              "cells": [
+                "max",
+                "35.6",
+                "6/11",
+                "10.8/12.7",
+                "5%",
+                "0%",
+                "4/13",
+                "4",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "3.50/4.00"
+              ],
+              "cost_run": 0,
+              "sessions": 6,
+              "raw": {
+                "quality": 10.833333333333334,
+                "coverage": 0.04619565217391304,
+                "unique_ratio": 1,
+                "duration": 3.7694444444444444,
+                "cost": 0,
+                "tokens_per_confirm": 66.1665
+              },
+              "observed": {
+                "quality": 10.833333333333334,
+                "confirmed": 4,
+                "coverage": 0.04619565217391304
+              }
+            },
+            {
+              "rank": "14",
+              "name": "Step 5 Preview",
+              "badge": "",
+              "dot": "#5c6b7a",
+              "cells": [
+                "max",
+                "34.7",
+                "6/11",
+                "9.5/10.3",
+                "5%",
+                "0%",
+                "5/10",
+                "5",
+                "1",
+                "83%",
+                "0.00/0.00",
+                "2.67/3.44"
+              ],
+              "cost_run": 0,
+              "sessions": 6,
+              "raw": {
+                "quality": 9.5,
+                "coverage": 0.05271739130434783,
+                "unique_ratio": 1,
+                "duration": 2.188888888888889,
+                "cost": 0,
+                "tokens_per_confirm": 11.9336
+              },
+              "observed": {
+                "quality": 9.5,
+                "confirmed": 5,
+                "coverage": 0.05271739130434783
+              }
+            },
+            {
+              "rank": "15",
+              "name": "Muse Spark 1.3 Contributor",
+              "badge": "OpenCode Go",
+              "dot": "#7d6b8f",
+              "cells": [
+                "xhigh",
+                "13.2",
+                "5/11",
+                "4.0/10.5",
+                "3%",
+                "0%",
+                "2/11",
+                "2",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "1.67/3.44"
+              ],
+              "cost_run": 0,
+              "sessions": 5,
+              "raw": {
+                "quality": 4,
+                "coverage": 0.029518072289156625,
+                "unique_ratio": 1,
+                "duration": 0.5233333333333333,
+                "cost": 0.0009862,
+                "tokens_per_confirm": 20.958
+              },
+              "observed": {
+                "quality": 4,
+                "confirmed": 2,
+                "coverage": 0.029518072289156625
+              }
+            },
+            {
+              "rank": "16",
+              "name": "MiniMax M3",
+              "badge": "",
+              "dot": "#3e8a7a",
+              "cells": [
+                "max",
+                "12.5",
+                "6/11",
+                "3.8/9.2",
+                "3%",
+                "0%",
+                "2/10",
+                "2",
+                "0",
+                "100%",
+                "0.00/0.01",
+                "2.00/3.56"
+              ],
+              "cost_run": 0,
+              "sessions": 6,
+              "raw": {
+                "quality": 3.8333333333333335,
+                "coverage": 0.028804347826086957,
+                "unique_ratio": 1,
+                "duration": 0.45,
+                "cost": 0.004690333333333334,
+                "tokens_per_confirm": 24.1115
+              },
+              "observed": {
+                "quality": 3.8333333333333335,
+                "confirmed": 2,
+                "coverage": 0.028804347826086957
+              }
+            },
+            {
+              "rank": "",
+              "name": "DeepSeek V4.1 Flash（max）",
+              "badge": "OpenCode Go",
+              "dot": "#8a7a3f",
+              "cells": [
+                "max",
+                "—",
+                "1/11",
+                "0.0/10.6",
+                "4%",
+                "0%",
+                "0/10",
+                "0",
+                "0",
+                "0%",
+                "—/0.01",
+                "0.00/3.56"
+              ],
+              "cost_run": null,
+              "sessions": 1,
+              "raw": {
+                "quality": 0,
+                "coverage": 0.04310344827586207,
+                "unique_ratio": 0,
+                "duration": 0.016666666666666666,
+                "cost": null,
+                "tokens_per_confirm": 0
+              },
+              "observed": {
+                "quality": 0,
+                "confirmed": 0,
+                "coverage": 0.04310344827586207
+              }
+            },
+            {
+              "rank": "",
+              "name": "DeepSeek V4.1 Flash（high）",
+              "badge": "OpenCode Go",
+              "dot": "#8a7a3f",
+              "cells": [
+                "high",
+                "—",
+                "1/11",
+                "0.0/11.5",
+                "4%",
+                "0%",
+                "0/12",
+                "0",
+                "0",
+                "0%",
+                "—/0.01",
+                "0.00/3.56"
+              ],
+              "cost_run": null,
+              "sessions": 1,
+              "raw": {
+                "quality": 0,
+                "coverage": 0.04310344827586207,
+                "unique_ratio": 0,
+                "duration": 0.05,
+                "cost": null,
+                "tokens_per_confirm": 0
+              },
+              "observed": {
+                "quality": 0,
+                "confirmed": 0,
+                "coverage": 0.04310344827586207
+              }
+            },
+            {
+              "rank": "",
+              "name": "Muse Spark 1.3 Contributor",
+              "badge": "Cline",
+              "dot": "#7d6b8f",
+              "cells": [
+                "xhigh",
+                "—",
+                "1/0",
+                "11.0/0.0",
+                "6%",
+                "0%",
+                "1/0",
+                "1",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "3.00/0.00"
+              ],
+              "cost_run": 0,
+              "sessions": 1,
+              "raw": {
+                "quality": 11,
+                "coverage": 0.06379310344827586,
+                "unique_ratio": 1,
+                "duration": 1.1,
+                "cost": 0,
+                "tokens_per_confirm": 17.931
+              },
+              "observed": {
+                "quality": 11,
+                "confirmed": 1,
+                "coverage": 0.06379310344827586
+              }
+            }
+          ]
         }
       }
     },
@@ -3618,6 +4990,571 @@
         "2026-W39": {
           "note": "",
           "rows": []
+        },
+        "2026-W40": {
+          "note": "样本 < 5 场未进排名，见下方观察区（DeepSeek V4.1 Flash（high） Cline、DeepSeek V4.1 Flash（max） Cline、GLM-5.3、GLM-5.3-Flash、Grok 4.6 Extra High xAI、Grok 4.7 Extra High、Kimi K3、MiMo V2.6 Flash、MiMo V2.6 Pro、MiniMax M3、Muse Spark 1.3 Contributor OpenCode Go、Opus 5.5（max） Cursor、Qwen3.8 Flash、Space Bunny Free、Step 5 Preview、SWE-2）",
+          "rows": [
+            {
+              "rank": "",
+              "name": "Kimi K3",
+              "badge": "",
+              "dot": "#6b5b95",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "15.5/0.0",
+                "7%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.14/0.00",
+                "1.19"
+              ],
+              "cost_run": 0.14,
+              "sessions": 2,
+              "raw": {
+                "quality": 15.5,
+                "coverage": 0.07345360824742268,
+                "unique_ratio": 1,
+                "duration": 3.45,
+                "cost": 0.137322,
+                "tokens_per_confirm": 22.594
+              },
+              "observed": {
+                "quality": 15.5,
+                "confirmed": 2,
+                "coverage": 0.07345360824742268
+              }
+            },
+            {
+              "rank": "",
+              "name": "Grok 4.6 Extra High",
+              "badge": "xAI",
+              "dot": "#4a6fa5",
+              "cells": [
+                "xhigh",
+                "—",
+                "2/0",
+                "15.5/0.0",
+                "7%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.63/0.00",
+                "1.09"
+              ],
+              "cost_run": 0.63,
+              "sessions": 2,
+              "raw": {
+                "quality": 15.5,
+                "coverage": 0.07345360824742268,
+                "unique_ratio": 1,
+                "duration": 4.608333333333333,
+                "cost": 0.6271559999999999,
+                "tokens_per_confirm": 877.276
+              },
+              "observed": {
+                "quality": 15.5,
+                "confirmed": 2,
+                "coverage": 0.07345360824742268
+              }
+            },
+            {
+              "rank": "",
+              "name": "Grok 4.7 Extra High",
+              "badge": "",
+              "dot": "#3b5f8f",
+              "cells": [
+                "xhigh",
+                "—",
+                "2/0",
+                "17.0/0.0",
+                "7%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "1.44/0.00",
+                "0.55"
+              ],
+              "cost_run": 1.44,
+              "sessions": 2,
+              "raw": {
+                "quality": 17,
+                "coverage": 0.07345360824742268,
+                "unique_ratio": 1,
+                "duration": 7.833333333333333,
+                "cost": 1.440182,
+                "tokens_per_confirm": 1813.108
+              },
+              "observed": {
+                "quality": 17,
+                "confirmed": 2,
+                "coverage": 0.07345360824742268
+              }
+            },
+            {
+              "rank": "",
+              "name": "GLM-5.3",
+              "badge": "",
+              "dot": "#b0674a",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "13.5/0.0",
+                "7%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.08/0.00",
+                "1.04"
+              ],
+              "cost_run": 0.08,
+              "sessions": 2,
+              "raw": {
+                "quality": 13.5,
+                "coverage": 0.06829896907216494,
+                "unique_ratio": 1,
+                "duration": 3.4833333333333334,
+                "cost": 0.082842,
+                "tokens_per_confirm": 51.6395
+              },
+              "observed": {
+                "quality": 13.5,
+                "confirmed": 2,
+                "coverage": 0.06829896907216494
+              }
+            },
+            {
+              "rank": "",
+              "name": "GLM-5.3-Flash",
+              "badge": "",
+              "dot": "#a05a76",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "10.0/0.0",
+                "6%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.01/0.00",
+                "0.48"
+              ],
+              "cost_run": 0.01,
+              "sessions": 2,
+              "raw": {
+                "quality": 10,
+                "coverage": 0.05798969072164949,
+                "unique_ratio": 1,
+                "duration": 5.316666666666666,
+                "cost": 0.00842,
+                "tokens_per_confirm": 168.1225
+              },
+              "observed": {
+                "quality": 10,
+                "confirmed": 2,
+                "coverage": 0.05798969072164949
+              }
+            },
+            {
+              "rank": "",
+              "name": "DeepSeek V4.1 Flash（max）",
+              "badge": "Cline",
+              "dot": "#8a7a3f",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "17.0/0.0",
+                "8%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "1.25"
+              ],
+              "cost_run": 0,
+              "sessions": 2,
+              "raw": {
+                "quality": 17,
+                "coverage": 0.07860824742268041,
+                "unique_ratio": 1,
+                "duration": 3.6416666666666666,
+                "cost": 0,
+                "tokens_per_confirm": 1721.003
+              },
+              "observed": {
+                "quality": 17,
+                "confirmed": 2,
+                "coverage": 0.07860824742268041
+              }
+            },
+            {
+              "rank": "",
+              "name": "DeepSeek V4.1 Flash（high）",
+              "badge": "Cline",
+              "dot": "#8a7a3f",
+              "cells": [
+                "high",
+                "—",
+                "2/0",
+                "17.5/0.0",
+                "8%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "1.80"
+              ],
+              "cost_run": 0,
+              "sessions": 2,
+              "raw": {
+                "quality": 17.5,
+                "coverage": 0.08376288659793814,
+                "unique_ratio": 1,
+                "duration": 2.783333333333333,
+                "cost": 0,
+                "tokens_per_confirm": 1579.11
+              },
+              "observed": {
+                "quality": 17.5,
+                "confirmed": 2,
+                "coverage": 0.08376288659793814
+              }
+            },
+            {
+              "rank": "",
+              "name": "MiMo V2.6 Pro",
+              "badge": "",
+              "dot": "#d9a441",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "12.0/0.0",
+                "6%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.02/0.00",
+                "0.66"
+              ],
+              "cost_run": 0.02,
+              "sessions": 2,
+              "raw": {
+                "quality": 12,
+                "coverage": 0.06314432989690721,
+                "unique_ratio": 1,
+                "duration": 4.891666666666667,
+                "cost": 0.016282500000000002,
+                "tokens_per_confirm": 38.291
+              },
+              "observed": {
+                "quality": 12,
+                "confirmed": 2,
+                "coverage": 0.06314432989690721
+              }
+            },
+            {
+              "rank": "",
+              "name": "MiMo V2.6 Flash",
+              "badge": "",
+              "dot": "#7a5c2e",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "8.0/0.0",
+                "5%",
+                "0%",
+                "1/0",
+                "1",
+                "0",
+                "100%",
+                "0.01/0.00",
+                "0.38"
+              ],
+              "cost_run": 0.01,
+              "sessions": 2,
+              "raw": {
+                "quality": 8,
+                "coverage": 0.04768041237113402,
+                "unique_ratio": 1,
+                "duration": 5.666666666666667,
+                "cost": 0.0068775,
+                "tokens_per_confirm": 573.045
+              },
+              "observed": {
+                "quality": 8,
+                "confirmed": 1,
+                "coverage": 0.04768041237113402
+              }
+            },
+            {
+              "rank": "",
+              "name": "Muse Spark 1.3 Contributor",
+              "badge": "OpenCode Go",
+              "dot": "#7d6b8f",
+              "cells": [
+                "xhigh",
+                "—",
+                "2/0",
+                "10.5/0.0",
+                "6%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "1.60"
+              ],
+              "cost_run": 0,
+              "sessions": 2,
+              "raw": {
+                "quality": 10.5,
+                "coverage": 0.05798969072164949,
+                "unique_ratio": 1,
+                "duration": 1.55,
+                "cost": 0.002693,
+                "tokens_per_confirm": 22.3725
+              },
+              "observed": {
+                "quality": 10.5,
+                "confirmed": 2,
+                "coverage": 0.05798969072164949
+              }
+            },
+            {
+              "rank": "",
+              "name": "Opus 5.5（max）",
+              "badge": "Cursor",
+              "dot": "#9a5b8f",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "13.0/0.0",
+                "6%",
+                "0%",
+                "1/0",
+                "1",
+                "0",
+                "100%",
+                "3.95/0.00",
+                "0.21"
+              ],
+              "cost_run": 3.95,
+              "sessions": 2,
+              "raw": {
+                "quality": 13,
+                "coverage": 0.05798969072164949,
+                "unique_ratio": 1,
+                "duration": 18.633333333333333,
+                "cost": 3.9472745,
+                "tokens_per_confirm": 12734.424
+              },
+              "observed": {
+                "quality": 13,
+                "confirmed": 1,
+                "coverage": 0.05798969072164949
+              }
+            },
+            {
+              "rank": "",
+              "name": "Qwen3.8 Flash",
+              "badge": "",
+              "dot": "#4f8a8b",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "10.5/0.0",
+                "6%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "1.76"
+              ],
+              "cost_run": 0,
+              "sessions": 2,
+              "raw": {
+                "quality": 10.5,
+                "coverage": 0.05798969072164949,
+                "unique_ratio": 1,
+                "duration": 1.4083333333333334,
+                "cost": 0,
+                "tokens_per_confirm": 0
+              },
+              "observed": {
+                "quality": 10.5,
+                "confirmed": 2,
+                "coverage": 0.05798969072164949
+              }
+            },
+            {
+              "rank": "",
+              "name": "Step 5 Preview",
+              "badge": "",
+              "dot": "#5c6b7a",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "8.5/0.0",
+                "5%",
+                "0%",
+                "1/0",
+                "1",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "0.59"
+              ],
+              "cost_run": 0,
+              "sessions": 2,
+              "raw": {
+                "quality": 8.5,
+                "coverage": 0.05283505154639175,
+                "unique_ratio": 1,
+                "duration": 3.3916666666666666,
+                "cost": 0,
+                "tokens_per_confirm": 214.702
+              },
+              "observed": {
+                "quality": 8.5,
+                "confirmed": 1,
+                "coverage": 0.05283505154639175
+              }
+            },
+            {
+              "rank": "",
+              "name": "SWE-2",
+              "badge": "",
+              "dot": "#6b8e5a",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "15.5/0.0",
+                "7%",
+                "0%",
+                "2/0",
+                "2",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "0.81"
+              ],
+              "cost_run": 0,
+              "sessions": 2,
+              "raw": {
+                "quality": 15.5,
+                "coverage": 0.07345360824742268,
+                "unique_ratio": 1,
+                "duration": 5.041666666666667,
+                "cost": 0,
+                "tokens_per_confirm": 125.937
+              },
+              "observed": {
+                "quality": 15.5,
+                "confirmed": 2,
+                "coverage": 0.07345360824742268
+              }
+            },
+            {
+              "rank": "",
+              "name": "MiniMax M3",
+              "badge": "",
+              "dot": "#3e8a7a",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "6.0/0.0",
+                "3%",
+                "0%",
+                "0/0",
+                "0",
+                "0",
+                "0%",
+                "0.01/0.00",
+                "0.00"
+              ],
+              "cost_run": 0.01,
+              "sessions": 2,
+              "raw": {
+                "quality": 6,
+                "coverage": 0.03221649484536082,
+                "unique_ratio": 0,
+                "duration": 2.4916666666666667,
+                "cost": 0.0133855,
+                "tokens_per_confirm": 0
+              },
+              "observed": {
+                "quality": 6,
+                "confirmed": 0,
+                "coverage": 0.03221649484536082
+              }
+            },
+            {
+              "rank": "",
+              "name": "Space Bunny Free",
+              "badge": "",
+              "dot": "#6a9ec9",
+              "cells": [
+                "max",
+                "—",
+                "2/0",
+                "11.0/0.0",
+                "5%",
+                "0%",
+                "1/0",
+                "1",
+                "0",
+                "100%",
+                "0.00/0.00",
+                "0.45"
+              ],
+              "cost_run": 0,
+              "sessions": 2,
+              "raw": {
+                "quality": 11,
+                "coverage": 0.04768041237113402,
+                "unique_ratio": 1,
+                "duration": 2.425,
+                "cost": 0,
+                "tokens_per_confirm": 458.286
+              },
+              "observed": {
+                "quality": 11,
+                "confirmed": 1,
+                "coverage": 0.04768041237113402
+              }
+            }
+          ]
         }
       }
     }
@@ -5036,6 +6973,536 @@
                   "quality": 5.636363636363637,
                   "confirmed": 17,
                   "coverage": 0.04730923091922693
+                }
+              }
+            ]
+          },
+          "2026-W40": {
+            "note": "主力（≥5 场）第一：SWE-2（综合 81.6）",
+            "rows": [
+              {
+                "rank": "1",
+                "name": "SWE-2",
+                "badge": "",
+                "dot": "#6b8e5a",
+                "cells": [
+                  "max",
+                  "81.6",
+                  "15/22",
+                  "10.9/9.7",
+                  "10%",
+                  "3%",
+                  "33/50",
+                  "25",
+                  "2",
+                  "94%",
+                  "0.00/0.00",
+                  "0.66"
+                ],
+                "cost_run": 0,
+                "sessions": 15,
+                "raw": {
+                  "quality": 10.866666666666667,
+                  "coverage": 0.1275460560685022,
+                  "unique_ratio": 0.7913669064748201,
+                  "duration": 14.52111111111111,
+                  "cost": 0,
+                  "tokens_per_confirm": 132.9280303030303
+                },
+                "observed": {
+                  "quality": 10.866666666666667,
+                  "confirmed": 33,
+                  "coverage": 0.1275460560685022
+                }
+              },
+              {
+                "rank": "2",
+                "name": "Space Bunny Free",
+                "badge": "",
+                "dot": "#6a9ec9",
+                "cells": [
+                  "max",
+                  "73.3",
+                  "15/7",
+                  "9.9/10.9",
+                  "9%",
+                  "2%",
+                  "32/16",
+                  "26",
+                  "3",
+                  "91%",
+                  "0.00/0.00",
+                  "1.10"
+                ],
+                "cost_run": 0,
+                "sessions": 15,
+                "raw": {
+                  "quality": 9.933333333333334,
+                  "coverage": 0.10756343226311559,
+                  "unique_ratio": 0.8448275862068966,
+                  "duration": 7.868888888888889,
+                  "cost": 0,
+                  "tokens_per_confirm": 1435.1871875
+                },
+                "observed": {
+                  "quality": 9.933333333333334,
+                  "confirmed": 32,
+                  "coverage": 0.10756343226311559
+                }
+              },
+              {
+                "rank": "3",
+                "name": "Grok 4.7 Extra High",
+                "badge": "",
+                "dot": "#3b5f8f",
+                "cells": [
+                  "xhigh",
+                  "73.3",
+                  "15/11",
+                  "9.9/6.1",
+                  "9%",
+                  "2%",
+                  "28/13",
+                  "23",
+                  "1",
+                  "97%",
+                  "4.07/4.26",
+                  "0.50"
+                ],
+                "cost_run": 4.07,
+                "sessions": 15,
+                "raw": {
+                  "quality": 9.866666666666667,
+                  "coverage": 0.1066946225324466,
+                  "unique_ratio": 0.8521739130434782,
+                  "duration": 15.503333333333334,
+                  "cost": 4.067022533333334,
+                  "tokens_per_confirm": 3345.8103214285716
+                },
+                "observed": {
+                  "quality": 9.866666666666667,
+                  "confirmed": 28,
+                  "coverage": 0.1066946225324466
+                }
+              },
+              {
+                "rank": "4",
+                "name": "Grok 4.6 Extra High",
+                "badge": "",
+                "dot": "#4a6fa5",
+                "cells": [
+                  "xhigh",
+                  "58.7",
+                  "15/22",
+                  "8.7/9.0",
+                  "8%",
+                  "2%",
+                  "25/41",
+                  "21",
+                  "0",
+                  "100%",
+                  "1.10/1.27",
+                  "0.88"
+                ],
+                "cost_run": 1.1,
+                "sessions": 15,
+                "raw": {
+                  "quality": 8.666666666666666,
+                  "coverage": 0.09018723764973591,
+                  "unique_ratio": 0.8333333333333334,
+                  "duration": 7.346666666666667,
+                  "cost": 1.0993824,
+                  "tokens_per_confirm": 900.61816
+                },
+                "observed": {
+                  "quality": 8.666666666666666,
+                  "confirmed": 25,
+                  "coverage": 0.09018723764973591
+                }
+              },
+              {
+                "rank": "5",
+                "name": "Qwen3.8 Flash",
+                "badge": "",
+                "dot": "#4f8a8b",
+                "cells": [
+                  "max",
+                  "51.9",
+                  "14/22",
+                  "8.1/8.8",
+                  "8%",
+                  "3%",
+                  "27/44",
+                  "19",
+                  "6",
+                  "82%",
+                  "0.00/0.00",
+                  "0.73"
+                ],
+                "cost_run": 0,
+                "sessions": 14,
+                "raw": {
+                  "quality": 8.071428571428571,
+                  "coverage": 0.10486175474216654,
+                  "unique_ratio": 0.7244897959183674,
+                  "duration": 9.375,
+                  "cost": 0,
+                  "tokens_per_confirm": 0
+                },
+                "observed": {
+                  "quality": 8.071428571428571,
+                  "confirmed": 27,
+                  "coverage": 0.10486175474216654
+                }
+              },
+              {
+                "rank": "6",
+                "name": "Kimi K3",
+                "badge": "",
+                "dot": "#6b5b95",
+                "cells": [
+                  "max",
+                  "48.3",
+                  "15/22",
+                  "6.3/9.0",
+                  "7%",
+                  "1%",
+                  "19/46",
+                  "16",
+                  "1",
+                  "95%",
+                  "0.68/0.61",
+                  "0.55"
+                ],
+                "cost_run": 0.68,
+                "sessions": 15,
+                "raw": {
+                  "quality": 6.333333333333333,
+                  "coverage": 0.08323675980438404,
+                  "unique_ratio": 0.8863636363636364,
+                  "duration": 9.277777777777777,
+                  "cost": 0.6833872000000001,
+                  "tokens_per_confirm": 767.9235263157894
+                },
+                "observed": {
+                  "quality": 6.333333333333333,
+                  "confirmed": 19,
+                  "coverage": 0.08323675980438404
+                }
+              },
+              {
+                "rank": "7",
+                "name": "Muse Spark 1.3 Contributor",
+                "badge": "",
+                "dot": "#7d6b8f",
+                "cells": [
+                  "xhigh",
+                  "45.2",
+                  "13/22",
+                  "6.3/10.8",
+                  "6%",
+                  "1%",
+                  "17/61",
+                  "15",
+                  "4",
+                  "81%",
+                  "0.00/0.01",
+                  "0.96"
+                ],
+                "cost_run": 0,
+                "sessions": 13,
+                "raw": {
+                  "quality": 6.3076923076923075,
+                  "coverage": 0.07263180694455856,
+                  "unique_ratio": 0.9014084507042254,
+                  "duration": 3.0243589743589743,
+                  "cost": 0.004364615384615385,
+                  "tokens_per_confirm": 269.729
+                },
+                "observed": {
+                  "quality": 6.3076923076923075,
+                  "confirmed": 17,
+                  "coverage": 0.07263180694455856
+                }
+              },
+              {
+                "rank": "8",
+                "name": "GLM-5.3",
+                "badge": "",
+                "dot": "#b0674a",
+                "cells": [
+                  "max",
+                  "42.5",
+                  "15/22",
+                  "7.1/7.4",
+                  "7%",
+                  "2%",
+                  "22/37",
+                  "15",
+                  "1",
+                  "96%",
+                  "0.54/0.40",
+                  "0.82"
+                ],
+                "cost_run": 0.54,
+                "sessions": 15,
+                "raw": {
+                  "quality": 7.133333333333334,
+                  "coverage": 0.08758080845772896,
+                  "unique_ratio": 0.7526881720430108,
+                  "duration": 6.703333333333333,
+                  "cost": 0.54172,
+                  "tokens_per_confirm": 1012.8627272727273
+                },
+                "observed": {
+                  "quality": 7.133333333333334,
+                  "confirmed": 22,
+                  "coverage": 0.08758080845772896
+                }
+              },
+              {
+                "rank": "9",
+                "name": "GLM-5.3-Flash",
+                "badge": "",
+                "dot": "#a05a76",
+                "cells": [
+                  "max",
+                  "33.3",
+                  "15/22",
+                  "6.3/7.9",
+                  "6%",
+                  "2%",
+                  "20/41",
+                  "13",
+                  "3",
+                  "87%",
+                  "0.04/0.03",
+                  "0.45"
+                ],
+                "cost_run": 0.04,
+                "sessions": 15,
+                "raw": {
+                  "quality": 6.333333333333333,
+                  "coverage": 0.08323675980438404,
+                  "unique_ratio": 0.7159090909090909,
+                  "duration": 11.577777777777778,
+                  "cost": 0.036889,
+                  "tokens_per_confirm": 1333.16805
+                },
+                "observed": {
+                  "quality": 6.333333333333333,
+                  "confirmed": 20,
+                  "coverage": 0.08323675980438404
+                }
+              },
+              {
+                "rank": "10",
+                "name": "MiniMax M3",
+                "badge": "",
+                "dot": "#3e8a7a",
+                "cells": [
+                  "max",
+                  "33.0",
+                  "15/20",
+                  "4.3/9.3",
+                  "5%",
+                  "0%",
+                  "12/47",
+                  "12",
+                  "0",
+                  "100%",
+                  "0.23/0.26",
+                  "0.41"
+                ],
+                "cost_run": 0.23,
+                "sessions": 15,
+                "raw": {
+                  "quality": 4.266666666666667,
+                  "coverage": 0.047615560846955715,
+                  "unique_ratio": 1,
+                  "duration": 2.9699999999999998,
+                  "cost": 0.23215506666666666,
+                  "tokens_per_confirm": 4196.093833333333
+                },
+                "observed": {
+                  "quality": 4.266666666666667,
+                  "confirmed": 12,
+                  "coverage": 0.047615560846955715
+                }
+              },
+              {
+                "rank": "11",
+                "name": "Step 5 Preview",
+                "badge": "",
+                "dot": "#5c6b7a",
+                "cells": [
+                  "max",
+                  "25.5",
+                  "15/22",
+                  "4.9/12.0",
+                  "5%",
+                  "1%",
+                  "16/57",
+                  "11",
+                  "1",
+                  "94%",
+                  "0.00/0.00",
+                  "0.33"
+                ],
+                "cost_run": 0,
+                "sessions": 15,
+                "raw": {
+                  "quality": 4.866666666666666,
+                  "coverage": 0.06586056519100437,
+                  "unique_ratio": 0.7941176470588235,
+                  "duration": 11.694444444444445,
+                  "cost": 0,
+                  "tokens_per_confirm": 2760.074375
+                },
+                "observed": {
+                  "quality": 4.866666666666666,
+                  "confirmed": 16,
+                  "coverage": 0.06586056519100437
+                }
+              },
+              {
+                "rank": "12",
+                "name": "MiMo V2.6 Flash",
+                "badge": "",
+                "dot": "#7a5c2e",
+                "cells": [
+                  "max",
+                  "23.2",
+                  "15/11",
+                  "4.1/8.0",
+                  "4%",
+                  "1%",
+                  "10/20",
+                  "9",
+                  "0",
+                  "100%",
+                  "0.01/0.02",
+                  "0.17"
+                ],
+                "cost_run": 0.01,
+                "sessions": 15,
+                "raw": {
+                  "quality": 4.066666666666666,
+                  "coverage": 0.0484843705776247,
+                  "unique_ratio": 0.8958333333333334,
+                  "duration": 6.225555555555556,
+                  "cost": 0.011685666666666667,
+                  "tokens_per_confirm": 1389.6291999999999
+                },
+                "observed": {
+                  "quality": 4.066666666666666,
+                  "confirmed": 10,
+                  "coverage": 0.0484843705776247
+                }
+              },
+              {
+                "rank": "13",
+                "name": "DeepSeek V4.1 Flash（max）",
+                "badge": "",
+                "dot": "#8a7a3f",
+                "cells": [
+                  "max",
+                  "20.4",
+                  "13/22",
+                  "4.9/10.9",
+                  "4%",
+                  "1%",
+                  "13/53",
+                  "10",
+                  "1",
+                  "93%",
+                  "0.01/0.11",
+                  "0.61"
+                ],
+                "cost_run": 0.01,
+                "sessions": 13,
+                "raw": {
+                  "quality": 4.923076923076923,
+                  "coverage": 0.05235530924870602,
+                  "unique_ratio": 0.7959183673469388,
+                  "duration": 3.137179487179487,
+                  "cost": 0.008189846153846153,
+                  "tokens_per_confirm": 2723.6703076923077
+                },
+                "observed": {
+                  "quality": 4.923076923076923,
+                  "confirmed": 13,
+                  "coverage": 0.05235530924870602
+                }
+              },
+              {
+                "rank": "14",
+                "name": "MiMo V2.6 Pro",
+                "badge": "",
+                "dot": "#d9a441",
+                "cells": [
+                  "max",
+                  "13.7",
+                  "15/11",
+                  "4.0/8.5",
+                  "4%",
+                  "1%",
+                  "13/22",
+                  "10",
+                  "2",
+                  "87%",
+                  "0.03/0.07",
+                  "0.18"
+                ],
+                "cost_run": 0.03,
+                "sessions": 15,
+                "raw": {
+                  "quality": 4,
+                  "coverage": 0.0484843705776247,
+                  "unique_ratio": 0.7916666666666666,
+                  "duration": 7.5055555555555555,
+                  "cost": 0.034662733333333334,
+                  "tokens_per_confirm": 856.1848461538461
+                },
+                "observed": {
+                  "quality": 4,
+                  "confirmed": 13,
+                  "coverage": 0.0484843705776247
+                }
+              },
+              {
+                "rank": "15",
+                "name": "DeepSeek V4.1 Flash（high）",
+                "badge": "",
+                "dot": "#8a7a3f",
+                "cells": [
+                  "high",
+                  "3.0",
+                  "13/22",
+                  "3.0/10.6",
+                  "3%",
+                  "1%",
+                  "10/50",
+                  "7",
+                  "3",
+                  "77%",
+                  "0.01/0.10",
+                  "0.47"
+                ],
+                "cost_run": 0.01,
+                "sessions": 13,
+                "raw": {
+                  "quality": 3,
+                  "coverage": 0.04406037837312998,
+                  "unique_ratio": 0.75,
+                  "duration": 2.864102564102564,
+                  "cost": 0.008826384615384614,
+                  "tokens_per_confirm": 4182.7944
+                },
+                "observed": {
+                  "quality": 3,
+                  "confirmed": 10,
+                  "coverage": 0.04406037837312998
                 }
               }
             ]
@@ -6542,6 +9009,571 @@
                 }
               }
             ]
+          },
+          "2026-W40": {
+            "note": "主力（≥5 场）第一：Opus 5.5（max）（综合 87.5）",
+            "rows": [
+              {
+                "rank": "1",
+                "name": "Opus 5.5（max）",
+                "badge": "",
+                "dot": "#9a5b8f",
+                "cells": [
+                  "max",
+                  "87.5",
+                  "6/4",
+                  "20.8/12.8",
+                  "12%",
+                  "0%",
+                  "11/6",
+                  "11",
+                  "0",
+                  "100%",
+                  "2.52/2.07",
+                  "4.33/5.00"
+                ],
+                "cost_run": 2.52,
+                "sessions": 6,
+                "raw": {
+                  "quality": 20.833333333333332,
+                  "coverage": 0.12445652173913044,
+                  "unique_ratio": 1,
+                  "duration": 12.852777777777778,
+                  "cost": 2.5167606666666664,
+                  "tokens_per_confirm": 1670.8127272727272
+                },
+                "observed": {
+                  "quality": 20.833333333333332,
+                  "confirmed": 11,
+                  "coverage": 0.12445652173913044
+                }
+              },
+              {
+                "rank": "2",
+                "name": "Grok 4.7 Extra High",
+                "badge": "",
+                "dot": "#3b5f8f",
+                "cells": [
+                  "xhigh",
+                  "64.2",
+                  "6/4",
+                  "15.0/7.0",
+                  "10%",
+                  "0%",
+                  "8/4",
+                  "8",
+                  "1",
+                  "89%",
+                  "0.59/0.44",
+                  "3.50/2.50"
+                ],
+                "cost_run": 0.59,
+                "sessions": 6,
+                "raw": {
+                  "quality": 15,
+                  "coverage": 0.0983695652173913,
+                  "unique_ratio": 1,
+                  "duration": 4.883333333333334,
+                  "cost": 0.5889356666666666,
+                  "tokens_per_confirm": 438.567625
+                },
+                "observed": {
+                  "quality": 15,
+                  "confirmed": 8,
+                  "coverage": 0.0983695652173913
+                }
+              },
+              {
+                "rank": "3",
+                "name": "Kimi K3",
+                "badge": "",
+                "dot": "#6b5b95",
+                "cells": [
+                  "max",
+                  "56.8",
+                  "6/11",
+                  "15.2/10.5",
+                  "8%",
+                  "0%",
+                  "7/11",
+                  "7",
+                  "0",
+                  "100%",
+                  "0.10/0.08",
+                  "4.00/3.44"
+                ],
+                "cost_run": 0.1,
+                "sessions": 6,
+                "raw": {
+                  "quality": 15.166666666666666,
+                  "coverage": 0.0766304347826087,
+                  "unique_ratio": 1,
+                  "duration": 1.8388888888888888,
+                  "cost": 0.09532249999999999,
+                  "tokens_per_confirm": 16.724714285714285
+                },
+                "observed": {
+                  "quality": 15.166666666666666,
+                  "confirmed": 7,
+                  "coverage": 0.0766304347826087
+                }
+              },
+              {
+                "rank": "4",
+                "name": "Space Bunny Free",
+                "badge": "",
+                "dot": "#6a9ec9",
+                "cells": [
+                  "max",
+                  "56.8",
+                  "6/2",
+                  "15.2/8.0",
+                  "8%",
+                  "0%",
+                  "7/1",
+                  "7",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "4.00/5.00"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 15.166666666666666,
+                  "coverage": 0.0766304347826087,
+                  "unique_ratio": 1,
+                  "duration": 1.8888888888888888,
+                  "cost": 0,
+                  "tokens_per_confirm": 97.72914285714286
+                },
+                "observed": {
+                  "quality": 15.166666666666666,
+                  "confirmed": 7,
+                  "coverage": 0.0766304347826087
+                }
+              },
+              {
+                "rank": "5",
+                "name": "GLM-5.3",
+                "badge": "",
+                "dot": "#b0674a",
+                "cells": [
+                  "max",
+                  "47.7",
+                  "6/11",
+                  "13.0/11.8",
+                  "7%",
+                  "0%",
+                  "6/12",
+                  "6",
+                  "0",
+                  "100%",
+                  "0.05/0.05",
+                  "3.50/3.89"
+                ],
+                "cost_run": 0.05,
+                "sessions": 6,
+                "raw": {
+                  "quality": 13,
+                  "coverage": 0.06576086956521739,
+                  "unique_ratio": 1,
+                  "duration": 2.411111111111111,
+                  "cost": 0.05463566666666666,
+                  "tokens_per_confirm": 24.894
+                },
+                "observed": {
+                  "quality": 13,
+                  "confirmed": 6,
+                  "coverage": 0.06576086956521739
+                }
+              },
+              {
+                "rank": "6",
+                "name": "GLM-5.3-Flash",
+                "badge": "",
+                "dot": "#a05a76",
+                "cells": [
+                  "max",
+                  "43.4",
+                  "6/11",
+                  "12.2/11.5",
+                  "6%",
+                  "0%",
+                  "6/11",
+                  "6",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "3.33/3.78"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 12.166666666666666,
+                  "coverage": 0.05923913043478261,
+                  "unique_ratio": 1,
+                  "duration": 3.725,
+                  "cost": 0.0033601666666666662,
+                  "tokens_per_confirm": 25.50933333333333
+                },
+                "observed": {
+                  "quality": 12.166666666666666,
+                  "confirmed": 6,
+                  "coverage": 0.05923913043478261
+                }
+              },
+              {
+                "rank": "7",
+                "name": "Grok 4.6 Extra High",
+                "badge": "",
+                "dot": "#4a6fa5",
+                "cells": [
+                  "xhigh",
+                  "42.6",
+                  "6/11",
+                  "11.8/12.2",
+                  "6%",
+                  "0%",
+                  "5/10",
+                  "5",
+                  "0",
+                  "100%",
+                  "0.16/0.24",
+                  "3.33/4.00"
+                ],
+                "cost_run": 0.16,
+                "sessions": 6,
+                "raw": {
+                  "quality": 11.833333333333334,
+                  "coverage": 0.05923913043478261,
+                  "unique_ratio": 1,
+                  "duration": 2.308333333333333,
+                  "cost": 0.16114133333333333,
+                  "tokens_per_confirm": 146.1984
+                },
+                "observed": {
+                  "quality": 11.833333333333334,
+                  "confirmed": 5,
+                  "coverage": 0.05923913043478261
+                }
+              },
+              {
+                "rank": "8",
+                "name": "DeepSeek V4.1 Flash（max）",
+                "badge": "",
+                "dot": "#8a7a3f",
+                "cells": [
+                  "max",
+                  "40.6",
+                  "6/11",
+                  "11.3/10.6",
+                  "6%",
+                  "0%",
+                  "5/10",
+                  "5",
+                  "0",
+                  "100%",
+                  "0.00/0.01",
+                  "3.80/3.56"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 11.333333333333334,
+                  "coverage": 0.057065217391304345,
+                  "unique_ratio": 1,
+                  "duration": 1.3638888888888887,
+                  "cost": 0,
+                  "tokens_per_confirm": 227.40439999999998
+                },
+                "observed": {
+                  "quality": 11.333333333333334,
+                  "confirmed": 5,
+                  "coverage": 0.057065217391304345
+                }
+              },
+              {
+                "rank": "9",
+                "name": "Qwen3.8 Flash",
+                "badge": "",
+                "dot": "#4f8a8b",
+                "cells": [
+                  "max",
+                  "40.3",
+                  "6/11",
+                  "11.5/12.1",
+                  "5%",
+                  "0%",
+                  "6/12",
+                  "6",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "3.17/3.78"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 11.5,
+                  "coverage": 0.05489130434782609,
+                  "unique_ratio": 1,
+                  "duration": 1.2194444444444446,
+                  "cost": 0,
+                  "tokens_per_confirm": 0
+                },
+                "observed": {
+                  "quality": 11.5,
+                  "confirmed": 6,
+                  "coverage": 0.05489130434782609
+                }
+              },
+              {
+                "rank": "10",
+                "name": "MiMo V2.6 Pro",
+                "badge": "",
+                "dot": "#d9a441",
+                "cells": [
+                  "max",
+                  "39.8",
+                  "6/4",
+                  "11.0/4.5",
+                  "6%",
+                  "0%",
+                  "5/2",
+                  "5",
+                  "0",
+                  "100%",
+                  "0.01/0.01",
+                  "3.60/2.50"
+                ],
+                "cost_run": 0.01,
+                "sessions": 6,
+                "raw": {
+                  "quality": 11,
+                  "coverage": 0.057065217391304345,
+                  "unique_ratio": 1,
+                  "duration": 2.2083333333333335,
+                  "cost": 0.007019666666666667,
+                  "tokens_per_confirm": 31.433799999999998
+                },
+                "observed": {
+                  "quality": 11,
+                  "confirmed": 5,
+                  "coverage": 0.057065217391304345
+                }
+              },
+              {
+                "rank": "11",
+                "name": "MiMo V2.6 Flash",
+                "badge": "",
+                "dot": "#7a5c2e",
+                "cells": [
+                  "max",
+                  "37.5",
+                  "6/4",
+                  "10.7/6.8",
+                  "5%",
+                  "0%",
+                  "5/4",
+                  "5",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "3.60/2.50"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 10.666666666666666,
+                  "coverage": 0.05271739130434783,
+                  "unique_ratio": 1,
+                  "duration": 1.7694444444444446,
+                  "cost": 0.0028938333333333333,
+                  "tokens_per_confirm": 22.9372
+                },
+                "observed": {
+                  "quality": 10.666666666666666,
+                  "confirmed": 5,
+                  "coverage": 0.05271739130434783
+                }
+              },
+              {
+                "rank": "12",
+                "name": "DeepSeek V4.1 Flash（high）",
+                "badge": "",
+                "dot": "#8a7a3f",
+                "cells": [
+                  "high",
+                  "36.6",
+                  "6/11",
+                  "9.7/11.5",
+                  "6%",
+                  "0%",
+                  "6/12",
+                  "6",
+                  "0",
+                  "100%",
+                  "0.00/0.01",
+                  "2.60/3.56"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 9.666666666666666,
+                  "coverage": 0.057065217391304345,
+                  "unique_ratio": 1,
+                  "duration": 0.6472222222222223,
+                  "cost": 0,
+                  "tokens_per_confirm": 117.5755
+                },
+                "observed": {
+                  "quality": 9.666666666666666,
+                  "confirmed": 6,
+                  "coverage": 0.057065217391304345
+                }
+              },
+              {
+                "rank": "13",
+                "name": "SWE-2",
+                "badge": "",
+                "dot": "#6b8e5a",
+                "cells": [
+                  "max",
+                  "35.6",
+                  "6/11",
+                  "10.8/12.7",
+                  "5%",
+                  "0%",
+                  "4/13",
+                  "4",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "3.50/4.00"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 10.833333333333334,
+                  "coverage": 0.04619565217391304,
+                  "unique_ratio": 1,
+                  "duration": 3.7694444444444444,
+                  "cost": 0,
+                  "tokens_per_confirm": 66.1665
+                },
+                "observed": {
+                  "quality": 10.833333333333334,
+                  "confirmed": 4,
+                  "coverage": 0.04619565217391304
+                }
+              },
+              {
+                "rank": "14",
+                "name": "Step 5 Preview",
+                "badge": "",
+                "dot": "#5c6b7a",
+                "cells": [
+                  "max",
+                  "34.7",
+                  "6/11",
+                  "9.5/10.3",
+                  "5%",
+                  "0%",
+                  "5/10",
+                  "5",
+                  "1",
+                  "83%",
+                  "0.00/0.00",
+                  "2.67/3.44"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 9.5,
+                  "coverage": 0.05271739130434783,
+                  "unique_ratio": 1,
+                  "duration": 2.188888888888889,
+                  "cost": 0,
+                  "tokens_per_confirm": 11.9336
+                },
+                "observed": {
+                  "quality": 9.5,
+                  "confirmed": 5,
+                  "coverage": 0.05271739130434783
+                }
+              },
+              {
+                "rank": "15",
+                "name": "Muse Spark 1.3 Contributor",
+                "badge": "",
+                "dot": "#7d6b8f",
+                "cells": [
+                  "xhigh",
+                  "17.3",
+                  "6/11",
+                  "5.2/10.5",
+                  "3%",
+                  "0%",
+                  "3/11",
+                  "3",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "2.00/3.44"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 5.166666666666667,
+                  "coverage": 0.03315217391304348,
+                  "unique_ratio": 1,
+                  "duration": 0.6194444444444444,
+                  "cost": 0.0008218333333333333,
+                  "tokens_per_confirm": 19.949
+                },
+                "observed": {
+                  "quality": 5.166666666666667,
+                  "confirmed": 3,
+                  "coverage": 0.03315217391304348
+                }
+              },
+              {
+                "rank": "16",
+                "name": "MiniMax M3",
+                "badge": "",
+                "dot": "#3e8a7a",
+                "cells": [
+                  "max",
+                  "12.5",
+                  "6/11",
+                  "3.8/9.2",
+                  "3%",
+                  "0%",
+                  "2/10",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.00/0.01",
+                  "2.00/3.56"
+                ],
+                "cost_run": 0,
+                "sessions": 6,
+                "raw": {
+                  "quality": 3.8333333333333335,
+                  "coverage": 0.028804347826086957,
+                  "unique_ratio": 1,
+                  "duration": 0.45,
+                  "cost": 0.004690333333333334,
+                  "tokens_per_confirm": 24.1115
+                },
+                "observed": {
+                  "quality": 3.8333333333333335,
+                  "confirmed": 2,
+                  "coverage": 0.028804347826086957
+                }
+              }
+            ]
           }
         }
       },
@@ -6884,6 +9916,571 @@
           "2026-W39": {
             "note": "",
             "rows": []
+          },
+          "2026-W40": {
+            "note": "样本 < 5 场未进排名，见下方观察区（DeepSeek V4.1 Flash（high）、DeepSeek V4.1 Flash（max）、GLM-5.3、GLM-5.3-Flash、Grok 4.6 Extra High、Grok 4.7 Extra High、Kimi K3、MiMo V2.6 Flash、MiMo V2.6 Pro、MiniMax M3、Muse Spark 1.3 Contributor、Opus 5.5（max）、Qwen3.8 Flash、Space Bunny Free、Step 5 Preview、SWE-2）",
+            "rows": [
+              {
+                "rank": "",
+                "name": "Kimi K3",
+                "badge": "",
+                "dot": "#6b5b95",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "15.5/0.0",
+                  "7%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.14/0.00",
+                  "1.19"
+                ],
+                "cost_run": 0.14,
+                "sessions": 2,
+                "raw": {
+                  "quality": 15.5,
+                  "coverage": 0.07345360824742268,
+                  "unique_ratio": 1,
+                  "duration": 3.45,
+                  "cost": 0.137322,
+                  "tokens_per_confirm": 22.594
+                },
+                "observed": {
+                  "quality": 15.5,
+                  "confirmed": 2,
+                  "coverage": 0.07345360824742268
+                }
+              },
+              {
+                "rank": "",
+                "name": "Grok 4.6 Extra High",
+                "badge": "",
+                "dot": "#4a6fa5",
+                "cells": [
+                  "xhigh",
+                  "—",
+                  "2/0",
+                  "15.5/0.0",
+                  "7%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.63/0.00",
+                  "1.09"
+                ],
+                "cost_run": 0.63,
+                "sessions": 2,
+                "raw": {
+                  "quality": 15.5,
+                  "coverage": 0.07345360824742268,
+                  "unique_ratio": 1,
+                  "duration": 4.608333333333333,
+                  "cost": 0.6271559999999999,
+                  "tokens_per_confirm": 877.276
+                },
+                "observed": {
+                  "quality": 15.5,
+                  "confirmed": 2,
+                  "coverage": 0.07345360824742268
+                }
+              },
+              {
+                "rank": "",
+                "name": "Grok 4.7 Extra High",
+                "badge": "",
+                "dot": "#3b5f8f",
+                "cells": [
+                  "xhigh",
+                  "—",
+                  "2/0",
+                  "17.0/0.0",
+                  "7%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "1.44/0.00",
+                  "0.55"
+                ],
+                "cost_run": 1.44,
+                "sessions": 2,
+                "raw": {
+                  "quality": 17,
+                  "coverage": 0.07345360824742268,
+                  "unique_ratio": 1,
+                  "duration": 7.833333333333333,
+                  "cost": 1.440182,
+                  "tokens_per_confirm": 1813.108
+                },
+                "observed": {
+                  "quality": 17,
+                  "confirmed": 2,
+                  "coverage": 0.07345360824742268
+                }
+              },
+              {
+                "rank": "",
+                "name": "GLM-5.3",
+                "badge": "",
+                "dot": "#b0674a",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "13.5/0.0",
+                  "7%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.08/0.00",
+                  "1.04"
+                ],
+                "cost_run": 0.08,
+                "sessions": 2,
+                "raw": {
+                  "quality": 13.5,
+                  "coverage": 0.06829896907216494,
+                  "unique_ratio": 1,
+                  "duration": 3.4833333333333334,
+                  "cost": 0.082842,
+                  "tokens_per_confirm": 51.6395
+                },
+                "observed": {
+                  "quality": 13.5,
+                  "confirmed": 2,
+                  "coverage": 0.06829896907216494
+                }
+              },
+              {
+                "rank": "",
+                "name": "GLM-5.3-Flash",
+                "badge": "",
+                "dot": "#a05a76",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "10.0/0.0",
+                  "6%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.01/0.00",
+                  "0.48"
+                ],
+                "cost_run": 0.01,
+                "sessions": 2,
+                "raw": {
+                  "quality": 10,
+                  "coverage": 0.05798969072164949,
+                  "unique_ratio": 1,
+                  "duration": 5.316666666666666,
+                  "cost": 0.00842,
+                  "tokens_per_confirm": 168.1225
+                },
+                "observed": {
+                  "quality": 10,
+                  "confirmed": 2,
+                  "coverage": 0.05798969072164949
+                }
+              },
+              {
+                "rank": "",
+                "name": "DeepSeek V4.1 Flash（max）",
+                "badge": "",
+                "dot": "#8a7a3f",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "17.0/0.0",
+                  "8%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "1.25"
+                ],
+                "cost_run": 0,
+                "sessions": 2,
+                "raw": {
+                  "quality": 17,
+                  "coverage": 0.07860824742268041,
+                  "unique_ratio": 1,
+                  "duration": 3.6416666666666666,
+                  "cost": 0,
+                  "tokens_per_confirm": 1721.003
+                },
+                "observed": {
+                  "quality": 17,
+                  "confirmed": 2,
+                  "coverage": 0.07860824742268041
+                }
+              },
+              {
+                "rank": "",
+                "name": "DeepSeek V4.1 Flash（high）",
+                "badge": "",
+                "dot": "#8a7a3f",
+                "cells": [
+                  "high",
+                  "—",
+                  "2/0",
+                  "17.5/0.0",
+                  "8%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "1.80"
+                ],
+                "cost_run": 0,
+                "sessions": 2,
+                "raw": {
+                  "quality": 17.5,
+                  "coverage": 0.08376288659793814,
+                  "unique_ratio": 1,
+                  "duration": 2.783333333333333,
+                  "cost": 0,
+                  "tokens_per_confirm": 1579.11
+                },
+                "observed": {
+                  "quality": 17.5,
+                  "confirmed": 2,
+                  "coverage": 0.08376288659793814
+                }
+              },
+              {
+                "rank": "",
+                "name": "MiMo V2.6 Pro",
+                "badge": "",
+                "dot": "#d9a441",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "12.0/0.0",
+                  "6%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.02/0.00",
+                  "0.66"
+                ],
+                "cost_run": 0.02,
+                "sessions": 2,
+                "raw": {
+                  "quality": 12,
+                  "coverage": 0.06314432989690721,
+                  "unique_ratio": 1,
+                  "duration": 4.891666666666667,
+                  "cost": 0.016282500000000002,
+                  "tokens_per_confirm": 38.291
+                },
+                "observed": {
+                  "quality": 12,
+                  "confirmed": 2,
+                  "coverage": 0.06314432989690721
+                }
+              },
+              {
+                "rank": "",
+                "name": "MiMo V2.6 Flash",
+                "badge": "",
+                "dot": "#7a5c2e",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "8.0/0.0",
+                  "5%",
+                  "0%",
+                  "1/0",
+                  "1",
+                  "0",
+                  "100%",
+                  "0.01/0.00",
+                  "0.38"
+                ],
+                "cost_run": 0.01,
+                "sessions": 2,
+                "raw": {
+                  "quality": 8,
+                  "coverage": 0.04768041237113402,
+                  "unique_ratio": 1,
+                  "duration": 5.666666666666667,
+                  "cost": 0.0068775,
+                  "tokens_per_confirm": 573.045
+                },
+                "observed": {
+                  "quality": 8,
+                  "confirmed": 1,
+                  "coverage": 0.04768041237113402
+                }
+              },
+              {
+                "rank": "",
+                "name": "Muse Spark 1.3 Contributor",
+                "badge": "",
+                "dot": "#7d6b8f",
+                "cells": [
+                  "xhigh",
+                  "—",
+                  "2/0",
+                  "10.5/0.0",
+                  "6%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "1.60"
+                ],
+                "cost_run": 0,
+                "sessions": 2,
+                "raw": {
+                  "quality": 10.5,
+                  "coverage": 0.05798969072164949,
+                  "unique_ratio": 1,
+                  "duration": 1.55,
+                  "cost": 0.002693,
+                  "tokens_per_confirm": 22.3725
+                },
+                "observed": {
+                  "quality": 10.5,
+                  "confirmed": 2,
+                  "coverage": 0.05798969072164949
+                }
+              },
+              {
+                "rank": "",
+                "name": "Opus 5.5（max）",
+                "badge": "",
+                "dot": "#9a5b8f",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "13.0/0.0",
+                  "6%",
+                  "0%",
+                  "1/0",
+                  "1",
+                  "0",
+                  "100%",
+                  "3.95/0.00",
+                  "0.21"
+                ],
+                "cost_run": 3.95,
+                "sessions": 2,
+                "raw": {
+                  "quality": 13,
+                  "coverage": 0.05798969072164949,
+                  "unique_ratio": 1,
+                  "duration": 18.633333333333333,
+                  "cost": 3.9472745,
+                  "tokens_per_confirm": 12734.424
+                },
+                "observed": {
+                  "quality": 13,
+                  "confirmed": 1,
+                  "coverage": 0.05798969072164949
+                }
+              },
+              {
+                "rank": "",
+                "name": "Qwen3.8 Flash",
+                "badge": "",
+                "dot": "#4f8a8b",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "10.5/0.0",
+                  "6%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "1.76"
+                ],
+                "cost_run": 0,
+                "sessions": 2,
+                "raw": {
+                  "quality": 10.5,
+                  "coverage": 0.05798969072164949,
+                  "unique_ratio": 1,
+                  "duration": 1.4083333333333334,
+                  "cost": 0,
+                  "tokens_per_confirm": 0
+                },
+                "observed": {
+                  "quality": 10.5,
+                  "confirmed": 2,
+                  "coverage": 0.05798969072164949
+                }
+              },
+              {
+                "rank": "",
+                "name": "Step 5 Preview",
+                "badge": "",
+                "dot": "#5c6b7a",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "8.5/0.0",
+                  "5%",
+                  "0%",
+                  "1/0",
+                  "1",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "0.59"
+                ],
+                "cost_run": 0,
+                "sessions": 2,
+                "raw": {
+                  "quality": 8.5,
+                  "coverage": 0.05283505154639175,
+                  "unique_ratio": 1,
+                  "duration": 3.3916666666666666,
+                  "cost": 0,
+                  "tokens_per_confirm": 214.702
+                },
+                "observed": {
+                  "quality": 8.5,
+                  "confirmed": 1,
+                  "coverage": 0.05283505154639175
+                }
+              },
+              {
+                "rank": "",
+                "name": "SWE-2",
+                "badge": "",
+                "dot": "#6b8e5a",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "15.5/0.0",
+                  "7%",
+                  "0%",
+                  "2/0",
+                  "2",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "0.81"
+                ],
+                "cost_run": 0,
+                "sessions": 2,
+                "raw": {
+                  "quality": 15.5,
+                  "coverage": 0.07345360824742268,
+                  "unique_ratio": 1,
+                  "duration": 5.041666666666667,
+                  "cost": 0,
+                  "tokens_per_confirm": 125.937
+                },
+                "observed": {
+                  "quality": 15.5,
+                  "confirmed": 2,
+                  "coverage": 0.07345360824742268
+                }
+              },
+              {
+                "rank": "",
+                "name": "MiniMax M3",
+                "badge": "",
+                "dot": "#3e8a7a",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "6.0/0.0",
+                  "3%",
+                  "0%",
+                  "0/0",
+                  "0",
+                  "0",
+                  "0%",
+                  "0.01/0.00",
+                  "0.00"
+                ],
+                "cost_run": 0.01,
+                "sessions": 2,
+                "raw": {
+                  "quality": 6,
+                  "coverage": 0.03221649484536082,
+                  "unique_ratio": 0,
+                  "duration": 2.4916666666666667,
+                  "cost": 0.0133855,
+                  "tokens_per_confirm": 0
+                },
+                "observed": {
+                  "quality": 6,
+                  "confirmed": 0,
+                  "coverage": 0.03221649484536082
+                }
+              },
+              {
+                "rank": "",
+                "name": "Space Bunny Free",
+                "badge": "",
+                "dot": "#6a9ec9",
+                "cells": [
+                  "max",
+                  "—",
+                  "2/0",
+                  "11.0/0.0",
+                  "5%",
+                  "0%",
+                  "1/0",
+                  "1",
+                  "0",
+                  "100%",
+                  "0.00/0.00",
+                  "0.45"
+                ],
+                "cost_run": 0,
+                "sessions": 2,
+                "raw": {
+                  "quality": 11,
+                  "coverage": 0.04768041237113402,
+                  "unique_ratio": 1,
+                  "duration": 2.425,
+                  "cost": 0,
+                  "tokens_per_confirm": 458.286
+                },
+                "observed": {
+                  "quality": 11,
+                  "confirmed": 1,
+                  "coverage": 0.04768041237113402
+                }
+              }
+            ]
           }
         }
       }

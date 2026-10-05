@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-10-02 00:44:47+08:00",
+  "accounts": [
+    {
+      "id": "devin",
+      "status": "ok",
+      "channels": [
+        "devin/devin"
+      ],
+      "metrics": [
+        {
+          "remaining": 100,
+          "resetAt": "2026-10-02T08:00:00.000Z"
+        },
+        {
+          "remaining": 46,
+          "resetAt": "2026-10-04T08:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}

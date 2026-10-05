@@ -1,0 +1,85 @@
+{
+  "window": [
+    "2026-09-28",
+    "2026-10-05"
+  ],
+  "prev_window": [
+    "2026-09-21",
+    "2026-09-28"
+  ],
+  "generated_at": "2026-10-05 14:32",
+  "week": "2026-W40",
+  "week_label": "2026 年第 40 周",
+  "partial": false,
+  "kinds": {
+    "事后审计": {
+      "sessions": 21,
+      "rows": 218,
+      "confirmed": 297,
+      "false_pos": 28,
+      "unique": 232,
+      "usd_rated": 100.88,
+      "top": [
+        {
+          "model": "SWE-2",
+          "score": 88.6,
+          "sessions": 15
+        },
+        {
+          "model": "DeepSeek V4.1 Flash（max） Cline",
+          "score": 85.8,
+          "sessions": 5
+        },
+        {
+          "model": "Space Bunny Free",
+          "score": 81,
+          "sessions": 15
+        }
+      ]
+    },
+    "设计分叉": {
+      "sessions": 6,
+      "rows": 96,
+      "confirmed": 91,
+      "false_pos": 2,
+      "unique": 91,
+      "usd_rated": 20.61,
+      "top": [
+        {
+          "model": "Opus 5.5（max） Cursor",
+          "score": 87.5,
+          "sessions": 6
+        },
+        {
+          "model": "Grok 4.7 Extra High",
+          "score": 64.2,
+          "sessions": 6
+        },
+        {
+          "model": "Kimi K3",
+          "score": 56.8,
+          "sessions": 6
+        }
+      ]
+    },
+    "专责推理": {
+      "sessions": 5,
+      "rows": 32,
+      "confirmed": 26,
+      "false_pos": 0,
+      "unique": 26,
+      "usd_rated": 12.56,
+      "top": []
+    }
+  },
+  "images": [
+    "images/1-ranking.png",
+    "images/2-audit-quality.png",
+    "images/3-audit-cost.png",
+    "images/4-design.png"
+  ],
+  "debt_sessions": 14,
+  "generations": 1,
+  "first_generated_at": "2026-10-05 14:32",
+  "last_generated_at": "2026-10-05 14:32"
+}

@@ -79,7 +79,8 @@
       "tone": null,
       "providers": [
         "Cline",
-        "OpenCode Go"
+        "OpenCode Go",
+        "Qoder CN"
       ],
       "thinking": "",
       "pricing": "opencode-go",
@@ -143,7 +144,8 @@
       "name": "Opus 5.5（max）",
       "tone": null,
       "providers": [
-        "agent"
+        "Cursor",
+        "Devin"
       ],
       "thinking": "max",
       "pricing": "cursor-other-models",
