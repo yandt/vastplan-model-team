@@ -106,7 +106,7 @@
       ],
       "thinking": "",
       "pricing": "vendor-api",
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "MiMo V2.6 Flash",
@@ -117,7 +117,7 @@
       ],
       "thinking": "",
       "pricing": "vendor-api",
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "Muse Spark 1.3 Contributor",
@@ -141,13 +141,13 @@
       "enabled": false
     },
     {
-      "name": "Opus 5.5（max）",
+      "name": "Opus 5.5（high）",
       "tone": null,
       "providers": [
         "Cursor",
         "Devin"
       ],
-      "thinking": "max",
+      "thinking": "high",
       "pricing": "cursor-other-models",
       "enabled": false
     },
@@ -189,7 +189,7 @@
       ],
       "thinking": "max",
       "pricing": "opencode-go",
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "Space Bunny Free",
@@ -197,7 +197,37 @@
       "providers": [
         "OpenCode Go"
       ],
-      "thinking": "max",
+      "thinking": "",
+      "pricing": "opencode-go",
+      "enabled": true
+    },
+    {
+      "name": "Exo Free",
+      "tone": null,
+      "providers": [
+        "OpenCode Go"
+      ],
+      "thinking": "",
+      "pricing": "opencode-go",
+      "enabled": true
+    },
+    {
+      "name": "Step 5 Preview Free",
+      "tone": null,
+      "providers": [
+        "OpenCode Go"
+      ],
+      "thinking": "",
+      "pricing": "opencode-go",
+      "enabled": true
+    },
+    {
+      "name": "Hy4 Preview",
+      "tone": null,
+      "providers": [
+        "OpenCode Go"
+      ],
+      "thinking": "",
       "pricing": "opencode-go",
       "enabled": true
     }

@@ -1,6 +1,32 @@
 {
-  "generatedAt": "2026-10-02 00:44:47+08:00",
+  "generatedAt": "2026-10-11 00:23:19+08:00",
   "accounts": [
+    {
+      "id": "cursor",
+      "status": "ok",
+      "channels": [
+        "agent",
+        "agent/cursor"
+      ],
+      "metrics": [
+        {
+          "remaining": 8.819999999999993,
+          "resetAt": "2026-10-16T15:07:24.000Z"
+        },
+        {
+          "remaining": 87.08433333333333,
+          "resetAt": "2026-10-16T15:07:24.000Z"
+        },
+        {
+          "remaining": 22.802144999999996,
+          "resetAt": "2026-10-11T15:10:59.000Z"
+        },
+        {
+          "remaining": 84.55967741935484,
+          "resetAt": "2026-10-16T15:07:24.000Z"
+        }
+      ]
+    },
     {
       "id": "devin",
       "status": "ok",
@@ -9,12 +35,76 @@
       ],
       "metrics": [
         {
-          "remaining": 100,
-          "resetAt": "2026-10-02T08:00:00.000Z"
+          "remaining": 29,
+          "resetAt": "2026-10-11T08:00:00.000Z"
         },
         {
-          "remaining": 46,
-          "resetAt": "2026-10-04T08:00:00.000Z"
+          "remaining": 8,
+          "resetAt": "2026-10-11T08:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "zai",
+      "status": "ok",
+      "channels": [
+        "pi/zai-coding-cn",
+        "zcode"
+      ],
+      "metrics": [
+        {
+          "remaining": 89,
+          "resetAt": "2026-10-10T18:40:59.856Z"
+        },
+        {
+          "remaining": 984,
+          "resetAt": "2026-10-28T02:02:27.984Z"
+        }
+      ]
+    },
+    {
+      "id": "opencode-go",
+      "status": "ok",
+      "channels": [
+        "pi/opencode-go",
+        "opencode/opencode-go"
+      ],
+      "metrics": [
+        {
+          "remaining": 100,
+          "resetAt": "2026-11-10T06:32:45.000Z"
+        },
+        {
+          "remaining": 100,
+          "resetAt": "2026-10-10T20:02:11.000Z"
+        },
+        {
+          "remaining": 100,
+          "resetAt": "2026-10-12T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "grok",
+      "status": "ok",
+      "channels": [
+        "pi/xai"
+      ],
+      "metrics": [
+        {
+          "remaining": 58,
+          "resetAt": "2026-10-11T14:53:10.638Z"
+        }
+      ]
+    },
+    {
+      "id": "deepseek",
+      "status": "ok",
+      "channels": [],
+      "metrics": [
+        {
+          "remaining": 6.2,
+          "resetAt": null
         }
       ]
     }
