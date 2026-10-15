@@ -30,7 +30,7 @@
       ],
       "thinking": "xhigh",
       "pricing": "vendor-api",
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "Grok 4.7 Extra High",
@@ -229,7 +229,7 @@
       ],
       "thinking": "",
       "pricing": "opencode-go",
-      "enabled": true
+      "enabled": false
     }
   ],
   "tones": {
