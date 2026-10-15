@@ -6,44 +6,66 @@
 - 综合能力评分（表格「综合」列）：效果 41% ｜ 覆盖 34% ｜ 独立 25% ｜ 时间 0%↓ ｜ 花费 0%↓ ｜ token 0%↓
 - 评分口径：按权重（41% 效果 + 34% 覆盖 + 25% 独立）在同活动类型内 min-max 归一到 0～100 后加权：效果（均质量）、覆盖（同名问题去重后的重要性加权成立数 ÷ 所参与轮次全场去重合计，再按贝叶斯收缩往全场均值靠：分母越小收缩越强）、独立（独有（重要性加权）/ 成立（重要性加权））；时间（每次分钟）、花费（每次花费）、token（每条成立 token）三项资源轴与效率分、契合分、样本量一样只作参考列，不进综合分；某项没采集到时（如订阅制模型没有金额）按中位 50 记，并在评论里标注。
 
+## 简报
+
+第 42 周（10-12 → 10-16）测的是 VastPlan：自研 Node/TypeScript 插件运行时与 Portal 内核的真实工程，不是题库。事后审计＝多模型并行找 BUG、对照代码判定；设计分叉＝各出方案、按用户选定算契合度。
+
+失败与未评不进对照但花费照计，订阅制模型金额未采集不记 0，总分是同活动类型内的相对排名。
+
+事后审计 20 场、已评 210 行，成立 472 条（上期 336）、假阳 27（上期 22）、花费 $62.95（上期 $63.11）；设计分叉 3 场、成立 23 条、花费 $4.32。
+
+事后审计综合评分前三：
+
+1. Grok 4.7 Extra High pi 88.9
+2. SWE-2 85.4
+3. Muse Spark 1.3 Contributor Cline 74.0
+
+Grok 4.7 Extra High pi 从第 3 升到第 1，均质量 19.3（上期 15.0）、假阳 0（上期 2）、精准 100%；代价是最贵，每次 $2.44，本期合计 $21.95。DeepSeek V4.1 Flash（high）从第 10 的 28.1 升到 67.8，成立 52 条（上期 19）。
+
+反面：Step 5 Preview 均质量 -0.1、成立 1 条、假阳 2、精准 33%、覆盖 1%；Qwen3.8 Flash 从第 4 的 82.0 掉到第 8 的 56.4，假阳 2→4。
+
+观察区（样本 < 5 场不排名）：DeepSeek V4.1 Flash（max） Qoder CN 掉榜，3 场均质量 10.7。设计分叉 3 场样本都不足，契合分最高 Space Bunny Free 5.00、最低 Qwen3.8 Flash 3.67。
+
+未评 24 行（2 场，补评后才算完成），失败 47 行不计入对照、花费照计。想看哪家明细，留言告诉我。#LLM #AI #Benchmark #MultiModel
+
 ## 事后审计
 
 | 指标 | 本期 | 上期 | 环比 |
 |---|---:|---:|---:|
-| 重要性5/4/3/2/1 | 55/165/149/72/18 | 51/121/121/37/6 | — |
+| 重要性5/4/3/2/1 | 55/169/151/77/20 | 51/121/121/37/6 | — |
 | 场次 | 20 | 13 | +7 |
-| 已评成功行 | 199 | 152 | +47 |
-| 成立/方向 | 459 | 336 | +123 |
-| 独有成立 | 342 | 266 | +76 |
-| 假阳性 | 23 | 22 | +1 |
-| 已评花费 $ | 61.15 | 63.11 | -1.96 |
-| 未采集金额行 | 53 | 58 | -5 |
-| 全部花费（含未评/失败）$ | 80.60 | 73.16 | +7.43 |
-| 输入 token | 17,998,326 | 15,079,674 | +2918652 |
-| 输出 token | 3,790,408 | 2,097,287 | +1693121 |
-| 缓存读 token | 215,492,999 | 136,682,218 | +78810781 |
+| 已评成功行 | 210 | 152 | +58 |
+| 成立/方向 | 472 | 336 | +136 |
+| 独有成立 | 355 | 266 | +89 |
+| 假阳性 | 27 | 22 | +5 |
+| 已评花费 $ | 62.95 | 63.11 | -0.16 |
+| 未采集金额行 | 55 | 58 | -3 |
+| 全部花费（含未评/失败）$ | 80.68 | 73.16 | +7.52 |
+| 输入 token | 18,560,270 | 15,079,674 | +3480596 |
+| 输出 token | 3,903,512 | 2,097,287 | +1806225 |
+| 缓存读 token | 221,369,840 | 136,682,218 | +84687622 |
 | 缓存写 token | 0 | 0 | +0 |
-| token 合计 | 237,281,733 | 153,859,179 | +83422554 |
-| 平均每次耗时 分钟 | 8.0 | 7.5 | +0.6 |
+| token 合计 | 243,833,622 | 153,859,179 | +89974443 |
+| 平均每次耗时 分钟 | 7.9 | 7.5 | +0.4 |
 | 缓存命中率 % | 92.3 | 90.1 | +2.2 |
 
 | # | 模型 | 思考 | 综合 | 场 本/上 | 均质量 本/上/Δ | 成立 本/上 | 独有 | 假阳 | 准确率 | 花费 本/上 | 效率 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | Grok 4.7 Extra High pi | xhigh | 89.0 | 9/10 | 19.3/15.0/+4.3 | 33/28 | 30 | 0 | 100% | 21.95/31.24 | 0.84 |
-| 2 | SWE-2 | max | 86.5 | 17/13 | 17.6/15.7/+2.0 | 65/42 | 49 | 1 | 98% | 0.00/0.00 | 1.60 |
-| 3 | Muse Spark 1.3 Contributor Cline | xhigh | 79.2 | 14/13 | 17.0/13.5/+3.5 | 54/43 | 39 | 4 | 93% | 0.00/0.00 | 3.17 |
-| 4 | DeepSeek V4.1 Flash（max） OpenCode Go | max | 74.0 | 14/0 | 14.6/0.0/+14.6 | 41/0 | 30 | 0 | 100% | 1.92/0.00 | 0.83 |
-| 5 | DeepSeek V4.1 Flash（high） | high | 70.8 | 17/13 | 14.0/6.5/+7.5 | 52/19 | 37 | 1 | 98% | 1.83/0.57 | 1.25 |
-| 6 | Grok 4.6 Extra High | xhigh | 63.1 | 11/13 | 12.5/14.1/-1.6 | 28/33 | 19 | 2 | 93% | 10.15/16.84 | 0.93 |
-| 7 | Kimi K3 方舟 Agent Plan | max | 62.4 | 16/13 | 9.6/13.0/-3.4 | 31/32 | 30 | 2 | 94% | 7.07/7.50 | 0.98 |
-| 8 | Qwen3.8 Flash | max | 58.2 | 17/12 | 10.6/14.3/-3.7 | 39/35 | 27 | 4 | 91% | —/— | 1.03 |
-| 9 | Grok 4.7 Extra High xAI | xhigh | 55.7 | 6/0 | 6.0/0.0/+6.0 | 7/0 | 7 | 0 | 100% | 9.63/0.00 | 0.29 |
-| 10 | GLM-5.3 | max | 50.9 | 17/13 | 9.9/13.2/-3.3 | 34/33 | 23 | 0 | 100% | 6.60/6.68 | 1.11 |
-| 11 | GLM-5.3-Flash | max | 45.1 | 17/11 | 6.9/9.2/-2.2 | 27/19 | 20 | 3 | 90% | 0.40/0.28 | 0.49 |
-| 12 | Step 5 Preview | max | 25.0 | 17/12 | -0.1/4.6/-4.6 | 1/13 | 1 | 2 | 33% | —/— | 2.12 |
-| 13 | Space Bunny Free | max | 20.4 | 17/13 | 4.2/4.9/-0.7 | 18/17 | 5 | 2 | 90% | 0.00/— | 13.33 |
+| 1 | Grok 4.7 Extra High pi | xhigh | 88.9 | 9/10 | 19.3/15.0/+4.3 | 33/28 | 30 | 0 | 100% | 21.95/31.24 | 0.84 |
+| 2 | SWE-2 | max | 85.4 | 18/13 | 17.3/15.7/+1.6 | 68/42 | 52 | 1 | 99% | 0.00/0.00 | 1.61 |
+| 3 | Muse Spark 1.3 Contributor Cline | xhigh | 74.0 | 15/13 | 15.3/13.5/+1.8 | 55/43 | 40 | 8 | 87% | 0.00/0.00 | 3.00 |
+| 4 | DeepSeek V4.1 Flash（max） OpenCode Go | max | 73.1 | 15/0 | 14.3/0.0/+14.3 | 43/0 | 32 | 0 | 100% | 2.01/0.00 | 0.81 |
+| 5 | DeepSeek V4.1 Flash（high） | high | 67.8 | 18/13 | 13.2/6.5/+6.7 | 52/19 | 37 | 1 | 98% | 1.83/0.57 | 1.18 |
+| 6 | Kimi K3 方舟 Agent Plan | max | 63.3 | 17/13 | 9.7/13.0/-3.3 | 33/32 | 32 | 2 | 94% | 7.34/7.50 | 1.02 |
+| 7 | Grok 4.6 Extra High | xhigh | 62.3 | 11/13 | 12.5/14.1/-1.6 | 28/33 | 19 | 2 | 93% | 10.15/16.84 | 0.93 |
+| 8 | Qwen3.8 Flash | max | 56.4 | 18/12 | 10.2/14.3/-4.1 | 40/35 | 28 | 4 | 91% | —/— | 1.00 |
+| 9 | Grok 4.7 Extra High xAI | xhigh | 54.3 | 7/0 | 5.7/0.0/+5.7 | 8/0 | 8 | 0 | 100% | 10.76/0.00 | 0.27 |
+| 10 | GLM-5.3 | max | 48.9 | 18/13 | 9.3/13.2/-3.8 | 34/33 | 23 | 0 | 100% | 6.88/6.68 | 1.05 |
+| 11 | GLM-5.3-Flash | max | 44.9 | 18/11 | 6.9/9.2/-2.3 | 28/19 | 21 | 3 | 90% | 0.43/0.28 | 0.50 |
+| 12 | Step 5 Preview | max | 25.0 | 18/12 | -0.1/4.6/-4.6 | 1/13 | 1 | 2 | 33% | —/— | 2.00 |
+| 13 | Space Bunny Free | max | 21.7 | 18/13 | 4.6/4.9/-0.4 | 20/17 | 7 | 2 | 91% | 0.00/— | 12.64 |
 
-样本 < 5 场未进排名，见下方观察区（DeepSeek V4.1 Flash（max） Qoder CN、Hy4 Preview、Muse Spark 1.3 Contributor OpenCode Go、Kimi K3 Cursor）；主力（≥5 场）第一：Grok 4.7 Extra High pi（综合 89.0）
+样本 < 5 场未进排名，见下方观察区（DeepSeek V4.1 Flash（max） Qoder CN、Hy4 Preview、Muse Spark 1.3 Contributor OpenCode Go、Kimi K3 Cursor）；主力（≥5 场）第一：Grok 4.7 Extra High pi（综合 88.9）
 
 **观察区（样本不足未进排名，只列数字）**
 
@@ -54,31 +76,31 @@
 
 **分项排名（各自口径，从优到差；产出/精准/性价比见上表）**
 
-- **覆盖 · 重要性加权占参与轮次**：1. SWE-2（17%）、2. Muse Spark 1.3 Contributor Cline（15%）、3. DeepSeek V4.1 Flash（max） OpenCode Go（14%）、4. DeepSeek V4.1 Flash（high）（14%）、5. Grok 4.7 Extra High pi（13%）、6. Qwen3.8 Flash（11%）、7. Grok 4.6 Extra High（11%）、8. GLM-5.3（10%）、9. Kimi K3 方舟 Agent Plan（9%）、10. Grok 4.7 Extra High xAI（9%）、11. GLM-5.3-Flash（8%）、12. Space Bunny Free（6%）、13. Step 5 Preview（1%）
-- **独立 · 独有占比（重要性加权）**：1. Step 5 Preview（100%）、2. Grok 4.7 Extra High xAI（100%）、3. Kimi K3 方舟 Agent Plan（96%）、4. Grok 4.7 Extra High pi（92%）、5. GLM-5.3-Flash（76%）、6. SWE-2（75%）、7. DeepSeek V4.1 Flash（max） OpenCode Go（72%）、8. Grok 4.6 Extra High（72%）、9. DeepSeek V4.1 Flash（high）（71%）、10. Qwen3.8 Flash（69%）、11. Muse Spark 1.3 Contributor Cline（69%）、12. GLM-5.3（64%）、13. Space Bunny Free（36%）
-- **执行时间 · 平均每次分钟**：1. Step 5 Preview（0.1）、2. Space Bunny Free（0.7）、3. Muse Spark 1.3 Contributor Cline（4.7）、4. GLM-5.3（7.2）、5. Kimi K3 方舟 Agent Plan（8.1）、6. Qwen3.8 Flash（8.5）、7. DeepSeek V4.1 Flash（high）（9.0）、8. SWE-2（9.6）、9. GLM-5.3-Flash（10.3）、10. Grok 4.6 Extra High（11.0）、11. Grok 4.7 Extra High xAI（12.7）、12. DeepSeek V4.1 Flash（max） OpenCode Go（13.4）、13. Grok 4.7 Extra High pi（17.5）
-- **Token · 每条成立千枚**：1. Space Bunny Free（8.9）、2. SWE-2（64.7）、3. Muse Spark 1.3 Contributor Cline（71.4）、4. Kimi K3 方舟 Agent Plan（232.4）、5. Grok 4.6 Extra High（408.9）、6. GLM-5.3（440.2）、7. GLM-5.3-Flash（604.4）、8. Grok 4.7 Extra High pi（990.7）、9. DeepSeek V4.1 Flash（high）（1,090.8）、10. DeepSeek V4.1 Flash（max） OpenCode Go（1,694.9）、11. Grok 4.7 Extra High xAI（2,033.4）
-- **缓存命中率**：1. DeepSeek V4.1 Flash（max） OpenCode Go（97%）、2. DeepSeek V4.1 Flash（high）（96%）、3. Grok 4.7 Extra High pi（94%）、4. Grok 4.7 Extra High xAI（94%）、5. GLM-5.3（92%）、6. GLM-5.3-Flash（92%）、7. Kimi K3 方舟 Agent Plan（88%）、8. Grok 4.6 Extra High（85%）、9. Space Bunny Free（80%）、10. SWE-2（49%）、11. Muse Spark 1.3 Contributor Cline（16%）、12. Step 5 Preview（0%）、13. Qwen3.8 Flash（0%）
-- **成立密度 · 每次（越多越好）**：1. Muse Spark 1.3 Contributor Cline（3.86）、2. SWE-2（3.82）、3. Grok 4.7 Extra High pi（3.67）、4. DeepSeek V4.1 Flash（high）（3.06）、5. DeepSeek V4.1 Flash（max） OpenCode Go（2.93）、6. Grok 4.6 Extra High（2.55）、7. Qwen3.8 Flash（2.29）、8. GLM-5.3（2.00）、9. Kimi K3 方舟 Agent Plan（1.94）、10. GLM-5.3-Flash（1.59）、11. Grok 4.7 Extra High xAI（1.17）、12. Space Bunny Free（1.06）、13. Step 5 Preview（0.06）
-- **生成速度 · 每秒 token（输出）**：1. DeepSeek V4.1 Flash（high）（77.3）、2. DeepSeek V4.1 Flash（max） OpenCode Go（72.1）、3. Grok 4.7 Extra High pi（55.0）、4. Grok 4.7 Extra High xAI（50.6）、5. Grok 4.6 Extra High（48.9）、6. GLM-5.3（46.6）、7. GLM-5.3-Flash（34.5）、8. Kimi K3 方舟 Agent Plan（22.9）、9. Muse Spark 1.3 Contributor Cline（11.6）、10. SWE-2（10.4）、11. Space Bunny Free（0.2）
-- **每条成立花费（越低越省）**：1. Muse Spark 1.3 Contributor Cline（$0.00）、2. Space Bunny Free（$0.00）、3. SWE-2（$0.00）、4. GLM-5.3-Flash（$0.01）、5. DeepSeek V4.1 Flash（high）（$0.04）、6. DeepSeek V4.1 Flash（max） OpenCode Go（$0.05）、7. GLM-5.3（$0.19）、8. Kimi K3 方舟 Agent Plan（$0.23）、9. Grok 4.6 Extra High（$0.36）、10. Grok 4.7 Extra High pi（$0.67）、11. Grok 4.7 Extra High xAI（$1.38）
-- **每次花费（越低越省）**：1. Muse Spark 1.3 Contributor Cline（$0.00）、2. Space Bunny Free（$0.00）、3. SWE-2（$0.00）、4. GLM-5.3-Flash（$0.02）、5. DeepSeek V4.1 Flash（high）（$0.11）、6. DeepSeek V4.1 Flash（max） OpenCode Go（$0.14）、7. GLM-5.3（$0.39）、8. Kimi K3 方舟 Agent Plan（$0.44）、9. Grok 4.6 Extra High（$0.92）、10. Grok 4.7 Extra High xAI（$1.60）、11. Grok 4.7 Extra High pi（$2.44）
+- **覆盖 · 重要性加权占参与轮次**：1. SWE-2（16%）、2. Muse Spark 1.3 Contributor Cline（14%）、3. DeepSeek V4.1 Flash（max） OpenCode Go（14%）、4. DeepSeek V4.1 Flash（high）（13%）、5. Grok 4.7 Extra High pi（13%）、6. Grok 4.6 Extra High（11%）、7. Qwen3.8 Flash（11%）、8. Kimi K3 方舟 Agent Plan（10%）、9. GLM-5.3（10%）、10. Grok 4.7 Extra High xAI（9%）、11. GLM-5.3-Flash（8%）、12. Space Bunny Free（6%）、13. Step 5 Preview（1%）
+- **独立 · 独有占比（重要性加权）**：1. Step 5 Preview（100%）、2. Grok 4.7 Extra High xAI（100%）、3. Kimi K3 方舟 Agent Plan（96%）、4. Grok 4.7 Extra High pi（92%）、5. GLM-5.3-Flash（77%）、6. SWE-2（75%）、7. DeepSeek V4.1 Flash（max） OpenCode Go（73%）、8. Grok 4.6 Extra High（72%）、9. DeepSeek V4.1 Flash（high）（71%）、10. Qwen3.8 Flash（70%）、11. Muse Spark 1.3 Contributor Cline（69%）、12. GLM-5.3（65%）、13. Space Bunny Free（40%）
+- **执行时间 · 平均每次分钟**：1. Step 5 Preview（0.1）、2. Space Bunny Free（1.0）、3. Muse Spark 1.3 Contributor Cline（4.5）、4. GLM-5.3（7.0）、5. Kimi K3 方舟 Agent Plan（7.9）、6. Qwen3.8 Flash（8.3）、7. DeepSeek V4.1 Flash（high）（8.7）、8. SWE-2（9.3）、9. GLM-5.3-Flash（10.1）、10. Grok 4.6 Extra High（11.0）、11. Grok 4.7 Extra High xAI（12.5）、12. DeepSeek V4.1 Flash（max） OpenCode Go（13.3）、13. Grok 4.7 Extra High pi（17.5）
+- **Token · 每条成立千枚**：1. Space Bunny Free（14.1）、2. SWE-2（64.1）、3. Muse Spark 1.3 Contributor Cline（72.0）、4. Kimi K3 方舟 Agent Plan（225.1）、5. Grok 4.6 Extra High（408.9）、6. GLM-5.3（460.1）、7. GLM-5.3-Flash（622.7）、8. Grok 4.7 Extra High pi（990.7）、9. DeepSeek V4.1 Flash（high）（1,092.6）、10. DeepSeek V4.1 Flash（max） OpenCode Go（1,675.8）、11. Grok 4.7 Extra High xAI（1,965.9）
+- **缓存命中率**：1. DeepSeek V4.1 Flash（max） OpenCode Go（97%）、2. DeepSeek V4.1 Flash（high）（96%）、3. Grok 4.7 Extra High pi（94%）、4. Grok 4.7 Extra High xAI（94%）、5. GLM-5.3-Flash（92%）、6. GLM-5.3（92%）、7. Kimi K3 方舟 Agent Plan（88%）、8. Grok 4.6 Extra High（85%）、9. Space Bunny Free（78%）、10. SWE-2（49%）、11. Muse Spark 1.3 Contributor Cline（16%）、12. Step 5 Preview（0%）、13. Qwen3.8 Flash（0%）
+- **成立密度 · 每次（越多越好）**：1. SWE-2（3.78）、2. Muse Spark 1.3 Contributor Cline（3.67）、3. Grok 4.7 Extra High pi（3.67）、4. DeepSeek V4.1 Flash（high）（2.89）、5. DeepSeek V4.1 Flash（max） OpenCode Go（2.87）、6. Grok 4.6 Extra High（2.55）、7. Qwen3.8 Flash（2.22）、8. Kimi K3 方舟 Agent Plan（1.94）、9. GLM-5.3（1.89）、10. GLM-5.3-Flash（1.56）、11. Grok 4.7 Extra High xAI（1.14）、12. Space Bunny Free（1.11）、13. Step 5 Preview（0.06）
+- **生成速度 · 每秒 token（输出）**：1. DeepSeek V4.1 Flash（high）（74.8）、2. DeepSeek V4.1 Flash（max） OpenCode Go（70.9）、3. Grok 4.7 Extra High pi（55.0）、4. Grok 4.7 Extra High xAI（51.0）、5. Grok 4.6 Extra High（48.9）、6. GLM-5.3（46.3）、7. GLM-5.3-Flash（34.6）、8. Kimi K3 方舟 Agent Plan（23.1）、9. Muse Spark 1.3 Contributor Cline（11.9）、10. SWE-2（10.5）、11. Space Bunny Free（0.8）
+- **每条成立花费（越低越省）**：1. Muse Spark 1.3 Contributor Cline（$0.00）、2. Space Bunny Free（$0.00）、3. SWE-2（$0.00）、4. GLM-5.3-Flash（$0.02）、5. DeepSeek V4.1 Flash（high）（$0.04）、6. DeepSeek V4.1 Flash（max） OpenCode Go（$0.05）、7. GLM-5.3（$0.20）、8. Kimi K3 方舟 Agent Plan（$0.22）、9. Grok 4.6 Extra High（$0.36）、10. Grok 4.7 Extra High pi（$0.67）、11. Grok 4.7 Extra High xAI（$1.35）
+- **每次花费（越低越省）**：1. Muse Spark 1.3 Contributor Cline（$0.00）、2. Space Bunny Free（$0.00）、3. SWE-2（$0.00）、4. GLM-5.3-Flash（$0.02）、5. DeepSeek V4.1 Flash（high）（$0.10）、6. DeepSeek V4.1 Flash（max） OpenCode Go（$0.13）、7. GLM-5.3（$0.38）、8. Kimi K3 方舟 Agent Plan（$0.43）、9. Grok 4.6 Extra High（$0.92）、10. Grok 4.7 Extra High xAI（$1.54）、11. Grok 4.7 Extra High pi（$2.44）
 
 **模型评论（按综合分）**
 
-1. **Grok 4.7 Extra High pi**（综合 89.0）— 长处：综合分最高（89.0），均质量居首（19.3）、假阳 0、准确率 100%、独有覆盖 12% 并列最高，独有 30 条；短处：每条成立第二贵（$0.67），每次最贵（$2.44）、每次 17.5 分钟，同场最慢、每条成立 token 991 千，token 开销偏高
-2. **SWE-2**（综合 86.5）— 长处：成立 65 条、独有 49 条，均同场最多、覆盖 17% 最高，重要性 5 级成立 7 条、每条成立 token 65 千，每条成立 $0.00；短处：均质量 17.6，低于榜首（19.3）、准确率 98%（假阳 1 条），未达满分、缓存命中 49%，同场偏低
-3. **Muse Spark 1.3 Contributor Cline**（综合 79.2）— 长处：成立 54 条、独有 39 条，产出居前、覆盖 15%，仅次于最高（17%）、每次 4.7 分钟，速度居前；短处：假阳 4 条，同场最多（并列）、准确率 93%，同场偏低、独有覆盖 10%，低于头部
-4. **DeepSeek V4.1 Flash（max） OpenCode Go**（综合 74.0）— 长处：假阳 0、准确率 100%、缓存命中 97% 最高，每次仅 $0.14、重要性 5 级成立 6 条，居同场前列；短处：每条成立 token 1695 千，同场偏高、每次 13.4 分钟，同场偏慢、独有覆盖 10%，不突出
-5. **DeepSeek V4.1 Flash（high）**（综合 70.8）— 长处：成立 52 条，产出居前、每条成立 $0.04、每次 $0.11，花费低（档位 high）、缓存命中 96%，准确率 98%；短处：每条成立 token 1091 千，token 开销偏高、均质量 14.0，低于头部、独有覆盖 10%，不突出
-6. **Grok 4.6 Extra High**（综合 63.1）— 长处：各项居中（均质量 12.5、覆盖 11%）；短处：假阳 2 条，准确率 93% 偏低、每条成立 $0.36，同场偏贵、每次 11.0 分钟，同场偏慢
-7. **Kimi K3 方舟 Agent Plan**（综合 62.4）— 长处：成立 31 条、独有 30 条，独有产出居前、每条成立 token 232 千，token 开销偏低、每次 8.1 分钟，速度快于多数；短处：覆盖 9%，同场偏低、假阳 2 条，准确率 94%、均质量 9.6，同场后段
-8. **Qwen3.8 Flash**（综合 58.2）— 长处：成立 39 条，产出居中偏上、重要性 5 级成立 6 条，居同场前列、每次 8.5 分钟，速度快于多数；短处：假阳 4 条，同场最多（并列）、准确率 91%，同场偏低、独有覆盖 8%，不突出
-9. **Grok 4.7 Extra High xAI**（综合 55.7）— 长处：假阳 0、准确率 100%、成立 7 条全部独有；短处：每条成立最贵（$1.38），每次 $1.60、每条成立 token 2033 千，同场最高、仅 6 场、成立 7 条，样本少需留余地
-10. **GLM-5.3**（综合 50.9）— 长处：假阳 0、准确率 100%、每次 7.2 分钟，速度快于多数、重要性 5 级成立 5 条，居同场前列；短处：独有覆盖 6%，同场偏低、均质量 9.9，同场偏后、覆盖 10%，成立 34 条不突出
-11. **GLM-5.3-Flash**（综合 45.1）— 长处：每条成立 $0.01、每次 $0.02，花费低于多数、独有 20 条，占成立 27 条的多数；短处：均质量 6.9，同场偏后、准确率 90%，同场偏低、假阳 3 条
-12. **Step 5 Preview**（综合 25.0）— 长处：每次 0.1 分钟，同场最快；短处：成立 1 条、覆盖 1%，同场垫底、准确率 33%，同场最低、均质量 -0.1，同场最低
-13. **Space Bunny Free**（综合 20.4）— 长处：每次 0.7 分钟，同场第二快、每条成立 9 千 token，token 开销同场偏低、每条成立 $0.00、每次 $0.00；短处：成立 18 条、独有 5 条，产出偏少、独有覆盖 2%，同场偏低、均质量 4.2，同场偏后
+1. **Grok 4.7 Extra High pi**（综合 88.9）— 长处：综合 88.9 居榜首，均质量 19.3 同场最高、准确率 100%、假阳 0，成立 33 条中独有 30 条、覆盖 13% 含独有 12%，重要性 4 分项成立 16 条；短处：每次 $2.44，为同场最高、每条成立 $0.67，花费同场偏贵、每次 17.5 分钟，为同场最慢
+2. **SWE-2**（综合 85.4）— 长处：综合 85.4 居次席，均质量 17.3、成立 68 条、独有 52 条，均为同场最多、覆盖 16% 为同场最高；短处：均质量 17.3，低于榜首 19.3、准确率 99%，有 1 条假阳、缓存命中 49%，为同场偏低
+3. **Muse Spark 1.3 Contributor Cline**（综合 74.0）— 长处：综合 74.0 列第三，均质量 15.3、成立 55 条、独有 40 条，量居同场前列、每次 4.5 分钟，速度同场前列；短处：假阳 8 条，为同场最多、准确率 87%，同场偏低、缓存命中 16%，为同场最低
+4. **DeepSeek V4.1 Flash（max） OpenCode Go**（综合 73.1）— 长处：综合 73.1 列第四，准确率 100% 且假阳 0、覆盖 14% 含独有 10%，重要性 5 分项成立 6 条、缓存命中 97%，为同场最高；短处：每条成立 token 1676 千，同场偏高、每次 13.3 分钟，速度同场偏慢
+5. **DeepSeek V4.1 Flash（high）**（综合 67.8）— 长处：场 18 全勤，成立 52 条、每条成立 $0.04、每次 $0.10，花费同场很低、缓存命中 96%，同场最高档；短处：均质量 13.2，与前列有差距、准确率 98%，有 1 条假阳、每条成立 token 1093 千，同场偏高
+6. **Kimi K3 方舟 Agent Plan**（综合 63.3）— 长处：成立 33 条中独有 32 条，几乎全为独有、每条成立 token 225 千，同场偏低、覆盖 10% 含独有 9%；短处：均质量 9.7，同场偏下、准确率 94%，有 2 条假阳、每条成立 $0.22，花费同场偏贵
+7. **Grok 4.6 Extra High**（综合 62.3）— 长处：均质量 12.5，列同场中游、每条成立 token 409 千，为同场中等水平；短处：准确率 93%，有 2 条假阳、每条成立 $0.36，为同场第三贵、样本仅 11 场，结论要留余地
+8. **Qwen3.8 Flash**（综合 56.4）— 长处：场 18 全勤，成立 40 条、覆盖 11% 含独有 8%、每次 8.3 分钟，速度同场中等；短处：缓存命中 0%，为同场最低档、假阳 4 条，同场偏多、均质量 10.2，同场偏下
+9. **Grok 4.7 Extra High xAI**（综合 54.3）— 长处：准确率 100%、假阳 0、成立 8 条全部为独有；短处：每条成立 $1.35，为同场最贵、每条成立 token 1966 千，为同场最高、均质量 5.7、样本仅 7 场，需留余地
+10. **GLM-5.3**（综合 48.9）— 长处：准确率 100%、假阳 0、每次 7.0 分钟，为同场较快、重要性 4 分项成立 18 条，同场较多；短处：均质量 9.3，同场偏下、综合 48.9，列同场第十、每条成立 $0.20，花费同场偏高
+11. **GLM-5.3-Flash**（综合 44.9）— 长处：每条成立 $0.02、每次 $0.02，花费同场很低、缓存命中 92%，同场偏高；短处：均质量 6.9，同场偏低、准确率 90%、假阳 3 条，同场偏差、覆盖 8%（独有 6%），同场偏低
+12. **Step 5 Preview**（综合 25.0）— 长处：每次 0.1 分钟，为同场最快、成立 1 条，独有 1 条；短处：均质量 -0.1，为同场最低、准确率 33%，为同场最低、覆盖 1%（独有 1%），为同场最低
+13. **Space Bunny Free**（综合 21.7）— 长处：每次 1.0 分钟，速度同场前列、每条成立 token 14 千，为同场最低、每条成立与每次均 $0.00；短处：均质量 4.6，同场偏低、独有仅 7 条，同场偏少、覆盖 6%、独有 3%，同场偏低
 
 ## 设计分叉
 
@@ -155,7 +177,7 @@
 | 2026-10-15-160941-4fa7e8 | 0 | 0.00 | 2 | 0.00 |
 | 2026-10-15-175022-7a4494 | 0 | 0.00 | 2 | 0.00 |
 | 2026-10-15-204244-63449a | 0 | 0.00 | 2 | 0.00 |
-| 2026-10-15-213241-348cb1 | 10 | 1.71 | 2 | 0.00 |
+| 2026-10-15-213241-348cb1 | 0 | 0.00 | 2 | 0.00 |
 
 ---
 

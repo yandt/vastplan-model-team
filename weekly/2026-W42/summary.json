@@ -7,33 +7,33 @@
     "2026-10-08",
     "2026-10-12"
   ],
-  "generated_at": "2026-10-15 21:53",
+  "generated_at": "2026-10-15 22:11",
   "week": "2026-W42",
   "week_label": "2026 年第 42 周",
   "partial": true,
   "kinds": {
     "事后审计": {
       "sessions": 20,
-      "rows": 199,
-      "confirmed": 459,
-      "false_pos": 23,
-      "unique": 342,
-      "usd_rated": 61.15,
+      "rows": 210,
+      "confirmed": 472,
+      "false_pos": 27,
+      "unique": 355,
+      "usd_rated": 62.95,
       "top": [
         {
           "model": "Grok 4.7 Extra High pi",
-          "score": 89,
+          "score": 88.9,
           "sessions": 9
         },
         {
           "model": "SWE-2",
-          "score": 86.5,
-          "sessions": 17
+          "score": 85.4,
+          "sessions": 18
         },
         {
           "model": "Muse Spark 1.3 Contributor Cline",
-          "score": 79.2,
-          "sessions": 14
+          "score": 74,
+          "sessions": 15
         }
       ]
     },
@@ -54,7 +54,7 @@
     "images/4-design.png"
   ],
   "debt_sessions": 23,
-  "generations": 1,
+  "generations": 2,
   "first_generated_at": "2026-10-15 21:53",
-  "last_generated_at": "2026-10-15 21:53"
+  "last_generated_at": "2026-10-15 22:11"
 }
